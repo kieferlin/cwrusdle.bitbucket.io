@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDLEFairPackage package &mdash; SDLE Fair Package 0.4.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=ff822928"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="SDLEFairPackage" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SDLE Fair Package
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">SDLEFairPackage</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SDLEFairPackage package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SDLEFairPackage.fair_sheet_parser">SDLEFairPackage.fair_sheet_parser module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser"><code class="docutils literal notranslate"><span class="pre">FairSheetParser</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SDLEFairPackage.rdflib_graph_saver">SDLEFairPackage.rdflib_graph_saver module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver"><code class="docutils literal notranslate"><span class="pre">RDFLibGraphSaver</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SDLEFairPackage">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SDLE Fair Package</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">SDLEFairPackage</a></li>
+      <li class="breadcrumb-item active">SDLEFairPackage package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/SDLEFairPackage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sdlefairpackage-package">
+<h1>SDLEFairPackage package<a class="headerlink" href="#sdlefairpackage-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-SDLEFairPackage.fair_sheet_parser">
+<span id="sdlefairpackage-fair-sheet-parser-module"></span><h2>SDLEFairPackage.fair_sheet_parser module<a class="headerlink" href="#module-SDLEFairPackage.fair_sheet_parser" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SDLEFairPackage.fair_sheet_parser.</span></span><span class="sig-name descname"><span class="pre">FairSheetParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ontology_sheet_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_valuetype_graphviz_edges</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rdflib_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphviz_graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to parse FAIR ontology sheets and create a corresponding RDFLib graph.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_info_path">
+<span class="sig-name descname"><span class="pre">__ontology_info_path</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_info_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the ontology information CSV file that the user fills out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__obj_property_path">
+<span class="sig-name descname"><span class="pre">__obj_property_path</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__obj_property_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the object property CSV file that the user fills out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__data_property_path">
+<span class="sig-name descname"><span class="pre">__data_property_path</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__data_property_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the data property CSV file that the user fills out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__namespace_path">
+<span class="sig-name descname"><span class="pre">__namespace_path</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__namespace_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the namespace CSV file that the user fills out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__entity_path">
+<span class="sig-name descname"><span class="pre">__entity_path</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__entity_path" title="Link to this definition"></a></dt>
+<dd><p>Path to the entity CSV file that the user fills out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__datatype_conversions">
+<span class="sig-name descname"><span class="pre">__datatype_conversions</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__datatype_conversions" title="Link to this definition"></a></dt>
+<dd><p>Dictionary for datatype conversions of strings to XSD objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__rdflib_graph">
+<span class="sig-name descname"><span class="pre">__rdflib_graph</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__rdflib_graph" title="Link to this definition"></a></dt>
+<dd><p>an RDFLib graph that will contain all information about the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>rdflib.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__graphviz_graph">
+<span class="sig-name descname"><span class="pre">__graphviz_graph</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__graphviz_graph" title="Link to this definition"></a></dt>
+<dd><p>an Graphviz graph that will used to visualize all information about the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>graphviz.Digraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_base_uri">
+<span class="sig-name descname"><span class="pre">__ontology_base_uri</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_base_uri" title="Link to this definition"></a></dt>
+<dd><p>Base URI of the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_name">
+<span class="sig-name descname"><span class="pre">__ontology_name</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_version">
+<span class="sig-name descname"><span class="pre">__ontology_version</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_version" title="Link to this definition"></a></dt>
+<dd><p>Version of the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__include_valuetype_graphviz_edges">
+<span class="sig-name descname"><span class="pre">__include_valuetype_graphviz_edges</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__include_valuetype_graphviz_edges" title="Link to this definition"></a></dt>
+<dd><p>Flag that determines whether or not to include valuetype and unit edges in Graphviz graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__individual_relationship">
+<span class="sig-name descname"><span class="pre">__individual_relationship</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__individual_relationship" title="Link to this definition"></a></dt>
+<dd><p>Dictionary to store existing relationships between individuals of entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__namespace_uris">
+<span class="sig-name descname"><span class="pre">__namespace_uris</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__namespace_uris" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of namespace prefixes and their corresponding base URIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_info">
+<span class="sig-name descname"><span class="pre">__ontology_info</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__ontology_info" title="Link to this definition"></a></dt>
+<dd><p>Dictionary to store ontology OWL URIs and the ontology’s correspnding Base URI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__entity_uris">
+<span class="sig-name descname"><span class="pre">__entity_uris</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__entity_uris" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of entity URIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__obj_property_uris">
+<span class="sig-name descname"><span class="pre">__obj_property_uris</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__obj_property_uris" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of object property URIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.__data_property_uris">
+<span class="sig-name descname"><span class="pre">__data_property_uris</span></span><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.__data_property_uris" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of data property URIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.add_external_ontology_info">
+<span class="sig-name descname"><span class="pre">add_external_ontology_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.add_external_ontology_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.add_external_ontology_info" title="Link to this definition"></a></dt>
+<dd><p>Adds external ontology information to all terms in the RDFLib graph that belonged to other ontologies in the FAIR sheets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_graphviz_graph">
+<span class="sig-name descname"><span class="pre">get_graphviz_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.get_graphviz_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_graphviz_graph" title="Link to this definition"></a></dt>
+<dd><p>Gets the current Graphviz Graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current Graphviz graph</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>graphviz.Digraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_ontology_name">
+<span class="sig-name descname"><span class="pre">get_ontology_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.get_ontology_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_ontology_name" title="Link to this definition"></a></dt>
+<dd><p>Gets the user-specified name of the ontology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user-specified name of the ontology</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_rdf_graph">
+<span class="sig-name descname"><span class="pre">get_rdf_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.get_rdf_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_rdf_graph" title="Link to this definition"></a></dt>
+<dd><p>Gets the current RDFLib Graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current rdflib graph</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>rdflib.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_data_properties">
+<span class="sig-name descname"><span class="pre">parse_data_properties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.parse_data_properties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_data_properties" title="Link to this definition"></a></dt>
+<dd><p>Parses data properties from a CSV file and updates the RDFLib and Graphviz graphs.</p>
+<p>This method reads data properties from a specified CSV file and processes each row to
+generate URIs for data properties, create RDF triples, and update a Graphviz graph.
+The method handles different namespaces based on the ontology specified in the CSV rows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing processed data properties and their URIs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If the data property CSV file cannot be found.</p></li>
+<li><p><strong>csv.Error</strong> – If there is an error reading the CSV file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_entities">
+<span class="sig-name descname"><span class="pre">parse_entities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.parse_entities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_entities" title="Link to this definition"></a></dt>
+<dd><p>Parses the entity CSV file and updates the RDFLib and Graphviz graphs with the terms, definitions, and other information specified in the CSV file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing processed entities and their URIs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_namespace">
+<span class="sig-name descname"><span class="pre">parse_namespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.parse_namespace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_namespace" title="Link to this definition"></a></dt>
+<dd><p>Parses the namespace CSV file and updates the RDFLib graph with namespace bindings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>A tuple containing:</dt><dd><ul class="simple">
+<li><p>dict: A dictionary of namespace prefixes and their corresponding base URIs.</p></li>
+<li><p>dict: A dictionary of the ontology OWL file URI and its corresponding base URI.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_object_properties">
+<span class="sig-name descname"><span class="pre">parse_object_properties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/fair_sheet_parser.html#FairSheetParser.parse_object_properties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_object_properties" title="Link to this definition"></a></dt>
+<dd><p>Parses the relationship CSV file and updates the RDFLib and Graphviz graphs with the terms, definitions, and other information about relationships specified in the CSV file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing processed object properties and their corresponding URIs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-SDLEFairPackage.rdflib_graph_saver">
+<span id="sdlefairpackage-rdflib-graph-saver-module"></span><h2>SDLEFairPackage.rdflib_graph_saver module<a class="headerlink" href="#module-SDLEFairPackage.rdflib_graph_saver" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SDLEFairPackage.rdflib_graph_saver.</span></span><span class="sig-name descname"><span class="pre">RDFLibGraphSaver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ontology_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rdflib_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphviz_graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/rdflib_graph_saver.html#RDFLibGraphSaver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to save an input RDFLib graph under different formats and generate corresponding documentation for the ontology.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.__rdflib_graph">
+<span class="sig-name descname"><span class="pre">__rdflib_graph</span></span><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.__rdflib_graph" title="Link to this definition"></a></dt>
+<dd><p>an RDFLib graph containing all information about the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>rdflib.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.__graphviz_graph">
+<span class="sig-name descname"><span class="pre">__graphviz_graph</span></span><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.__graphviz_graph" title="Link to this definition"></a></dt>
+<dd><p>an Graphviz graph containing all information about the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>graphviz.Digraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.__ontology_name">
+<span class="sig-name descname"><span class="pre">__ontology_name</span></span><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.__ontology_name" title="Link to this definition"></a></dt>
+<dd><p>Name of the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.generate_pylode_html">
+<span class="sig-name descname"><span class="pre">generate_pylode_html</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/rdflib_graph_saver.html#RDFLibGraphSaver.generate_pylode_html"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.generate_pylode_html" title="Link to this definition"></a></dt>
+<dd><p>Generates an HTML file using PyLODE for the RDFLib graph containing all information about the ontology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The file path of the generated HTML file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_graphviz_graph">
+<span class="sig-name descname"><span class="pre">save_graphviz_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/rdflib_graph_saver.html#RDFLibGraphSaver.save_graphviz_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_graphviz_graph" title="Link to this definition"></a></dt>
+<dd><p>Saves the Graphviz graph to a PNG file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>graphviz.exceptions.GraphvizError</strong> – If the graph is empty and cannot be printed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_rdflib_graph_jsonld">
+<span class="sig-name descname"><span class="pre">save_rdflib_graph_jsonld</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/rdflib_graph_saver.html#RDFLibGraphSaver.save_rdflib_graph_jsonld"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_rdflib_graph_jsonld" title="Link to this definition"></a></dt>
+<dd><p>Saves the RDFLib graph to a JSON-LD file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The file path of the saved JSON-LD file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_rdflib_graph_owl">
+<span class="sig-name descname"><span class="pre">save_rdflib_graph_owl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SDLEFairPackage/rdflib_graph_saver.html#RDFLibGraphSaver.save_rdflib_graph_owl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_rdflib_graph_owl" title="Link to this definition"></a></dt>
+<dd><p>Saves the RDFLib graph to an OWL file in TTL format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The file path of the saved OWL file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-SDLEFairPackage">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-SDLEFairPackage" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="SDLEFairPackage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Alexander Harding Bradley, Kiefer Lin, Priyan Rajamohan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

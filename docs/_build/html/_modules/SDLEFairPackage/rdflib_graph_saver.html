@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDLEFairPackage.rdflib_graph_saver &mdash; SDLE Fair Package 0.4.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=ff822928"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SDLE Fair Package
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">SDLEFairPackage</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SDLE Fair Package</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">SDLEFairPackage.rdflib_graph_saver</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for SDLEFairPackage.rdflib_graph_saver</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span>
+<span class="kn">from</span> <span class="nn">pylode</span> <span class="kn">import</span> <span class="n">VocPub</span>
+
+<div class="viewcode-block" id="RDFLibGraphSaver">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver">[docs]</a>
+<span class="k">class</span> <span class="nc">RDFLibGraphSaver</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to save an input RDFLib graph under different formats and generate corresponding documentation for the ontology.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        __rdflib_graph (rdflib.Graph): an RDFLib graph containing all information about the ontology.</span>
+<span class="sd">        __graphviz_graph (graphviz.Digraph): an Graphviz graph containing all information about the ontology.</span>
+<span class="sd">        __ontology_name (str): Name of the ontology.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ontology_name</span><span class="p">,</span> <span class="n">rdflib_graph</span><span class="p">,</span> <span class="n">graphviz_graph</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span> <span class="o">=</span> <span class="n">ontology_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span> <span class="o">=</span> <span class="n">rdflib_graph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span> <span class="o">=</span> <span class="n">graphviz_graph</span>
+
+<div class="viewcode-block" id="RDFLibGraphSaver.save_rdflib_graph_owl">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_rdflib_graph_owl">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_rdflib_graph_owl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Saves the RDFLib graph to an OWL file in TTL format.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The file path of the saved OWL file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Define the folder name</span>
+        <span class="n">output_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">_output&quot;</span>
+        
+        <span class="c1"># Create the folder if it doesn&#39;t exist</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_folder</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">)</span>
+        
+        <span class="c1"># Define the file path within the folder</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">.ttl&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Write the RDFLib graph to the file in TTL format</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+            
+        <span class="k">return</span> <span class="n">file_path</span></div>
+
+
+<div class="viewcode-block" id="RDFLibGraphSaver.save_rdflib_graph_jsonld">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_rdflib_graph_jsonld">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_rdflib_graph_jsonld</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Saves the RDFLib graph to a JSON-LD file.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The file path of the saved JSON-LD file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">rdf_namespaces_to_json_ld_context</span><span class="p">(</span><span class="n">graph</span><span class="p">):</span>
+            <span class="n">json_ld_context</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">namespace</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">namespaces</span><span class="p">():</span>
+                <span class="n">json_ld_context</span><span class="p">[</span><span class="n">prefix</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">namespace</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">json_ld_context</span>
+
+        <span class="n">json_ld_context</span> <span class="o">=</span> <span class="n">rdf_namespaces_to_json_ld_context</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="p">)</span>
+
+        <span class="c1"># Define the folder name</span>
+        <span class="n">output_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">_output&quot;</span>
+        
+        <span class="c1"># Create the folder if it doesn&#39;t exist</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_folder</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">)</span>
+        
+        <span class="c1"># Define the file path within the folder</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Write the RDFLib graph to the file in JSON-LD format</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;json-ld&quot;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">json_ld_context</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+            
+        <span class="k">return</span> <span class="n">file_path</span></div>
+
+    
+<div class="viewcode-block" id="RDFLibGraphSaver.save_graphviz_graph">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.save_graphviz_graph">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_graphviz_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Saves the Graphviz graph to a PNG file.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            graphviz.exceptions.GraphvizError: If the graph is empty and cannot be printed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">output_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">_output&quot;</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_folder</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">body</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">GraphvizError</span><span class="p">(</span><span class="s2">&quot;The graph is empty and cannot be printed&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">Graph&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="n">cleanup</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="RDFLibGraphSaver.generate_pylode_html">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.rdflib_graph_saver.RDFLibGraphSaver.generate_pylode_html">[docs]</a>
+    <span class="k">def</span> <span class="nf">generate_pylode_html</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Generates an HTML file using PyLODE for the RDFLib graph containing all information about the ontology.</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                str: The file path of the generated HTML file.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;.ttl&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">temp_file</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">destination</span><span class="o">=</span><span class="n">temp_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;turtle&#39;</span><span class="p">)</span>
+                <span class="n">temp_file_path</span> <span class="o">=</span> <span class="n">temp_file</span><span class="o">.</span><span class="n">name</span>
+
+            <span class="n">op</span> <span class="o">=</span> <span class="n">VocPub</span><span class="p">(</span><span class="n">ontology</span><span class="o">=</span><span class="n">temp_file_path</span><span class="p">)</span>
+
+            <span class="n">html</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">make_html</span><span class="p">()</span>
+            <span class="n">output_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">_output&quot;</span>
+            
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_folder</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">)</span>
+            
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="si">}</span><span class="s2">.html&quot;</span><span class="p">)</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># &#39;pass&#39; is used here to create an empty file</span>
+
+            <span class="n">op</span><span class="o">.</span><span class="n">make_html</span><span class="p">(</span><span class="n">destination</span><span class="o">=</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">file_path</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Alexander Harding Bradley, Kiefer Lin, Priyan Rajamohan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

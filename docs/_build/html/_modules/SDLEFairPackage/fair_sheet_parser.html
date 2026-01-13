@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDLEFairPackage.fair_sheet_parser &mdash; SDLE Fair Package 0.4.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=ff822928"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SDLE Fair Package
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">SDLEFairPackage</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SDLE Fair Package</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">SDLEFairPackage.fair_sheet_parser</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for SDLEFairPackage.fair_sheet_parser</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span> <span class="k">as</span> <span class="n">rdfGraph</span><span class="p">,</span> <span class="n">Namespace</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">URIRef</span><span class="p">,</span> <span class="n">OWL</span><span class="p">,</span> <span class="n">XSD</span> 
+<span class="kn">from</span> <span class="nn">rdflib.namespace</span> <span class="kn">import</span> <span class="n">RDF</span><span class="p">,</span> <span class="n">RDFS</span><span class="p">,</span> <span class="n">SKOS</span><span class="p">,</span> <span class="n">DCTERMS</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.infixowl</span> <span class="kn">import</span> <span class="n">Class</span><span class="p">,</span> <span class="n">Ontology</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+
+<div class="viewcode-block" id="FairSheetParser">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser">[docs]</a>
+<span class="k">class</span> <span class="nc">FairSheetParser</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to parse FAIR ontology sheets and create a corresponding RDFLib graph.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        __ontology_info_path (str): Path to the ontology information CSV file that the user fills out.</span>
+<span class="sd">        __obj_property_path (str): Path to the object property CSV file that the user fills out.</span>
+<span class="sd">        __data_property_path (str): Path to the data property CSV file that the user fills out.</span>
+<span class="sd">        __namespace_path (str): Path to the namespace CSV file that the user fills out.</span>
+<span class="sd">        __entity_path (str): Path to the entity CSV file that the user fills out.</span>
+<span class="sd">        __datatype_conversions (dict): Dictionary for datatype conversions of strings to XSD objects.</span>
+<span class="sd">        __rdflib_graph (rdflib.Graph): an RDFLib graph that will contain all information about the ontology.</span>
+<span class="sd">        __graphviz_graph (graphviz.Digraph): an Graphviz graph that will used to visualize all information about the ontology.</span>
+<span class="sd">        __ontology_base_uri (Namespace): Base URI of the ontology.</span>
+<span class="sd">        __ontology_name (str): Name of the ontology.</span>
+<span class="sd">        __ontology_version (str): Version of the ontology.</span>
+<span class="sd">        __include_valuetype_graphviz_edges (bool): Flag that determines whether or not to include valuetype and unit edges in Graphviz graph.</span>
+<span class="sd">        __individual_relationship (dict): Dictionary to store existing relationships between individuals of entities.</span>
+<span class="sd">        __namespace_uris (dict): Dictionary of namespace prefixes and their corresponding base URIs.</span>
+<span class="sd">        __ontology_info (dict): Dictionary to store ontology OWL URIs and the ontology&#39;s correspnding Base URI.</span>
+<span class="sd">        __entity_uris (dict): Dictionary of entity URIs.</span>
+<span class="sd">        __obj_property_uris (dict): Dictionary of object property URIs.</span>
+<span class="sd">        __data_property_uris (dict): Dictionary of data property URIs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ontology_sheet_folder</span><span class="p">,</span> <span class="n">include_valuetype_graphviz_edges</span><span class="p">,</span> <span class="n">rdflib_graph</span><span class="p">,</span> <span class="n">graphviz_graph</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the FairSheetParser object with the provided ontology sheet folder and populates the RDFLib graph and Graphviz PNG using the information provided in these sheets.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ontology_sheet_folder (str): The folder containing ontology CSV files.</span>
+<span class="sd">            include_valuetype_graphviz_edges (bool): Flag to include valuetype and unit edges in the Graphviz png.</span>
+<span class="sd">            rdflib_graph (rdflib.Graph): An empty rdflib graph</span>
+<span class="sd">            graphviz_graph (graphviz.Digraph): An empty graphviz graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HI&quot;</span><span class="p">)</span>
+        <span class="n">ontology_info_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">ontology_sheet_folder</span> <span class="o">+</span> <span class="s2">&quot;/*OntologyInfo.csv&quot;</span><span class="p">)))</span>
+        <span class="n">obj_property_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">ontology_sheet_folder</span> <span class="o">+</span> <span class="s2">&quot;/*RelationshipDefinitions.csv&quot;</span><span class="p">)))</span>
+        <span class="n">data_property_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">ontology_sheet_folder</span> <span class="o">+</span> <span class="s2">&quot;/*ValueTypeDefinitions.csv&quot;</span><span class="p">)))</span>
+        <span class="n">namespace_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">ontology_sheet_folder</span> <span class="o">+</span> <span class="s2">&quot;/*NameSpace.csv&quot;</span><span class="p">)))</span>
+        <span class="n">entity_path</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">ontology_sheet_folder</span> <span class="o">+</span> <span class="s2">&quot;/*VariableDefinitions.csv&quot;</span><span class="p">)))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_info_path</span> <span class="o">=</span> <span class="n">ontology_info_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__obj_property_path</span> <span class="o">=</span> <span class="n">obj_property_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__data_property_path</span> <span class="o">=</span> <span class="n">data_property_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_path</span> <span class="o">=</span> <span class="n">namespace_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__entity_path</span> <span class="o">=</span> <span class="n">entity_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__datatype_conversions</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;xsd:integer&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">integer</span><span class="p">,</span>
+            <span class="s2">&quot;xsd:string&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">string</span><span class="p">,</span>
+            <span class="s2">&quot;xsd:date&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">date</span><span class="p">,</span>
+            <span class="s2">&quot;xsd:dateTime&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">dateTime</span><span class="p">,</span>
+            <span class="s2">&quot;xsd:float&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">float</span><span class="p">,</span>
+            <span class="s2">&quot;xsd:seq&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">Sequence</span><span class="p">,</span>
+            <span class="s2">&quot;xsd:boolean&quot;</span><span class="p">:</span> <span class="n">XSD</span><span class="o">.</span><span class="n">boolean</span>
+        <span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span> <span class="o">=</span> <span class="n">rdflib_graph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span> <span class="o">=</span> <span class="n">graphviz_graph</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_info_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">onto_info_file</span><span class="p">:</span>
+            <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">onto_info_file</span><span class="p">)</span>
+            <span class="n">ontology_metadata</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span><span class="n">ontology_metadata</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="o">.</span><span class="n">Ontology</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">Ontology</span><span class="p">))</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span> <span class="o">=</span> <span class="n">ontology_metadata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="o">.</span><span class="n">Ontology</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="p">)))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="o">.</span><span class="n">Ontology</span><span class="p">,</span> <span class="n">DCTERMS</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="p">)))</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_version</span> <span class="o">=</span> <span class="n">ontology_metadata</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="o">.</span><span class="n">Ontology</span><span class="p">,</span> <span class="n">DCTERMS</span><span class="o">.</span><span class="n">hasVersion</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_version</span><span class="p">)))</span>
+
+            <span class="n">authorsList</span> <span class="o">=</span> <span class="p">[</span><span class="n">author</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">author</span> <span class="ow">in</span> <span class="n">ontology_metadata</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+            <span class="k">if</span> <span class="n">authorsList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">author</span> <span class="ow">in</span> <span class="n">authorsList</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="o">.</span><span class="n">Ontology</span><span class="p">,</span> <span class="n">DCTERMS</span><span class="o">.</span><span class="n">creator</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">author</span><span class="p">)))</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="o">.</span><span class="n">Ontology</span><span class="p">,</span> <span class="n">DCTERMS</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">ontology_metadata</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">])))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__include_valuetype_graphviz_edges</span> <span class="o">=</span> <span class="n">include_valuetype_graphviz_edges</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__individual_relationship</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_namespace</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_entities</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__obj_property_uris</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_object_properties</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__data_property_uris</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_data_properties</span><span class="p">()</span>
+
+        <span class="c1"># Add external ontology information</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_external_ontology_info</span><span class="p">()</span>
+
+<div class="viewcode-block" id="FairSheetParser.parse_namespace">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_namespace">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_namespace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parses the namespace CSV file and updates the RDFLib graph with namespace bindings.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple: A tuple containing:</span>
+<span class="sd">                - dict: A dictionary of namespace prefixes and their corresponding base URIs.</span>
+<span class="sd">                - dict: A dictionary of the ontology OWL file URI and its corresponding base URI.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">namespace_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">ontology_info_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__namespace_path</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">namespace_file</span><span class="p">:</span>
+            <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">namespace_file</span><span class="p">)</span>
+            <span class="nb">next</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+                <span class="n">prefix_name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Prefix Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="n">namespace_dict</span><span class="p">[</span><span class="n">prefix_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Ontology URL&quot;</span><span class="p">])</span>
+                <span class="n">ontology_info_dict</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Ontology Info&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Ontology URL&quot;</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">prefix_name</span><span class="p">,</span> <span class="n">namespace_dict</span><span class="p">[</span><span class="n">prefix_name</span><span class="p">])</span>
+
+            <span class="n">namespace_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">namespace_dict</span><span class="p">,</span> <span class="n">ontology_info_dict</span></div>
+
+
+<div class="viewcode-block" id="FairSheetParser.parse_entities">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_entities">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parses the entity CSV file and updates the RDFLib and Graphviz graphs with the terms, definitions, and other information specified in the CSV file.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary containing processed entities and their URIs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">entitiesCreated</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">entities_to_process</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__entity_path</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">entity_file</span><span class="p">:</span>
+            <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">entity_file</span><span class="p">)</span>
+            <span class="nb">next</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+                <span class="n">entity</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span>
+                <span class="n">ontology_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">ontology_namespace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_base_uri</span>
+                    <span class="n">entity_uri</span> <span class="o">=</span> <span class="n">ontology_namespace</span><span class="p">[</span><span class="n">Literal</span><span class="p">(</span><span class="n">entity</span><span class="p">)]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ontology_namespace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+                    <span class="n">entity_uri</span> <span class="o">=</span> <span class="n">ontology_namespace</span><span class="p">[</span><span class="n">Literal</span><span class="p">(</span><span class="n">entity</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])]</span>
+
+                <span class="n">entities_to_process</span><span class="p">[</span><span class="n">entity</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Variable Name&quot;</span><span class="p">],</span>
+                    <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Parent Variable&quot;</span><span class="p">],</span>
+                    <span class="s1">&#39;definition&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Definition of Variable&quot;</span><span class="p">],</span>
+                    <span class="s1">&#39;alt_names&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Alternative Name(s)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">),</span>
+                    <span class="s1">&#39;fullName&#39;</span><span class="p">:</span> <span class="n">entity</span><span class="p">,</span>
+                    <span class="s1">&#39;unit&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Unit&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+
+                <span class="n">entitiesCreated</span><span class="p">[</span><span class="n">entity</span><span class="p">]</span> <span class="o">=</span> <span class="n">entity_uri</span>
+
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">entity_uri</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;mds:&quot;</span> <span class="o">+</span> <span class="n">entity</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;filled&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">entity_uri</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">entity</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;filled&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">entities_to_process</span><span class="p">):</span>
+                <span class="n">entity_uri</span> <span class="o">=</span> <span class="n">entitiesCreated</span><span class="p">[(</span><span class="n">entity</span><span class="p">[</span><span class="s2">&quot;fullName&quot;</span><span class="p">])]</span>
+                <span class="n">entity_graphviz_id</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">entity_uri</span><span class="p">)</span>
+                <span class="n">entity_subclassOf_box_id</span> <span class="o">=</span> <span class="s2">&quot;superclassOf&quot;</span> <span class="o">+</span> <span class="n">entity_graphviz_id</span>
+                <span class="n">entity_unit_id</span> <span class="o">=</span> <span class="n">entity_graphviz_id</span> <span class="o">+</span> <span class="s2">&quot;unit&quot;</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">Class</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])))</span>
+
+                <span class="k">if</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">namespace_unit</span><span class="p">,</span> <span class="n">unit_unit</span> <span class="o">=</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+                    <span class="n">unit_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[(</span><span class="n">namespace_unit</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()][</span><span class="n">unit_unit</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">URIRef</span><span class="p">(</span><span class="s2">&quot;https://w3id.org/pmd/co/unit&quot;</span><span class="p">),</span> <span class="n">unit_uri</span><span class="p">))</span>
+
+                <span class="k">if</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;alt_names&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">altName</span> <span class="ow">in</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;alt_names&#39;</span><span class="p">]:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">altLabel</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">altName</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">altLabel</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)))</span>
+
+                <span class="k">if</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;definition&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">definition</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;definition&#39;</span><span class="p">])))</span>
+
+                <span class="k">if</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;parent&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">entities_to_process</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;parent&#39;</span><span class="p">])):</span>
+                    <span class="n">parent_uri</span> <span class="o">=</span> <span class="n">entitiesCreated</span><span class="p">[(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;parent&#39;</span><span class="p">])]</span>
+                    <span class="n">parent_graphviz_id</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">parent_uri</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">subClassOf</span><span class="p">,</span> <span class="n">parent_uri</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">entity_subclassOf_box_id</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;subclass of&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">parent_graphviz_id</span><span class="p">,</span> <span class="n">entity_subclassOf_box_id</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;dashed, bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">entity_subclassOf_box_id</span><span class="p">,</span> <span class="n">entity_graphviz_id</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;dashed, bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__include_valuetype_graphviz_edges</span> <span class="ow">and</span> <span class="n">entity</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">entity_unit_id</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">entity</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">entity_graphviz_id</span><span class="p">,</span> <span class="n">entity_unit_id</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">entity_unit_id</span><span class="p">,</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span>
+
+                <span class="k">elif</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;parent&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">parent_uri</span> <span class="o">=</span> <span class="n">entitiesCreated</span><span class="p">[</span><span class="n">entity</span><span class="p">[</span><span class="s2">&quot;parent&quot;</span><span class="p">]]</span>
+                    <span class="n">parent_graphviz_id</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">parent_uri</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">entity_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">subClassOf</span><span class="p">,</span> <span class="n">parent_uri</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">entity_subclassOf_box_id</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;subclass of&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">parent_graphviz_id</span><span class="p">,</span> <span class="n">entity_subclassOf_box_id</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;dashed, bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">entity_subclassOf_box_id</span><span class="p">,</span> <span class="n">entity_graphviz_id</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;dashed, bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__include_valuetype_graphviz_edges</span> <span class="ow">and</span> <span class="n">entity</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">entity_unit_id</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">entity</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">entity_graphviz_id</span><span class="p">,</span> <span class="n">entity_unit_id</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">entity_unit_id</span><span class="p">,</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span>
+
+                <span class="n">entities_to_process</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">entity</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">])</span>
+                <span class="k">return</span> <span class="n">entity</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">entities_to_process</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+                <span class="n">dfs</span><span class="p">(</span><span class="n">entities_to_process</span><span class="p">[</span><span class="n">entity</span><span class="p">],</span> <span class="n">entities_to_process</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">entitiesCreated</span></div>
+
+
+    <span class="c1"># def parse_values_csv(self):</span>
+    <span class="c1">#     &quot;&quot;&quot;</span>
+    <span class="c1">#     Method to parse the values CSV file.</span>
+
+    <span class="c1">#     Returns:</span>
+    <span class="c1">#         dict: Dictionary mapping ontology names to their base URIs.</span>
+    <span class="c1">#     &quot;&quot;&quot;</span>
+
+    <span class="c1">#     values_dict = {}</span>
+    <span class="c1">#     with open(self.__values_path, newline=&#39;&#39;) as values_file:</span>
+    <span class="c1">#         csv_reader = csv.DictReader(values_file)</span>
+    <span class="c1">#         count = 1</span>
+    <span class="c1">#         existing_objects = {}</span>
+    <span class="c1">#         column_vars = []</span>
+    <span class="c1">#         column_obj_indices = []</span>
+    <span class="c1">#         column_obj_start_index = 0</span>
+    <span class="c1">#         column_obj_end_index = 0</span>
+    <span class="c1">#         current_obj = None</span>
+
+    <span class="c1">#         # Iterate over each column in the CSV file</span>
+    <span class="c1">#         for column in csv_reader.fieldnames:</span>
+    <span class="c1">#             # Extract domain and relationship from column header using regex patterns</span>
+    <span class="c1">#             domain_pattern = r&#39;\((.*?)\-\&gt;&#39;</span>
+    <span class="c1">#             relationship_pattern = r&#39;^([^()]*)&#39;</span>
+    <span class="c1">#             domain = re.search(domain_pattern, column).group(1)</span>
+    <span class="c1">#             relationship = re.search(relationship_pattern, column).group(1)</span>
+    <span class="c1">#             column_vars.append({&#39;domain&#39;: domain, &#39;relationship&#39;: relationship})</span>
+    <span class="c1">#             if current_obj is None:</span>
+    <span class="c1">#                 current_obj = domain</span>
+    <span class="c1">#                 column_obj_start_index = 0</span>
+    <span class="c1">#             elif current_obj != domain:</span>
+    <span class="c1">#                 column_obj_indices.append((column_obj_start_index, column_obj_end_index-1))</span>
+    <span class="c1">#                 column_obj_start_index = column_obj_end_index</span>
+    <span class="c1">#             column_obj_end_index += 1</span>
+    <span class="c1">#         column_obj_indices.append((column_obj_start_index, column_obj_end_index-1))</span>
+
+    <span class="c1">#         # Iterate over each row in the CSV file</span>
+    <span class="c1">#         for row in csv_reader:</span>
+    <span class="c1">#             curr_objects = {}</span>
+    <span class="c1">#             row_keys = list(row.keys())</span>
+    <span class="c1">#             row_values = list(row.values())</span>
+
+    <span class="c1">#             # Iterate over each group of columns representing an object</span>
+    <span class="c1">#             for i, j in column_obj_indices:</span>
+    <span class="c1">#                 # Generate a unique hash for the object based on column variables and row data</span>
+    <span class="c1">#                 object_hash = hash(str(column_vars[i:j+1]) + str(row_keys[i:j+1] + row_values[i:j+1]))</span>
+    <span class="c1">#                 domain = column_vars[i][&#39;domain&#39;]</span>
+
+    <span class="c1">#                 # Check if the object already exists, if not, create a new RDF instance</span>
+    <span class="c1">#                 if object_hash not in existing_objects:</span>
+    <span class="c1">#                     entity_uri = self.__entity_uris[domain]</span>
+    <span class="c1">#                     instance_key = URIRef(entity_uri + str(count))</span>
+    <span class="c1">#                     self.__rdflib_graph.add((instance_key, RDF.type, URIRef(entity_uri)))</span>
+    <span class="c1">#                     existing_objects[object_hash] = instance_key</span>
+    <span class="c1">#                 else:</span>
+    <span class="c1">#                     instance_key = existing_objects[object_hash]</span>
+
+    <span class="c1">#                 # Add RDF triples for each property of the object</span>
+    <span class="c1">#                 for index in range(i,j+1):</span>
+    <span class="c1">#                     relationship_val = self.__data_property_uris[column_vars[index][&#39;relationship&#39;]]</span>
+    <span class="c1">#                     self.__rdflib_graph.add((URIRef(instance_key), URIRef(relationship_val), Literal(row_values[index])))</span>
+    <span class="c1">#                 curr_objects[domain] = instance_key</span>
+
+    <span class="c1">#             # Add RDF triples for relationships specified in __individual_relationship</span>
+    <span class="c1">#             for domain in self.__individual_relationship.keys():</span>
+    <span class="c1">#                 for relationshipRange, relationship in self.__individual_relationship[domain]:</span>
+    <span class="c1">#                     if domain not in curr_objects.keys():</span>
+    <span class="c1">#                         entity_uri = self.__entity_uris[domain]</span>
+    <span class="c1">#                         instance_key = URIRef(entity_uri + str(count))</span>
+    <span class="c1">#                         self.__rdflib_graph.add((instance_key, RDF.type, URIRef(entity_uri)))</span>
+    <span class="c1">#                         curr_objects[domain] = instance_key</span>
+    <span class="c1">#                     if relationshipRange not in curr_objects.keys():</span>
+    <span class="c1">#                         entity_uri = self.__entity_uris[relationshipRange]</span>
+    <span class="c1">#                         instance_key = URIRef(entity_uri + str(count))</span>
+    <span class="c1">#                         self.__rdflib_graph.add((instance_key, RDF.type, URIRef(entity_uri)))</span>
+    <span class="c1">#                         curr_objects[relationshipRange] = instance_key</span>
+    <span class="c1">#                     self.__rdflib_graph.add((URIRef(curr_objects[domain]), relationship, URIRef(curr_objects[relationshipRange])))</span>
+                    
+    <span class="c1">#             count+=1</span>
+
+    <span class="c1">#         # Add ontology name and base URI to the values dictionary</span>
+    <span class="c1">#         values_dict[self.__ontology_name] = self.__ontology_base_uri</span>
+
+    <span class="c1">#     return values_dict</span>
+
+<div class="viewcode-block" id="FairSheetParser.parse_object_properties">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_object_properties">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_object_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parses the relationship CSV file and updates the RDFLib and Graphviz graphs with the terms, definitions, and other information about relationships specified in the CSV file.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary containing processed object properties and their corresponding URIs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__obj_property_path</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">obj_property_file</span><span class="p">:</span>
+            <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">obj_property_file</span><span class="p">)</span>
+            <span class="nb">next</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>
+
+            <span class="n">obj_property_list</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+                <span class="n">obj_property_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="p">][</span><span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Relationship Name&quot;</span><span class="p">])]</span>
+                <span class="n">graphviz_obj_prop_uri</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">obj_property_uri</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">])</span>
+
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">obj_property_uri</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">obj_property_list</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">ObjectProperty</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">graphviz_obj_prop_uri</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Relationship Name&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Relationship Name&quot;</span><span class="p">])))</span>
+                    
+                    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Definition&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">definition</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Definition&quot;</span><span class="p">])))</span>
+                    
+                    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Alternative Name(s)&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">alternativeNamesList</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Alternative Name(s)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">alternativeNamesList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">altName</span> <span class="ow">in</span> <span class="n">alternativeNamesList</span><span class="p">:</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">altLabel</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">altName</span><span class="p">)))</span>
+
+                    <span class="n">obj_property_list</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;fullName&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">obj_property_uri</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">ObjectProperty</span><span class="p">))</span>
+
+                <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">obj_property_uri</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">obj_property_list</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+                    <span class="n">obj_property_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()][</span><span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Relationship Name&quot;</span><span class="p">])]</span>
+                    <span class="n">graphviz_obj_prop_uri</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">obj_property_uri</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">ObjectProperty</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">graphviz_obj_prop_uri</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Relationship Name&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+                    <span class="n">obj_property_list</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;fullName&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">obj_property_uri</span>
+                <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">obj_property_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]][</span><span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Relationship Name&quot;</span><span class="p">])]</span>
+                    <span class="n">graphviz_obj_prop_uri</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">obj_property_uri</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">])</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">domain</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]]))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">obj_property_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">]]))</span>
+
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__individual_relationship</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__individual_relationship</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__individual_relationship</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]]</span> <span class="o">+=</span> <span class="p">[(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">],</span> <span class="n">obj_property_uri</span><span class="p">)]</span>
+
+                <span class="n">graphviz_domain</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]])</span>
+                <span class="n">graphviz_range</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">]])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">graphviz_domain</span><span class="p">,</span> <span class="n">graphviz_obj_prop_uri</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">graphviz_obj_prop_uri</span><span class="p">,</span> <span class="n">graphviz_range</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">obj_property_list</span></div>
+
+
+<div class="viewcode-block" id="FairSheetParser.add_external_ontology_info">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.add_external_ontology_info">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_external_ontology_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds external ontology information to all terms in the RDFLib graph that belonged to other ontologies in the FAIR sheets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">ontology_file</span><span class="p">,</span> <span class="n">base_uri</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">graph</span> <span class="o">=</span> <span class="n">rdfGraph</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ontology_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;ttl&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;http:&quot;</span> <span class="ow">in</span> <span class="n">base_uri</span><span class="p">:</span>
+                <span class="n">http_uri</span> <span class="o">=</span> <span class="n">base_uri</span>
+                <span class="n">https_uri</span> <span class="o">=</span> <span class="n">base_uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;https&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">http_uri</span> <span class="o">=</span> <span class="n">base_uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https&quot;</span><span class="p">,</span> <span class="s2">&quot;http&quot;</span><span class="p">)</span>
+                <span class="n">https_uri</span> <span class="o">=</span> <span class="n">base_uri</span>
+
+            <span class="n">referenced_terms</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">subj</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">subj</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">http_uri</span><span class="p">):</span>
+                    <span class="n">referenced_terms</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">subj</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">http_uri</span><span class="p">):])</span>
+                <span class="k">if</span> <span class="n">subj</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">https_uri</span><span class="p">):</span>
+                    <span class="n">referenced_terms</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">subj</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">https_uri</span><span class="p">):])</span>
+            
+            <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">referenced_terms</span><span class="p">:</span>
+                <span class="n">term</span> <span class="o">=</span> <span class="n">URIRef</span><span class="p">(</span><span class="n">base_uri</span> <span class="o">+</span> <span class="n">term</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">triples</span><span class="p">((</span><span class="n">term</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">definition</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">triples</span><span class="p">((</span><span class="n">term</span><span class="p">,</span> <span class="n">DCTERMS</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">triples</span><span class="p">((</span><span class="n">term</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">altLabel</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">triples</span><span class="p">((</span><span class="n">term</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="FairSheetParser.parse_data_properties">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.parse_data_properties">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_data_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parses data properties from a CSV file and updates the RDFLib and Graphviz graphs.</span>
+
+<span class="sd">        This method reads data properties from a specified CSV file and processes each row to </span>
+<span class="sd">        generate URIs for data properties, create RDF triples, and update a Graphviz graph. </span>
+<span class="sd">        The method handles different namespaces based on the ontology specified in the CSV rows.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: A dictionary containing processed data properties and their URIs.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            FileNotFoundError: If the data property CSV file cannot be found.</span>
+<span class="sd">            csv.Error: If there is an error reading the CSV file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;[^\w\s]&#39;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__data_property_path</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_property_file</span><span class="p">:</span>
+            <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">data_property_file</span><span class="p">)</span>
+            <span class="nb">next</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>
+
+            <span class="n">data_property_list</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+                <span class="c1"># Generate URI for the data property</span>
+                <span class="n">data_property_uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span><span class="p">][</span><span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ValueType Name&quot;</span><span class="p">])]</span>
+                <span class="n">graphviz_data_prop_uri</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">data_property_uri</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">])</span>
+
+                <span class="c1"># If conditions met, adds triples representing the data property with its type, label, definition, and alternative names</span>
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">data_property_uri</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data_property_list</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">DatatypeProperty</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ValueType Name&quot;</span><span class="p">])))</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__include_valuetype_graphviz_edges</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">graphviz_data_prop_uri</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ValueType Name&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+                    
+                    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Definition of Property&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">definition</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Definition&quot;</span><span class="p">]))</span>
+                    
+                    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Alternative Name(s)&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                        <span class="n">alternativeNamesList</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Alternative Name(s)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">altName</span> <span class="ow">in</span> <span class="n">alternativeNamesList</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">altLabel</span><span class="p">,</span> <span class="n">Literal</span><span class="p">(</span><span class="n">altName</span><span class="p">)))</span>
+
+                    <span class="n">data_property_list</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;fullName&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data_property_uri</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">DatatypeProperty</span><span class="p">))</span>
+
+                <span class="c1"># Else, it uses a different namespace URI based on the ontology specified in the row.    </span>
+                <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">data_property_uri</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data_property_list</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+                    <span class="n">data_property_uri</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__namespace_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Belongs to Ontology&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()])[</span><span class="n">Literal</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ValueType Name&quot;</span><span class="p">])]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">OWL</span><span class="o">.</span><span class="n">DatatypeProperty</span><span class="p">))</span>
+                    <span class="n">data_property_list</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;fullName&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data_property_uri</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__include_valuetype_graphviz_edges</span><span class="p">:</span>
+                        <span class="n">graphviz_data_prop_uri</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">data_property_uri</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">])</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">graphviz_data_prop_uri</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ValueType Name&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+                
+                <span class="c1"># Adds triples representing the domain and range of the object property </span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">domain</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]]))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">data_property_uri</span><span class="p">,</span> <span class="n">RDFS</span><span class="o">.</span><span class="n">range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__datatype_conversions</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">]]))</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__include_valuetype_graphviz_edges</span><span class="p">:</span>
+                    <span class="n">graphviz_domain</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__entity_uris</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Domain&quot;</span><span class="p">]])</span>
+                    <span class="n">graphviz_range</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">graphviz_data_prop_uri</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">]))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">graphviz_range</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">graphviz_domain</span><span class="p">,</span> <span class="n">graphviz_data_prop_uri</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">graphviz_data_prop_uri</span><span class="p">,</span> <span class="n">graphviz_range</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">data_property_list</span></div>
+
+    
+<div class="viewcode-block" id="FairSheetParser.get_rdf_graph">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_rdf_graph">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_rdf_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the current RDFLib Graph</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            rdflib.Graph: The current rdflib graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__rdflib_graph</span></div>
+
+
+<div class="viewcode-block" id="FairSheetParser.get_graphviz_graph">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_graphviz_graph">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_graphviz_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the current Graphviz Graph</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            graphviz.Digraph: The current Graphviz graph</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__graphviz_graph</span></div>
+
+    
+<div class="viewcode-block" id="FairSheetParser.get_ontology_name">
+<a class="viewcode-back" href="../../SDLEFairPackage.html#SDLEFairPackage.fair_sheet_parser.FairSheetParser.get_ontology_name">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_ontology_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the user-specified name of the ontology</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The user-specified name of the ontology</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ontology_name</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Alexander Harding Bradley, Kiefer Lin, Priyan Rajamohan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
