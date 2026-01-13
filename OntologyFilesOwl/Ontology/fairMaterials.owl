@@ -1,0 +1,2824 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/weiqi/ontologies/2023/0/MDO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/weiqi/ontologies/2023/0/MDO">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://gitlab.cc-asp.fraunhofer.de/EMI_datamanagement/LPBFO/-/raw/master/LPBFO.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is an ontology for Polymer Additive Manufacturing.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is ontology for PV Cell.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is ontology for PV Inverter.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000011"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/kristen/ontologies/2023/0/metal-am#metalam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ChemicalProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ElectronicSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ExperimentalData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#FTIRSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#FluorescenceSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Intensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MeasurementTechnique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MechanicalProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#OpticalSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Phase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#RamanSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Results"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ScatteringSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Thickness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#UVvisSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#VibrationalSpectroscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Wavelength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Width"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#sampleID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#Results"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#absorbanceValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#afinityElectrophoresis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteCharge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteMass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#appliedVoltage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#bufferComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#bufferPh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryCoating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryDiameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryElectrophoresis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryLength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#columnTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#detectorType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#freeFlowElectrophoresis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#gas-phaseElectrophoreticMobilityMolecularAnalysis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ionName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ionType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#isoeletricFocusing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#isotachophoresis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#mobility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#pka"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#pulse-fieldElectrophoresis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleId"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sievingElectrophoresis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#zetaPotential"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#AirGap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BasePolymer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BuildGeometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BuildOrientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ChemicalComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#CompositeRatio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ContourWidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Density"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#DepositionSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#EnvironmentTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ExSitu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ExtrusionTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#FillerMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#FlowRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#HighSpeedCamera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#IRCamera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InSitu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InfillPercentage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#LayerThickness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MeasurementTechnique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MechanicalProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#NozzleDiameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#PlatformTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#PrintMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Profilometer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#RasterAngle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#RasterPattern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Viscosity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#WidthBot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#WidthTop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Alloy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Composition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#DataSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#DeviceName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Diameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Displacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#DisplacementRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#EndDisplacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#EndLoad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#EndTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FileName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FilePath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FovHeight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FovWidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Hardness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Load"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Methodology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Namlt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#RelativeHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Resolution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SampleProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SensitizationDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SensitizationTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SequenceNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Series"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SiteName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Solution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SolutionConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StackNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StartDisplacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StartLoad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StartTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StrainMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StrainRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Supplier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Technique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Temper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timeseries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#VoxelResolution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#xct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellCount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellTechnologyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#EncapsulantMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FluorescencePattern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FrameColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Height"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Mass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ModuleEfficiency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PVModule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PowerSTC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdBacksheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdEncapsulant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdMfr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#SampleID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#TemperatureNOCT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Weight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Width"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Detector_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Experiment_Setting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Meta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Log_Files"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Logs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Patterns"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Sample_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Ti_mater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Wavelength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Width"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#XRD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#btm_pzo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#btm_rota"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#cesr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#crys_rtrn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#crys_sply"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#data_xrd"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#diod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#fst_shtr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#hepp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#img_stck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#indx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#load_cll"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#load_scrw"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#mo_stab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#said"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#summary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#sync_cnt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#tif_path"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#top_pzo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#top_rota"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#AStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Albedo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#BStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#BacksheetMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellCountX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellCountY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeXGap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeYGap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Elevation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ExposureTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FTIR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FilenameFTIR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FilenameRaman"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss20"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss60"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss85"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#GroundCover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstalledDate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstrumentInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Intensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#JunctionPosition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#LStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Latitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Longitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentPositionX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentPositionY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentTimeGloss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentTimeYI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeXGap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeYGap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeZGap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Pitch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Raman"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#RowCount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Rows"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Standart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Subrow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SubrowCount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SubrowName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SurveyDate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Tube"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#TubeDiameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#TubeType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Wavenumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Weather"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellCutType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellPosition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellShape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellTechnologyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Column"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#MissingCornerArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#PVCell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdModule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Row"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#SampleID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Side"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Width"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Capacitor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CircuitBoardType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentACMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentACNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentDCMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentShortCircuitMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Diode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyCECWtdVoltageMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyCECWtdVoltageMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyCECWtdVoltageNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyVoltageMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyVoltageMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyVoltageNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiencyCEC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiencyIEC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiencyMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterStyle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterSwitchoverTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTInputStrings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVInverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVModule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerACApparentMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerACApparentNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerACNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerDCContinuousMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerFactorMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerFactorMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerLevelCECTest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdDatasheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdMfr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Resistor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#SampleID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageACMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageACMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageACNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageDCMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageDCMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageDCNom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageMPPTMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageMPPTMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00136"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00169"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_build_orientation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_characterization_measurement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_material_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_method"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_parameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_shape"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_temperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#IsHybrid"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ChemicalProperties"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ElectronicSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MeasurementTechnique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ExperimentalData"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Results"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#FTIRSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#VibrationalSpectroscopy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#FluorescenceSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MeasurementTechnique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Intensity"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ExperimentalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Material"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MeasurementTechnique"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#OpticalSpectroscopy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MechanicalProperties"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Phase"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ChemicalProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#RamanSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ScatteringSpectroscopy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Results"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#OpticalSpectroscopy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleInformation"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Results"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleParameter"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ScatteringSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MeasurementTechnique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Thickness"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#UVvisSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ElectronicSpectroscopy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#VibrationalSpectroscopy"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#MeasurementTechnique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Wavelength"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#ExperimentalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Width"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#SampleParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#sampleID"/>
+        <Class IRI="http://www.semanticweb.org/leeanjo/ontologies/2023/0/optical-spc#Results"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#Results"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryElectrophoresis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#absorbanceValue"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#afinityElectrophoresis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteCharge"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteConcentration"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteMass"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#analyteSize"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#appliedVoltage"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#bufferComposition"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#bufferPh"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryCoating"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryDiameter"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryElectrophoresis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryLength"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryMaterial"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#columnTemperature"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#detectorType"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryElectrophoresis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#freeFlowElectrophoresis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#gas-phaseElectrophoreticMobilityMolecularAnalysis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ion"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#Results"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ionName"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ionType"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#isoeletricFocusing"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#isotachophoresis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#mobility"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#pka"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#pulse-fieldElectrophoresis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleId"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryElectrophoresis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sievingElectrophoresis"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#electrophoresisType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#time"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#ion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#zetaPotential"/>
+        <Class IRI="http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#experimentMetadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#AirGap"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BasePolymer"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ChemicalComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BuildGeometry"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BuildOrientation"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ChemicalComposition"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#CompositeRatio"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ChemicalComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ContourWidth"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Density"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#DepositionSpeed"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#EnvironmentTemperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ExSitu"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MeasurementTechnique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ExtrusionTemperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#FillerMaterial"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#ChemicalComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#FlowRate"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#HighSpeedCamera"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InSitu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#IRCamera"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InSitu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InSitu"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MeasurementTechnique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InfillPercentage"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#LayerThickness"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MeasurementTechnique"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MechanicalProperties"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#NozzleDiameter"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#PlatformTemperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#PrintMethod"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Profilometer"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#InSitu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#RasterAngle"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#RasterPattern"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Temperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Viscosity"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#WidthBot"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#WidthTop"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#manufacturer"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#polymerAM"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#test"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Address"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Alloy"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Composition"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Data"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#xct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#DataSize"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Date"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#DeviceName"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Diameter"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Displacement"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timeseries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#DisplacementRate"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#EndDisplacement"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#EndLoad"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#EndTime"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Energy"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#xct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FileName"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FilePath"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FovHeight"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#FovWidth"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Hardness"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Length"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Load"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timeseries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Material"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#xct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Method"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Methodology"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Namlt"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#RelativeHumidity"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Resolution"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SampleProperties"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SensitizationDuration"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SensitizationTemperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SequenceNumber"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Series"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Shape"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Site"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SiteName"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Solution"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SolutionConcentration"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StackNumber"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StartDisplacement"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StartLoad"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StartTime"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StrainMax"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#StrainRate"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Supplier"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Technique"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Temper"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timeseries"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timestamp"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Timeseries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#VoxelResolution"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetColor"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetMaterial"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellColor"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellCount"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellMaterial"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellTechnologyType"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#EncapsulantMaterial"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdEncapsulant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FluorescencePattern"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FrameColor"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Height"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Length"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Mass"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ModuleEfficiency"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PowerSTC"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdBacksheet"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCode"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdEncapsulant"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdMfr"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PVModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#SampleID"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#TemperatureNOCT"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Weight"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Width"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Attributes"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Energy"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Detector_Attributes"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Experiment_Setting"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#XRD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Attributes"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Patterns"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Meta"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Patterns"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Length"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Length"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Sample_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Log_Files"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Logs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Logs"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Patterns"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Patterns"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#XRD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Sample_Attributes"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Ti_mater"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Sample_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Wavelength"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Width"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Width"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Sample_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#btm_pzo"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#btm_rota"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#cesr"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#crys_rtrn"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#crys_sply"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#data_xrd"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#diod"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#fst_shtr"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#hepp"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic1"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic2"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic3"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ico"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#img_stck"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#indx"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#load_cll"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#load_scrw"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#mo_stab"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#said"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#summary"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#sync_cnt"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#tif_path"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#time"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#top_pzo"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#top_rota"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#AStar"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Albedo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#BStar"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#BacksheetMaterial"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Subrow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellCountX"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellCountY"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeX"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeXGap"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeY"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#CellSizeYGap"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Elevation"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ExposureTime"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FTIR"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FilenameFTIR"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FilenameRaman"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss20"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss60"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss85"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#GroundCover"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstalledDate"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstrumentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FTIR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstrumentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstrumentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Raman"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#InstrumentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Intensity"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FTIR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Intensity"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Raman"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#JunctionPosition"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#LStar"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Latitude"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Longitude"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FTIR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Gloss"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Raman"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentPositionX"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentPositionY"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentTimeGloss"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentTimeYI"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Rows"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleName"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeX"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeXGap"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeY"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeYGap"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#ModuleSizeZGap"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Module"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Pitch"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Raman"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#RowCount"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Rows"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#MeasurmentInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteName"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Standart"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Subrow"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Rows"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SubrowCount"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Subrow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SubrowName"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Subrow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SurveyDate"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#SiteInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Tube"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Rows"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#TubeDiameter"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Tube"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#TubeType"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Tube"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Wavenumber"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#FTIR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Wavenumber"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Raman"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#Weather"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YI"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#YellownessIndex"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVBacksheet.owl#PVBacksheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellArea"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellCutType"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellPosition"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellShape"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellTechnologyType"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Column"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellPosition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Length"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#MissingCornerArea"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#PVCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdModule"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#PVCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Row"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellPosition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#SampleID"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#ProdCell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Side"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#CellPosition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Width"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVCell#Dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Capacitor"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CircuitBoardType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CircuitBoardType"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentACMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentACNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentDCMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CurrentShortCircuitMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Diode"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CircuitBoardType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyCECWtdVoltageMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyCECWtdVoltageMin"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyCECWtdVoltageNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyVoltageMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyVoltageMin"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#EfficiencyVoltageNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiencyCEC"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiencyIEC"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiencyMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterStyle"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterSwitchoverTime"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTInputStrings"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTNumber"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVModule"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVSystem"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerACApparentMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerACApparentNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerACNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerDCContinuousMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerFactorMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerFactorMin"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PowerLevelCECTest"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#InverterEfficiency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdDatasheet"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdMfr"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdName"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdType"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Product"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#PVInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#Resistor"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#CircuitBoardType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#SampleID"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageACMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageACMin"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageACNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ACOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageDCMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageDCMin"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageDCNom"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#DCInput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageMPPTMax"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#VoltageMPPTMin"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#MPPTS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00005"/>
+        <Class IRI="http://www.semanticweb.org/kristen/ontologies/2023/0/metal-am#metalam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00030"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00065"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00716"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00066"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00716"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00067"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00716"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00512"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00511"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00800"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00046"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00036"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00117"/>
+        <Class IRI="http://www.semanticweb.org/kristen/ontologies/2023/0/metal-am#metalam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00136"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00169"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00751"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00170"/>
+        <Class IRI="https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00751"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00226"/>
+        <Class IRI="http://www.semanticweb.org/kristen/ontologies/2023/0/metal-am#metalam"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetColor"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetMaterial"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellColor"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellMaterial"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellTechnologyType"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellCount"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FluorescencePattern"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FrameColor"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ModuleEfficiency"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PowerSTC"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdBacksheet"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCode"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdEncapsulant"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdMfr"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#SampleID"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#TemperatureNOCT"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Height"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Length"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Mass"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Weight"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Width"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PVModule"/>
+        <Class IRI="http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Beamline_Energy"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#Wavelength"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#btm_pzo"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#btm_rota"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#cesr"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#crys_rtrn"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#crys_sply"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#data_xrd"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#diod"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#fst_shtr"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#hepp"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic1"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic2"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ic3"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#ico"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#load_cll"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#load_scrw"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#mo_stab"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#summary"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#sync_cnt"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#time"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#top_pzo"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#top_rota"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#img_stck"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#indx"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#said"/>
+        <Class IRI="http://www.semanticweb.org/ywq93/ontologies/2023/0/XRD#tif_path"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_build_orientation"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_characterization_measurement"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_manufacturer"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_material_type"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_method"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_parameter"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_shape"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_temperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#sampleID"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_build_orientation"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BuildOrientation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_characterization_measurement"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#MeasurementTechnique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_manufacturer"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#manufacturer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_material_type"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Material"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_method"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#PrintMethod"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_parameter"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#SlicingParameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_shape"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#BuildGeometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_temperature"/>
+        <Class IRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#Temperature"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#IsHybrid"/>
+        <Class IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#ProdInverter"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="https://cwrusdle.bitbucket.io/Ontology/PVInverter#IsHybrid"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000011</IRI>
+        <Literal>printerMetaData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#test</IRI>
+        <Literal>MeasurementTechnique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetColor</IRI>
+        <Literal>Color of the backsheet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#BacksheetMaterial</IRI>
+        <Literal>Material the backsheet is made out of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellColor</IRI>
+        <Literal>Physical color of the solar cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellCount</IRI>
+        <Literal>The number of cells in a module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellMaterial</IRI>
+        <Literal>Cell material type (mono-silicon, perovskite, etc)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#CellTechnologyType</IRI>
+        <Literal>Cell technology type (PERC, Al-BSF, etc)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Dimension</IRI>
+        <Literal>Dimensions of an object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#EncapsulantMaterial</IRI>
+        <Literal>Material the encapsulant is made out of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FluorescencePattern</IRI>
+        <Literal>Pattern of modules under UV Fluorescence (square or ring)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#FrameColor</IRI>
+        <Literal>The color of the module frame</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Height</IRI>
+        <Literal>The height of the parent object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Length</IRI>
+        <Literal>The length of the parent object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Mass</IRI>
+        <Literal>The mass of the parent object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ModuleEfficiency</IRI>
+        <Literal>The efficiency of the solar module at standard test condition (STC)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#PowerSTC</IRI>
+        <Literal>DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdBacksheet</IRI>
+        <Literal>A backsheet of a photovoltaic module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCell</IRI>
+        <Literal>A cell of a photovoltaic module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdCode</IRI>
+        <Literal>A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdEncapsulant</IRI>
+        <Literal>An encapsulant of a photovoltaic module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdMfr</IRI>
+        <Literal>Name of the product or equipment manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#ProdModule</IRI>
+        <Literal>A solar module product</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#TemperatureNOCT</IRI>
+        <Literal>The nominal operating cell temperature (NOCT) of a solar module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Weight</IRI>
+        <Literal>The weight of the parent object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/will/ontologies/2023/0/untitled-ontology-5#Width</IRI>
+        <Literal>The width of the parent object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00800</IRI>
+        <Literal xml:lang="en">PostBuildMetaConditions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00036</IRI>
+        <Literal xml:lang="en">Application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00136</IRI>
+        <Literal xml:lang="en">ExSituMeasurment</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

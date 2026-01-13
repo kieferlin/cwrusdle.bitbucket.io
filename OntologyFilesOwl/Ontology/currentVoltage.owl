@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#"
+     xml:base="https://cwrusdle.bitbucket.io/Ontology/currentVoltage"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://www.schema.org/">
+    <owl:Ontology rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage">
+        <rdfs:comment>This is an ontology for the current-voltage data acquisition method.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#CurrentShortCircuit -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#CurrentShortCircuit">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#ProdSpecficiations -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#ProdSpecficiations">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#equipmentType"/>
+        <rdfs:comment xml:lang="en">A single specification for a product</rdfs:comment>
+        <rdfs:label xml:lang="en">ProdSpecifications</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#TempRefCell -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#TempRefCell">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">Temperature of a reference cell.</rdfs:comment>
+        <rdfs:label xml:lang="en">TempRefCell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#VoltageOpenCircuit -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#VoltageOpenCircuit">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#analysis -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#analysis">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage"/>
+        <rdfs:comment xml:lang="en">The curve fitting and associated parameters created from the curve fitting.</rdfs:comment>
+        <rdfs:label xml:lang="en">analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#analysisMethod -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#analysisMethod">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#analysis"/>
+        <rdfs:comment xml:lang="en">The curve fitting and analysis method used to create the current voltage curve.</rdfs:comment>
+        <rdfs:label xml:lang="en">analysisMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#calibrationSettings -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#calibrationSettings">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">Unique settings of measurement equipment.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">calibrationSettings</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage">
+        <rdfs:comment xml:lang="en">A measurement method based on the current-voltage plot of photovoltaic systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">currentVoltage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#curves -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#curves">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage"/>
+        <rdfs:comment xml:lang="en">The base current voltage data that is to be used in the currentVoltage measurement method.</rdfs:comment>
+        <rdfs:label xml:lang="en">curves</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#equipmentType -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#equipmentType">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage"/>
+        <rdfs:comment xml:lang="en">The equipment used for the current voltage measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">equipmentType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#fillFactor -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#fillFactor">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters"/>
+        <rdfs:comment xml:lang="en">The ratio of the maximum power to the product of the short circuit current and open circuit voltage.</rdfs:comment>
+        <rdfs:label xml:lang="en">fillFactor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#flashDuration -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#flashDuration">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">The amount of time for a flash during currentVoltage measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">flashDuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#irradiance -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#irradiance">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">Measurement setting describing the intensity of the light energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">irradiance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#manufacturer -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#manufacturer">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#equipmentType"/>
+        <rdfs:comment xml:lang="en">The manufacturer of the product.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufacturer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#maximumPowerPoint -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#maximumPowerPoint">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters"/>
+        <rdfs:comment xml:lang="en">The point on the power curve that has the highest power output, or the product of the voltage and current.</rdfs:comment>
+        <rdfs:label xml:lang="en">maximumPowerPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage"/>
+        <rdfs:comment xml:lang="en">The settings for the equipment used to measure the current voltage.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurementSettings</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementTechnique -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementTechnique">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#currentVoltage"/>
+        <rdfs:comment xml:lang="en">The technique used to measure the CurrentVoltage data. The value can be dark, illuminated, or pseudo.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurementTechnique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#model -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#model">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#equipmentType"/>
+        <rdfs:comment xml:lang="en">The model of the product.</rdfs:comment>
+        <rdfs:label xml:lang="en">model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#analysis"/>
+        <rdfs:comment xml:lang="en">The extracted parameters from the current voltage measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">performanceParameters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#polarity -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#polarity">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">Positive or negative polarity for the voltage.</rdfs:comment>
+        <rdfs:label xml:lang="en">polarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#seriesResistance -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#seriesResistance">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters"/>
+        <rdfs:comment xml:lang="en">Equivalent resistance throughout the solar cell.</rdfs:comment>
+        <rdfs:label xml:lang="en">seriesResistance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#shuntResistance -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#shuntResistance">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#performanceParameters"/>
+        <rdfs:comment xml:lang="en">The slope of the dark current versus applied voltage.</rdfs:comment>
+        <rdfs:label xml:lang="en">shuntResistance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#spacialUniformity -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#spacialUniformity">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#ProdSpecficiations"/>
+        <rdfs:comment xml:lang="en">The measurement of how the irradiance varies over a defined area.</rdfs:comment>
+        <rdfs:label xml:lang="en">spacialUniformity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#spectralClass -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#spectralClass">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#ProdSpecficiations"/>
+        <rdfs:comment xml:lang="en">Definition of how well the distribution of irradiance among different wavelengths approximates natural sunlight.</rdfs:comment>
+        <rdfs:label xml:lang="en">spectralClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#sweepType -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#sweepType">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">The sweep method used for current voltage measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">sweepType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#temporalStability -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#temporalStability">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#ProdSpecficiations"/>
+        <rdfs:comment xml:lang="en">The output of a solar system at a certain spot, comparing the max irradiance and minimum irradiance.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">temporalStability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/currentVoltage#timeStamp -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#timeStamp">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/currentVoltage#measurementSettings"/>
+        <rdfs:comment xml:lang="en">The time at which the specific current voltage measurement took place.</rdfs:comment>
+        <rdfs:label xml:lang="en">timeStamp</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

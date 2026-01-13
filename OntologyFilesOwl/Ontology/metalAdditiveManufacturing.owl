@@ -1,0 +1,288 @@
+@prefix : <https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl> .
+
+<https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl> rdf:type owl:Ontology ;
+                                                                         rdfs:comment "This is an ontology for Metal Additive Manufacturing."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_build_orientation
+:has_build_orientation rdf:type owl:ObjectProperty ;
+                       rdfs:domain :sampleID ;
+                       rdfs:range :BuildOrientation .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_characterization_measurement
+:has_characterization_measurement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :sampleID ;
+                                  rdfs:range :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_manufacturer
+:has_manufacturer rdf:type owl:ObjectProperty ;
+                  rdfs:domain :sampleID ;
+                  rdfs:range :manufacturer .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_material_type
+:has_material_type rdf:type owl:ObjectProperty ;
+                   rdfs:domain :sampleID ;
+                   rdfs:range :MaterialType .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_printing_method
+:has_printing_method rdf:type owl:ObjectProperty ;
+                     rdfs:domain :sampleID ;
+                     rdfs:range :PrintMethod .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_printing_parameter
+:has_printing_parameter rdf:type owl:ObjectProperty ;
+                        rdfs:domain :sampleID ;
+                        rdfs:range :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_shape
+:has_shape rdf:type owl:ObjectProperty ;
+           rdfs:domain :sampleID ;
+           rdfs:range :BuildGeometry .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#has_temperature
+:has_temperature rdf:type owl:ObjectProperty ;
+                 rdfs:domain :sampleID ;
+                 rdfs:range :Temperature .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Accustic
+:Accustic rdf:type owl:Class ;
+          rdfs:subClassOf :InSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Application
+:Application rdf:type owl:Class ;
+             rdfs:subClassOf :metalAdditiveManufacturing .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#BaseMetal
+:BaseMetal rdf:type owl:Class ;
+           rdfs:subClassOf :ChemicalComposition .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#BuildGeometry
+:BuildGeometry rdf:type owl:Class ;
+               rdfs:subClassOf :metalAdditiveManufacturing .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#BuildOrientation
+:BuildOrientation rdf:type owl:Class ;
+                  rdfs:subClassOf :BuildGeometry .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#ChemicalComposition
+:ChemicalComposition rdf:type owl:Class ;
+                     rdfs:subClassOf :MaterialType .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#CompositeRatio
+:CompositeRatio rdf:type owl:Class ;
+                rdfs:subClassOf :ChemicalComposition .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#ContourWidth
+:ContourWidth rdf:type owl:Class ;
+              rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Density
+:Density rdf:type owl:Class ;
+         rdfs:subClassOf :MaterialType .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#DepositionSpeed
+:DepositionSpeed rdf:type owl:Class ;
+                 rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#EnvironmentTemperature
+:EnvironmentTemperature rdf:type owl:Class ;
+                        rdfs:subClassOf :Temperature .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#ExSitu
+:ExSitu rdf:type owl:Class ;
+        rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#FillerMaterial
+:FillerMaterial rdf:type owl:Class ;
+                rdfs:subClassOf :ChemicalComposition .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#FlowRate
+:FlowRate rdf:type owl:Class ;
+          rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#HighSpeedCamera
+:HighSpeedCamera rdf:type owl:Class ;
+                 rdfs:subClassOf :InSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#IRCamera
+:IRCamera rdf:type owl:Class ;
+          rdfs:subClassOf :InSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#InSitu
+:InSitu rdf:type owl:Class ;
+        rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#InfillPercentage
+:InfillPercentage rdf:type owl:Class ;
+                  rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Keyence
+:Keyence rdf:type owl:Class ;
+         rdfs:subClassOf :ExSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#LayerThickness
+:LayerThickness rdf:type owl:Class ;
+                rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#MaterialType
+:MaterialType rdf:type owl:Class ;
+              rdfs:subClassOf :metalAdditiveManufacturing .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#MeasurementTechnique
+:MeasurementTechnique rdf:type owl:Class ;
+                      rdfs:subClassOf :metalAdditiveManufacturing .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#MechanicalProperties
+:MechanicalProperties rdf:type owl:Class ;
+                      rdfs:subClassOf :MaterialType .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Metallography
+:Metallography rdf:type owl:Class ;
+               rdfs:subClassOf :ExSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#NozzleDiameter
+:NozzleDiameter rdf:type owl:Class ;
+                rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#OCT
+:OCT rdf:type owl:Class ;
+     rdfs:subClassOf :ExSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#PlatformTemperature
+:PlatformTemperature rdf:type owl:Class ;
+                     rdfs:subClassOf :Temperature .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#PrintMethod
+:PrintMethod rdf:type owl:Class ;
+             rdfs:subClassOf :BuildGeometry .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Profilometer
+:Profilometer rdf:type owl:Class ;
+              rdfs:subClassOf :InSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Radiography
+:Radiography rdf:type owl:Class ;
+             rdfs:subClassOf :ExSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#SlicingParameter
+:SlicingParameter rdf:type owl:Class ;
+                  rdfs:subClassOf :BuildGeometry .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :InSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#Time
+:Time rdf:type owl:Class ;
+      rdfs:subClassOf :InSitu .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#WidthBot
+:WidthBot rdf:type owl:Class ;
+          rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#WidthTop
+:WidthTop rdf:type owl:Class ;
+          rdfs:subClassOf :SlicingParameter .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#manufacturer
+:manufacturer rdf:type owl:Class ;
+              rdfs:subClassOf :BuildGeometry .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#metalAdditiveManufacturing
+:metalAdditiveManufacturing rdf:type owl:Class ;
+                            rdfs:isDefinedBy "http://purl.obolibrary.org/obo/bfo.owl"@en .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing#sampleID
+:sampleID rdf:type owl:Class ;
+          rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl#Binder_Jetting
+:Binder_Jetting rdf:type owl:Class ;
+                rdfs:subClassOf :PrintMethod .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl#Direct_Energy_Deposition
+:Direct_Energy_Deposition rdf:type owl:Class ;
+                          rdfs:subClassOf :PrintMethod .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl#Laser_Powder_Bed_Fusion
+:Laser_Powder_Bed_Fusion rdf:type owl:Class ;
+                         rdfs:subClassOf :PrintMethod .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl#Material_Jetting
+:Material_Jetting rdf:type owl:Class ;
+                  rdfs:subClassOf :PrintMethod .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl#Metal_Extrusion
+:Metal_Extrusion rdf:type owl:Class ;
+                 rdfs:subClassOf :PrintMethod .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl#Sheet_Lamination
+:Sheet_Lamination rdf:type owl:Class ;
+                  rdfs:subClassOf :PrintMethod .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

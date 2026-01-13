@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/raymond/ontologies/2023/0/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/raymond/ontologies/2023/0/untitled-ontology-2">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Albedo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Altitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Azimuth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BillOfMaterials"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CapacityAC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CapacityDC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentShortCircuit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Devices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elevation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumidityRelative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrradDiffuseHorizontal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrradDirectNormal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrradGlobalHorizMeas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrradGlobalHorizontal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrradPlaneOfArray"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrradPlaneOfArrayMeas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Latitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocationID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocationType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Longitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PVSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PVsystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PowerACArray"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PowerACMeas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrecipitalWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProdDatasheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProdMfr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProdName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProdType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Production"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReferenceCellMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SerialNum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Snowfall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TempAmb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TempAmbArray"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TempAmbMeas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TempRefCell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tilt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VoltageOpenCircuit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherDataRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WindSpeed"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Albedo"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Altitude"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Azimuth"/>
+        <Class IRI="#Orientation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BillOfMaterials"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CapacityAC"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CapacityDC"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentShortCircuit"/>
+        <Class IRI="#ReferenceCellMeasurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Devices"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elevation"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#IrradGlobalHorizMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#IrradPlaneOfArrayMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#PowerACMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#TempAmbMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumidityRelative"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrradDiffuseHorizontal"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrradDirectNormal"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrradGlobalHorizMeas"/>
+        <Class IRI="#Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrradGlobalHorizontal"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrradPlaneOfArray"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrradPlaneOfArrayMeas"/>
+        <Class IRI="#Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Latitude"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class IRI="#Devices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocationID"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocationType"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Longitude"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orientation"/>
+        <Class IRI="#Devices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PowerACArray"/>
+        <Class IRI="#PowerACMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PowerACMeas"/>
+        <Class IRI="#Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrecipitalWater"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProdDatasheet"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProdMfr"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProdName"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProdType"/>
+        <Class IRI="#Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <Class IRI="#Devices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Production"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReferenceCellMeasurement"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SerialNum"/>
+        <Class IRI="#Devices"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snowfall"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartTime"/>
+        <Class IRI="#IrradGlobalHorizMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartTime"/>
+        <Class IRI="#IrradPlaneOfArrayMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartTime"/>
+        <Class IRI="#PowerACMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartTime"/>
+        <Class IRI="#TempAmbMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemID"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemType"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempAmb"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempAmbArray"/>
+        <Class IRI="#TempAmbMeas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempAmbMeas"/>
+        <Class IRI="#Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempRefCell"/>
+        <Class IRI="#ReferenceCellMeasurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tilt"/>
+        <Class IRI="#Orientation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VoltageOpenCircuit"/>
+        <Class IRI="#ReferenceCellMeasurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherDataRecord"/>
+        <Class IRI="#PVSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WindSpeed"/>
+        <Class IRI="#WeatherDataRecord"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Albedo"/>
+        <Class IRI="#BillOfMaterials"/>
+        <Class IRI="#CapacityAC"/>
+        <Class IRI="#CapacityDC"/>
+        <Class IRI="#Devices"/>
+        <Class IRI="#HumidityRelative"/>
+        <Class IRI="#IrradDiffuseHorizontal"/>
+        <Class IRI="#IrradDirectNormal"/>
+        <Class IRI="#IrradGlobalHorizMeas"/>
+        <Class IRI="#IrradGlobalHorizontal"/>
+        <Class IRI="#IrradPlaneOfArray"/>
+        <Class IRI="#IrradPlaneOfArrayMeas"/>
+        <Class IRI="#Location"/>
+        <Class IRI="#Orientation"/>
+        <Class IRI="#PowerACMeas"/>
+        <Class IRI="#PrecipitalWater"/>
+        <Class IRI="#Product"/>
+        <Class IRI="#Production"/>
+        <Class IRI="#ReferenceCellMeasurement"/>
+        <Class IRI="#SerialNum"/>
+        <Class IRI="#Snowfall"/>
+        <Class IRI="#SystemID"/>
+        <Class IRI="#SystemType"/>
+        <Class IRI="#TempAmb"/>
+        <Class IRI="#TempAmbMeas"/>
+        <Class IRI="#WeatherDataRecord"/>
+        <Class IRI="#WindSpeed"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Altitude"/>
+        <Class IRI="#Elevation"/>
+        <Class IRI="#Latitude"/>
+        <Class IRI="#LocationID"/>
+        <Class IRI="#LocationType"/>
+        <Class IRI="#Longitude"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Azimuth"/>
+        <Class IRI="#Tilt"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CurrentShortCircuit"/>
+        <Class IRI="#TempRefCell"/>
+        <Class IRI="#VoltageOpenCircuit"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#PowerACArray"/>
+        <Class IRI="#StartTime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#StartTime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#StartTime"/>
+        <Class IRI="#TempAmbArray"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PVSystem"/>
+        <Class IRI="#PVsystem"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ProdDatasheet"/>
+        <Class IRI="#ProdMfr"/>
+        <Class IRI="#ProdName"/>
+        <Class IRI="#ProdType"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

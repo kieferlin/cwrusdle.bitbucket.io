@@ -1,0 +1,163 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XrayToolChess: <https://cwrusdle.bitbucket.io/xrayTool#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XrayToolChess:Ontology a owl:Ontology ;
+    rdfs:label "mds-XrayToolChess" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "XRD Tool Ontology for the FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XrayToolChess" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XrayToolChess:XrayTool ;
+    rdfs:range mds-XrayToolChess:BeamConvergence,
+        mds-XrayToolChess:EnergyRange,
+        mds-XrayToolChess:Facility,
+        mds-XrayToolChess:MaxBeamSize,
+        mds-XrayToolChess:Station,
+        mds-XrayToolChess:WavelengthRange ;
+    skos:altLabel "is characteristic of" .
+
+pmd:component a owl:ObjectProperty ;
+    rdfs:label "component"@en ;
+    rdfs:domain mds-XrayToolChess:XrayTool ;
+    rdfs:range mds-XrayToolChess:XrayDetector ;
+    skos:altLabel "has component"@en ;
+    skos:definition "Die Objekt-Eigenschaft Komponente, die in Verbindung mit ProzessKnoten und seinen (modularen) Elementen verwendet wird. Sie ermöglicht die Darstellung der einzelnen, unterschiedlichen Teile von ProzessKnoten. Im Wesentlichen ist die  \"Komponenten-Eigenschaft\" eine Möglichkeit, ein komplexes System in überschaubare und eindeutige Teile zu zerlegen, um die Rolle der einzelnen Teile innerhalb des Gesamtsystems zu verstehen und zu verwalten."@de,
+        "The object property component, which is used in connection with ProcessingNode and its (modular) elements. It enables the representation of the individual, different parts of processing nodes. Essentially, the 'component property' is a way of breaking down a complex system into manageable and distinct parts in order to understand and manage the role of each part within the overall system."@en .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XrayToolChess:XrayTool ;
+    rdfs:range mds-XrayToolChess:ToolID .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XrayToolChess:BeamConvergence,
+        mds-XrayToolChess:EnergyRange,
+        mds-XrayToolChess:Facility,
+        mds-XrayToolChess:MaxBeamSize,
+        mds-XrayToolChess:Station,
+        mds-XrayToolChess:ToolID,
+        mds-XrayToolChess:WavelengthRange ;
+    rdfs:range xsd:float,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XrayToolChess:XrayDetector a owl:Class ;
+    rdfs:label "XrayDetector" ;
+    skos:altLabel "" .
+
+pmd:Department a owl:Class ;
+    rdfs:label "Department",
+        "Abteilung"@de,
+        "Department"@en ;
+    skos:altLabel "" ;
+    skos:definition "A sub section of an organization."@en .
+
+pmd:Laboratory a owl:Class ;
+    rdfs:label "Laboratory",
+        "Labor"@de,
+        "Laboratory"@en ;
+    skos:altLabel "" ;
+    skos:definition "A place equipped for experimental study in a science or for testing and analysis."@en .
+
+pmd:ProcessingNode a owl:Class ;
+    rdfs:label "ProcessingNode",
+        "Prozessknoten"@de,
+        "Processing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."@de,
+        "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+mds-XrayToolChess:BeamConvergence a owl:Class ;
+    rdfs:label "BeamConvergence" ;
+    rdfs:subClassOf pmd:Optical ;
+    skos:altLabel "" ;
+    skos:definition "Beam convergence of the incident beam." .
+
+mds-XrayToolChess:EnergyRange a owl:Class ;
+    rdfs:label "EnergyRange" ;
+    rdfs:subClassOf pmd:WorkingRange ;
+    skos:altLabel "" ;
+    skos:definition "The energy range the given beamline can operate in." ;
+    pmd:unit qudt:ANGSTROM .
+
+mds-XrayToolChess:Facility a owl:Class ;
+    rdfs:label "Facility" ;
+    rdfs:subClassOf pmd:Laboratory ;
+    skos:altLabel "" ;
+    skos:definition "Facility where the experiment was performed." .
+
+mds-XrayToolChess:MaxBeamSize a owl:Class ;
+    rdfs:label "MaxBeamSize" ;
+    rdfs:subClassOf pmd:Optical ;
+    skos:altLabel "" ;
+    skos:definition "Maximum beam size." ;
+    pmd:unit qudt:DEG .
+
+mds-XrayToolChess:Station a owl:Class ;
+    rdfs:label "Station" ;
+    rdfs:subClassOf pmd:Department ;
+    skos:altLabel "" ;
+    skos:definition "Particular beamline within the facility." .
+
+mds-XrayToolChess:ToolID a owl:Class ;
+    rdfs:label "ToolID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "An identifier for the instrument." .
+
+mds-XrayToolChess:WavelengthRange a owl:Class ;
+    rdfs:label "WavelengthRange" ;
+    rdfs:subClassOf pmd:WorkingRange ;
+    skos:altLabel "" ;
+    skos:definition "The wavelength range the given beamline can operate in." .
+
+pmd:Optical a owl:Class ;
+    rdfs:label "Optical",
+        "Optisch"@de,
+        "Optical"@en ;
+    skos:altLabel "" ;
+    skos:definition "Optisch bezieht sich auf die Wissenschaft der Optik. Hier speziell auf die optischen Eigenschaften eines Materials."@de,
+        "Optical is relating to the science of optics. Here specifically to the optical properties of a material."@en ;
+    pmd:unit qudt:KiloEV .
+
+pmd:WorkingRange a owl:Class ;
+    rdfs:label "WorkingRange",
+        "Arbeitsbereich"@de,
+        "Working Range"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Eigenschaft beschreibt den Bereich zwischen den Grenzen, innerhalb derer ein Prozessknoten (z. B. eine Maschine) für ihren vorgesehenen Zweck verwendet werden kann, ausgedrückt durch die Angabe der in Rede stehenden unteren und oberen Bereichswerte."@de,
+        "This property describes the region between the limits within which a processing node (e.g., a machine) is capable of being used for its intended purpose, expressed by stating the lower and upper range values of interest."@en .
+
+mds-XrayToolChess:XrayTool a owl:Class ;
+    rdfs:label "XrayTool" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    skos:altLabel "" ;
+    skos:definition "The instrument used to perform the experiment." .
+

@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/xray-post-review"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/xray-post-review">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#formsResult"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthUsed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#maxBeamSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#stackNumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#residesInFacility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesCalibrations"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdResult"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#energyRangeMax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdByRecipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#beamSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#energyRangeMin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#distanceFromSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#operatesOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorLength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#X-Ray_Diffraction_Pattern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialThickness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdUsingSample"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSavedPath"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMax"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesProcessingMethod"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdByTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSequence2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#logFile2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#formsResult"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesProcessingMethod"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#formsResult"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesProcessingMethod"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#operatesOn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#residesInFacility"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesCalibrations"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#operatesOn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#residesInFacility"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesCalibrations"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorLength"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector1"/>
+        <Literal>detectorName1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorWidth"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorLength"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector2"/>
+        <Literal>detectorName2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorWidth"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#beamSize"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#distanceFromSource"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthUsed"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">420</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#beamSize"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#distanceFromSource"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthUsed"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">440</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSavedPath"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID1"/>
+        <Literal>/home/xray-diffraction-images/image1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSavedPath"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID2"/>
+        <Literal>/home/xray-diffraction-images/image2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialLength"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <Literal>MaterialName1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialThickness"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialWidth"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialLength"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <Literal>MaterialName2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialThickness"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialWidth"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#maxBeamSize"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMax"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMin"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#maxBeamSize"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMax"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">700</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMin"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdByRecipe"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#X-Ray_Diffraction_Pattern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdByTool"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#X-Ray_Diffraction_Pattern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdResult"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#X-Ray_Diffraction_Pattern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdUsingSample"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#X-Ray_Diffraction_Pattern"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#formsResult"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#operatesOn"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#residesInFacility"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesCalibrations"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesProcessingMethod"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdByRecipe"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdByTool"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdResult"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#createdUsingSample"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#formsResult"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#operatesOn"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#residesInFacility"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#facility"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesCalibrations"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#usesProcessingMethod"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#processingMethod"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#beamSize"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorLength"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorName"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorWidth"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detector"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#distanceFromSource"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#energyRangeMax"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#energyRangeMin"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSavedPath"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialLength"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialName"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialThickness"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialWidth"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#maxBeamSize"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Sample"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#stackNumber"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMax"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMin"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Tool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthUsed"/>
+        <Class IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#beamSize"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorLength"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#detectorWidth"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#distanceFromSource"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#energyRangeMax"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#energyRangeMin"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#imageSavedPath"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialLength"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialThickness"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#materialWidth"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#maxBeamSize"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#sampleID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#stackNumber"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#toolID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMax"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthRangeMin"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#wavelengthUsed"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID1</IRI>
+        <Literal>recipe1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#recipeID2</IRI>
+        <Literal>recipe2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID1</IRI>
+        <Literal>result1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/alexanderhardingbradley/ontologies/2023/9/untitled-ontology-8#resultID2</IRI>
+        <Literal>result2</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->

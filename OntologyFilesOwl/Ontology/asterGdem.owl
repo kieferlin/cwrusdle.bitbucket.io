@@ -1,0 +1,164 @@
+@prefix : <https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl> .
+
+<https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_body_type
+:has_body_type rdf:type owl:ObjectProperty ;
+               rdfs:domain :asterGdem ;
+               rdfs:range :typeBody .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_lake_elevation
+:has_lake_elevation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :is_lake_body ;
+                    rdfs:domain :lake ;
+                    rdfs:range :elevationLake .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_land_elevation
+:has_land_elevation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :is_land ;
+                    rdfs:domain :land ;
+                    rdfs:range :elevationLand .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_lat
+:has_lat rdf:type owl:ObjectProperty ;
+         rdfs:domain :asterGdem ;
+         rdfs:range :latitude .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_lon
+:has_lon rdf:type owl:ObjectProperty ;
+         rdfs:domain :asterGdem ;
+         rdfs:range :longitude .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_ocean_elevation
+:has_ocean_elevation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_ocean_body ;
+                     rdfs:domain :lake ;
+                     rdfs:range :elevationLake .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#has_river_elevation
+:has_river_elevation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_river_body ;
+                     rdfs:domain :river ;
+                     rdfs:range :elevationRiver .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#is_lake_body
+:is_lake_body rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :is_water ;
+              rdfs:domain :water ;
+              rdfs:range :lake .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#is_land
+:is_land rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :has_body_type ;
+         rdfs:domain :typeBody ;
+         rdfs:range :land .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#is_ocean_body
+:is_ocean_body rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is_water ;
+               rdfs:domain :water ;
+               rdfs:range :ocean .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#is_river_body
+:is_river_body rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is_water ;
+               rdfs:domain :water ;
+               rdfs:range :river .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#is_water
+:is_water rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :has_body_type ;
+          rdfs:domain :typeBody ;
+          rdfs:range :water .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#asterGdem
+:asterGdem rdf:type owl:Class .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#elevationLake
+:elevationLake rdf:type owl:Class ;
+               rdfs:subClassOf :lake .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#elevationLand
+:elevationLand rdf:type owl:Class ;
+               rdfs:subClassOf :land .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#elevationOcean
+:elevationOcean rdf:type owl:Class ;
+                rdfs:subClassOf :ocean .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#elevationRiver
+:elevationRiver rdf:type owl:Class ;
+                rdfs:subClassOf :river .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#lake
+:lake rdf:type owl:Class ;
+      rdfs:subClassOf :water .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#land
+:land rdf:type owl:Class ;
+      rdfs:subClassOf :typeBody .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#latitude
+:latitude rdf:type owl:Class ;
+          rdfs:subClassOf :asterGdem .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#longitude
+:longitude rdf:type owl:Class ;
+           rdfs:subClassOf :asterGdem .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#ocean
+:ocean rdf:type owl:Class ;
+       rdfs:subClassOf :water .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#river
+:river rdf:type owl:Class ;
+       rdfs:subClassOf :water .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#typeBody
+:typeBody rdf:type owl:Class ;
+          rdfs:subClassOf :asterGdem .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl#water
+:water rdf:type owl:Class ;
+       rdfs:subClassOf :typeBody .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

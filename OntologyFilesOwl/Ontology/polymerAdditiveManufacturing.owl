@@ -1,0 +1,255 @@
+@prefix : <http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl> .
+
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl> rdf:type owl:Ontology ;
+                                                                           rdfs:comment "This is an ontology for Polymer Additive Manufacturing."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_build_orientation
+:has_build_orientation rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                       rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BuildOrientation> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_characterization_measurement
+:has_characterization_measurement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                                  rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MeasurementTechnique> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_manufacturer
+:has_manufacturer rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                  rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#manufacturer> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_material_type
+:has_material_type rdf:type owl:ObjectProperty ;
+                   rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                   rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_method
+:has_printing_method rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                     rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#PrintMethod> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_printing_parameter
+:has_printing_parameter rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                        rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_shape
+:has_shape rdf:type owl:ObjectProperty ;
+           rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+           rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BuildGeometry> .
+
+
+###  http://www.semanticweb.org/vuvlab/ontologies/2023/0/polymerAM#has_temperature
+:has_temperature rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> ;
+                 rdfs:range <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Temperature> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#AirGap
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#AirGap> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BasePolymer
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BasePolymer> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ChemicalComposition> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BuildGeometry
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BuildGeometry> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BuildOrientation
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#BuildOrientation> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ChemicalComposition
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ChemicalComposition> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#CompositeRatio
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#CompositeRatio> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ChemicalComposition> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ContourWidth
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ContourWidth> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Density
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Density> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#DepositionSpeed
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#DepositionSpeed> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#EnvironmentTemperature
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#EnvironmentTemperature> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Temperature> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ExSitu
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ExSitu> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MeasurementTechnique> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ExtrusionTemperature
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ExtrusionTemperature> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Temperature> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#FillerMaterial
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#FillerMaterial> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#ChemicalComposition> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#FlowRate
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#FlowRate> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#HighSpeedCamera
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#HighSpeedCamera> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InSitu> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#IRCamera
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#IRCamera> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InSitu> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InSitu
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InSitu> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MeasurementTechnique> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InfillPercentage
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InfillPercentage> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#LayerThickness
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#LayerThickness> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MeasurementTechnique
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MeasurementTechnique> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MechanicalProperties
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#MechanicalProperties> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#NozzleDiameter
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#NozzleDiameter> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#PlatformTemperature
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#PlatformTemperature> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Temperature> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#PrintMethod
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#PrintMethod> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty :has_printing_parameter ;
+                                                                                                    owl:someValuesFrom <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter>
+                                                                                                  ] .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Profilometer
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Profilometer> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#InSitu> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#RasterAngle
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#RasterAngle> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#RasterPattern
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#RasterPattern> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Temperature
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Temperature> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Viscosity
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Viscosity> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#Material> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#WidthBot
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#WidthBot> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#WidthTop
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#WidthTop> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#manufacturer
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#manufacturer> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> rdf:type owl:Class .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID
+<https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#sampleID> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#polymerAM> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty :has_printing_parameter ;
+                                                                                                 owl:someValuesFrom <https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing#SlicingParameter>
+                                                                                               ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

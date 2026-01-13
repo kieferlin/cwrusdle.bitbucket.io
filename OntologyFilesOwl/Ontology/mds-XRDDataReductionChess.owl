@@ -1,0 +1,283 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XRDDataReductionChess: <https://cwrusdle.bitbucket.io/xrdDataReductionChess#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XRDDataReductionChess:Ontology a owl:Ontology ;
+    rdfs:label "mds-XRDDataReductionChess" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "XRD Data Reduction Ontology for the FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XRDDataReductionChess" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XRDDataReductionChess:Integration ;
+    rdfs:range mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "is characteristic of" .
+
+pmd:executedBy a owl:ObjectProperty ;
+    rdfs:label "executed by"@en ;
+    rdfs:domain mds-XRDDataReductionChess:AzimuthalRegrouping ;
+    rdfs:range mds-XRDDataReductionChess:Integration ;
+    skos:definition "This property represents which process is executed by which process node."@en .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XRDDataReductionChess:Integration ;
+    rdfs:range mds-XRDDataReductionChess:IntegrationID .
+
+pmd:inputOf a owl:ObjectProperty ;
+    rdfs:label "input of"@en ;
+    rdfs:domain mds-XRDDataReductionChess:AzimuthalRegrouping,
+        mds-XRDDataReductionChess:DataReduction,
+        mds-XRDDataReductionChess:Integration ;
+    rdfs:range mds-XRDDataReductionChess:DiffractionImage,
+        mds-XRDDataReductionChess:ImageStack,
+        mds-XRDDataReductionChess:PoniFile,
+        mds-XRDDataReductionChess:PostProcessing ;
+    skos:altLabel "is input of" .
+
+pmd:isPartOf a owl:ObjectProperty ;
+    rdfs:domain mds-XRDDataReductionChess:ImageStack ;
+    rdfs:range mds-XRDDataReductionChess:DarkField,
+        mds-XRDDataReductionChess:Frame .
+
+pmd:outputOf a owl:ObjectProperty ;
+    rdfs:label "output of"@en ;
+    rdfs:domain mds-XRDDataReductionChess:DataReduction ;
+    rdfs:range mds-XRDDataReductionChess:AzimuthalRegrouping ;
+    skos:altLabel "is output of"@en .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XRDDataReductionChess:AzimuthRange,
+        mds-XRDDataReductionChess:ChiDiscontinuity,
+        mds-XRDDataReductionChess:DoPolarizationCorrection,
+        mds-XRDDataReductionChess:DoRemoveNAN,
+        mds-XRDDataReductionChess:DoSolidAngleCorrection,
+        mds-XRDDataReductionChess:ErrorModel,
+        mds-XRDDataReductionChess:IntegrationMethod,
+        mds-XRDDataReductionChess:IntegrationType,
+        mds-XRDDataReductionChess:NptAzimuth,
+        mds-XRDDataReductionChess:Nptradial,
+        mds-XRDDataReductionChess:OpenCLDevice,
+        mds-XRDDataReductionChess:PolarizationFactor,
+        mds-XRDDataReductionChess:RadialRange ;
+    rdfs:range xsd:boolean,
+        xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XRDDataReductionChess:AzimuthRange a owl:Class ;
+    rdfs:label "AzimuthRange" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "The azimuthal integration range." .
+
+mds-XRDDataReductionChess:ChiDiscontinuity a owl:Class ;
+    rdfs:label "ChiDiscontinuity" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" .
+
+mds-XRDDataReductionChess:DarkField a owl:Class ;
+    rdfs:label "DarkField" ;
+    rdfs:subClassOf pmd:Image ;
+    skos:altLabel "" ;
+    skos:definition "The dark field image." .
+
+mds-XRDDataReductionChess:DiffractionImage a owl:Class ;
+    rdfs:label "DiffractionImage" ;
+    rdfs:subClassOf pmd:Image ;
+    skos:altLabel "" ;
+    skos:definition "The diffraction image being integrated." .
+
+mds-XRDDataReductionChess:DoPolarizationCorrection a owl:Class ;
+    rdfs:label "DoPolarizationCorrection" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "Is polarization correction required." .
+
+mds-XRDDataReductionChess:DoRemoveNAN a owl:Class ;
+    rdfs:label "DoRemoveNAN" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "Is NAN removal required." .
+
+mds-XRDDataReductionChess:DoSolidAngleCorrection a owl:Class ;
+    rdfs:label "DoSolidAngleCorrection" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "Is solid angle correction required." .
+
+mds-XRDDataReductionChess:ErrorModel a owl:Class ;
+    rdfs:label "ErrorModel" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "The error model used." .
+
+mds-XRDDataReductionChess:Frame a owl:Class ;
+    rdfs:label "Frame" ;
+    rdfs:subClassOf pmd:Image ;
+    skos:altLabel "" ;
+    skos:definition "The frame of diffraction." .
+
+mds-XRDDataReductionChess:IntegrationID a owl:Class ;
+    rdfs:label "IntegrationID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "Identifier for the integration process." .
+
+mds-XRDDataReductionChess:IntegrationMethod a owl:Class ;
+    rdfs:label "IntegrationMethod" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "The method used for integration." .
+
+mds-XRDDataReductionChess:IntegrationType a owl:Class ;
+    rdfs:label "IntegrationType" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "Type of integration, either 1 or 2D." .
+
+mds-XRDDataReductionChess:NptAzimuth a owl:Class ;
+    rdfs:label "NptAzimuth" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" .
+
+mds-XRDDataReductionChess:Nptradial a owl:Class ;
+    rdfs:label "Nptradial" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" .
+
+mds-XRDDataReductionChess:OpenCLDevice a owl:Class ;
+    rdfs:label "OpenCLDevice" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "The device used. Either CPU or GPU." .
+
+mds-XRDDataReductionChess:PolarizationFactor a owl:Class ;
+    rdfs:label "PolarizationFactor" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "Polarization factor of the diffractometer." ;
+    pmd:unit qudt:Degree .
+
+mds-XRDDataReductionChess:PoniFile a owl:Class ;
+    rdfs:label "PoniFile" ;
+    rdfs:subClassOf pmd:CalibrationDocument ;
+    skos:altLabel "" ;
+    skos:definition "PONI file of the detector." .
+
+mds-XRDDataReductionChess:PostProcessing a owl:Class ;
+    rdfs:label "PostProcessing" ;
+    rdfs:subClassOf pmd:Algorithm ;
+    skos:altLabel "" ;
+    skos:definition "Post processing appplied to the original collected data." .
+
+mds-XRDDataReductionChess:RadialRange a owl:Class ;
+    rdfs:label "RadialRange" ;
+    rdfs:subClassOf mds-XRDDataReductionChess:IntegrationOptions ;
+    skos:altLabel "" ;
+    skos:definition "The radial range." .
+
+pmd:CalibrationDocument a owl:Class ;
+    rdfs:label "CalibrationDocument",
+        "Kalibrierschein"@de,
+        "Kalibrierungsdokument"@de,
+        "Calibration Document"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Entität beschreibt ein Dokument, welches Abweichungen eines Messgerätes oder einer Maßverkörperung gegenüber einem anderen Gerät oder einer anderen Maßverkörperung feststellt und dokumentiert. Typischerweise ist die Person, welche die Kalibrierung durchführte, angegeben."@de,
+        "This entity describes a document used to state that a set of graduations to indicate values or positions has been performed. Typically, the calibration operator is included."@en .
+
+pmd:ComputingNode a owl:Class ;
+    rdfs:label "ComputingNode",
+        "Computerknoten"@de,
+        "Computing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition """Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.
+Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."""@de,
+        """A computing system that provides an execution environment for, e.g., simulation processes or prediction models.
+A Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."""@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-XRDDataReductionChess:DataReduction a owl:Class ;
+    rdfs:label "DataReduction" ;
+    rdfs:subClassOf pmd:ComputingNode ;
+    skos:altLabel "" ;
+    skos:definition "The data reduction of X-Ray diffraction data." .
+
+mds-XRDDataReductionChess:ImageStack a owl:Class ;
+    rdfs:label "ImageStack" ;
+    rdfs:subClassOf pmd:Image ;
+    skos:altLabel "" ;
+    skos:definition "The image stack." .
+
+mds-XRDDataReductionChess:AzimuthalRegrouping a owl:Class ;
+    rdfs:label "AzimuthalRegrouping" ;
+    rdfs:subClassOf pmd:Algorithm ;
+    skos:altLabel "" ;
+    skos:definition "The azimuthal regrouping of XRD data." .
+
+pmd:Algorithm a owl:Class ;
+    rdfs:label "Algorithm",
+        "Algorithmus"@de,
+        "Algorithm"@en ;
+    skos:altLabel "" ;
+    skos:definition "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."@en .
+
+mds-XRDDataReductionChess:Integration a owl:Class ;
+    rdfs:label "Integration" ;
+    rdfs:subClassOf pmd:Algorithm ;
+    skos:altLabel "" ;
+    skos:definition "Integration of diffraction patterns azimuthally." .
+
+pmd:Image a owl:Class ;
+    rdfs:label "Image",
+        "Bild"@de,
+        "Image"@en ;
+    skos:altLabel "" ;
+    skos:definition "A visual representation of something"@en .
+
+mds-XRDDataReductionChess:IntegrationOptions a owl:Class ;
+    rdfs:label "IntegrationOptions" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "The various optoins used for integration." .
+

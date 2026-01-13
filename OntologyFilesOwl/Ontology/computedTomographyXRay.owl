@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/vuvlab/ontologies/2023/0/xct">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alloy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Composition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeviceName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Displacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisplacementRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndDisplacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndLoad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FilePath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FovHeight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FovWidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hardness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Load"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Methodology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Namlt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Preprocessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelativeHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resolution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SampleProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensitizationDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensitizationTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SequenceNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Series"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SiteName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Solution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolutionConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SourceProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StackNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartDisplacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartLoad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrainMax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrainRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Supplier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timeseries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timestamp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VoxelResolution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#xct"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alloy"/>
+        <Class IRI="#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composition"/>
+        <Class IRI="#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data"/>
+        <Class IRI="#xct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataSize"/>
+        <Class IRI="#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Date"/>
+        <Class IRI="#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device"/>
+        <Class IRI="#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeviceName"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diameter"/>
+        <Class IRI="#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Displacement"/>
+        <Class IRI="#Timeseries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplacementRate"/>
+        <Class IRI="#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndDisplacement"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndLoad"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndTime"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Energy"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <Class IRI="#xct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileName"/>
+        <Class IRI="#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilePath"/>
+        <Class IRI="#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FovHeight"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FovWidth"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hardness"/>
+        <Class IRI="#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Length"/>
+        <Class IRI="#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Load"/>
+        <Class IRI="#Timeseries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material"/>
+        <Class IRI="#xct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Method"/>
+        <Class IRI="#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methodology"/>
+        <Class IRI="#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Namlt"/>
+        <Class IRI="#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Preprocessing"/>
+        <Class IRI="#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelativeHumidity"/>
+        <Class IRI="#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resolution"/>
+        <Class IRI="#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleProperties"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scan"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensitizationDuration"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensitizationTemperature"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SequenceNumber"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Series"/>
+        <Class IRI="#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shape"/>
+        <Class IRI="#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site"/>
+        <Class IRI="#Experiment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SiteName"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Solution"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolutionConcentration"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SourceProperties"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StackNumber"/>
+        <Class IRI="#Image"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartDisplacement"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartLoad"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartTime"/>
+        <Class IRI="#Scan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrainMax"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrainRate"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Supplier"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Technique"/>
+        <Class IRI="#Methodology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temper"/>
+        <Class IRI="#SourceProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timeseries"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timestamp"/>
+        <Class IRI="#Timeseries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VoxelResolution"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

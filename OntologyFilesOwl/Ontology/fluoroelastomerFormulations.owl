@@ -1,0 +1,361 @@
+@prefix : <http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl> .
+
+<https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#has_Category
+:has_Category rdf:type owl:ObjectProperty ;
+              rdfs:domain :experiment ,
+                          :fluoroelastomer ,
+                          :substrate ;
+              rdfs:range :afm ,
+                         :cleaningProcess ,
+                         :fluoroelastomer ,
+                         :fluoroelastomerFilmPreparation ,
+                         :fluoroelastomerProperties ,
+                         :substrateDimensions ,
+                         :substrateType .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#has_Parameter
+:has_Parameter rdf:type owl:ObjectProperty ;
+               owl:equivalentProperty :has_Variable ;
+               rdfs:domain :afm ,
+                           :fluoroelastomerFilmPreparation ,
+                           :gainParameters ,
+                           :scanParameters ,
+                           :spincoatingParameters ;
+               rdfs:range :afmChannel ,
+                          :afmInstrument ,
+                          :afmVoltage ,
+                          :dimensionsImage ,
+                          :driveAmplitude ,
+                          :gainParameters ,
+                          :hotStageTemperature ,
+                          :integralGain ,
+                          :piezoelectricSensorLocation ,
+                          :proportionalGain ,
+                          :resonanceFrequency ,
+                          :scanAngle ,
+                          :scanLines ,
+                          :scanParameters ,
+                          :scanRate ,
+                          :scanSize ,
+                          :setPoint ,
+                          :spincoatingSpeed ,
+                          :spincoatingTime .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#has_Property
+:has_Property rdf:type owl:ObjectProperty ;
+              rdfs:domain :fluoroelastomerProperties ,
+                          :solventProperties ;
+              rdfs:range :batch ,
+                         :gyrationRadius ,
+                         :hydrodynamicRadius ,
+                         :intrinsicVelocity ,
+                         :material ,
+                         :numberAverageMolecularWeight ,
+                         :peakMolecularWeight ,
+                         :polydispersityIndex ,
+                         :solventConcentration ,
+                         :solventType ,
+                         :weightAverageMolecularWeight .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#has_Variable
+:has_Variable rdf:type owl:ObjectProperty ;
+              rdfs:domain :fluoroelastomerFilmPreparation ;
+              rdfs:range :adhesionPromoter ,
+                         :dryingTemperature ,
+                         :dryingTime ,
+                         :filmDimensions ,
+                         :preFiltration ,
+                         :solventProperties ,
+                         :spincoaterInstrument ,
+                         :spincoatingParameters ,
+                         :substrate .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#is_Type
+:is_Type rdf:type owl:ObjectProperty ;
+         rdfs:domain :afmChannel ;
+         rdfs:range :amplitude ,
+                    :height ,
+                    :phase ,
+                    :zSensor .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#adhesionPromoter
+:adhesionPromoter rdf:type owl:Class ;
+                  rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#afm
+:afm rdf:type owl:Class ;
+     rdfs:subClassOf :experiment .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#afmChannel
+:afmChannel rdf:type owl:Class ;
+            rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#afmInstrument
+:afmInstrument rdf:type owl:Class ;
+               rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#afmVoltage
+:afmVoltage rdf:type owl:Class ;
+            rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#amplitude
+:amplitude rdf:type owl:Class ;
+           rdfs:subClassOf :afmChannel .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#batch
+:batch rdf:type owl:Class ;
+       rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#cleaningProcess
+:cleaningProcess rdf:type owl:Class ;
+                 rdfs:subClassOf :substrate .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#dimensionsImage
+:dimensionsImage rdf:type owl:Class ;
+                 rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#driveAmplitude
+:driveAmplitude rdf:type owl:Class ;
+                rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#dryingTemperature
+:dryingTemperature rdf:type owl:Class ;
+                   rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#dryingTime
+:dryingTime rdf:type owl:Class ;
+            rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#experiment
+:experiment rdf:type owl:Class ;
+            rdfs:subClassOf :PolymerFormulation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#filmDimensions
+:filmDimensions rdf:type owl:Class ;
+                rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#fluoroelastomer
+:fluoroelastomer rdf:type owl:Class ;
+                 rdfs:subClassOf :experiment .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#fluoroelastomerFilmPreparation
+:fluoroelastomerFilmPreparation rdf:type owl:Class ;
+                                rdfs:subClassOf :fluoroelastomer .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#fluoroelastomerProperties
+:fluoroelastomerProperties rdf:type owl:Class ;
+                           rdfs:subClassOf :fluoroelastomer .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#gainParameters
+:gainParameters rdf:type owl:Class ;
+                rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#gyrationRadius
+:gyrationRadius rdf:type owl:Class ;
+                rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#height
+:height rdf:type owl:Class ;
+        rdfs:subClassOf :afmChannel .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#hotStageTemperature
+:hotStageTemperature rdf:type owl:Class ;
+                     rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#hydrodynamicRadius
+:hydrodynamicRadius rdf:type owl:Class ;
+                    rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#integralGain
+:integralGain rdf:type owl:Class ;
+              rdfs:subClassOf :gainParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#intrinsicVelocity
+:intrinsicVelocity rdf:type owl:Class ;
+                   rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#material
+:material rdf:type owl:Class ;
+          rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#numberAverageMolecularWeight
+:numberAverageMolecularWeight rdf:type owl:Class ;
+                              rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#peakMolecularWeight
+:peakMolecularWeight rdf:type owl:Class ;
+                     rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#phase
+:phase rdf:type owl:Class ;
+       rdfs:subClassOf :afmChannel .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#piezoelectricSensorLocation
+:piezoelectricSensorLocation rdf:type owl:Class ;
+                             rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#polydispersityIndex
+:polydispersityIndex rdf:type owl:Class ;
+                     rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#preFiltration
+:preFiltration rdf:type owl:Class ;
+               rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#proportionalGain
+:proportionalGain rdf:type owl:Class ;
+                  rdfs:subClassOf :gainParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#resonanceFrequency
+:resonanceFrequency rdf:type owl:Class ;
+                    rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#scanAngle
+:scanAngle rdf:type owl:Class ;
+           rdfs:subClassOf :scanParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#scanLines
+:scanLines rdf:type owl:Class ;
+           rdfs:subClassOf :scanParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#scanParameters
+:scanParameters rdf:type owl:Class ;
+                rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#scanRate
+:scanRate rdf:type owl:Class ;
+          rdfs:subClassOf :scanParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#scanSize
+:scanSize rdf:type owl:Class ;
+          rdfs:subClassOf :scanParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#setPoint
+:setPoint rdf:type owl:Class ;
+          rdfs:subClassOf :afm .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#solventConcentration
+:solventConcentration rdf:type owl:Class ;
+                      rdfs:subClassOf :solventProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#solventProperties
+:solventProperties rdf:type owl:Class ;
+                   rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#solventType
+:solventType rdf:type owl:Class ;
+             rdfs:subClassOf :solventProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#spincoaterInstrument
+:spincoaterInstrument rdf:type owl:Class ;
+                      rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#spincoatingParameters
+:spincoatingParameters rdf:type owl:Class ;
+                       rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#spincoatingSpeed
+:spincoatingSpeed rdf:type owl:Class ;
+                  rdfs:subClassOf :spincoatingParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#spincoatingTime
+:spincoatingTime rdf:type owl:Class ;
+                 rdfs:subClassOf :spincoatingParameters .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#substrate
+:substrate rdf:type owl:Class ;
+           rdfs:subClassOf :fluoroelastomerFilmPreparation .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#substrateDimensions
+:substrateDimensions rdf:type owl:Class ;
+                     rdfs:subClassOf :substrate .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#substrateType
+:substrateType rdf:type owl:Class ;
+               rdfs:subClassOf :substrate .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#weightAverageMolecularWeight
+:weightAverageMolecularWeight rdf:type owl:Class ;
+                              rdfs:subClassOf :fluoroelastomerProperties .
+
+
+###  http://www.semanticweb.org/sxn440/ontologies/2023/0/untitled-ontology-3#zSensor
+:zSensor rdf:type owl:Class ;
+         rdfs:subClassOf :afmChannel .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl#PolymerFormulation
+:PolymerFormulation rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

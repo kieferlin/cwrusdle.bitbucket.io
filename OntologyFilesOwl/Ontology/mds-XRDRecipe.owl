@@ -1,0 +1,519 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XRDRecipe: <https://cwrusdle.bitbucket.io/xrdRecipe#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XRDRecipe:Ontology a owl:Ontology ;
+    rdfs:label "mds-XRDRecipe" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology for the XRD Recipe FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XRDRecipe" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XRDRecipe:XRDRecipe,
+        mds-XRDRecipe:beamlineConfiguration,
+        mds-XRDRecipe:detectorCalibration,
+        mds-XRDRecipe:detectorParameters,
+        mds-XRDRecipe:diffractionFrame,
+        mds-XRDRecipe:heatTreatmentProcess,
+        mds-XRDRecipe:sampleAlignment,
+        mds-XRDRecipe:textureMeasurement ;
+    rdfs:range mds-XRDRecipe:beamSize,
+        mds-XRDRecipe:beamlineConfiguration,
+        mds-XRDRecipe:calibration,
+        mds-XRDRecipe:daqFrequency,
+        mds-XRDRecipe:distanceFromSample,
+        mds-XRDRecipe:energyUsed,
+        mds-XRDRecipe:exposureTime,
+        mds-XRDRecipe:framesPerFile,
+        mds-XRDRecipe:maskFile,
+        mds-XRDRecipe:ringPointFile,
+        mds-XRDRecipe:rmsFitQuality,
+        mds-XRDRecipe:sampletoLabAlignment,
+        mds-XRDRecipe:startEndTimeStamp,
+        mds-XRDRecipe:wavelengthUsed,
+        pmd:Medium ;
+    skos:altLabel "is characteristic of" .
+
+pmd:component a owl:ObjectProperty ;
+    rdfs:label "component"@en ;
+    rdfs:domain mds-XRDRecipe:calibration ;
+    rdfs:range mds-XRDRecipe:detectorCalibration,
+        mds-XRDRecipe:sampleAlignment ;
+    skos:altLabel "has component"@en ;
+    skos:definition "Die Objekt-Eigenschaft Komponente, die in Verbindung mit ProzessKnoten und seinen (modularen) Elementen verwendet wird. Sie ermöglicht die Darstellung der einzelnen, unterschiedlichen Teile von ProzessKnoten. Im Wesentlichen ist die  \"Komponenten-Eigenschaft\" eine Möglichkeit, ein komplexes System in überschaubare und eindeutige Teile zu zerlegen, um die Rolle der einzelnen Teile innerhalb des Gesamtsystems zu verstehen und zu verwalten."@de,
+        "The object property component, which is used in connection with ProcessingNode and its (modular) elements. It enables the representation of the individual, different parts of processing nodes. Essentially, the 'component property' is a way of breaking down a complex system into manageable and distinct parts in order to understand and manage the role of each part within the overall system."@en .
+
+pmd:composedOf a owl:ObjectProperty ;
+    rdfs:label "composed of"@en ;
+    rdfs:domain mds-XRDRecipe:XRDRecipe,
+        mds-XRDRecipe:beamlineConfiguration,
+        mds-XRDRecipe:diffractionFrame,
+        pmd:Furnace ;
+    rdfs:range mds-XRDRecipe:XRDRecipeParameters,
+        mds-XRDRecipe:beamlineConfiguration,
+        mds-XRDRecipe:calibration,
+        mds-XRDRecipe:dataCollection,
+        mds-XRDRecipe:detectorParameters,
+        mds-XRDRecipe:experimentType,
+        pmd:Medium ;
+    skos:definition """This property is used to describe the fact that and which objects are composed of other objects, i.e. it is used to describe the specific constituents or ingredients that form a particular entity or object. 
+As a prepositional phrase, it indicates the elements, parts, or components that make up a whole."""@en,
+        "This property is used to describe which voxels and materials an object is composed of."@en .
+
+pmd:composes a owl:ObjectProperty ;
+    rdfs:label "composes"@en ;
+    rdfs:domain pmd:Furnace ;
+    rdfs:range mds-XRDRecipe:design ;
+    skos:definition """Diese Eigenschaft wird verwendet, um die Tatsache zu beschreiben, dass und welche Objekte andere Objekte zusammensetzen, d. h. sie wird verwendet, um die spezifischen Bestandteile oder Zutaten zu beschreiben, aus denen ein bestimmtes Gebilde oder Objekt besteht. 
+Als Präpositionalphrase bezeichnet sie die Elemente, Teile oder Komponenten, aus denen sich ein anderes Objekt zusammensetzt."""@de,
+        """This property is used to describe the fact that and which objects compose other objects, i.e. it is used to describe the specific constituents or ingredients forming a particular entity or object. 
+As a prepositional phrase, it indicates the elements, parts, or components that make up a whole of another object."""@en,
+        "This property is used to describe which objects a voxel or a material contributes to compose."@en .
+
+pmd:executedBy a owl:ObjectProperty ;
+    rdfs:label "executed by"@en ;
+    rdfs:domain mds-XRDRecipe:heatTreatmentProcess ;
+    rdfs:range pmd:Furnace ;
+    skos:definition "This property represents which process is executed by which process node."@en .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XRDRecipe:XRDRecipe,
+        mds-XRDRecipe:beamlineConfiguration,
+        mds-XRDRecipe:detectorCalibration,
+        mds-XRDRecipe:diffractionFrame,
+        mds-XRDRecipe:sampleAlignment ;
+    rdfs:range mds-XRDRecipe:FrameID,
+        mds-XRDRecipe:RecipeID .
+
+pmd:outputOf a owl:ObjectProperty ;
+    rdfs:label "output of"@en ;
+    rdfs:domain mds-XRDRecipe:detectorCalibration ;
+    rdfs:range mds-XRDRecipe:poniFile ;
+    skos:altLabel "is output of"@en .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XRDRecipe:RecipeID,
+        mds-XRDRecipe:beamSize,
+        mds-XRDRecipe:btm_rota,
+        mds-XRDRecipe:cesr_,
+        mds-XRDRecipe:crys_rtrn,
+        mds-XRDRecipe:crys_sply,
+        mds-XRDRecipe:daqFrequency,
+        mds-XRDRecipe:diod,
+        mds-XRDRecipe:distanceFromSample,
+        mds-XRDRecipe:energyUsed,
+        mds-XRDRecipe:exposureTime,
+        mds-XRDRecipe:fst_shtr,
+        mds-XRDRecipe:ic0,
+        mds-XRDRecipe:ic1,
+        mds-XRDRecipe:ic2,
+        mds-XRDRecipe:ic3,
+        mds-XRDRecipe:load_cll,
+        mds-XRDRecipe:load_scrw,
+        mds-XRDRecipe:mo_stab,
+        mds-XRDRecipe:startEndTimeStamp,
+        mds-XRDRecipe:sync_cnt,
+        mds-XRDRecipe:top_pzo,
+        mds-XRDRecipe:top_rota,
+        mds-XRDRecipe:wavelengthUsed ;
+    rdfs:range xsd:float,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XRDRecipe:FrameID a owl:Class ;
+    rdfs:label "FrameID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "Identifier of the frame." .
+
+mds-XRDRecipe:btm_rota a owl:Class ;
+    rdfs:label "btm_rota" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:cesr_ a owl:Class ;
+    rdfs:label "cesr_" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:crys_rtrn a owl:Class ;
+    rdfs:label "crys_rtrn" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:crys_sply a owl:Class ;
+    rdfs:label "crys_sply" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:design a owl:Class ;
+    rdfs:label "design" ;
+    rdfs:subClassOf pmd:Description ;
+    skos:altLabel "" ;
+    skos:definition "Design of the furnace." .
+
+mds-XRDRecipe:diod a owl:Class ;
+    rdfs:label "diod" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" ;
+    pmd:unit qudt:V .
+
+mds-XRDRecipe:framesPerFile a owl:Class ;
+    rdfs:label "framesPerFile" ;
+    rdfs:subClassOf pmd:DataAcquisitionRate ;
+    skos:altLabel "" ;
+    skos:definition "Number of frames per file." .
+
+mds-XRDRecipe:fst_shtr a owl:Class ;
+    rdfs:label "fst_shtr" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:ic0 a owl:Class ;
+    rdfs:label "ic0" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" ;
+    pmd:unit qudt:S .
+
+mds-XRDRecipe:ic1 a owl:Class ;
+    rdfs:label "ic1" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" ;
+    pmd:unit qudt:S .
+
+mds-XRDRecipe:ic2 a owl:Class ;
+    rdfs:label "ic2" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" ;
+    pmd:unit qudt:S .
+
+mds-XRDRecipe:ic3 a owl:Class ;
+    rdfs:label "ic3" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" ;
+    pmd:unit qudt:S .
+
+mds-XRDRecipe:load_cll a owl:Class ;
+    rdfs:label "load_cll" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:load_scrw a owl:Class ;
+    rdfs:label "load_scrw" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:maskFile a owl:Class ;
+    rdfs:label "maskFile" ;
+    rdfs:subClassOf pmd:CalibrationDocument ;
+    skos:altLabel "" ;
+    skos:definition "Mask file of the detector." .
+
+mds-XRDRecipe:mo_stab a owl:Class ;
+    rdfs:label "mo_stab" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:poniFile a owl:Class ;
+    rdfs:label "poniFile" ;
+    rdfs:subClassOf pmd:CalibrationDocument ;
+    skos:altLabel "" ;
+    skos:definition "PONI file of the detector." .
+
+mds-XRDRecipe:ringPointFile a owl:Class ;
+    rdfs:label "ringPointFile" ;
+    rdfs:subClassOf pmd:CalibrationDocument ;
+    skos:altLabel "" ;
+    skos:definition "Ring point file of the detector." .
+
+mds-XRDRecipe:rmsFitQuality a owl:Class ;
+    rdfs:label "rmsFitQuality" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "RMS fit quality of the detector." .
+
+mds-XRDRecipe:sampletoLabAlignment a owl:Class ;
+    rdfs:label "sampletoLabAlignment" ;
+    rdfs:subClassOf mds-XRDRecipe:sampleAlignment ;
+    skos:altLabel "" ;
+    skos:definition "Alignment of the sample in lab coordinates." .
+
+mds-XRDRecipe:sync_cnt a owl:Class ;
+    rdfs:label "sync_cnt" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:textureMeasurement a owl:Class ;
+    rdfs:label "textureMeasurement" ;
+    rdfs:subClassOf mds-XRDRecipe:experimentType ;
+    skos:altLabel "" ;
+    skos:definition "An experiment to measure texture in a sample." .
+
+mds-XRDRecipe:top_pzo a owl:Class ;
+    rdfs:label "top_pzo" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:top_rota a owl:Class ;
+    rdfs:label "top_rota" ;
+    rdfs:subClassOf mds-XRDRecipe:XRDRecipeParameters ;
+    skos:altLabel "" .
+
+pmd:DataAcquisitionRate a owl:Class ;
+    rdfs:label "DataAcquisitionRate",
+        "Datenerfassungsrate"@de,
+        "Data Acquisition Rate"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Eigenschaft bezeichnet die Anzahl der Messungen / Abfragen pro Zeiteinheit bei einer betrachteten Messung einer Messgröße (Abtast-/Abfragerate bei der Datenerfassung)."@de,
+        "This property denotes the number of measurements / queries per time period for a considered measurement of a measurement parameter (sampling / query rate during data acquisition)."@en .
+
+pmd:Description a owl:Class ;
+    rdfs:label "Description",
+        "Beschreibung"@de,
+        "Description"@en ;
+    skos:altLabel "" ;
+    skos:definition "A descriptive text qualifying the nature of a thing (e.g. agent, activity, entity, object, ...).",
+        "Ein beschreibender Text, der die Natur / Beschaffenheit / Informationen zu einer Entität qualifiziert (z.B. Aktivitäten, Entitäten, Objekten, ...)."@de .
+
+pmd:Distance a owl:Class ;
+    rdfs:label "Distance",
+        "Abstand"@de,
+        "Distance"@en ;
+    skos:altLabel "" ;
+    skos:definition "Spatial remoteness."@en .
+
+pmd:Force a owl:Class ;
+    rdfs:label "Force",
+        "Kraft"@de,
+        "Force"@en ;
+    skos:altLabel "" ;
+    skos:definition "Strength or energy exerted or brought to bear : cause of motion or change : active power."@en .
+
+pmd:Length a owl:Class ;
+    rdfs:label "Length",
+        "Länge"@de,
+        "Length"@en ;
+    skos:altLabel "" ;
+    skos:definition "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."@de,
+        "A measured distance or dimension of an object, usually the longer or longest dimension of the object."@en .
+
+pmd:MeasuringProcess a owl:Class ;
+    rdfs:label "MeasuringProcess",
+        "Messprozess"@de,
+        "Measuring Process"@en ;
+    skos:altLabel "" ;
+    skos:definition "A measurement process is an analysis process that acquires data (usually expressed in numbers) by using tools."@en .
+
+pmd:Optical a owl:Class ;
+    rdfs:label "Optical",
+        "Optisch"@de,
+        "Optical"@en ;
+    skos:altLabel "" ;
+    skos:definition "Optisch bezieht sich auf die Wissenschaft der Optik. Hier speziell auf die optischen Eigenschaften eines Materials."@de,
+        "Optical is relating to the science of optics. Here specifically to the optical properties of a material."@en .
+
+pmd:PrimaryData a owl:Class ;
+    rdfs:label "PrimaryData",
+        "Primärdaten"@de,
+        "Primary Data"@en ;
+    skos:altLabel "" ;
+    skos:definition "Die Datenkategorie Primärdaten umfasst Daten, die vor / nach einem Prozess erfasst werden, entweder bezogen auf die Geometrie des Objekts (z.B. ao, bo, do, au, bu, du, Lu) oder als Register des gesamten Aufbaus (z.B. Skizzen, Fotos oder Videos)"@de,
+        "This data scope expresses that a ValueObject refers to data that is directly acquired during a process by sensors (time, force, length, temperature)"@en .
+
+mds-XRDRecipe:RecipeID a owl:Class ;
+    rdfs:label "RecipeID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "An identifier for the recipe." .
+
+mds-XRDRecipe:beamSize a owl:Class ;
+    rdfs:label "beamSize" ;
+    rdfs:subClassOf pmd:Optical ;
+    skos:altLabel "" ;
+    skos:definition "Size of the incident beam." ;
+    pmd:unit qudt:MilliM .
+
+mds-XRDRecipe:daqFrequency a owl:Class ;
+    rdfs:label "daqFrequency" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "DAQ frequency of the detector." .
+
+mds-XRDRecipe:dataCollection a owl:Class ;
+    rdfs:label "dataCollection" ;
+    rdfs:subClassOf pmd:PrimaryData ;
+    skos:altLabel "" ;
+    skos:definition "Data collection stage of the experiment." .
+
+mds-XRDRecipe:detectorParameters a owl:Class ;
+    rdfs:label "detectorParameters" ;
+    rdfs:subClassOf mds-XRDRecipe:diffractionFrame ;
+    skos:altLabel "" ;
+    skos:definition "Detector parameters for the frame." .
+
+mds-XRDRecipe:distanceFromSample a owl:Class ;
+    rdfs:label "distanceFromSample" ;
+    rdfs:subClassOf pmd:Distance ;
+    skos:altLabel "" ;
+    skos:definition "Distance of the detector from the sample. " ;
+    pmd:unit qudt:MilliM .
+
+mds-XRDRecipe:energyUsed a owl:Class ;
+    rdfs:label "energyUsed" ;
+    rdfs:subClassOf pmd:Force ;
+    skos:altLabel "" ;
+    skos:definition "The energy of the incident beam." ;
+    pmd:unit qudt:KiloEV .
+
+mds-XRDRecipe:exposureTime a owl:Class ;
+    rdfs:label "exposureTime" ;
+    rdfs:subClassOf pmd:Time ;
+    skos:altLabel "" ;
+    skos:definition "Exposure time for the detector." ;
+    pmd:unit qudt:SEC .
+
+mds-XRDRecipe:heatTreatmentProcess a owl:Class ;
+    rdfs:label "heatTreatmentProcess" ;
+    rdfs:subClassOf mds-XRDRecipe:experimentType ;
+    skos:altLabel "" ;
+    skos:definition "A heat treatment experiment." .
+
+mds-XRDRecipe:startEndTimeStamp a owl:Class ;
+    rdfs:label "startEndTimeStamp" ;
+    rdfs:subClassOf pmd:Time ;
+    skos:altLabel "" ;
+    skos:definition "Start and end time stamp. " ;
+    pmd:unit qudt:SEC .
+
+mds-XRDRecipe:wavelengthUsed a owl:Class ;
+    rdfs:label "wavelengthUsed" ;
+    rdfs:subClassOf pmd:Length ;
+    skos:altLabel "" ;
+    skos:definition "The wavelength used for the experiment." ;
+    pmd:unit qudt:ANGSTROM .
+
+pmd:Medium a owl:Class ;
+    rdfs:label "Medium",
+        "Medium"@de,
+        "Medium"@en ;
+    skos:altLabel "" ;
+    skos:definition "Substance that surrounds an object inside the system boundaries of a processing node."@en .
+
+pmd:Process a owl:Class ;
+    rdfs:label "Process",
+        "Prozess"@de,
+        "Process"@en ;
+    skos:altLabel "" ;
+    skos:definition "A process is an activity including a series of actions or operations conducing to an end. In PMD, a process is conducted via processing nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:Time a owl:Class ;
+    rdfs:label "Time",
+        "Zeit"@de,
+        "Time"@en ;
+    skos:altLabel "" ;
+    skos:definition "A nonspatial continuum that is measured in terms of events which succeed one another from past through present to future."@en .
+
+mds-XRDRecipe:XRDRecipe a owl:Class ;
+    rdfs:label "XRDRecipe" ;
+    rdfs:subClassOf pmd:MeasuringProcess ;
+    skos:altLabel "" ;
+    skos:definition "Th experimental setttings used to get a set of data." .
+
+mds-XRDRecipe:experimentType a owl:Class ;
+    rdfs:label "experimentType" ;
+    rdfs:subClassOf pmd:Process ;
+    skos:altLabel "" ;
+    skos:definition "Type of the experiment performed." .
+
+pmd:CalibrationDocument a owl:Class ;
+    rdfs:label "CalibrationDocument",
+        "Kalibrierschein"@de,
+        "Kalibrierungsdokument"@de,
+        "Calibration Document"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Entität beschreibt ein Dokument, welches Abweichungen eines Messgerätes oder einer Maßverkörperung gegenüber einem anderen Gerät oder einer anderen Maßverkörperung feststellt und dokumentiert. Typischerweise ist die Person, welche die Kalibrierung durchführte, angegeben."@de,
+        "This entity describes a document used to state that a set of graduations to indicate values or positions has been performed. Typically, the calibration operator is included."@en .
+
+pmd:Furnace a owl:Class ;
+    rdfs:label "Furnace",
+        "Ofen"@de,
+        "Furnace"@en ;
+    skos:altLabel "" ;
+    skos:definition "Eine geschlossene Struktur, in der Wärme erzeugt wird (z. B. zum Heizen eines Hauses oder zum Einschmelzen von Erz)."@de,
+        "An enclosed structure in which heat is produced (as for heating a house or for reducing ore)."@en .
+
+mds-XRDRecipe:detectorCalibration a owl:Class ;
+    rdfs:label "detectorCalibration" ;
+    rdfs:subClassOf mds-XRDRecipe:calibration ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:diffractionFrame a owl:Class ;
+    rdfs:label "diffractionFrame" ;
+    rdfs:subClassOf mds-XRDRecipe:dataCollection ;
+    skos:altLabel "" ;
+    skos:definition "The frame of diffraction." .
+
+mds-XRDRecipe:sampleAlignment a owl:Class ;
+    rdfs:label "sampleAlignment" ;
+    rdfs:subClassOf mds-XRDRecipe:calibration ;
+    skos:altLabel "" ;
+    skos:definition "Alignment of the sample and stage." .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-XRDRecipe:beamlineConfiguration a owl:Class ;
+    rdfs:label "beamlineConfiguration" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Configuration of the beamline after the calibration. " .
+
+mds-XRDRecipe:calibration a owl:Class ;
+    rdfs:label "calibration" ;
+    rdfs:subClassOf pmd:Process ;
+    skos:altLabel "" .
+
+mds-XRDRecipe:XRDRecipeParameters a owl:Class ;
+    rdfs:label "XRDRecipeParameters" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Various parmeters of the testing equipment." .
+

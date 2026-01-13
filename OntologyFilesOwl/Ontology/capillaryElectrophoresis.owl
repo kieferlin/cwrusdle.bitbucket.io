@@ -1,0 +1,217 @@
+@prefix : <http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#> .
+
+<https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#hasCalibration
+:hasCalibration rdf:type owl:ObjectProperty ;
+                rdfs:domain :capillaryElectrophoresis ;
+                rdfs:range :calibrationMetadata .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#hasExperimentalMetadata
+:hasExperimentalMetadata rdf:type owl:ObjectProperty ;
+                         rdfs:domain :capillaryElectrophoresis ;
+                         rdfs:range :measurementMetadata .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#hasResults
+:hasResults rdf:type owl:ObjectProperty ;
+            rdfs:domain :capillaryElectrophoresis ;
+            rdfs:range :results .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#hasSampleInformation
+:hasSampleInformation rdf:type owl:ObjectProperty ;
+                      rdfs:domain :capillaryElectrophoresis ;
+                      rdfs:range :sampleInformation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#analyte
+:analyte rdf:type owl:DatatypeProperty ;
+         rdfs:domain :results ;
+         rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#analyteConcentration
+:analyteConcentration rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :results ;
+                      rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#appliedVoltage
+:appliedVoltage rdf:type owl:DatatypeProperty ;
+                rdfs:domain :measurementMetadata ;
+                rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#bufferComposition
+:bufferComposition rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :measurementMetadata ;
+                   rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#bufferPh
+:bufferPh rdf:type owl:DatatypeProperty ;
+          rdfs:domain :measurementMetadata ;
+          rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#calibrationCoeficient
+:calibrationCoeficient rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :calibrationMetadata ;
+                       rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#calibrationName
+:calibrationName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :calibrationMetadata ;
+                 rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#capillaryCoating
+:capillaryCoating rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :measurementMetadata ;
+                  rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#capillaryDiameter
+:capillaryDiameter rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :measurementMetadata ;
+                   rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#capillaryLength
+:capillaryLength rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :measurementMetadata ;
+                 rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#capillaryMaterial
+:capillaryMaterial rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :measurementMetadata ;
+                   rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#capillaryTemp
+:capillaryTemp rdf:type owl:DatatypeProperty ;
+               rdfs:domain :measurementMetadata ;
+               rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#conductivity
+:conductivity rdf:type owl:DatatypeProperty ;
+              rdfs:domain :results ;
+              rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain :results ;
+      rdfs:range xsd:dateTimeStamp .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#detectorType
+:detectorType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :measurementMetadata ;
+              rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#injectionPressure
+:injectionPressure rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :measurementMetadata ;
+                   rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#injectionTime
+:injectionTime rdf:type owl:DatatypeProperty ;
+               rdfs:domain :measurementMetadata ;
+               rdfs:range xsd:nonNegativeInteger .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#ionicStrenghCorrection
+:ionicStrenghCorrection rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :measurementMetadata ;
+                        rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#ionicStrength
+:ionicStrength rdf:type owl:DatatypeProperty ;
+               rdfs:domain :measurementMetadata ;
+               rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#ions
+:ions rdf:type owl:DatatypeProperty ;
+      rdfs:domain :results ;
+      rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#peakArea
+:peakArea rdf:type owl:DatatypeProperty ;
+          rdfs:domain :results ;
+          rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#peakHeight
+:peakHeight rdf:type owl:DatatypeProperty ;
+            rdfs:domain :results ;
+            rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#polarity
+:polarity rdf:type owl:DatatypeProperty ;
+          rdfs:domain :measurementMetadata ;
+          rdfs:range xsd:float .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#uniqueIdentifier
+:uniqueIdentifier rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :sampleInformation ;
+                  rdfs:range xsd:string .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/capillaryElectrophoresis.owl#zetaPotential
+:zetaPotential rdf:type owl:DatatypeProperty ;
+               rdfs:domain :measurementMetadata ;
+               rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#calibrationMetadata
+:calibrationMetadata rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#capillaryElectrophoresis
+:capillaryElectrophoresis rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#measurementMetadata
+:measurementMetadata rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#results
+:results rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2023/0/capillaryElectrophoresis#sampleInformation
+:sampleInformation rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,146 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XraySample: <https://cwrusdle.bitbucket.io/xraySample#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XraySample:Ontology a owl:Ontology ;
+    rdfs:label "mds-XraySample" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "XRD Sample Ontology for the FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XraySample" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XraySample:XraySample ;
+    rdfs:range mds-XraySample:MaterialName,
+        mds-XraySample:ProcessingMethod,
+        pmd:Length,
+        pmd:Thickness,
+        pmd:Width ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XraySample:XraySample ;
+    rdfs:range mds-XraySample:SampleID .
+
+pmd:inputOf a owl:ObjectProperty ;
+    rdfs:label "input of"@en ;
+    rdfs:domain mds-XraySample:XraySample ;
+    rdfs:range mds-XraySample:XrayTool ;
+    skos:altLabel "is input of" .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XraySample:MaterialName,
+        mds-XraySample:ProcessingMethod,
+        mds-XraySample:SampleID,
+        pmd:Length,
+        pmd:Thickness,
+        pmd:Width ;
+    rdfs:range xsd:float,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XraySample:XrayTool a owl:Class ;
+    rdfs:label "XrayTool" ;
+    skos:altLabel "" .
+
+pmd:ManufacturingProcess a owl:Class ;
+    rdfs:label "ManufacturingProcess",
+        "Herstellungsprozess"@de,
+        "Manufacture Process"@en ;
+    skos:altLabel "" ;
+    skos:definition "A process that is driven by the primary intent to transform objects."@en .
+
+pmd:MaterialDesignation a owl:Class ;
+    rdfs:label "MaterialDesignation",
+        "Materialbezeichnung"@de,
+        "Material Designation"@en ;
+    skos:altLabel "" ;
+    skos:definition """It is a name or identifier of a material type. It designates a material. 
+E.g. "steel", "aluminium", "wood", "plastic", "rubber".""" .
+
+pmd:Sample a owl:Class ;
+    rdfs:label "Sample",
+        "Probe"@de,
+        "Sample"@en ;
+    skos:altLabel "" ;
+    skos:definition "Portion of material, usually selected from a larger quantity of material, collected and taken away for testing"@en .
+
+pmd:SpecimenName a owl:Class ;
+    rdfs:label "SpecimenName",
+        "Prüfstück Name"@de,
+        "Specimen Name"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Eigenschaft beschreibt die Bezeichnung eines Prüfstücks, die in der Regel von Menschen als von Menschen lesbarer Identifikator vergeben wird."@de,
+        "This property describes the designation of a specimen, usually given as human-readable identifier by humans."@de .
+
+mds-XraySample:MaterialName a owl:Class ;
+    rdfs:label "MaterialName" ;
+    rdfs:subClassOf pmd:MaterialDesignation ;
+    skos:altLabel "" ;
+    skos:definition "Name of the material." .
+
+mds-XraySample:ProcessingMethod a owl:Class ;
+    rdfs:label "ProcessingMethod" ;
+    rdfs:subClassOf pmd:ManufacturingProcess ;
+    skos:altLabel "" ;
+    skos:definition "The manufacturing method by ehich the sample was created." .
+
+mds-XraySample:SampleID a owl:Class ;
+    rdfs:label "SampleID" ;
+    rdfs:subClassOf pmd:SpecimenName ;
+    skos:altLabel "" ;
+    skos:definition "A human-labeled sample identifier." .
+
+pmd:Length a owl:Class ;
+    rdfs:label "Length",
+        "Länge"@de,
+        "Length"@en ;
+    skos:altLabel "" ;
+    skos:definition "Length of the sample.",
+        "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."@de,
+        "A measured distance or dimension of an object, usually the longer or longest dimension of the object."@en .
+
+pmd:Thickness a owl:Class ;
+    rdfs:label "Thickness",
+        "Dicke"@de,
+        "Thickness"@en ;
+    skos:altLabel "" ;
+    skos:definition "Thickness of the sample.",
+        "Diese Entität beschreibt die gemessene Dimension in einer Richtung eines Prüfstücks."@de,
+        "This entity describes the measured dimension in one direction of a test piece."@en ;
+    pmd:unit qudt:MilliM .
+
+pmd:Width a owl:Class ;
+    rdfs:label "Width",
+        "Breite"@de,
+        "Width"@en ;
+    skos:altLabel "" ;
+    skos:definition "Width of the sample.",
+        "Diese Entität bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."@de,
+        "This entity describes a horizontal measurement of an object taken at right angles to the length of the object."@en ;
+    pmd:unit qudt:MilliM .
+
+mds-XraySample:XraySample a owl:Class ;
+    rdfs:label "XraySample" ;
+    rdfs:subClassOf pmd:Sample ;
+    skos:altLabel "" ;
+    pmd:unit qudt:MilliM .
+

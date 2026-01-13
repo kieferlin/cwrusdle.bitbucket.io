@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://cwrusdle.bitbucket.io/Ontology/diffractionXRay.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://cwrusdle.bitbucket.io/Ontology/diffractionXRay.owl">
+    <Prefix name="" IRI="https://cwrusdle.bitbucket.io/Ontology/XRD.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Beamline_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beamline_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Detector_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experiment_Setting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image_Meta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Log_Files"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Other_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patterns"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ti_mater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wavelength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Width"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#btm_pzo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#btm_rota"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cesr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#crys_rtrn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#crys_sply"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#data_xrd"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#diffractionXRay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#diod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fst_shtr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hepp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ic1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ic2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ic3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#img_stck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#indx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#load_cll"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#load_scrw"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mo_stab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#said"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#summary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sync_cnt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tif_path"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#top_pzo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#top_rota"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Beamline_Attributes"/>
+        <Class IRI="#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beamline_Energy"/>
+        <Class IRI="#Beamline_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Detector_Attributes"/>
+        <Class IRI="#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment_Setting"/>
+        <Class IRI="#diffractionXRay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image_Attributes"/>
+        <Class IRI="#Patterns"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image_Meta"/>
+        <Class IRI="#Patterns"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Length"/>
+        <Class IRI="#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Length"/>
+        <Class IRI="#Sample_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Log_Files"/>
+        <Class IRI="#Logs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logs"/>
+        <Class IRI="#Patterns"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Other_Attributes"/>
+        <Class IRI="#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patterns"/>
+        <Class IRI="#diffractionXRay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_Attributes"/>
+        <Class IRI="#Experiment_Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ti_mater"/>
+        <Class IRI="#Sample_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wavelength"/>
+        <Class IRI="#Beamline_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Width"/>
+        <Class IRI="#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Width"/>
+        <Class IRI="#Sample_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#btm_pzo"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#btm_rota"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cesr"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#crys_rtrn"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#crys_sply"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#data_xrd"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#diod"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fst_shtr"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#hepp"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ic1"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ic2"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ic3"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ico"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#img_stck"/>
+        <Class IRI="#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#indx"/>
+        <Class IRI="#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#load_cll"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#load_scrw"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mo_stab"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#said"/>
+        <Class IRI="#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#summary"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sync_cnt"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#tif_path"/>
+        <Class IRI="#Image_Meta"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#time"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#top_pzo"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#top_rota"/>
+        <Class IRI="#Other_Attributes"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Beamline_Energy"/>
+        <Class IRI="#Wavelength"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#btm_pzo"/>
+        <Class IRI="#btm_rota"/>
+        <Class IRI="#cesr"/>
+        <Class IRI="#crys_rtrn"/>
+        <Class IRI="#crys_sply"/>
+        <Class IRI="#data_xrd"/>
+        <Class IRI="#diod"/>
+        <Class IRI="#fst_shtr"/>
+        <Class IRI="#hepp"/>
+        <Class IRI="#ic1"/>
+        <Class IRI="#ic2"/>
+        <Class IRI="#ic3"/>
+        <Class IRI="#ico"/>
+        <Class IRI="#load_cll"/>
+        <Class IRI="#load_scrw"/>
+        <Class IRI="#mo_stab"/>
+        <Class IRI="#summary"/>
+        <Class IRI="#sync_cnt"/>
+        <Class IRI="#time"/>
+        <Class IRI="#top_pzo"/>
+        <Class IRI="#top_rota"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#img_stck"/>
+        <Class IRI="#indx"/>
+        <Class IRI="#said"/>
+        <Class IRI="#tif_path"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,112 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-pvbacksheet: <https://cwrusdle.bitbucket.io/pvBacksheet#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-pvbacksheet:Ontology a owl:Ontology ;
+    rdfs:label "mds-pvbacksheet" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology representing a PV backsheet" ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-pvbacksheet" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-pvbacksheet:PhotovoltaicBacksheet ;
+    rdfs:range mds-pvbacksheet:PhotovoltaicBacksheetProperty ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-pvbacksheet:PhotovoltaicBacksheet ;
+    rdfs:range mds-pvbacksheet:PhotovoltaicBacksheetID .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-pvbacksheet:BacksheetManufacturer,
+        mds-pvbacksheet:BacksheetMaterial,
+        mds-pvbacksheet:BacksheetVintage,
+        mds-pvbacksheet:PhotovoltaicBacksheetID ;
+    rdfs:range xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-pvbacksheet:BacksheetManufacturer a owl:Class ;
+    rdfs:label "BacksheetManufacturer" ;
+    rdfs:subClassOf mds-pvbacksheet:PhotovoltaicBacksheetProperty ;
+    skos:altLabel "" ;
+    skos:definition "Manufacturer (if known) of the backsheet" .
+
+mds-pvbacksheet:BacksheetMaterial a owl:Class ;
+    rdfs:label "BacksheetMaterial" ;
+    rdfs:subClassOf mds-pvbacksheet:PhotovoltaicBacksheetProperty ;
+    skos:altLabel "" ;
+    skos:definition "Material (polymer) the PV backsheet is comprised of (EVA, POE, PET, etc)" .
+
+mds-pvbacksheet:BacksheetVintage a owl:Class ;
+    rdfs:label "BacksheetVintage" ;
+    rdfs:subClassOf mds-pvbacksheet:PhotovoltaicBacksheetProperty ;
+    skos:altLabel "" ;
+    skos:definition "Vintage (year of manufacture) of the backsheet" .
+
+pmd:ProcessingNode a owl:Class ;
+    rdfs:label "ProcessingNode",
+        "Prozessknoten"@de,
+        "Processing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."@de,
+        "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-pvbacksheet:PhotovoltaicBacksheet a owl:Class ;
+    rdfs:label "PhotovoltaicBacksheet" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    skos:altLabel "" ;
+    skos:definition "Polymer backsheet of a PV cell or module" .
+
+mds-pvbacksheet:PhotovoltaicBacksheetID a owl:Class ;
+    rdfs:label "PhotovoltaicBacksheetID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "Identifier for a PV backsheet" .
+
+mds-pvbacksheet:PhotovoltaicBacksheetProperty a owl:Class ;
+    rdfs:label "PhotovoltaicBacksheetProperty" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Property of a PV backsheet" .
+

@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://cwrusdle.bitbucket.io/Ontology/streamWater.owl/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://cwrusdle.bitbucket.io/Ontology/streamWater.owl/">
+    <Prefix name="" IRI="http://www.semanticweb.org/vijay/ontologies/2023/0/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="biological"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="inorganicMajorMetals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="inorganicMinorMetals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="inorganicMinorNonMetals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="metaData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="microbiological"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="nutrient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="organicOther"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="organicPCBs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="organicPesticide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="parameterCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="physical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="populationCommunity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="radiochemical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="sediment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="siteNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="stableIsotopes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="streamWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="toxcitiy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isMeasuredOn"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="biological"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="date"/>
+        <Class IRI="site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="information"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="inorganicMajorMetals"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="inorganicMinorMetals"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="inorganicMinorNonMetals"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="metaData"/>
+        <Class IRI="site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="microbiological"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="nutrient"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organicOther"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organicPCBs"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organicPesticide"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="parameterCode"/>
+        <Class IRI="site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="physical"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="populationCommunity"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="radiochemical"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="sediment"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="site"/>
+        <Class IRI="streamWater"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="siteNumber"/>
+        <Class IRI="site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="stableIsotopes"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="toxcitiy"/>
+        <Class IRI="parameterCode"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isMeasuredOn"/>
+        <Class IRI="site"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="parameterCode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isMeasuredOn"/>
+        <Class IRI="date"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,176 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-pvSite: <https://cwrusdle.bitbucket.io/pvSite#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-pvSite:Ontology a owl:Ontology ;
+    rdfs:label "mds-pvSite" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology representing a PV site" ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-pvSite" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-pvSite:PhotovoltaicRacking,
+        mds-pvSite:PhotovoltaicSite ;
+    rdfs:range mds-pvSite:MountingType,
+        mds-pvSite:PhotovoltaicSiteParameter,
+        mds-pvSite:RackingType,
+        mds-pvSite:TrackingAlgorithm ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-pvSite:PhotovoltaicSite ;
+    rdfs:range mds-pvSite:PhotovoltaicSiteID .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-pvSite:Elevation,
+        mds-pvSite:Latitude,
+        mds-pvSite:Longitude,
+        mds-pvSite:MountingType,
+        mds-pvSite:NumberInverters,
+        mds-pvSite:PhotovoltaicSiteID,
+        mds-pvSite:RackingType,
+        mds-pvSite:TrackingAlgorithm ;
+    rdfs:range xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-pvSite:Elevation a owl:Class ;
+    rdfs:label "Elevation" ;
+    rdfs:subClassOf mds-pvSite:PhotovoltaicSiteParameter ;
+    skos:altLabel "" ;
+    skos:definition "Elevation above sea level" ;
+    pmd:unit qudt:M .
+
+mds-pvSite:Latitude a owl:Class ;
+    rdfs:label "Latitude" ;
+    rdfs:subClassOf mds-pvSite:PhotovoltaicSiteParameter ;
+    skos:altLabel "" ;
+    skos:definition "North/south position of a point on the Earth, decimal format" .
+
+mds-pvSite:Longitude a owl:Class ;
+    rdfs:label "Longitude" ;
+    rdfs:subClassOf mds-pvSite:PhotovoltaicSiteParameter ;
+    skos:altLabel "" ;
+    skos:definition "East/west position of a point on the Earth, decimal format" .
+
+mds-pvSite:NumberInverters a owl:Class ;
+    rdfs:label "NumberInverters" ;
+    rdfs:subClassOf mds-pvSite:PhotovoltaicSiteParameter ;
+    skos:altLabel "" ;
+    skos:definition "Number of inverters located at the site" .
+
+mds-pvSite:PhotovoltaicRacking a owl:Class ;
+    rdfs:label "PhotovoltaicRacking" ;
+    rdfs:subClassOf mds-pvSite:PhotovoltaicSiteParameter ;
+    skos:altLabel "" ;
+    skos:definition "How PV modules are arranged within the system" .
+
+pmd:Algorithm a owl:Class ;
+    rdfs:label "Algorithm",
+        "Algorithmus"@de,
+        "Algorithm"@en ;
+    skos:altLabel "" ;
+    skos:definition "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."@en .
+
+pmd:Location a owl:Class ;
+    rdfs:label "Location",
+        "Ort"@de,
+        "Location"@en ;
+    skos:altLabel "" ;
+    skos:definition "Eine Position oder ein Ort, der besetzt ist oder besetzt werden kann oder durch ein bestimmtes Merkmal gekennzeichnet ist."@de,
+        "A position or site occupied or available for occupancy or marked by some distinguishing feature."@en .
+
+pmd:MaterialDesignation a owl:Class ;
+    rdfs:label "MaterialDesignation",
+        "Materialbezeichnung"@de,
+        "Material Designation"@en ;
+    skos:altLabel "" ;
+    skos:definition """It is a name or identifier of a material type. It designates a material. 
+E.g. "steel", "aluminium", "wood", "plastic", "rubber".""" .
+
+pmd:MaterialProperty a owl:Class ;
+    rdfs:label "MaterialProperty",
+        "Materialeigenschaft"@de,
+        "Material Property"@en ;
+    skos:altLabel "" ;
+    skos:definition "Eine Materialeigenschaft ist eine intensive Eigenschaft eines Materials, d. h. eine physikalische Eigenschaft, die nicht von der Menge des Materials abhängt. Diese quantitativen Eigenschaften können als Maßstab verwendet werden, um die Vorteile eines Materials mit denen eines anderen zu vergleichen und so die Materialauswahl zu erleichtern."@de,
+        "A materials property is an intensive property of a material, i.e., a physical property that does not depend on the amount of the material. These quantitative properties may be used as a metric by which the benefits of one material versus another can be compared, thereby aiding in materials selection."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-pvSite:MountingType a owl:Class ;
+    rdfs:label "MountingType" ;
+    rdfs:subClassOf pmd:MaterialProperty ;
+    skos:altLabel "" ;
+    skos:definition "How the arrays are mounted (fixed, one axis tracker, two axis tracker, vertical, etc)" .
+
+mds-pvSite:PhotovoltaicSite a owl:Class ;
+    rdfs:label "PhotovoltaicSite" ;
+    rdfs:subClassOf pmd:Location ;
+    skos:altLabel "" ;
+    skos:definition "Physical location of a PV site" .
+
+mds-pvSite:PhotovoltaicSiteID a owl:Class ;
+    rdfs:label "PhotovoltaicSiteID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "Site identifier" .
+
+mds-pvSite:RackingType a owl:Class ;
+    rdfs:label "RackingType" ;
+    rdfs:subClassOf pmd:MaterialDesignation ;
+    skos:altLabel "" ;
+    skos:definition "Type of racking used (open, closed, roof, etc)" .
+
+mds-pvSite:TrackingAlgorithm a owl:Class ;
+    rdfs:label "TrackingAlgorithm" ;
+    rdfs:subClassOf pmd:Algorithm ;
+    skos:altLabel "" ;
+    skos:definition "If system is tracking, method used (truetracking, backtracking, diffuse tracking, etc)" .
+
+mds-pvSite:PhotovoltaicSiteParameter a owl:Class ;
+    rdfs:label "PhotovoltaicSiteParameter" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Parameter or property a PV site has" .
+

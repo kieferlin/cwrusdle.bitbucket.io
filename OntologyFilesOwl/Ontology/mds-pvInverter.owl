@@ -1,0 +1,350 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-pvInverter: <https://cwrusdle.bitbucket.io/pvInverter#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-pvInverter:ACOutputs a owl:Class ;
+    rdfs:label "ACOutputs" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "AC output of inverter" .
+
+mds-pvInverter:CECListingDate a owl:Class ;
+    rdfs:label "CECListingDate" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Date module measurements listed by CEC" .
+
+mds-pvInverter:CECNotes a owl:Class ;
+    rdfs:label "CECNotes" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Notes from CEC testing of the inverter" .
+
+mds-pvInverter:GridInterfaceType a owl:Class ;
+    rdfs:label "GridInterfaceType" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Grid interface phase (monophase, biphase, triphase)" .
+
+mds-pvInverter:InterconnectionLineCount a owl:Class ;
+    rdfs:label "InterconnectionLineCount" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Number of interconnection lines" .
+
+mds-pvInverter:InterconnectionPhaseType a owl:Class ;
+    rdfs:label "InterconnectionPhaseType" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Interconnection phase type" .
+
+mds-pvInverter:InverterSwitchoverTime a owl:Class ;
+    rdfs:label "InverterSwitchoverTime" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Switch over time between grid import and inverter export to grid" .
+
+mds-pvInverter:NightTare a owl:Class ;
+    rdfs:label "NightTare" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Power consumption of the device during nighttime" .
+
+mds-pvInverter:Ontology a owl:Ontology ;
+    rdfs:label "mds-pvInverter" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology describing a PV inverter" ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-pvInverter" .
+
+mds-pvInverter:PowerFactorMax a owl:Class ;
+    rdfs:label "PowerFactorMax" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Maximum power factor" ;
+    pmd:unit qudt:KiloW .
+
+mds-pvInverter:PowerFactorMin a owl:Class ;
+    rdfs:label "PowerFactorMin" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Minimum power factor" ;
+    pmd:unit qudt:KiloW .
+
+mds-pvInverter:RevenueGrade a owl:Class ;
+    rdfs:label "RevenueGrade" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Is the inverter revenue grade? (accuracy of 0.5% or better)" .
+
+mds-pvInverter:TotalHarmonicDistortionCurrent a owl:Class ;
+    rdfs:label "TotalHarmonicDistortionCurrent" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Harmonic distortion of current" .
+
+mds-pvInverter:TotalHarmonicDistortionPower a owl:Class ;
+    rdfs:label "TotalHarmonicDistortionPower" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Total harmonic distortion of power" ;
+    pmd:unit qudt:KiloW .
+
+mds-pvInverter:VoltageACNom a owl:Class ;
+    rdfs:label "VoltageACNom" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Nominal AC voltage" ;
+    pmd:unit qudt:V .
+
+mds-pvInverter:VoltageDCInverterStart a owl:Class ;
+    rdfs:label "VoltageDCInverterStart" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Turn-on input DC voltage required for inverter to output AC power" ;
+    pmd:unit qudt:V .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-pvInverter:PhotovoltaicInverter ;
+    rdfs:range mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-pvInverter:PhotovoltaicInverter ;
+    rdfs:range mds-pvInverter:PhotovoltaicInverterID .
+
+pmd:hasSource a owl:ObjectProperty ;
+    rdfs:domain mds-pvInverter:InverterEfficiency,
+        mds-pvInverter:InverterOutput ;
+    rdfs:range mds-pvInverter:OrangeButtonTerm .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-pvInverter:CurrentACMax,
+        mds-pvInverter:EfficiencyCECWtdVoltageMax,
+        mds-pvInverter:EfficiencyCECWtdVoltageMin,
+        mds-pvInverter:EfficiencyCECWtdVoltageNom,
+        mds-pvInverter:FrequenciesAC,
+        mds-pvInverter:HasMeter,
+        mds-pvInverter:InverterEfficiency,
+        mds-pvInverter:InverterEfficiencyCEC,
+        mds-pvInverter:InverterEfficiencyIEC,
+        mds-pvInverter:InverterEfficiencyMax,
+        mds-pvInverter:InverterOutput,
+        mds-pvInverter:IsHybrid,
+        mds-pvInverter:IsPVInputCapable,
+        mds-pvInverter:ModuleCountParallel,
+        mds-pvInverter:ModuleCountSeries,
+        mds-pvInverter:PhotovoltaicInverterID,
+        mds-pvInverter:PowerACMax,
+        mds-pvInverter:PowerACNom,
+        mds-pvInverter:PowerDCOut,
+        mds-pvInverter:VoltageACMax,
+        mds-pvInverter:VoltageACMin ;
+    rdfs:range xsd:boolean,
+        xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-pvInverter:CurrentACMax a owl:Class ;
+    rdfs:label "CurrentACMax" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Current at maximum AC power" ;
+    pmd:unit qudt:A .
+
+mds-pvInverter:EfficiencyCECWtdVoltageMax a owl:Class ;
+    rdfs:label "EfficiencyCECWtdVoltageMax" ;
+    rdfs:subClassOf mds-pvInverter:InverterEfficiency ;
+    skos:altLabel "" ;
+    skos:definition "CEC measured voltage maximum" ;
+    pmd:unit qudt:V .
+
+mds-pvInverter:EfficiencyCECWtdVoltageMin a owl:Class ;
+    rdfs:label "EfficiencyCECWtdVoltageMin" ;
+    rdfs:subClassOf mds-pvInverter:InverterEfficiency ;
+    skos:altLabel "" ;
+    skos:definition "CEC measured voltage minimum" ;
+    pmd:unit qudt:V .
+
+mds-pvInverter:EfficiencyCECWtdVoltageNom a owl:Class ;
+    rdfs:label "EfficiencyCECWtdVoltageNom" ;
+    rdfs:subClassOf mds-pvInverter:InverterEfficiency ;
+    skos:altLabel "" ;
+    skos:definition "CEC measured nominal operating voltage" ;
+    pmd:unit qudt:V .
+
+mds-pvInverter:FrequenciesAC a owl:Class ;
+    rdfs:label "FrequenciesAC" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "AC frequency, typically 60Hz (Americas) or 50Hz (elsewhere)" ;
+    pmd:unit qudt:Hertz .
+
+mds-pvInverter:HasMeter a owl:Class ;
+    rdfs:label "HasMeter" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Does the inverter measure output AC power and input DC power?" .
+
+mds-pvInverter:InverterEfficiencyCEC a owl:Class ;
+    rdfs:label "InverterEfficiencyCEC" ;
+    rdfs:subClassOf mds-pvInverter:InverterEfficiency ;
+    skos:altLabel "" ;
+    skos:definition "CEC measured inverter efficency" .
+
+mds-pvInverter:InverterEfficiencyIEC a owl:Class ;
+    rdfs:label "InverterEfficiencyIEC" ;
+    rdfs:subClassOf mds-pvInverter:InverterEfficiency ;
+    skos:altLabel "" ;
+    skos:definition "IEC inverter efficency" .
+
+mds-pvInverter:InverterEfficiencyMax a owl:Class ;
+    rdfs:label "InverterEfficiencyMax" ;
+    rdfs:subClassOf mds-pvInverter:InverterEfficiency ;
+    skos:altLabel "" ;
+    skos:definition "Theoretical maximum inverter efficency (nameplate)" .
+
+mds-pvInverter:IsHybrid a owl:Class ;
+    rdfs:label "IsHybrid" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "System connected only to grid, or also to batteries?" .
+
+mds-pvInverter:IsPVInputCapable a owl:Class ;
+    rdfs:label "IsPVInputCapable" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Is inverter capable of directly accepting PV input?" .
+
+mds-pvInverter:ModuleCountParallel a owl:Class ;
+    rdfs:label "ModuleCountParallel" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Number of strings of modules connected in parallel" .
+
+mds-pvInverter:ModuleCountSeries a owl:Class ;
+    rdfs:label "ModuleCountSeries" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Number of modules per string connected in series" .
+
+mds-pvInverter:OrangeButtonTerm a owl:Class ;
+    rdfs:label "OrangeButtonTerm" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Term from the OrangeButton Taxonomy" .
+
+mds-pvInverter:PowerACMax a owl:Class ;
+    rdfs:label "PowerACMax" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Maximum AC power" ;
+    pmd:unit qudt:KiloW .
+
+mds-pvInverter:PowerACNom a owl:Class ;
+    rdfs:label "PowerACNom" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Nominal AC power" ;
+    pmd:unit qudt:KiloW .
+
+mds-pvInverter:PowerDCOut a owl:Class ;
+    rdfs:label "PowerDCOut" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "DC power output of PV array" .
+
+mds-pvInverter:VoltageACMax a owl:Class ;
+    rdfs:label "VoltageACMax" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Maximum AC voltage " ;
+    pmd:unit qudt:V .
+
+mds-pvInverter:VoltageACMin a owl:Class ;
+    rdfs:label "VoltageACMin" ;
+    rdfs:subClassOf mds-pvInverter:InverterOutput ;
+    skos:altLabel "" ;
+    skos:definition "Minimum AC voltage" ;
+    pmd:unit qudt:V .
+
+pmd:ProcessingNode a owl:Class ;
+    rdfs:label "ProcessingNode",
+        "Prozessknoten"@de,
+        "Processing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."@de,
+        "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+mds-pvInverter:PhotovoltaicInverter a owl:Class ;
+    rdfs:label "PhotovoltaicInverter" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    skos:altLabel "" ;
+    skos:definition "An inverter for a PV system" .
+
+mds-pvInverter:PhotovoltaicInverterID a owl:Class ;
+    rdfs:label "PhotovoltaicInverterID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "Identifier for a PV inverter" .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-pvInverter:InverterEfficiency a owl:Class ;
+    rdfs:label "InverterEfficiency" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Inverter efficency from DC to AC power" .
+
+mds-pvInverter:PhotovoltaicInverterProperty a owl:Class ;
+    rdfs:label "PhotovoltaicInverterProperty" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Property of a PV inverter" .
+
+mds-pvInverter:InverterOutput a owl:Class ;
+    rdfs:label "InverterOutput" ;
+    rdfs:subClassOf mds-pvInverter:PhotovoltaicInverterProperty ;
+    skos:altLabel "" ;
+    skos:definition "Output AC power of the inverter" ;
+    pmd:unit qudt:KiloW .
+

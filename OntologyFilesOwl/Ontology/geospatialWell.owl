@@ -1,0 +1,144 @@
+@prefix : <http://www.semanticweb.org/hope/ontologies/2023/0/untitled-ontology-4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hope/ontologies/2023/0/Geospatiawell> .
+
+<http://www.semanticweb.org/hope/ontologies/2023/0/Geospatiawell> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/Geospatiawell#GeospatialWell
+:GeospatialWell rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/Geospatiawell#wellLogs
+:wellLogs rdf:type owl:Class ;
+          rdfs:subClassOf :GeospatialWell .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#country
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#country> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#location> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#county
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#county> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#location> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :wellLogs .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#data
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#data> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#density
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#density> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#elevationPermanentDatum
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#elevationPermanentDatum> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#endIndex
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#endIndex> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#field
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#field> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#location> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#gammaRay
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#gammaRay> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#geocoordinates
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#geocoordinates> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf :wellLogs .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :wellLogs .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#latitude
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#latitude> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#geocoordinates> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#location
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#location> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf :wellLogs .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#longitude
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#longitude> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#geocoordinates> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#measuredDepth
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#measuredDepth> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#name
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#name> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#neutronPorosity
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#neutronPorosity> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#photoelectricFactor
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#photoelectricFactor> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#startindex
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#startindex> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#state
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#state> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#location> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#step
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#step> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#volumeClay
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#volumeClay> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#volumeDolomite
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#volumeDolomite> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#curves> .
+
+
+###  http://www.semanticweb.org/hope/ontologies/2023/0/welllog#wellAPI
+<http://www.semanticweb.org/hope/ontologies/2023/0/welllog#wellAPI> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/hope/ontologies/2023/0/welllog#header> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

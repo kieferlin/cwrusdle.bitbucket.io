@@ -1,0 +1,125 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XrayModeling: <https://cwrusdle.bitbucket.io/xrayModeling#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XrayModeling:Ontology a owl:Ontology ;
+    rdfs:label "mds-XrayModeling" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology for the XRD Modeling FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XrayModeling" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XrayModeling:Modeling ;
+    rdfs:range mds-XrayModeling:Architecture,
+        mds-XrayModeling:Epochs,
+        mds-XrayModeling:TestingSplit,
+        mds-XrayModeling:TrainingSplit ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XrayModeling:Modeling ;
+    rdfs:range mds-XrayModeling:ModelID .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XrayModeling:Architecture,
+        mds-XrayModeling:Epochs,
+        mds-XrayModeling:ModelID,
+        mds-XrayModeling:TestingSplit,
+        mds-XrayModeling:TrainingSplit ;
+    rdfs:range xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+pmd:ComputingNode a owl:Class ;
+    rdfs:label "ComputingNode",
+        "Computerknoten"@de,
+        "Computing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition """Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.
+Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."""@de,
+        """A computing system that provides an execution environment for, e.g., simulation processes or prediction models.
+A Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."""@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-XrayModeling:Architecture a owl:Class ;
+    rdfs:label "Architecture" ;
+    rdfs:subClassOf mds-XrayModeling:ModelingParameters ;
+    skos:altLabel "" ;
+    skos:definition "Architecture of the model." .
+
+mds-XrayModeling:Epochs a owl:Class ;
+    rdfs:label "Epochs" ;
+    rdfs:subClassOf mds-XrayModeling:ModelingParameters ;
+    skos:altLabel "" ;
+    skos:definition "Number of epochs the model was trained for." .
+
+mds-XrayModeling:ModelID a owl:Class ;
+    rdfs:label "ModelID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "An identifier for the model." .
+
+mds-XrayModeling:Modeling a owl:Class ;
+    rdfs:label "Modeling" ;
+    rdfs:subClassOf pmd:ComputingNode ;
+    skos:altLabel "" ;
+    skos:definition "Modeling applied to the collected or modified data." .
+
+mds-XrayModeling:TestingSplit a owl:Class ;
+    rdfs:label "TestingSplit" ;
+    rdfs:subClassOf mds-XrayModeling:ModelingParameters ;
+    skos:altLabel "" ;
+    skos:definition "The testing split." .
+
+mds-XrayModeling:TrainingSplit a owl:Class ;
+    rdfs:label "TrainingSplit" ;
+    rdfs:subClassOf mds-XrayModeling:ModelingParameters ;
+    skos:altLabel "" ;
+    skos:definition "The training split." .
+
+mds-XrayModeling:ModelingParameters a owl:Class ;
+    rdfs:label "ModelingParameters" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Parameters of the model." .
+

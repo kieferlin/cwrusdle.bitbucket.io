@@ -1,0 +1,193 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-pvCell: <https://cwrusdle.bitbucket.io/pvCell#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-pvCell:CellCutType a owl:Class ;
+    rdfs:label "CellCutType" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" .
+
+mds-pvCell:CellTechnologyType a owl:Class ;
+    rdfs:label "CellTechnologyType" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "Cell technology (PERC, TOPCon, Al-BSF, CdTe, CIGS, etc)" .
+
+mds-pvCell:ModuleRatingCondition a owl:Class ;
+    rdfs:label "ModuleRatingCondition" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "Condition of the cell" .
+
+mds-pvCell:Ontology a owl:Ontology ;
+    rdfs:label "mds-pvCell" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "This is an ontology describing the terms for a PV cell" ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-pvCell" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-pvCell:PhotovoltaicCell ;
+    rdfs:range mds-pvCell:PhotovoltaicCellProperty,
+        pmd:Length,
+        pmd:MaterialDesignation,
+        pmd:Thickness,
+        pmd:Width ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-pvCell:PhotovoltaicCell ;
+    rdfs:range mds-pvCell:PhotovoltaicCellID .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-pvCell:CurrentAtMaximumPower,
+        mds-pvCell:CurrentShortCircuit,
+        mds-pvCell:PhotovoltaicCellID,
+        mds-pvCell:PhotovoltaicCellProperty,
+        mds-pvCell:PowerDC,
+        mds-pvCell:VoltageAtMaximumPower,
+        mds-pvCell:VoltageOpenCircuit,
+        pmd:Length,
+        pmd:MaterialDesignation,
+        pmd:Thickness,
+        pmd:Width ;
+    rdfs:range xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-pvCell:CurrentAtMaximumPower a owl:Class ;
+    rdfs:label "CurrentAtMaximumPower" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "DC current at maximum power point" ;
+    pmd:unit qudt:A .
+
+mds-pvCell:CurrentShortCircuit a owl:Class ;
+    rdfs:label "CurrentShortCircuit" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "Short-circuit current of the cell" ;
+    pmd:unit qudt:A .
+
+mds-pvCell:PowerDC a owl:Class ;
+    rdfs:label "PowerDC" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "DC power produced by the cell" ;
+    pmd:unit qudt:V .
+
+mds-pvCell:VoltageAtMaximumPower a owl:Class ;
+    rdfs:label "VoltageAtMaximumPower" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "DC voltage at the maximum power point of the cell" ;
+    pmd:unit qudt:V .
+
+mds-pvCell:VoltageOpenCircuit a owl:Class ;
+    rdfs:label "VoltageOpenCircuit" ;
+    rdfs:subClassOf mds-pvCell:PhotovoltaicCellProperty ;
+    skos:altLabel "" ;
+    skos:definition "Open-circuit voltage of the cell" ;
+    pmd:unit qudt:V .
+
+pmd:ProcessingNode a owl:Class ;
+    rdfs:label "ProcessingNode",
+        "Prozessknoten"@de,
+        "Processing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."@de,
+        "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-pvCell:PhotovoltaicCell a owl:Class ;
+    rdfs:label "PhotovoltaicCell" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    skos:altLabel "" .
+
+mds-pvCell:PhotovoltaicCellID a owl:Class ;
+    rdfs:label "PhotovoltaicCellID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "Identifier for the PV cell" .
+
+pmd:Length a owl:Class ;
+    rdfs:label "Length",
+        "Länge"@de,
+        "Length"@en ;
+    skos:altLabel "" ;
+    skos:definition "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."@de,
+        "A measured distance or dimension of an object, usually the longer or longest dimension of the object."@en ;
+    pmd:unit qudt:CentiM .
+
+pmd:MaterialDesignation a owl:Class ;
+    rdfs:label "MaterialDesignation",
+        "Materialbezeichnung"@de,
+        "Material Designation"@en ;
+    skos:altLabel "" ;
+    skos:definition """It is a name or identifier of a material type. It designates a material. 
+E.g. "steel", "aluminium", "wood", "plastic", "rubber".""" .
+
+pmd:Thickness a owl:Class ;
+    rdfs:label "Thickness",
+        "Dicke"@de,
+        "Thickness"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Entität beschreibt die gemessene Dimension in einer Richtung eines Prüfstücks."@de,
+        "This entity describes the measured dimension in one direction of a test piece."@en ;
+    pmd:unit qudt:CentiM .
+
+pmd:Width a owl:Class ;
+    rdfs:label "Width",
+        "Breite"@de,
+        "Width"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Entität bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."@de,
+        "This entity describes a horizontal measurement of an object taken at right angles to the length of the object."@en ;
+    pmd:unit qudt:CentiM .
+
+mds-pvCell:PhotovoltaicCellProperty a owl:Class ;
+    rdfs:label "PhotovoltaicCellProperty" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "A property of a PV cell" .
+

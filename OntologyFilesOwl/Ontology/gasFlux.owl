@@ -1,0 +1,250 @@
+@prefix : <https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl> .
+
+<https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#hasData
+:hasData rdf:type owl:ObjectProperty ;
+         rdfs:domain :sampleId ;
+         rdfs:range :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#hasMetadata
+:hasMetadata rdf:type owl:ObjectProperty ;
+             rdfs:domain :sampleId ;
+             rdfs:range :sampleMetadataa .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#anualBudgetContrib
+:anualBudgetContrib rdf:type owl:Class ;
+                    rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#conversion
+:conversion rdf:type owl:Class ;
+            rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#cumulativeFluxDuringPeak
+:cumulativeFluxDuringPeak rdf:type owl:Class ;
+                          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#data
+:data rdf:type owl:Class ;
+      rdfs:subClassOf :sampleId .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#date
+:date rdf:type owl:Class ;
+      rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#duration
+:duration rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#elevation
+:elevation rdf:type owl:Class ;
+           rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#experimentType
+:experimentType rdf:type owl:Class ;
+                rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxChange
+:fluxChange rdf:type owl:Class ;
+            rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxNormUnits
+:fluxNormUnits rdf:type owl:Class ;
+               rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxPost
+:fluxPost rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxPostNorm
+:fluxPostNorm rdf:type owl:Class ;
+              rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxPostRaw
+:fluxPostRaw rdf:type owl:Class ;
+             rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxPre
+:fluxPre rdf:type owl:Class ;
+         rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxPreNorm
+:fluxPreNorm rdf:type owl:Class ;
+             rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxPreRaw
+:fluxPreRaw rdf:type owl:Class ;
+            rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#fluxUnits
+:fluxUnits rdf:type owl:Class ;
+           rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#gas
+:gas rdf:type owl:Class ;
+     rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#gasFlux
+:gasFlux rdf:type owl:Class .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#lat
+:lat rdf:type owl:Class ;
+     rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#location
+:location rdf:type owl:Class ;
+          rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#lon
+:lon rdf:type owl:Class ;
+     rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#map
+:map rdf:type owl:Class ;
+     rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#mat
+:mat rdf:type owl:Class ;
+     rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#peakLag
+:peakLag rdf:type owl:Class ;
+         rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#rainfall
+:rainfall rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#ref
+:ref rdf:type owl:Class ;
+     rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#sampleID
+:sampleID rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#sampleId
+:sampleId rdf:type owl:Class ;
+          rdfs:subClassOf :gasFlux .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#sampleMetadataa
+:sampleMetadataa rdf:type owl:Class ;
+                 rdfs:subClassOf :sampleId .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#siteType
+:siteType rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#smChange
+:smChange rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#smPost
+:smPost rdf:type owl:Class ;
+        rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#smPre
+:smPre rdf:type owl:Class ;
+       rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#soilC
+:soilC rdf:type owl:Class ;
+       rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#soilN
+:soilN rdf:type owl:Class ;
+       rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#soilNitrogen
+:soilNitrogen rdf:type owl:Class ;
+              rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#soilPh
+:soilPh rdf:type owl:Class ;
+        rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#soilType
+:soilType rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#studyType
+:studyType rdf:type owl:Class ;
+           rdfs:subClassOf :sampleMetadataa .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#tIncubation
+:tIncubation rdf:type owl:Class ;
+             rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#tSoilPost
+:tSoilPost rdf:type owl:Class ;
+           rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#tSoilPre
+:tSoilPre rdf:type owl:Class ;
+          rdfs:subClassOf :data .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl#vegetation
+:vegetation rdf:type owl:Class ;
+            rdfs:subClassOf :data .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/redad/ontologies/2023/4/simulationXRD"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/redad/ontologies/2023/4/simulationXRD">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Alpha-Ti"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Austenite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaseName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beamline_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beta-Ti"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experimental_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image_Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lambda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Length_Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaskDim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NGrains"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NPatterns"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhaseFracAlpha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhaseFracAust"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhaseFracBeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhaseFracTotal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phases"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PixelDim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relative_wavelength_spread"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Run_Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simulated_pattern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeDistrAust"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeDistrTiAlpha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeDistrTiBeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TextureAust"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TextureTiAlpha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TextureTiBeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UUID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#XRD_Simulation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Alpha-Ti"/>
+        <Class IRI="#Phases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Austenite"/>
+        <Class IRI="#Phases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaseName"/>
+        <Class IRI="#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beamline_attributes"/>
+        <Class IRI="#Experimental_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beta-Ti"/>
+        <Class IRI="#Phases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experimental_Attributes"/>
+        <Class IRI="#XRD_Simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image_Attributes"/>
+        <Class IRI="#Simulated_pattern"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lambda"/>
+        <Class IRI="#Beamline_attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Length_Unit"/>
+        <Class IRI="#Beamline_attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaskDim"/>
+        <Class IRI="#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ngrains"/>
+        <Class IRI="#Simulated_pattern"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Npatterns"/>
+        <Class IRI="#Simulated_pattern"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhaseFracAlpha"/>
+        <Class IRI="#Alpha-Ti"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhaseFracAust"/>
+        <Class IRI="#Austenite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhaseFracBeta"/>
+        <Class IRI="#Beta-Ti"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhaseFracTotal"/>
+        <Class IRI="#Phases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phases"/>
+        <Class IRI="#Sample_attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PixelDim"/>
+        <Class IRI="#Image_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relative_wavelength_spread"/>
+        <Class IRI="#Beamline_attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Run_Description"/>
+        <Class IRI="#Simulated_pattern"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_attributes"/>
+        <Class IRI="#Experimental_Attributes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simulated_pattern"/>
+        <Class IRI="#XRD_Simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeDistrAust"/>
+        <Class IRI="#Austenite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeDistrTiAlpha"/>
+        <Class IRI="#Alpha-Ti"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeDistrTiBeta"/>
+        <Class IRI="#Beta-Ti"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TextureAust"/>
+        <Class IRI="#Austenite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TextureTiAlpha"/>
+        <Class IRI="#Alpha-Ti"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TextureTiBeta"/>
+        <Class IRI="#Beta-Ti"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UUID"/>
+        <Class IRI="#Image_Attributes"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Alpha-Ti"/>
+        <Class IRI="#Austenite"/>
+        <Class IRI="#Beta-Ti"/>
+        <Class IRI="#PhaseFracTotal"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BaseName"/>
+        <Class IRI="#MaskDim"/>
+        <Class IRI="#PixelDim"/>
+        <Class IRI="#UUID"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Beamline_attributes"/>
+        <Class IRI="#Sample_attributes"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Experimental_Attributes"/>
+        <Class IRI="#Simulated_pattern"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Experimental_Attributes"/>
+        <Class IRI="#Simulated_pattern"/>
+        <Class IRI="#XRD_Simulation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Image_Attributes"/>
+        <Class IRI="#Ngrains"/>
+        <Class IRI="#Npatterns"/>
+        <Class IRI="#Run_Description"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Lambda"/>
+        <Class IRI="#Length_Unit"/>
+        <Class IRI="#Relative_wavelength_spread"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhaseFracAlpha"/>
+        <Class IRI="#SizeDistrTiAlpha"/>
+        <Class IRI="#TextureTiAlpha"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhaseFracAust"/>
+        <Class IRI="#SizeDistrAust"/>
+        <Class IRI="#TextureAust"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhaseFracBeta"/>
+        <Class IRI="#SizeDistrTiBeta"/>
+        <Class IRI="#TextureTiBeta"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

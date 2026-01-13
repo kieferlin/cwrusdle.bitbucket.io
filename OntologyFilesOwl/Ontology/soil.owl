@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vijay/ontologies/2023/0/untitled-ontology-12#"
+     xml:base="http://www.semanticweb.org/vijay/ontologies/2023/0/untitled-ontology-12"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#AWC -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#AWC">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#ID -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#ID">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#MUGlobal -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#MUGlobal">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#MUSource -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#MUSource">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#MUSource2 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#MUSource2">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SEQ -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SEQ">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUCode74 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUCode74">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUCode85 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUCode85">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUCode90 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUCode90">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSym74 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSym74">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSym85 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSym85">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSym90 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSym90">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSymbol -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#SUSymbol">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#addProp -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#addProp">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilProperties"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#coverage -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#coverage">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#impermeableLayer -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#impermeableLayer">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#isSoil -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#isSoil">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#phase1 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#phase1">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#phase2 -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#phase2">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#refDepth -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#refDepth">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#roots -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#roots">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#share -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#share">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#soil -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soil"/>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilMappingUnitIdentifiers">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soil"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soil"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilProperties -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilProperties">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soil"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soil"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilWaterRegimeSWR -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilWaterRegimeSWR">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilPhases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cwrusdle.bitbucket.io/Ontology/soil.owl#texture -->
+
+    <owl:Class rdf:about="https://cwrusdle.bitbucket.io/Ontology/soil.owl#texture">
+        <rdfs:subClassOf rdf:resource="https://cwrusdle.bitbucket.io/Ontology/soil.owl#soilUnitNaming"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

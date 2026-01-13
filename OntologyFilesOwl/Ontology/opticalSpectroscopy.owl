@@ -1,0 +1,254 @@
+@prefix : <https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl> .
+
+<https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#ElectronicSpectroscopy
+:ElectronicSpectroscopy rdf:type owl:Class ;
+                        rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#FTIRSpectroscopy
+:FTIRSpectroscopy rdf:type owl:Class ;
+                  rdfs:subClassOf :VibrationalSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#FluorescenceSpectroscopy
+:FluorescenceSpectroscopy rdf:type owl:Class ;
+                          rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#ICPMethod
+:ICPMethod rdf:type owl:Class ;
+           rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#MeasurementTechnique
+:MeasurementTechnique rdf:type owl:Class ;
+                      rdfs:subClassOf :OpticalSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#OpticalSpectroscopy
+:OpticalSpectroscopy rdf:type owl:Class .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#RamanSpectroscopy
+:RamanSpectroscopy rdf:type owl:Class ;
+                   rdfs:subClassOf :ScatteringSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#ScatteringSpectroscopy
+:ScatteringSpectroscopy rdf:type owl:Class ;
+                        rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#UVvisSpectroscopy
+:UVvisSpectroscopy rdf:type owl:Class ;
+                   rdfs:subClassOf :ElectronicSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#VibrationalSpectroscopy
+:VibrationalSpectroscopy rdf:type owl:Class ;
+                         rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#absorbanceUv
+:absorbanceUv rdf:type owl:Class ;
+              rdfs:subClassOf :experimentalMetadataUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#calibration
+:calibration rdf:type owl:Class ;
+             rdfs:subClassOf :inductivelyCoupledPlasma .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#calibrationMixture
+:calibrationMixture rdf:type owl:Class ;
+                    rdfs:subClassOf :calibration .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#cellGas
+:cellGas rdf:type owl:Class ;
+         rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#concentration
+:concentration rdf:type owl:Class ;
+               rdfs:subClassOf :sampleInformation .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#concentrationRange
+:concentrationRange rdf:type owl:Class ;
+                    rdfs:subClassOf :calibration .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#dataTypeUv
+:dataTypeUv rdf:type owl:Class ;
+            rdfs:subClassOf :rawData .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#detectorType
+:detectorType rdf:type owl:Class ;
+              rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#dilution
+:dilution rdf:type owl:Class ;
+          rdfs:subClassOf :calibration .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#dwellTime
+:dwellTime rdf:type owl:Class ;
+           rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#element
+:element rdf:type owl:Class ;
+         rdfs:subClassOf :inductivelyCoupledPlasma .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#elementConcentration
+:elementConcentration rdf:type owl:Class ;
+                      rdfs:subClassOf :inductivelyCoupledPlasma .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#experimentalMetadata
+:experimentalMetadata rdf:type owl:Class ;
+                      rdfs:subClassOf :inductivelyCoupledPlasma .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#experimentalMetadataUv
+:experimentalMetadataUv rdf:type owl:Class ;
+                        rdfs:subClassOf :UVvisSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#inductivelyCoupledPlasma
+:inductivelyCoupledPlasma rdf:type owl:Class ;
+                          rdfs:subClassOf :MeasurementTechnique .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#intensityUv
+:intensityUv rdf:type owl:Class ;
+             rdfs:subClassOf :rawData .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#materialType
+:materialType rdf:type owl:Class ;
+              rdfs:subClassOf :experimentalMetadataUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#numberRuns
+:numberRuns rdf:type owl:Class ;
+            rdfs:subClassOf :calibration .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#numberRunsSample
+:numberRunsSample rdf:type owl:Class ;
+                  rdfs:subClassOf :sampleInformation .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#rawData
+:rawData rdf:type owl:Class ;
+         rdfs:subClassOf :UVvisSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#readings
+:readings rdf:type owl:Class ;
+          rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#replicates
+:replicates rdf:type owl:Class ;
+            rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#results
+:results rdf:type owl:Class ;
+         rdfs:subClassOf :inductivelyCoupledPlasma .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleDilution
+:sampleDilution rdf:type owl:Class ;
+                rdfs:subClassOf :sampleInformation .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleId
+:sampleId rdf:type owl:Class ;
+          rdfs:subClassOf :sampleInformation .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleIdUv
+:sampleIdUv rdf:type owl:Class ;
+            rdfs:subClassOf :sampleInformationUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleInformation
+:sampleInformation rdf:type owl:Class ;
+                   rdfs:subClassOf :inductivelyCoupledPlasma .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleInformationUv
+:sampleInformationUv rdf:type owl:Class ;
+                     rdfs:subClassOf :UVvisSpectroscopy .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleMaterial
+:sampleMaterial rdf:type owl:Class ;
+                rdfs:subClassOf :sampleInformationUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#samplePhase
+:samplePhase rdf:type owl:Class ;
+             rdfs:subClassOf :sampleInformationUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleReplicate
+:sampleReplicate rdf:type owl:Class ;
+                 rdfs:subClassOf :sampleInformation .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleThickness
+:sampleThickness rdf:type owl:Class ;
+                 rdfs:subClassOf :sampleInformationUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#sampleWidth
+:sampleWidth rdf:type owl:Class ;
+             rdfs:subClassOf :sampleInformationUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#scanMode
+:scanMode rdf:type owl:Class ;
+          rdfs:subClassOf :experimentalMetadata .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#stepNumber
+:stepNumber rdf:type owl:Class ;
+            rdfs:subClassOf :experimentalMetadataUv .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#wavelenghts
+:wavelenghts rdf:type owl:Class ;
+             rdfs:subClassOf :calibration .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#wavelengthUv
+:wavelengthUv rdf:type owl:Class ;
+              rdfs:subClassOf :rawData .
+
+
+###  https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl#wavelengthUvMeta
+:wavelengthUvMeta rdf:type owl:Class ;
+                  rdfs:subClassOf :experimentalMetadataUv .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

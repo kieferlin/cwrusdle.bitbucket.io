@@ -1,0 +1,114 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XRDResult: <https://cwrusdle.bitbucket.io/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XRDResult:Ontology a owl:Ontology ;
+    rdfs:label "mds-XRDResult" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology for the XRD Result FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XRDResult" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XRDResult:XRDResult ;
+    rdfs:range mds-XRDResult:imageSequence,
+        mds-XRDResult:logFile,
+        mds-XRDResult:stackNumber ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XRDResult:XRDResult ;
+    rdfs:range mds-XRDResult:ResultID .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XRDResult:ResultID,
+        mds-XRDResult:imageSequence,
+        mds-XRDResult:stackNumber ;
+    rdfs:range xsd:Sequence,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XRDResult:logFile a owl:Class ;
+    rdfs:label "logFile" ;
+    rdfs:subClassOf pmd:Metadata ;
+    skos:altLabel "" .
+
+pmd:Metadata a owl:Class ;
+    rdfs:label "Metadata",
+        "Metadaten"@de,
+        "Metadata"@en ;
+    skos:altLabel "" ;
+    skos:definition "Die DataScope Metadaten umfassen Attribute und zusätzliche Daten (Provenienz), die z.B. die Fabrik, das Labor, das Prozesssystem und die Objekte betreffen und die eine Bewertung der Qualität / Zuverlässigkeit der Messungen und eine systematische Suche in einer Datenbank ermöglichen."@de,
+        "This data scope expresses that a :ValueObject refers to attributes and additional data (provenance) on production, laboratory, process system and objects that enable an evaluation of the quality/reliability of the measurements and a systematic search task in a database."@en .
+
+pmd:PrimaryData a owl:Class ;
+    rdfs:label "PrimaryData",
+        "Primärdaten"@de,
+        "Primary Data"@en ;
+    skos:altLabel "" ;
+    skos:definition "Die Datenkategorie Primärdaten umfasst Daten, die vor / nach einem Prozess erfasst werden, entweder bezogen auf die Geometrie des Objekts (z.B. ao, bo, do, au, bu, du, Lu) oder als Register des gesamten Aufbaus (z.B. Skizzen, Fotos oder Videos)"@de,
+        "This data scope expresses that a ValueObject refers to data that is directly acquired during a process by sensors (time, force, length, temperature)"@en .
+
+pmd:ProjectIdentifier a owl:Class ;
+    rdfs:label "ProjectIdentifier",
+        "Projektidentifikator"@de,
+        "Project Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "Ein umgangssprachlicher, von Menschen erstellter, beschreibender Text, der die Art eines Projekts qualifiziert."@de,
+        "A colloquial, human-generated, descriptive text qualifying the nature of a project."@en .
+
+pmd:ProvidedIdentifier a owl:Class ;
+    rdfs:label "ProvidedIdentifier",
+        "Bereitgestellter Identifikator"@de,
+        "Provided Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A colloquial, human-generated descriptor."@en .
+
+pmd:SequenceNumber a owl:Class ;
+    rdfs:label "SequenceNumber",
+        "Sequenznummer"@de,
+        "Sequence Number"@en ;
+    skos:altLabel "" ;
+    skos:definition "Strict monotonically increasing integer that indicates the position in an ordered list."@en .
+
+mds-XRDResult:ResultID a owl:Class ;
+    rdfs:label "ResultID" ;
+    rdfs:subClassOf pmd:ProvidedIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "An identifier for the results." .
+
+mds-XRDResult:XRDResult a owl:Class ;
+    rdfs:label "XRDResult" ;
+    rdfs:subClassOf pmd:PrimaryData ;
+    skos:altLabel "" .
+
+mds-XRDResult:imageSequence a owl:Class ;
+    rdfs:label "imageSequence" ;
+    rdfs:subClassOf pmd:SequenceNumber ;
+    skos:altLabel "" ;
+    skos:definition "Running sequence of the image taken." .
+
+mds-XRDResult:stackNumber a owl:Class ;
+    rdfs:label "stackNumber" ;
+    rdfs:subClassOf pmd:ProjectIdentifier ;
+    skos:altLabel "" ;
+    skos:definition "The stack of the data." .
+

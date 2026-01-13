@@ -1,0 +1,244 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XRDPostProcessing: <https://cwrusdle.bitbucket.io/xrdPostProcessing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XRDPostProcessing:Ontology a owl:Ontology ;
+    rdfs:label "mds-XRDPostProcessing" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology for the XRD Post-Processing FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XRDPostProcessing" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XRDPostProcessing:DarkCorrectionMethod1,
+        mds-XRDPostProcessing:DarkCorrectionMethod2,
+        mds-XRDPostProcessing:RingSamplingMethod ;
+    rdfs:range mds-XRDPostProcessing:DarkPatternUsed,
+        mds-XRDPostProcessing:DistanceBetweenTwoRings,
+        mds-XRDPostProcessing:NumberOfRings,
+        mds-XRDPostProcessing:VersionNumber ;
+    skos:altLabel "is characteristic of" .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XRDPostProcessing:CroppingMethod,
+        mds-XRDPostProcessing:DarkCorrectionMethod1,
+        mds-XRDPostProcessing:DarkCorrectionMethod2,
+        mds-XRDPostProcessing:GravityMethod,
+        mds-XRDPostProcessing:PixelwiseCorrelation,
+        mds-XRDPostProcessing:RingSamplingMethod,
+        mds-XRDPostProcessing:RollingMethod ;
+    rdfs:range mds-XRDPostProcessing:MethodName .
+
+pmd:input a owl:ObjectProperty ;
+    rdfs:label "input"@en ;
+    rdfs:domain mds-XRDPostProcessing:PostProcessing ;
+    rdfs:range mds-XRDPostProcessing:XrayResult ;
+    skos:altLabel "has input" ;
+    skos:definition "This property is used to link the processes to their input objects."@en .
+
+pmd:inputOf a owl:ObjectProperty ;
+    rdfs:label "input of"@en ;
+    rdfs:domain mds-XRDPostProcessing:PostProcessing ;
+    rdfs:range mds-XRDPostProcessing:Modeling ;
+    skos:altLabel "is input of" .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XRDPostProcessing:DistanceBetweenTwoRings,
+        mds-XRDPostProcessing:MethodName,
+        mds-XRDPostProcessing:NumberOfRings,
+        mds-XRDPostProcessing:VersionNumber ;
+    rdfs:range xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XRDPostProcessing:Centering a owl:Class ;
+    rdfs:label "Centering" ;
+    rdfs:subClassOf mds-XRDPostProcessing:PostProcessing ;
+    skos:altLabel "" ;
+    skos:definition "Centering algorithm to center the images." .
+
+mds-XRDPostProcessing:CroppingMethod a owl:Class ;
+    rdfs:label "CroppingMethod" ;
+    rdfs:subClassOf mds-XRDPostProcessing:Registration ;
+    skos:altLabel "" ;
+    skos:definition "The cropping method." .
+
+mds-XRDPostProcessing:DarkPatternUsed a owl:Class ;
+    rdfs:label "DarkPatternUsed" ;
+    rdfs:subClassOf pmd:PrimaryData ;
+    skos:altLabel "" ;
+    skos:definition "The dark image used to perform dark correction." .
+
+mds-XRDPostProcessing:GravityMethod a owl:Class ;
+    rdfs:label "GravityMethod" ;
+    rdfs:subClassOf mds-XRDPostProcessing:Centering ;
+    skos:altLabel "" ;
+    skos:definition "The gravity centering method." .
+
+mds-XRDPostProcessing:Modeling a owl:Class ;
+    rdfs:label "Modeling" ;
+    rdfs:subClassOf pmd:ComputingNode ;
+    skos:altLabel "" .
+
+mds-XRDPostProcessing:PixelwiseCorrelation a owl:Class ;
+    rdfs:label "PixelwiseCorrelation" ;
+    rdfs:subClassOf mds-XRDPostProcessing:Rescaling ;
+    skos:altLabel "" ;
+    skos:definition "Pixelwise correlation for rescaling." .
+
+mds-XRDPostProcessing:Rescaling a owl:Class ;
+    rdfs:label "Rescaling" ;
+    rdfs:subClassOf mds-XRDPostProcessing:PostProcessing ;
+    skos:altLabel "" ;
+    skos:definition "Rescaling of images." .
+
+mds-XRDPostProcessing:RollingMethod a owl:Class ;
+    rdfs:label "RollingMethod" ;
+    rdfs:subClassOf mds-XRDPostProcessing:Registration ;
+    skos:altLabel "" ;
+    skos:definition "The rolling method." .
+
+mds-XRDPostProcessing:XrayResult a owl:Class ;
+    rdfs:label "XrayResult" ;
+    rdfs:subClassOf pmd:PrimaryData ;
+    skos:altLabel "" .
+
+pmd:Algorithm a owl:Class ;
+    rdfs:label "Algorithm",
+        "Algorithmus"@de,
+        "Algorithm"@en ;
+    skos:altLabel "" ;
+    skos:definition "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."@en .
+
+pmd:ComputingNode a owl:Class ;
+    rdfs:label "ComputingNode",
+        "Computerknoten"@de,
+        "Computing Node"@en ;
+    skos:altLabel "" ;
+    skos:definition """Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.
+Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."""@de,
+        """A computing system that provides an execution environment for, e.g., simulation processes or prediction models.
+A Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."""@en .
+
+pmd:Distance a owl:Class ;
+    rdfs:label "Distance",
+        "Abstand"@de,
+        "Distance"@en ;
+    skos:altLabel "" ;
+    skos:definition "Spatial remoteness."@en .
+
+pmd:Identifier a owl:Class ;
+    rdfs:label "Identifier",
+        "Identifikator"@de,
+        "Identifier"@en ;
+    skos:altLabel "" ;
+    skos:definition "A named value intended to distinguish between entities."@en .
+
+pmd:SequenceNumber a owl:Class ;
+    rdfs:label "SequenceNumber",
+        "Sequenznummer"@de,
+        "Sequence Number"@en ;
+    skos:altLabel "" ;
+    skos:definition "Strict monotonically increasing integer that indicates the position in an ordered list."@en .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+mds-XRDPostProcessing:DarkCorrection a owl:Class ;
+    rdfs:label "DarkCorrection" ;
+    rdfs:subClassOf mds-XRDPostProcessing:PostProcessing ;
+    skos:altLabel "" ;
+    skos:definition "Dark correction of raw images." .
+
+mds-XRDPostProcessing:DarkCorrectionMethod1 a owl:Class ;
+    rdfs:label "DarkCorrectionMethod1" ;
+    rdfs:subClassOf mds-XRDPostProcessing:DarkCorrection ;
+    skos:altLabel "" ;
+    skos:definition "Method 1 to perform dark correction." .
+
+mds-XRDPostProcessing:DarkCorrectionMethod2 a owl:Class ;
+    rdfs:label "DarkCorrectionMethod2" ;
+    rdfs:subClassOf mds-XRDPostProcessing:DarkCorrection ;
+    skos:altLabel "" ;
+    skos:definition "Method 2 to perform dark correction." .
+
+mds-XRDPostProcessing:DistanceBetweenTwoRings a owl:Class ;
+    rdfs:label "DistanceBetweenTwoRings" ;
+    rdfs:subClassOf pmd:Distance ;
+    skos:altLabel "" ;
+    skos:definition "Distance between two rings." .
+
+mds-XRDPostProcessing:MethodName a owl:Class ;
+    rdfs:label "MethodName" ;
+    rdfs:subClassOf pmd:Identifier ;
+    skos:altLabel "" ;
+    skos:definition "Name of the method." .
+
+mds-XRDPostProcessing:NumberOfRings a owl:Class ;
+    rdfs:label "NumberOfRings" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Number of rings in the diffractogram." .
+
+mds-XRDPostProcessing:Registration a owl:Class ;
+    rdfs:label "Registration" ;
+    rdfs:subClassOf mds-XRDPostProcessing:PostProcessing ;
+    skos:altLabel "" ;
+    skos:definition "Registration of an image." .
+
+mds-XRDPostProcessing:RingSamplingMethod a owl:Class ;
+    rdfs:label "RingSamplingMethod" ;
+    rdfs:subClassOf mds-XRDPostProcessing:PostProcessing ;
+    skos:altLabel "" ;
+    skos:definition "The ring sampling method." .
+
+mds-XRDPostProcessing:VersionNumber a owl:Class ;
+    rdfs:label "VersionNumber" ;
+    rdfs:subClassOf pmd:SequenceNumber ;
+    skos:altLabel "" ;
+    skos:definition "Version number of the method." .
+
+pmd:PrimaryData a owl:Class ;
+    rdfs:label "PrimaryData",
+        "Primärdaten"@de,
+        "Primary Data"@en ;
+    skos:altLabel "" ;
+    skos:definition "Die Datenkategorie Primärdaten umfasst Daten, die vor / nach einem Prozess erfasst werden, entweder bezogen auf die Geometrie des Objekts (z.B. ao, bo, do, au, bu, du, Lu) oder als Register des gesamten Aufbaus (z.B. Skizzen, Fotos oder Videos)"@de,
+        "This data scope expresses that a ValueObject refers to data that is directly acquired during a process by sensors (time, force, length, temperature)"@en .
+
+mds-XRDPostProcessing:PostProcessing a owl:Class ;
+    rdfs:label "PostProcessing" ;
+    rdfs:subClassOf pmd:Algorithm ;
+    skos:altLabel "" ;
+    skos:definition "Post processing appplied to the original collected data." .
+

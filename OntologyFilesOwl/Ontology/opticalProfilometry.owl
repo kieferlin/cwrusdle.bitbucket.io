@@ -1,0 +1,195 @@
+Prefix(:=<https://cwrusdle.bitbucket.io/Ontology/opticalProfilometry.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://cwrusdle.bitbucket.io/Ontology/opticalProfilometry.owl>
+
+Declaration(Class(:cameraMode))
+Declaration(Class(:chromaticLightProfilometer))
+Declaration(Class(:chromaticMeasurementParameters))
+Declaration(Class(:chromaticMetadata))
+Declaration(Class(:date))
+Declaration(Class(:exposureCondition))
+Declaration(Class(:fdaRes))
+Declaration(Class(:formRemoved))
+Declaration(Class(:frequency))
+Declaration(Class(:hoursExposed))
+Declaration(Class(:interferomMeasurementParameters))
+Declaration(Class(:interferomMetadata))
+Declaration(Class(:lightLevel))
+Declaration(Class(:magnification))
+Declaration(Class(:minMod))
+Declaration(Class(:pen))
+Declaration(Class(:percentOverlap))
+Declaration(Class(:rrms))
+Declaration(Class(:sampleID))
+Declaration(Class(:scanArea))
+Declaration(Class(:scanLength))
+Declaration(Class(:scanSpeed))
+Declaration(Class(:stitch))
+Declaration(Class(:stitchNCols))
+Declaration(Class(:stitchNRows))
+Declaration(Class(:surface))
+Declaration(Class(:whiteLightInterferometer))
+Declaration(Class(:xDistance))
+Declaration(Class(:xPosition))
+Declaration(Class(:xScanStep))
+Declaration(Class(:yDistance))
+Declaration(Class(:yPosition))
+Declaration(Class(:yScanStep))
+Declaration(Class(:zHeight))
+Declaration(Class(:zPosition))
+############################
+#   Classes
+############################
+
+# Class: :cameraMode (:cameraMode)
+
+SubClassOf(:cameraMode :interferomMeasurementParameters)
+
+# Class: :chromaticMeasurementParameters (:chromaticMeasurementParameters)
+
+SubClassOf(:chromaticMeasurementParameters :chromaticLightProfilometer)
+
+# Class: :chromaticMetadata (:chromaticMetadata)
+
+SubClassOf(:chromaticMetadata :chromaticLightProfilometer)
+
+# Class: :date (:date)
+
+SubClassOf(:date :chromaticMetadata)
+SubClassOf(:date :interferomMetadata)
+
+# Class: :exposureCondition (:exposureCondition)
+
+SubClassOf(:exposureCondition :chromaticMetadata)
+SubClassOf(:exposureCondition :interferomMetadata)
+
+# Class: :fdaRes (:fdaRes)
+
+SubClassOf(:fdaRes :interferomMeasurementParameters)
+
+# Class: :formRemoved (:formRemoved)
+
+SubClassOf(:formRemoved :chromaticMeasurementParameters)
+SubClassOf(:formRemoved :interferomMeasurementParameters)
+
+# Class: :frequency (:frequency)
+
+SubClassOf(:frequency :chromaticMeasurementParameters)
+
+# Class: :hoursExposed (:hoursExposed)
+
+SubClassOf(:hoursExposed :chromaticMetadata)
+SubClassOf(:hoursExposed :interferomMetadata)
+
+# Class: :interferomMeasurementParameters (:interferomMeasurementParameters)
+
+SubClassOf(:interferomMeasurementParameters :whiteLightInterferometer)
+
+# Class: :interferomMetadata (:interferomMetadata)
+
+SubClassOf(:interferomMetadata :chromaticMetadata)
+SubClassOf(:interferomMetadata :whiteLightInterferometer)
+
+# Class: :lightLevel (:lightLevel)
+
+SubClassOf(:lightLevel :chromaticMeasurementParameters)
+
+# Class: :magnification (:magnification)
+
+SubClassOf(:magnification :interferomMeasurementParameters)
+SubClassOf(:magnification :interferomMetadata)
+
+# Class: :minMod (:minMod)
+
+SubClassOf(:minMod :interferomMeasurementParameters)
+
+# Class: :pen (:pen)
+
+SubClassOf(:pen :chromaticMeasurementParameters)
+SubClassOf(:pen :chromaticMetadata)
+
+# Class: :percentOverlap (:percentOverlap)
+
+SubClassOf(:percentOverlap :stitch)
+
+# Class: :rrms (:rrms)
+
+SubClassOf(:rrms :chromaticMetadata)
+SubClassOf(:rrms :interferomMetadata)
+
+# Class: :sampleID (:sampleID)
+
+SubClassOf(:sampleID :chromaticMetadata)
+SubClassOf(:sampleID :interferomMetadata)
+
+# Class: :scanArea (:scanArea)
+
+SubClassOf(:scanArea :chromaticMetadata)
+SubClassOf(:scanArea :interferomMetadata)
+
+# Class: :scanLength (:scanLength)
+
+SubClassOf(:scanLength :interferomMeasurementParameters)
+
+# Class: :scanSpeed (:scanSpeed)
+
+SubClassOf(:scanSpeed :chromaticMeasurementParameters)
+
+# Class: :stitch (:stitch)
+
+SubClassOf(:stitch :interferomMeasurementParameters)
+
+# Class: :stitchNCols (:stitchNCols)
+
+SubClassOf(:stitchNCols :stitch)
+
+# Class: :stitchNRows (:stitchNRows)
+
+SubClassOf(:stitchNRows :stitch)
+
+# Class: :surface (:surface)
+
+SubClassOf(:surface :interferomMetadata)
+
+# Class: :xDistance (:xDistance)
+
+SubClassOf(:xDistance :chromaticMeasurementParameters)
+
+# Class: :xPosition (:xPosition)
+
+SubClassOf(:xPosition :chromaticMetadata)
+SubClassOf(:xPosition :interferomMetadata)
+
+# Class: :xScanStep (:xScanStep)
+
+SubClassOf(:xScanStep :chromaticMeasurementParameters)
+
+# Class: :yDistance (:yDistance)
+
+SubClassOf(:yDistance :chromaticMeasurementParameters)
+
+# Class: :yPosition (:yPosition)
+
+SubClassOf(:yPosition :chromaticMetadata)
+SubClassOf(:yPosition :interferomMetadata)
+
+# Class: :yScanStep (:yScanStep)
+
+SubClassOf(:yScanStep :chromaticMeasurementParameters)
+
+# Class: :zHeight (:zHeight)
+
+SubClassOf(:zHeight :interferomMetadata)
+
+# Class: :zPosition (:zPosition)
+
+SubClassOf(:zPosition :interferomMetadata)
+
+
+)

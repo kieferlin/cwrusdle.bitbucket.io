@@ -1,0 +1,230 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XrayDetector: <https://cwrusdle.bitbucket.io/xrayDetector#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mds-XrayDetector:Ontology a owl:Ontology ;
+    rdfs:label "mds-XrayDetector" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Erika I. Barcelos",
+        "Finley Holt",
+        "Frank Ernst",
+        "Matthew Willard",
+        "Mohommad Redad Mehdi",
+        "Pawan K. Tripathi",
+        "Roger H. French",
+        "Weiqi Yue" ;
+    dcterms:description "Ontology for the XRay Detector FAST Beamline at CHESS." ;
+    dcterms:hasVersion "0.2.0.5" ;
+    owl:versionInfo "0.2.0.5" ;
+    dcterms:title "mds-XrayDetector" .
+
+pmd:characteristicOf a owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    rdfs:domain mds-XrayDetector:XrayDetector ;
+    rdfs:range mds-XrayDetector:BitDepth,
+        mds-XrayDetector:DetectorLength,
+        mds-XrayDetector:DetectorResolution,
+        mds-XrayDetector:DetectorWidth,
+        mds-XrayDetector:EnergyRange,
+        mds-XrayDetector:MaxFrameRate,
+        mds-XrayDetector:PixelSize,
+        mds-XrayDetector:ReadOutTime ;
+    skos:altLabel "is characteristic of" .
+
+pmd:composedOf a owl:ObjectProperty ;
+    rdfs:label "composed of"@en ;
+    rdfs:domain mds-XrayDetector:DetectorResolution ;
+    rdfs:range mds-XrayDetector:PixelHeight,
+        mds-XrayDetector:PixelWidth ;
+    skos:definition """This property is used to describe the fact that and which objects are composed of other objects, i.e. it is used to describe the specific constituents or ingredients that form a particular entity or object. 
+As a prepositional phrase, it indicates the elements, parts, or components that make up a whole."""@en,
+        "This property is used to describe which voxels and materials an object is composed of."@en .
+
+pmd:hasIdentifier a owl:ObjectProperty ;
+    rdfs:domain mds-XrayDetector:XrayDetector ;
+    rdfs:range mds-XrayDetector:DetectorName .
+
+pmd:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain mds-XrayDetector:BitDepth,
+        mds-XrayDetector:DetectorLength,
+        mds-XrayDetector:DetectorName,
+        mds-XrayDetector:DetectorWidth,
+        mds-XrayDetector:EnergyRange,
+        mds-XrayDetector:MaxFrameRate,
+        mds-XrayDetector:PixelHeight,
+        mds-XrayDetector:PixelSize,
+        mds-XrayDetector:PixelWidth,
+        mds-XrayDetector:ReadOutTime ;
+    rdfs:range xsd:float,
+        xsd:integer,
+        xsd:string ;
+    skos:definition "Provides the actual value a value object is referring to."@en .
+
+mds-XrayDetector:Depth a owl:Class ;
+    rdfs:label "Depth" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "the distance from the top or surface to the bottom of something" .
+
+mds-XrayDetector:Resolution a owl:Class ;
+    rdfs:label "Resolution" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "the smallest interval measurable by a scientific (especially optical) instrument" .
+
+pmd:DataAcquisitionRate a owl:Class ;
+    rdfs:label "DataAcquisitionRate",
+        "Datenerfassungsrate"@de,
+        "Data Acquisition Rate"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Eigenschaft bezeichnet die Anzahl der Messungen / Abfragen pro Zeiteinheit bei einer betrachteten Messung einer Messgröße (Abtast-/Abfragerate bei der Datenerfassung)."@de,
+        "This property denotes the number of measurements / queries per time period for a considered measurement of a measurement parameter (sampling / query rate during data acquisition)."@en .
+
+pmd:MeasuringDevice a owl:Class ;
+    rdfs:label "MeasuringDevice",
+        "Messgerät"@de,
+        "Measuring Device"@en ;
+    skos:altLabel "" ;
+    skos:definition "A processing node capable of determining a specific quality." .
+
+pmd:NodeSeries a owl:Class ;
+    rdfs:label "NodeSeries",
+        "Serie"@de,
+        "Node Series"@en ;
+    skos:altLabel "",
+        "Knotentyp"@de,
+        "Node Type"@en ;
+    skos:definition "Processing Node typename, e.g. \"ProTherm500\""@en .
+
+pmd:Time a owl:Class ;
+    rdfs:label "Time",
+        "Zeit"@de,
+        "Time"@en ;
+    skos:altLabel "" ;
+    skos:definition "A nonspatial continuum that is measured in terms of events which succeed one another from past through present to future."@en .
+
+pmd:WorkingRange a owl:Class ;
+    rdfs:label "WorkingRange",
+        "Arbeitsbereich"@de,
+        "Working Range"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Eigenschaft beschreibt den Bereich zwischen den Grenzen, innerhalb derer ein Prozessknoten (z. B. eine Maschine) für ihren vorgesehenen Zweck verwendet werden kann, ausgedrückt durch die Angabe der in Rede stehenden unteren und oberen Bereichswerte."@de,
+        "This property describes the region between the limits within which a processing node (e.g., a machine) is capable of being used for its intended purpose, expressed by stating the lower and upper range values of interest."@en .
+
+mds-XrayDetector:BitDepth a owl:Class ;
+    rdfs:label "BitDepth" ;
+    rdfs:subClassOf mds-XrayDetector:Depth ;
+    skos:altLabel "" ;
+    skos:definition "Bit depth of the resulting image." .
+
+mds-XrayDetector:DetectorLength a owl:Class ;
+    rdfs:label "DetectorLength" ;
+    rdfs:subClassOf pmd:Length ;
+    skos:altLabel "" ;
+    skos:definition "Length of the detector." ;
+    pmd:unit qudt:MilliM .
+
+mds-XrayDetector:DetectorName a owl:Class ;
+    rdfs:label "DetectorName" ;
+    rdfs:subClassOf pmd:NodeSeries ;
+    skos:altLabel "" ;
+    skos:definition "Name of the detector." .
+
+mds-XrayDetector:DetectorResolution a owl:Class ;
+    rdfs:label "DetectorResolution" ;
+    rdfs:subClassOf mds-XrayDetector:Resolution ;
+    skos:altLabel "" ;
+    skos:definition "The resolution of the detector." .
+
+mds-XrayDetector:DetectorWidth a owl:Class ;
+    rdfs:label "DetectorWidth" ;
+    rdfs:subClassOf pmd:Width ;
+    skos:altLabel "" ;
+    skos:definition "Width of the detector." ;
+    pmd:unit qudt:MilliM .
+
+mds-XrayDetector:EnergyRange a owl:Class ;
+    rdfs:label "EnergyRange" ;
+    rdfs:subClassOf pmd:WorkingRange ;
+    skos:altLabel "" ;
+    skos:definition "The energy range the detector can operate in. " ;
+    pmd:unit qudt:KiloEV .
+
+mds-XrayDetector:MaxFrameRate a owl:Class ;
+    rdfs:label "MaxFrameRate" ;
+    rdfs:subClassOf pmd:DataAcquisitionRate ;
+    skos:altLabel "" ;
+    skos:definition "Maximum frame rate the detector can capture." ;
+    pmd:unit qudt:HZ .
+
+mds-XrayDetector:PixelHeight a owl:Class ;
+    rdfs:label "PixelHeight" ;
+    rdfs:subClassOf pmd:Length ;
+    skos:altLabel "" ;
+    skos:definition "Pixel height of the detector." .
+
+mds-XrayDetector:PixelSize a owl:Class ;
+    rdfs:label "PixelSize" ;
+    rdfs:subClassOf pmd:Length ;
+    skos:altLabel "" ;
+    skos:definition "Pixel size of the detector." ;
+    pmd:unit qudt:MicroM .
+
+mds-XrayDetector:PixelWidth a owl:Class ;
+    rdfs:label "PixelWidth" ;
+    rdfs:subClassOf pmd:Width ;
+    skos:altLabel "" ;
+    skos:definition "Pixel width of the detector." .
+
+mds-XrayDetector:ReadOutTime a owl:Class ;
+    rdfs:label "ReadOutTime" ;
+    rdfs:subClassOf pmd:Time ;
+    skos:altLabel "" ;
+    skos:definition "Time to read out the data." ;
+    pmd:unit qudt:MilliSEC .
+
+mds-XrayDetector:XrayDetector a owl:Class ;
+    rdfs:label "XrayDetector" ;
+    rdfs:subClassOf pmd:MeasuringDevice ;
+    skos:altLabel "" ;
+    skos:definition "The detector used to capture the transmitted X-rays." .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    skos:altLabel "" ;
+    skos:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en .
+
+pmd:Width a owl:Class ;
+    rdfs:label "Width",
+        "Breite"@de,
+        "Width"@en ;
+    skos:altLabel "" ;
+    skos:definition "Diese Entität bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."@de,
+        "This entity describes a horizontal measurement of an object taken at right angles to the length of the object."@en .
+
+pmd:Length a owl:Class ;
+    rdfs:label "Length",
+        "Länge"@de,
+        "Length"@en ;
+    skos:altLabel "" ;
+    skos:definition "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."@de,
+        "A measured distance or dimension of an object, usually the longer or longest dimension of the object."@en .
+
