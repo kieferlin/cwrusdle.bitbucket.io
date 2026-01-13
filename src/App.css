@@ -1,0 +1,443 @@
+/* Background Styling */
+body {
+    background-image: url('https://images.adsttc.com/media/images/5721/c0d6/e58e/ce0b/da00/0018/slideshow/CASE_ar_js_0096_pw.jpg?1461829833');
+    background-size: cover;
+    background-position: top;
+    padding-top: 6.25rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: white;
+    padding: 1vh 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.3125rem 0.625rem rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Header Links Styling */
+.top-right-labels {
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    display: flex;
+    color: rgb(0, 47, 113);
+    font-weight: bold;
+    font-size: 1vw;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: rgb(0, 47, 113);
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+  
+  .nav-link:hover {
+    color: #000000;
+  }
+  
+  .top-right-labels span {
+    margin-left: 1.5vw;
+    font-size: 1.5vw;
+  }
+  
+  .dropdown-1 {
+    position: relative;
+    display: inline-block;
+    margin-right: 1vw;
+  }
+  
+  .label {
+    cursor: pointer;
+  }
+  
+  .dropdown-content-1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 12vw;
+    box-shadow: 0 0.5vw 0.5vw 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content-1 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-content-1 li {
+    padding: 1vw;
+    text-align: left;
+  }
+  
+  .dropdown-1:hover .dropdown-content-1 {
+    display: block;
+  }
+  
+  .dropdown-content-1 a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content-1 a:hover {
+    background-color: #f1f1f1;
+  }
+  
+/* Logo Styling */
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2vw;
+}
+
+.logo img {
+    height: 4vw;
+}
+
+/* Centered Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 2vh 1vw; 
+    box-sizing: border-box;
+    max-width: 70vw; 
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+/* Rounded Box Styling */
+.rounded-box {
+    background-color: rgba(0, 0, 0, 0.525);
+    border-radius: 2vw; 
+    padding: 4vw;
+    width: 55vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+/* Title Styling */
+.big-text {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-bottom: 2vh; 
+    color: white;
+    text-align: center;
+    border-bottom: 0.3vw solid #FFFFFF;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 30vw;
+    height: 4vh;
+    border-radius: 1vh; 
+    padding: 0.5vh 1vw;
+    margin-top: 1vh; 
+    box-sizing: border-box;
+    font-size: 1vw;
+    margin-left: 2vw;
+}
+
+/* Search Bar Text Styling */
+.search-bar::placeholder {
+    font-size: 1vw; 
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.dropdown-content {
+    font-size: 1vw; 
+    text-align: left;
+    border-radius: 1vh;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 30vw; 
+    box-shadow: 0 0.5vh 1vh 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1vh 1vw; 
+    overflow-y: auto;
+    margin-left: 1vw;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Image Icons Styling */
+.image-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3vh;
+    position: relative;
+}
+
+.image-links img {
+    filter: brightness(0) invert(1);
+    width: 5vw; 
+    height: 10vh;
+    margin: 0 2vw; 
+    z-index: 2;
+    margin-top: 2vh;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 3vw;
+    height: 22vh; 
+    justify-content: space-between; 
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.icon-overlay {
+    position: absolute;
+    background-color: rgba(0, 47, 113, 0.775);
+    width: 16vw; 
+    height: 30vh;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.img-fluid {
+    width: 3vw;
+    height: 3vh;
+}
+
+.ml-2 {
+    color: white;
+    font-size: 1.5vw;
+    z-index: 1; 
+    margin-top: 1vh;
+    font-weight: bold;
+}
+
+/* Description Styling */
+.Description {
+    color: white;
+    font-size: 0.9vw;
+    margin-bottom: 0.5vh;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    width: 12vw;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.image-links a {
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.image-links a:hover {
+    color: rgb(217, 255, 0);
+    text-decoration: underline;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Hover Links Styling */
+.hover-links {
+    display: flex;
+    position: relative;
+    top: 5vh;
+    background-color: rgba(0, 47, 113, 0.775);
+    padding: 0.5rem;
+    border-radius: 2vw;
+    list-style: none;
+    margin: 0 1vw;
+    text-align: left;
+    width: 16vw;
+    height: 30vh;
+    flex-direction: column;
+    font-size: 1.1vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+}
+
+.hover-links li::before {
+    content: "\2022";
+    margin-right: 0.5vw;
+}
+
+.hover-links li {
+    margin-bottom: 1vh;
+    color: white;
+}
+
+.hover-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hover-links a:hover {
+    color: rgb(217, 255, 0);
+}
+
+.centered-text {
+    color: white;
+    font-size: 1vw;
+    margin-top: 10vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+.big-text {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-bottom: 2vh; 
+    color: white;
+    text-align: center;
+    border-bottom: 0.3vw solid #FFFFFF;
+}
+
+/* OntologyFiles Search Styling */
+.search-bar-container {
+    max-width: 30vw;
+    margin: 0 auto;
+    padding: 1vh;
+    color: white;
+    margin-left: 5vw;
+}
+
+.search-domain-list {
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+.search-results {
+    margin-top: 5vh;    
+}
+
+.search-result ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1vw;
+}
+  
+.search-result ul li a:hover {
+    color: rgb(217, 255, 0);
+}
+
+.domain-text {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 2vw;
+  }
+
+.subdomain-text {
+    font-size: 1.5vw;
+    margin-top: 2.5vw;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    margin-top: 0vw;
+    margin-bottom: 0.5vw;
+    margin-left: 2vw;
+    font-size: 1vw;
+    white-space: nowrap;
+}
+
+button:hover {
+    color: rgb(217, 255, 0);
+}
+
+.search-results ul li {
+    margin-left: 3vw;
+    list-style-type: disc;
+}
+
+.search-results h4 {
+    margin-left: 2vw; 
+    font-size: 1.5vw;
+}
+
+.search-results ul ul {
+    margin-left: 4vw;
+}
+
+.search-results h3:hover,
+.search-results h4:hover {
+    color: rgb(217, 255, 0)
+}
+
+.search-results h3 {
+    font-size: 1.7vw;
+    margin-bottom: 1vw;
+    white-space: nowrap;
+}

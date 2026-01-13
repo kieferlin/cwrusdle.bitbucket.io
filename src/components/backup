@@ -1,0 +1,282 @@
+import React, { useState } from 'react';
+
+const OntologyFilesSearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Array of links with nested options
+  const links = [
+    {
+        "text": "agilentFTIR-opticalSpectroscopy",
+        "options": [
+            "agilentFTIR-opticalSpectroscopy.owl",
+            "agilentFTIR-opticalSpectroscopy.json"
+        ]
+    },
+    {
+        "text": "asterGdem",
+        "options": [
+            "asterGdem.owl",
+            "asterGdem.json"
+        ]
+    },
+    {
+        "text": "buildings",
+        "options": [
+            "buildings.owl",
+            "buildings.json"
+        ]
+    },
+    {
+        "text": "calibration",
+        "options": [
+            "calibration.owl",
+            "calibration.json"
+        ]
+    },
+    {
+        "text": "capillaryElectrophoresis",
+        "options": [
+            "capillaryElectrophoresis.owl",
+            "capillaryElectrophoresis.json"
+        ]
+    },
+    {
+        "text": "caryUvVis-opticalSpectroscopy",
+        "options": [
+            "caryUvVis-opticalSpectroscopy.owl",
+            "caryUvVis-opticalSpectroscopy.json"
+        ]
+    },
+    {
+        "text": "computedTomographyXRay",
+        "options": [
+            "computedTomographyXRay.owl",
+            "computedTomographyXRay.json"
+        ]
+    },
+    {
+        "text": "currentVoltage",
+        "options": [
+            "currentVoltage.owl",
+            "currentVoltage.json"
+        ]
+    },
+    {
+        "text": "diffractionXRay",
+        "options": [
+            "diffractionXRay.owl",
+            "diffractionXRay.json"
+        ]
+    },
+    {
+        "text": "environmentalExposure",
+        "options": [
+            "environmentalExposure.owl",
+            "environmentalExposure.json"
+        ]
+    },
+    {
+        "text": "fluoroelastomerFormulation",
+        "options": [
+            "fluoroelastomerFormulation.owl",
+            "fluoroelastomerFormulation.json"
+        ]
+    },
+    {
+        "text": "gasFlux",
+        "options": [
+            "gasFlux.owl",
+            "gasFlux.json"
+        ]
+    },
+    {
+        "text": "geospatialWell",
+        "options": [
+            "geospatialWell.owl",
+            "geospatialWell.json"
+        ]
+    },
+    {
+        "text": "icp-opticalSpectroscopy",
+        "options": [
+            "icp-opticalSpectroscopy.owl",
+            "icp-opticalSpectroscopy.json"
+        ]
+    },
+    {
+        "text": "materialsProcessing",
+        "options": [
+            "materialsProcessing.owl",
+            "materialsProcessing.json"
+        ]
+    },
+    {
+        "text": "metalAdditiveManufacturing",
+        "options": [
+            "metalAdditiveManufacturing.owl",
+            "metalAdditiveManufacturing.json"
+        ]
+    },
+    {
+        "text": "nicoletFTIR-opticalSpectroscopy",
+        "options": [
+            "nicoletFTIR-opticalSpectroscopy.owl",
+            "nicoletFTIR-opticalSpectroscopy.json"
+        ]
+    },
+    {
+        "text": "opticalProfilometry",
+        "options": [
+            "opticalProfilometry.owl",
+            "opticalProfilometry.json"
+        ]
+    },
+    {
+        "text": "opticalSpectroscopy",
+        "options": [
+            "opticalSpectroscopy.owl",
+            "opticalSpectroscopy.json"
+        ]
+    },
+    {
+        "text": "photovoltaicBacksheet",
+        "options": [
+            "photovoltaicBacksheet.owl",
+            "photovoltaicBacksheet.json"
+        ]
+    },
+    {
+        "text": "photovoltaicCell",
+        "options": [
+            "photovoltaicCell.owl",
+            "photovoltaicCell.json"
+        ]
+    },
+    {
+        "text": "photovoltaicInverter",
+        "options": [
+            "photovoltaicInverter.owl",
+            "photovoltaicInverter.json"
+        ]
+    },
+    {
+        "text": "photovoltaicModule",
+        "options": [
+            "photovoltaicModule.owl",
+            "photovoltaicModule.json"
+        ]
+    },
+    {
+        "text": "photovoltaicSystem",
+        "options": [
+            "photovoltaicSystem.owl",
+            "photovoltaicSystem.json"
+        ]
+    },
+    {
+        "text": "polymerAdditiveManufacturing",
+        "options": [
+            "polymerAdditiveManufacturing.owl",
+            "polymerAdditiveManufacturing.json"
+        ]
+    },
+    {
+        "text": "sampleMetadata",
+        "options": [
+            "sampleMetadata.owl",
+            "sampleMetadata.json"
+        ]
+    },
+    {
+        "text": "simulationXRayDiffraction",
+        "options": [
+            "simulationXRayDiffraction.owl",
+            "simulationXRayDiffraction.json"
+        ]
+    },
+    {
+        "text": "soil",
+        "options": [
+            "soil.owl",
+            "soil.json"
+        ]
+    },
+    {
+        "text": "soilWoSis",
+        "options": [
+            "soilWoSis.owl",
+            "soilWoSis.json"
+        ]
+    },
+    {
+        "text": "spectramaxUvVis-opticalSpectroscopy",
+        "options": [
+            "spectramaxUvVis-opticalSpectroscopy.owl",
+            "spectramaxUvVis-opticalSpectroscopy.json"
+        ]
+    },
+    {
+        "text": "streamWaterRasterio",
+        "options": [
+            "streamWaterRasterio.owl",
+            "streamWaterRasterio.json"
+        ]
+    },
+    {
+        "text": "waterDataUSGS",
+        "options": [
+            "waterDataUSGS.owl",
+            "waterDataUSGS.json"
+        ]
+    },
+    {
+        "text": "waterMetadataUSGS",
+        "options": [
+            "waterMetadataUSGS.owl",
+            "waterMetadataUSGS.json"
+        ]
+    },
+    {
+        "text": "XRDOntology",
+        "options": [
+            "XRDOntology.owl",
+            "XRDOntology.json"
+        ]
+    }
+];
+return (
+    <div className="search-bar-container">
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search Ontologies Here"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <div className="search-results">
+        {links
+          .filter((link) => link.text.toLowerCase().includes(searchTerm.toLowerCase()))
+          .map((link, index) => (
+            <div key={index} className="search-result">
+              <h3><span className="search-domain-list">{link.text}</span></h3>
+              <ul>
+                {link.options.map((option, optionIndex) => (
+                  <li key={optionIndex}>
+                    <a
+                      href={`./OntologyFilesJSONLD/${option}/html`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {option}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default OntologyFilesSearchBar;
