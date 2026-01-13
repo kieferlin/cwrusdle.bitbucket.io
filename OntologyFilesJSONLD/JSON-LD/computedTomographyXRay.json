@@ -1,0 +1,320 @@
+{
+    "@context": {
+        "SampleID": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Material": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Experiment": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Data": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SourceProperties": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Alloy": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Composition": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Series": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Temper": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Hardness": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Namlt": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SampleProperties": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Shape": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Diameter": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Length": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Supplier": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Date": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Preprocessing": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SolutionConcentation": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SensitizationTemperature": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SensitizationDuration": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "PreStrainRate": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "StrainMax": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Site": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SiteName": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Address": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Device": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "DeviceName": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Energy": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "FovWidth": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "FovHeight": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "VoxelResolution": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Methodology": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Technique": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Method": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "RelativeHumidity": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "StrainRate": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "DisplacementRate": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Scan": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "SequenceNumber": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "StartTime": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "EndTime":"https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "StartLoad": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "EndLoad": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "StartDisplacement": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "EndDisplacement": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Image": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "StackNumber": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "FilePath": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "FileName": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "FileSize": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Resolution": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Timeseries": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Timestamp": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Load": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "Strain": "https://cwrusdle.bitbucket.io/Ontology/xct.owl/",
+        "description": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+        "value": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+        "unitText": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024"
+    },
+    "SampleID": {
+        "description": "ID of sample being experimented on",
+        "value": "$SampleID"
+    },
+    "Material": 
+        {
+            "SourceProperties": 
+                {
+                    "Alloy": {
+                        "description": "material sample is composed of",
+                        "value": "$Alloy"
+                    },
+                    "Composition": {
+                        "description": "compositional breakdown of material",
+                        "value": "$Composition",
+                        "unitText": "%"
+                    },
+                    "Series": {
+                        "description": "series of alloy",
+                        "value": "$Series"
+                    },
+                    "Temper": {
+                        "description": "temper of alloy",
+                        "value": "$Temper"
+                    },
+                    "Hardness": {
+                        "description": "Rockwell hardness number",
+                        "value": "$Hardness",
+                        "unitText": "HRB"
+                    },
+                    "Namlt": {
+                        "description": "Nitric Acid Mass Lost Test",
+                        "value": "$Namlt",
+                        "unitText": "mg/cm^2"
+                    }
+                }       
+            ,
+            "SampleProperties": 
+                {
+                    "Shape": {
+                        "description": "shape of sample",
+                        "value": "$Shape"
+                    },
+                    "Diameter": {
+                        "description": "diameter of sample",
+                        "value": "$Diameter",
+                        "unitText": "mm"
+                    },
+                    "Length": {
+                        "description": "length of sample",
+                        "value": "$Length",
+                        "unitText": "mm"
+                    }
+                }
+            ,
+            "Supplier": {
+                "description": "source of material",
+                "value": "$Supplier"
+            }
+        }
+    ,
+    "Experiment": 
+        {
+            "Date": {
+                "description": "date experiment conducted on",
+                "value": "$Date"
+            },
+            "Preprocessing": 
+                {
+                    "Solution": {
+                        "description": "solution sample was exposed to",
+                        "value": "$Solution"
+                    },
+                    "SolutionConcentation": {
+                        "description": "concentration of solution sample was exposed to",
+                        "value": "$SolutionConcentration",
+                        "unitText": "M"
+                    },
+                    "SensitizationTemperature": {
+                        "description": "temperature sample was sensitized at",
+                        "value": "$SensitizationTemperature",
+                        "unitText": "C"
+                    },
+                    "SensitizationDuration": {
+                        "description": "length of time sample was sensitized for",
+                        "value": "$SensitizationDuration",
+                        "unitText": "s"
+                    },
+                    "PreStrainRate": {
+                        "description": "strain rate sample experienced during preprocessing",
+                        "value": "$PreStrainRate",
+                        "unitText": "1/s"
+                    },
+                    "StrainMax": {
+                        "description": "maximum strain of sample during preprocessing",
+                        "value": "$StrainMax",
+                        "unitText": "%"
+                    }
+                }
+            ,
+            "Site": 
+                {
+                    "SiteName": {
+                        "description": "name of site experiment took place",
+                        "value": "$SiteName"
+                    },
+                    "Address": {
+                        "description": "address of experiment site",
+                        "value": "$Address"
+                    }
+                }
+            ,
+            "Device": 
+                {
+                    "DeviceName": {
+                        "description": "name of device used for experimentation",
+                        "value": "$DeviceName"
+                    },
+                    "Energy": {
+                        "description": "energy of beamline",
+                        "value": "$Energy",
+                        "unitText": "keV"
+                    },
+                    "FovWidth": {
+                        "description": "field of view width parameter",
+                        "value": "$FovWidth",
+                        "unitText": "mm"
+                    },
+                    "FovHeight": {
+                        "description": "field of view height parameter",
+                        "value": "$FovHeight",
+                        "unitText": "mm"
+                    },
+                    "VoxelResolution": {
+                        "description": "voxel resolution parameter",
+                        "value": "$VoxelResolution",
+                        "unitText": "um^3"
+                    }
+                }
+            ,
+            "Methodology": 
+                {
+                    "Technique": {
+                        "description": "type of experiment conducted",
+                        "value": "$Technique"
+                    },
+                    "Method": {
+                        "description": "in or ex situ",
+                        "value": "$Method",
+                        "unitText": "keV"
+                    },
+                    "RelativeHumidity": {
+                        "description": "relative humidity of experiment chamber",
+                        "value": "$RelativeHumidity",
+                        "unitText": "%"
+                    },
+                    "StrainRate": {
+                        "description": "strain rate of experiment",
+                        "value": "$StrainRate",
+                        "unitText": "1/s"
+                    },
+                    "DisplacementRate": {
+                        "description": "displacement rate of experiment",
+                        "value": "$DisplacementRate",
+                        "unitText": "um/s"
+                    }
+                }
+            
+        }
+    ,
+    "Data": 
+        {
+            "Scan": 
+                {
+                    "SequenceNumber": {
+                        "description": "sequence number in scan order",
+                        "value": "$SequenceNumber"
+                    },
+                    "StartTime": {
+                        "description": "timestamp at start of scan being taken",
+                        "value": "$StartTime",
+                        "unitText": "ms"
+                    },
+                    "EndTime": {
+                        "description": "timestamp at end of scan being taken",
+                        "value": "$EndTime",
+                        "unitText": "ms"
+                    },
+                    "StartLoad": {
+                        "description": "load at start of scan being taken",
+                        "value": "$StartLoad",
+                        "unitText": "N"
+                    },
+                    "EndLoad": {
+                        "description": "load at end of scan being taken",
+                        "value": "$EndLoad",
+                        "unitText": "N"
+                    },
+                    "StartDisplacement": {
+                        "description": "displacement at start of scan being taken",
+                        "value": "$StartDisplacement",
+                        "unitText": "mm"
+                    },
+                    "EndDisplacement": {
+                        "description": "displacement at end of scan being taken",
+                        "value": "$EndDisplacement",
+                        "unitText": "mm"
+                    }
+                }
+            ,
+            "Image": 
+                {
+                    "StackNumber": {
+                        "description": "image location in stack",
+                        "value": "$StackNumber"
+                    },
+                    "FilePath": {
+                        "description": "path of file in directory",
+                        "value": "$FilePath"
+                    },
+                    "FileName": {
+                        "description": "name of file",
+                        "value": "$FileName"
+                    },
+                    "FileSize": {
+                        "description": "size of file",
+                        "value": "$FileSize",
+                        "unitText": "bytes"
+                    },
+                    "Resolution": {
+                        "description": "image resolution",
+                        "value": "$Resolution",
+                        "unitText": "pixels"
+                    }
+                }
+            ,
+            "Timeseries": 
+                {
+                    "Timestamp": {
+                        "description": "timestamp value",
+                        "value": "$Timestamp",
+                        "unitText": "ms"
+                    },
+                    "Load": {
+                        "description": "load value at timestamp",
+                        "value": "$Load",
+                        "unitText": "N"
+                    },
+                    "Strain": {
+                        "description": "strain value at a timestamp",
+                        "value": "$Strain",
+                        "unitText": "mm"
+                    }
+                }
+            
+        }
+    
+}

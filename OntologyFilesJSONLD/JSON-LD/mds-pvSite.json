@@ -1,0 +1,396 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-pvSite": "https://cwrusdle.bitbucket.io/pvSite#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-pvSite:NumberInverters",
+      "@type": "owl:Class",
+      "rdfs:label": "NumberInverters",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvSite:PhotovoltaicSiteParameter"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of inverters located at the site"
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-pvSite:PhotovoltaicSiteID"
+        },
+        {
+          "@id": "mds-pvSite:Latitude"
+        },
+        {
+          "@id": "mds-pvSite:Longitude"
+        },
+        {
+          "@id": "mds-pvSite:Elevation"
+        },
+        {
+          "@id": "mds-pvSite:NumberInverters"
+        },
+        {
+          "@id": "mds-pvSite:RackingType"
+        },
+        {
+          "@id": "mds-pvSite:MountingType"
+        },
+        {
+          "@id": "mds-pvSite:TrackingAlgorithm"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "pmd:Algorithm",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Algorithm",
+        {
+          "@language": "en",
+          "@value": "Algorithm"
+        },
+        {
+          "@language": "de",
+          "@value": "Algorithmus"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."
+      }
+    },
+    {
+      "@id": "mds-pvSite:TrackingAlgorithm",
+      "@type": "owl:Class",
+      "rdfs:label": "TrackingAlgorithm",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "If system is tracking, method used (truetracking, backtracking, diffuse tracking, etc)"
+    },
+    {
+      "@id": "mds-pvSite:Longitude",
+      "@type": "owl:Class",
+      "rdfs:label": "Longitude",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvSite:PhotovoltaicSiteParameter"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "East/west position of a point on the Earth, decimal format"
+    },
+    {
+      "@id": "mds-pvSite:PhotovoltaicSiteID",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicSiteID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Site identifier"
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-pvSite:PhotovoltaicSite"
+      },
+      "rdfs:range": {
+        "@id": "mds-pvSite:PhotovoltaicSiteID"
+      }
+    },
+    {
+      "@id": "mds-pvSite:PhotovoltaicSite",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicSite",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Location"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Physical location of a PV site"
+    },
+    {
+      "@id": "pmd:MaterialDesignation",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MaterialDesignation",
+        {
+          "@language": "en",
+          "@value": "Material Designation"
+        },
+        {
+          "@language": "de",
+          "@value": "Materialbezeichnung"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": "It is a name or identifier of a material type. It designates a material. \nE.g. \"steel\", \"aluminium\", \"wood\", \"plastic\", \"rubber\"."
+    },
+    {
+      "@id": "mds-pvSite:MountingType",
+      "@type": "owl:Class",
+      "rdfs:label": "MountingType",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MaterialProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "How the arrays are mounted (fixed, one axis tracker, two axis tracker, vertical, etc)"
+    },
+    {
+      "@id": "pmd:Location",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Location",
+        {
+          "@language": "en",
+          "@value": "Location"
+        },
+        {
+          "@language": "de",
+          "@value": "Ort"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A position or site occupied or available for occupancy or marked by some distinguishing feature."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine Position oder ein Ort, der besetzt ist oder besetzt werden kann oder durch ein bestimmtes Merkmal gekennzeichnet ist."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ValueObject",
+        {
+          "@language": "en",
+          "@value": "Value Object"
+        },
+        {
+          "@language": "de",
+          "@value": "Wertobjekt"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    },
+    {
+      "@id": "mds-pvSite:PhotovoltaicSiteParameter",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicSiteParameter",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Parameter or property a PV site has"
+    },
+    {
+      "@id": "mds-pvSite:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "Ontology representing a PV site",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-pvSite",
+      "rdfs:label": "mds-pvSite"
+    },
+    {
+      "@id": "mds-pvSite:Latitude",
+      "@type": "owl:Class",
+      "rdfs:label": "Latitude",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvSite:PhotovoltaicSiteParameter"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "North/south position of a point on the Earth, decimal format"
+    },
+    {
+      "@id": "pmd:MaterialProperty",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MaterialProperty",
+        {
+          "@language": "en",
+          "@value": "Material Property"
+        },
+        {
+          "@language": "de",
+          "@value": "Materialeigenschaft"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A materials property is an intensive property of a material, i.e., a physical property that does not depend on the amount of the material. These quantitative properties may be used as a metric by which the benefits of one material versus another can be compared, thereby aiding in materials selection."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine Materialeigenschaft ist eine intensive Eigenschaft eines Materials, d. h. eine physikalische Eigenschaft, die nicht von der Menge des Materials abhängt. Diese quantitativen Eigenschaften können als Maßstab verwendet werden, um die Vorteile eines Materials mit denen eines anderen zu vergleichen und so die Materialauswahl zu erleichtern."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-pvSite:PhotovoltaicRacking"
+        },
+        {
+          "@id": "mds-pvSite:PhotovoltaicSite"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-pvSite:RackingType"
+        },
+        {
+          "@id": "mds-pvSite:MountingType"
+        },
+        {
+          "@id": "mds-pvSite:TrackingAlgorithm"
+        },
+        {
+          "@id": "mds-pvSite:PhotovoltaicSiteParameter"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-pvSite:PhotovoltaicRacking",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicRacking",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvSite:PhotovoltaicSiteParameter"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "How PV modules are arranged within the system"
+    },
+    {
+      "@id": "pmd:ProvidedIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProvidedIdentifier",
+        {
+          "@language": "de",
+          "@value": "Bereitgestellter Identifikator"
+        },
+        {
+          "@language": "en",
+          "@value": "Provided Identifier"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A colloquial, human-generated descriptor."
+      }
+    },
+    {
+      "@id": "mds-pvSite:Elevation",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:M"
+      },
+      "rdfs:label": "Elevation",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvSite:PhotovoltaicSiteParameter"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Elevation above sea level"
+    },
+    {
+      "@id": "mds-pvSite:RackingType",
+      "@type": "owl:Class",
+      "rdfs:label": "RackingType",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MaterialDesignation"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Type of racking used (open, closed, roof, etc)"
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XRDResult": "https://cwrusdle.bitbucket.io/",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRDResult:ResultID"
+        },
+        {
+          "@id": "mds-XRDResult:imageSequence"
+        },
+        {
+          "@id": "mds-XRDResult:stackNumber"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:Sequence"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "mds-XRDResult:imageSequence",
+      "@type": "owl:Class",
+      "rdfs:label": "imageSequence",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SequenceNumber"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Running sequence of the image taken."
+    },
+    {
+      "@id": "mds-XRDResult:XRDResult",
+      "@type": "owl:Class",
+      "rdfs:label": "XRDResult",
+      "rdfs:subClassOf": {
+        "@id": "pmd:PrimaryData"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:ProvidedIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProvidedIdentifier",
+        {
+          "@language": "de",
+          "@value": "Bereitgestellter Identifikator"
+        },
+        {
+          "@language": "en",
+          "@value": "Provided Identifier"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A colloquial, human-generated descriptor."
+      }
+    },
+    {
+      "@id": "mds-XRDResult:stackNumber",
+      "@type": "owl:Class",
+      "rdfs:label": "stackNumber",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProjectIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The stack of the data."
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDResult:XRDResult"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRDResult:logFile"
+        },
+        {
+          "@id": "mds-XRDResult:imageSequence"
+        },
+        {
+          "@id": "mds-XRDResult:stackNumber"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-XRDResult:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "Ontology for the XRD Result FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XRDResult",
+      "rdfs:label": "mds-XRDResult"
+    },
+    {
+      "@id": "mds-XRDResult:logFile",
+      "@type": "owl:Class",
+      "rdfs:label": "logFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Metadata"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:Metadata",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Metadata",
+        {
+          "@language": "en",
+          "@value": "Metadata"
+        },
+        {
+          "@language": "de",
+          "@value": "Metadaten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die DataScope Metadaten umfassen Attribute und zusätzliche Daten (Provenienz), die z.B. die Fabrik, das Labor, das Prozesssystem und die Objekte betreffen und die eine Bewertung der Qualität / Zuverlässigkeit der Messungen und eine systematische Suche in einer Datenbank ermöglichen."
+        },
+        {
+          "@language": "en",
+          "@value": "This data scope expresses that a :ValueObject refers to attributes and additional data (provenance) on production, laboratory, process system and objects that enable an evaluation of the quality/reliability of the measurements and a systematic search task in a database."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:PrimaryData",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "PrimaryData",
+        {
+          "@language": "en",
+          "@value": "Primary Data"
+        },
+        {
+          "@language": "de",
+          "@value": "Primärdaten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die Datenkategorie Primärdaten umfasst Daten, die vor / nach einem Prozess erfasst werden, entweder bezogen auf die Geometrie des Objekts (z.B. ao, bo, do, au, bu, du, Lu) oder als Register des gesamten Aufbaus (z.B. Skizzen, Fotos oder Videos)"
+        },
+        {
+          "@language": "en",
+          "@value": "This data scope expresses that a ValueObject refers to data that is directly acquired during a process by sensors (time, force, length, temperature)"
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRDResult:ResultID",
+      "@type": "owl:Class",
+      "rdfs:label": "ResultID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An identifier for the results."
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDResult:XRDResult"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDResult:ResultID"
+      }
+    },
+    {
+      "@id": "pmd:ProjectIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProjectIdentifier",
+        {
+          "@language": "en",
+          "@value": "Project Identifier"
+        },
+        {
+          "@language": "de",
+          "@value": "Projektidentifikator"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A colloquial, human-generated, descriptive text qualifying the nature of a project."
+        },
+        {
+          "@language": "de",
+          "@value": "Ein umgangssprachlicher, von Menschen erstellter, beschreibender Text, der die Art eines Projekts qualifiziert."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:SequenceNumber",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "SequenceNumber",
+        {
+          "@language": "en",
+          "@value": "Sequence Number"
+        },
+        {
+          "@language": "de",
+          "@value": "Sequenznummer"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Strict monotonically increasing integer that indicates the position in an ordered list."
+      }
+    }
+  ]
+}

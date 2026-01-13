@@ -1,0 +1,328 @@
+{
+    "@context": {
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "printerMetadata": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "measurementTechnique": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "value": "https://schema.org/value",
+        "unitText": "https://schema.org/unitText",
+        "description": "https://schema.org/description",
+        "sampleID": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "printMethod": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "manufacturer": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "brand": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "material": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "chemicalComposition": {
+            "@id": "http://materialsmine.org/ns/Composition/",
+            "@type": "string"
+        },
+        "lotNumber": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "buildGeometry": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "buildParameter": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl"
+        },
+        "flowRate": {
+            "@id": "http://purl.obolibrary.org/obo/NCIT_C82554",
+            "@type": "float"
+        },
+        "layerThickness": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "laserSpeed": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "infillPercentage": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "laserTurnPower": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "laserTurnSpeed": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "contourWidth": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "materialDefect": {
+            "@id": "https://gitlab.cc-asp.fraunhofer.de/EMI_datamanagement/bwmd_ontology",
+            "@type": "string"
+        },
+        "spotSize": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "widthTop": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "widthBot": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "buildOrientation": {
+            "@id": "https://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00030",
+            "@type": "string"
+        },
+        "temperature": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "environmentalTemperature": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "extrusionTemperature": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "platformTemperature": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "inSitu": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "exSitu": {
+            "@id": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+            "@type": "string"
+        },
+        "profilometer": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "CameraInfrared": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "cameraHighSpeed": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "image": "http://schema.org/image",
+        "VideoObject": "https://schema.org/VideoObject",
+        "duration": "https://schema.org/duration",
+        "accustic": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "radiography": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "metallography": "http://schema.org/image",
+        "keyence": "https://schema.org/duration",
+        "tomographyOpticalCoherence": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "surfaceRoughness": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "imageAcquisitionRate": "ttps://www.emi.fraunhofer.de/ontologies/LPBFO#LPBFO_00512",
+        "CompositeRatio": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "baseMetal": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "FillerMaterial": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "MechanicalProperties": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "TensileStrength": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "TensileModulus": "https://cwrusdle.bitbucket.io/Ontology/metalAdditiveManufacturing.owl",
+        "Density": "http://purl.obolibrary.org/obo/NCIT_C45781",
+        "MolecularWeight": "http://purl.obolibrary.org/obo/NCIT_C28272",
+        "Viscosity": "http://purl.obolibrary.org/obo/NCIT_C75912"
+        
+    },
+    "sampleID": {
+        "value": "$sampleID",
+        "manufacturer": "$manufacturer",
+        "buildGeometry": {
+            "value": "$buildGeometry",
+            "description": "Shape of printed sample."
+        },
+        "printerMetadata": {
+            "processMethod": "Laser powder bed fusion",
+            "buildParameter": {
+                "description": "Parameters controlling the building of slices from CAD model. ",
+                "flowRate": {
+                    "value": "$flowRate",
+                    "unitText": "null",
+                    "description": "The speed of movement of gas."
+                },
+                "layerThickness": {
+                    "value": "$layerThickness",
+                    "unitText": "null",
+                    "description": "Thickness of each slice layer."
+                },
+                "laserSpeed": {
+                    "value": "$laserSpeed",
+                    "unitText": "null",
+                    "description": "Speed at which is laser speed."
+                },
+                "infillPercentage": {
+                    "value": "$infillPercentage",
+                    "unitText": "null",
+                    "description": "Percentage representing how much space inside a print material is filled."
+                },
+                "laserTurnPower": {
+                    "value": "$laserTurnPower",
+                    "unitText": "null",
+                    "description": "The power with respect to the turn along welds"
+                },
+                "laserTurnSpeed": {
+                    "value": "$laserTurnSpeed",
+                    "unitText": "null",
+                    "description": "Building Pattern."
+                },
+                "contourWidth": {
+                    "value": "$contourWidth",
+                    "unitText": "null",
+                    "description": "null"
+                },
+                "materialDefect": {
+                    "value": "$materialDefect",
+                    "unitText": "null",
+                    "description": " The appearance of a materialDefect (pore/cracks/ect)."
+                },
+                "spotSize": {
+                    "value": "$spotSize",
+                    "unitText": "null",
+                    "description": "Diameter of nozzle."
+                },
+                "widthTop": {
+                    "value": "$widthTop",
+                    "unitText": "null",
+                    "description": "null"
+                },
+                "widthBot": {
+                    "value": "$widthBot",
+                    "unitText": "null",
+                    "description": "null"
+                }
+            },
+            "buildOrientation": {
+                "value": "$buildOrientation",
+                "description": "Direction of build."
+            },
+            "temperature": {
+                "platformTemperature": {
+                    "value": "$platformTemperature",
+                    "unitText": "null",
+                    "description": "Temperature of build platform preheat."
+                },
+                "environmentTemperature": {
+                    "value": "$environmentTemperature",
+                    "unitText": "null",
+                    "description": "null"
+                }
+            }
+        },
+        "measurementTechnique": {
+            "inSitu": {
+                "profilometer": {
+                    "surfaceRoughness": "$surfaceRoughness",
+                    "unitText": "null",
+                    "image": "null",
+                    "brand": "null"
+                },
+                "CameraInfrared": {
+                    "image": "null",
+                    "VideoObject": "null",
+                    "duration": {
+                        "value": "$duration",
+                        "unitText": "null"
+                    },
+                    "temperature": {
+                        "value": "$temperature",
+                        "unitText": "null"
+                    },
+                    "imageAcquisitionRate": {
+                        "value": "$imageAcquisitionRate",
+                        "unitText": "null"
+                    },
+                    "brand": "null"
+                },
+                "cameraHighSpeed": {
+                    "image": "null",
+                    "VideoObject": "null",
+                    "duration": {
+                        "value": "$duration",
+                        "unitText": "null"
+                    },
+                    "imageAcquisitionRate": {
+                        "value": "$imageAcquisitionRate",
+                        "unitText": "null"
+                    },
+                    "brand": "null"
+                },
+                "accustic": {
+                    "audio": "null",
+                    "brand":  "null"
+                    }
+            },
+            "exSitu": {
+                "radiography": {
+                    "unitText": "null",
+                    "image": "null",
+                    "brand": "null",
+                    "resolution": "null"
+                },
+                "tomographyOpticalCoherence": {
+                    "unitText": "null",
+                    "image": "null",
+                    "brand": "null",
+                    "resolution": "null"
+                },
+                "metallography": {
+                    "image": "null",
+                    "resolution":  "null"
+                    },
+                 "keyence": {
+                    "image": "null",
+                    "VideoObject": "null",
+                    "duration": {
+                        "value": "$duration",
+                        "unitText": "null"
+                    }
+        },
+        "material": {
+            "value": "$material",
+            "chemicalComposition": {
+                "baseMetal": "null",
+                "FillerMaterial": "null",
+                "compositeRatio": "null",
+                "manufacturer": "null",
+                "molecularWeight": {
+                    "value": "$molecularWeight",
+                    "unitText": "null"
+                }
+            },
+            "mechanicalProperties": {
+                "tensileStrength": {
+                    "value": "$tensileStrength",
+                    "unitText": "null"
+                },
+                "tensileModulus": {
+                    "value": "$tensileModulus",
+                    "unitText": "null"
+                }
+            },
+            "density": {
+                "value": "$density",
+                "unitText": "null",
+                "description": "Density of print material."
+            },
+            "particleSize": {
+                "value": "$particleSize",
+                "unitText": "null",
+                "description": "Intrinsic particle size of print material."
+            }
+        }
+            }
+        }
+    }
+}

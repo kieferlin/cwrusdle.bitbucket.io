@@ -1,0 +1,256 @@
+{
+  "@context": {
+    "experiment": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afm": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanParameters": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanSize": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanRate": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanAngle": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanLines": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afmVoltage": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "springConstant": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "gainParameters": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "integralGain": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "proportionalGain": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "setPoint": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "driveAmplitude": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "dimensionsImage": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "resonanceFrequency": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "hotStageTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "piezoelectricSensorLocation": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afmInstrument": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afmChannel": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "height": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "amplitude": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "phase": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "zSensor": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "fluoroelastomer": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "fluoroelastomerProperties": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "material": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "batch": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "polydispersityIndex": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "gyrationRadius": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "hydrodynamicRadius": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "peakMolecularWeight": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "numberAverageMolecularWeight": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "weightAverageMolecularWeight": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "intrinsicVelocity": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "fluoroelastomerFilmPreparation": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "substrate": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "cleaningProcess": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "substrateType": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "substrateDimensions": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "solventProperties": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "solventType": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "solventConcentration": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "adhesionPromoter": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "filmDimensions": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoatingParameters": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoatingTime": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoatingSpeed": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "dryingTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "dryingTime": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoaterInstrument": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "preFiltration": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "description": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "value": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "units": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024"
+  },
+    "SampleID": {
+        "@type": "PropertyValue",
+        "description": "Sample ID",
+        "value": "$SampleID",
+        "unitText": "Null"
+    },
+  "experiment": {
+    "value": "$experiment",
+    "afm": {
+      "scanParameters": {
+        "scanSize": {
+          "value": "$scanSize",
+          "description": "Size of the AFM scan along one side of the square."
+        },
+        "scanRate": {
+          "value": "$scanRate",
+          "description": "Controls the rate at which the cantilever scans the sample area."
+        },
+        "scanAngle": {
+          "value": "$scanAngle",
+          "description": "Angle at which the scanning occurs."
+        },
+        "scanLines": {
+          "value": "$scanLines",
+          "description": "Number of lines scanned per second in the fast scan direction (X-axis)."
+        }
+      },
+      "afmVoltage": {
+        "description": "Voltage of the AFM experiment.",
+        "value": "$afmVoltage"
+      },
+      "springConstant": {
+        "description": "Spring constant associated with AFM experiment.",
+        "value": "$springConstant"
+      },
+      "gainParameters": {
+        "integralGain": {
+          "value": "$integralGain",
+          "description": "Controls response time of the feedback loop; can dramatically affect the image quality and dependent on both the duration and magnitude of the error signal."
+        },
+        "proportionalGain": {
+          "value": "$proportionalGain",
+          "description": "Scales the error signal by a user specified value."
+        }
+      },
+      "setPoint": {
+        "description": "Deflection or amplitude that the height feedback maintains during imaging.",
+        "value": "$setPoint"
+      },
+      "driveAmplitude": {
+        "description": "Amplitude of the voltage to cause the cantilever to vibrate.",
+        "value": "$driveAmplitude"
+      },
+      "dimensionsImage": {
+        "description": "Dimensions of the AFM image.",
+        "value": "$dimensionsImage"
+      },
+      "resonanceFrequency": {
+        "description": "Resonance frequency of the cantilever.",
+        "value": "$resonanceFrequency"
+      },
+      "hotstageTemperature": {
+        "description": "AFM hot stage temperature.",
+        "value": "$hotstageTemperature"
+      },
+      "piezoelectricSensorLocation": {
+        "description": "Piezoelectric sensor location of the AFM instrument.",
+        "value": "$piezoelectricSensorLocation"
+      },
+      "afmInstrument": {
+        "description": "AFM instrument type.",
+        "value": "$afmInstrument"
+      },
+      "afmChannel": {
+        "height": {
+          "value": "$height",
+          "description": "Height image from AFM instrument."
+        },
+        "amplitude": {
+          "value": "$amplitude",
+          "description": "Amplitude image from AFM instrument."
+        },
+        "phase": {
+          "value": "$phase",
+          "description": "Phase image from AFM instrument."
+        },
+        "zSensor": {
+          "value": "$zSensor",
+          "description": "Z-sensor image from AFM instrument."
+        }
+      }
+    },
+    "fluoroelastomer": {
+      "value": "$fluoroelastomer",
+      "fluoroelastomerProperties": {
+        "material": {
+          "value": "$material",
+          "description": "Fluoroelastomer material."
+        },
+        "batch": {
+          "value": "$material",
+          "description": "Fluoroelastomer batch."
+        },
+        "polydispersityIndex": {
+          "value": "$polydispersityIndex",
+          "description": "Polydispersity index of the fluoroelastomer."
+        },
+        "gyrationRadius": {
+          "value": "$gyrationRadius",
+          "description": "Radius of gyration of the fluoroelastomer."
+        },
+        "hydrodynamicRadius": {
+          "value": "$hydrodynamicRadius",
+          "description": "Hydrodynamic radius of the fluoroelastomer."
+        },
+        "peakMolecularWeight": {
+          "value": "$peakMolecularWeight",
+          "description": "Peak molecular weight of the fluoroelastomer."
+        },
+        "numberAverageMolecularWeight": {
+          "value": "$numberAverageMolecularWeight",
+          "description": "Number average molecular weight of the fluoroelastomer."
+        },
+        "weightAverageMolecularWeight": {
+          "value": "$weightAverageMolecularWeight",
+          "description": "Weight molecular weight of the fluoroelastomer."
+        },
+        "intrinsicVelocity": {
+          "value": "$intrinsicVelocity",
+          "description": "Intrinsic velocity of the fluoroelastomer."
+        }
+      },
+      "fluoroelastomerFilmPreparation": {
+        "substrate": {
+          "cleaningProcess": {
+            "value": "$cleaningProcess",
+            "description": "Cleaning process of the substrate."
+          },
+          "substrateType": {
+            "value": "$substrateType",
+            "description": "Type of substrate being used for AFM study."
+          },
+          "substrateDimensions": {
+            "value": "$substrateDimensions",
+            "description": "Dimensions of the substrate."
+          }
+        },
+        "solventProperties": {
+          "solventType": {
+            "value": "$solventType",
+            "description": "Type of solvent for thin-film preparation."
+          },
+          "solventConcentration": {
+            "value": "$solventConcentration",
+            "description": "Solvent concentration."
+          }
+        },
+        "adhesionPromoter": {
+          "value": "$adhesionPromoter",
+          "description": "Adhesion promoter."
+        },
+        "filmDimensions": {
+          "value": "$filmDimensions",
+          "description": "Dimension of the fluoroelastomer film."
+        },
+        "spincoatingParameters": {
+          "spincoatingTime": {
+            "value": "$spincoatingTime",
+            "description": "Time taken for spin-coating."
+          },
+          "spincoatingSpeed": {
+            "value": "$spincoatingSpeed",
+            "description": "Speed of spin-coating."
+          }
+        },
+        "dryingTemperature": {
+          "value": "$dryingTemperature",
+          "description": "Drying temperature in the evaporation process of film preparation."
+        },
+        "dryingTime": {
+          "value": "$dryingTime",
+          "description": "Drying time in the evaporation process of film preparation."
+        },
+        "spincoaterInstrument": {
+          "value": "$spincoaterInstrument",
+          "description": "Spin-coating instrument."
+        },
+        "preFiltration": {
+          "value": "$preFiltration",
+          "description": "Is there pre-filtration prior to film preparation?"
+        }
+      }
+    }
+  }
+}
+        
+        
+        

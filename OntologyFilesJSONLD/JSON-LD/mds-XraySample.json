@@ -1,0 +1,376 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XraySample": "https://cwrusdle.bitbucket.io/xraySample#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "pmd:Width",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": [
+        "Width",
+        {
+          "@language": "de",
+          "@value": "Breite"
+        },
+        {
+          "@language": "en",
+          "@value": "Width"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        "Width of the sample.",
+        {
+          "@language": "de",
+          "@value": "Diese Entität bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes a horizontal measurement of an object taken at right angles to the length of the object."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XraySample:XraySample",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "XraySample",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Sample"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:SpecimenName",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "SpecimenName",
+        {
+          "@language": "de",
+          "@value": "Prüfstück Name"
+        },
+        {
+          "@language": "en",
+          "@value": "Specimen Name"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft beschreibt die Bezeichnung eines Prüfstücks, die in der Regel von Menschen als von Menschen lesbarer Identifikator vergeben wird."
+        },
+        {
+          "@language": "de",
+          "@value": "This property describes the designation of a specimen, usually given as human-readable identifier by humans."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:inputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XraySample:XraySample"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "input of"
+      },
+      "rdfs:range": {
+        "@id": "mds-XraySample:XrayTool"
+      },
+      "skos:altLabel": "is input of"
+    },
+    {
+      "@id": "mds-XraySample:SampleID",
+      "@type": "owl:Class",
+      "rdfs:label": "SampleID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SpecimenName"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "A human-labeled sample identifier."
+    },
+    {
+      "@id": "pmd:MaterialDesignation",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MaterialDesignation",
+        {
+          "@language": "en",
+          "@value": "Material Designation"
+        },
+        {
+          "@language": "de",
+          "@value": "Materialbezeichnung"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": "It is a name or identifier of a material type. It designates a material. \nE.g. \"steel\", \"aluminium\", \"wood\", \"plastic\", \"rubber\"."
+    },
+    {
+      "@id": "mds-XraySample:ProcessingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "ProcessingMethod",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ManufacturingProcess"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The manufacturing method by ehich the sample was created."
+    },
+    {
+      "@id": "mds-XraySample:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "XRD Sample Ontology for the FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XraySample",
+      "rdfs:label": "mds-XraySample"
+    },
+    {
+      "@id": "mds-XraySample:XrayTool",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayTool",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XraySample:XraySample"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XraySample:ProcessingMethod"
+        },
+        {
+          "@id": "mds-XraySample:MaterialName"
+        },
+        {
+          "@id": "pmd:Length"
+        },
+        {
+          "@id": "pmd:Width"
+        },
+        {
+          "@id": "pmd:Thickness"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XraySample:SampleID"
+        },
+        {
+          "@id": "mds-XraySample:ProcessingMethod"
+        },
+        {
+          "@id": "mds-XraySample:MaterialName"
+        },
+        {
+          "@id": "pmd:Length"
+        },
+        {
+          "@id": "pmd:Width"
+        },
+        {
+          "@id": "pmd:Thickness"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "pmd:Length",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Length",
+        {
+          "@language": "en",
+          "@value": "Length"
+        },
+        {
+          "@language": "de",
+          "@value": "Länge"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        "Length of the sample.",
+        {
+          "@language": "en",
+          "@value": "A measured distance or dimension of an object, usually the longer or longest dimension of the object."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:Sample",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Sample",
+        {
+          "@language": "de",
+          "@value": "Probe"
+        },
+        {
+          "@language": "en",
+          "@value": "Sample"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Portion of material, usually selected from a larger quantity of material, collected and taken away for testing"
+      }
+    },
+    {
+      "@id": "mds-XraySample:MaterialName",
+      "@type": "owl:Class",
+      "rdfs:label": "MaterialName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MaterialDesignation"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the material."
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XraySample:XraySample"
+      },
+      "rdfs:range": {
+        "@id": "mds-XraySample:SampleID"
+      }
+    },
+    {
+      "@id": "pmd:Thickness",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": [
+        "Thickness",
+        {
+          "@language": "de",
+          "@value": "Dicke"
+        },
+        {
+          "@language": "en",
+          "@value": "Thickness"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        "Thickness of the sample.",
+        {
+          "@language": "de",
+          "@value": "Diese Entität beschreibt die gemessene Dimension in einer Richtung eines Prüfstücks."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes the measured dimension in one direction of a test piece."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:ManufacturingProcess",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ManufacturingProcess",
+        {
+          "@language": "de",
+          "@value": "Herstellungsprozess"
+        },
+        {
+          "@language": "en",
+          "@value": "Manufacture Process"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A process that is driven by the primary intent to transform objects."
+      }
+    }
+  ]
+}

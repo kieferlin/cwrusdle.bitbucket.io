@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "SampleID": "https://schema.org/",
+    "@vocab": "http://www.w3.org/2001/XMLSchema#",
+    "site": "http://semanticscience.org/resource/SIO_000019",
+    "siteNumber": "http://purl.obolibrary.org/obo/NCIT_C83081",
+    "date": "http://purl.obolibrary.org/obo/STATO_0000093",
+    "startDate": "http://purl.obolibrary.org/obo/STATO_0000093",
+    "endDate": "http://purl.obolibrary.org/obo/STATO_0000093",
+    "metaData": "http://purl.obolibrary.org/obo/NCIT_C52095",
+    "stationName":"http://edamontology.org/data_2099",
+    "latitude": "http://purl.obolibrary.org/obo/OBI_0001620",
+    "longitude": "http://purl.obolibrary.org/obo/OBI_0001621",
+    "state": "http://purl.obolibrary.org/obo/ENVO_00000009",
+    "parameterCode": "http://semanticscience.org/resource/SIO_000115",
+    "value": "https://schema.org/value",
+    "description": "https://schema.org/description",
+    "unitText": "https://schema.org/unitText"
+     },
+    "site":{
+      "description": "A site is a spatial region bounded (in part or in whole) by material entities and may be occupied by material entities",
+      "siteNumber": {
+        "description" : "A sequence of characters used to identify, name, or characterize the study site", 
+        "value": "$siteNumber",
+        "unitText": "Null"
+      }},
+    "date":{
+      "description":"Information about a calendar date or timestamp indicating day, month, year and time of an event",
+      "startDate":{
+        "description":"Information about a calendar date or timestamp indicating day, month, year and time of an event",
+        "value": "$startDate",
+        "unitText": "Null"
+    },
+    "endDate":{
+      "description":"Information about a calendar date or timestamp indicating day, month, year and time of an event",
+      "value": "$endDate",
+      "unitText": "Null"
+    }},
+   "metaData":{
+      "description":"Data about data; information that describes another set of data",
+      "stationName":{
+        "description":"A name of a thing, which need not necessarily uniquely identify it",
+        "value": "$stationName",
+        "unitText": "Null"
+    },
+    "latitude":{
+      "description":"A measurement datum that is the measure of the latitude coordinate of a site",
+      "value": "$latitude",
+      "unitText": "Null"
+    },
+    "longitude":{
+      "description":"A measurement datum that is the measure of the longitude coordinate of a site",
+      "value": "$longitude",
+      "unitText": "Null"
+    },
+    "state":{
+      "description":"A political association with effective dominion over a geographic area",
+      "value": "$state",
+      "unitText": "Null"
+    }},
+   "parameterCode":{
+      "description":"An identifier is a label that specifically refers to (identifies) an entity (instance/type)",
+       "value": "$parameterCode",
+       "unitText": ["information", "physical", "radiochemical", "sediment", "biological", "inorganicMinorNonMetals", "inorganicMinorMetals", "inorganicMajorMetals", "organicPesticide", "microbiological", "populationComunity", "toxicity", "organicOther", "nutrient", "stableIsotopes", "organicPCBs"]
+    }
+  }

@@ -1,0 +1,79 @@
+{
+  "@context": {
+   "description": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "sampleID":  "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "measurementDate": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "batch": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "solvent": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "solventConcentration": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "dilutionFactor": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "sampleInformation": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "material": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "peeled": "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "calculatedConcentration" : "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl",
+    "calculatedConcentrationUndilutedSample" : "https://cwrusdle.bitbucket.io/Ontology/sampleMetadata.owl"
+
+
+  },
+              "sampleInformation": {
+
+            "sampleID": {
+                  "description": "Analyte identification",
+                   "value": "$sampleID",
+                  "unitText": "null"
+                },
+
+            "measurementDate": {
+                  "description": "Date of the Measurement",
+                   "value": "$measurementDate",
+                  "unitText": "null"
+                },
+                "batch": {
+                  "description": " Batch of the set of tests",
+                   "value": "$batch",
+                  "unitText": "null"
+                },
+                   "solvent": {
+                  "description": "Solvent used to dilute the sample",
+                   "value": "$solvent",
+                  "unitText": "null"
+                },
+                   "solventConcentration": {
+                  "description": "Concentration of the solvent used to dilute the sample",
+                   "value": "$solventConcentration",
+                  "unitText": "null"
+                },
+                   "dilutionFactor": {
+                  "description": "Dilution factor used in the readings",
+                   "value": "$dilution",
+                  "unitText": "null"
+                },
+                   "material": {
+                  "description": "Material type of the sample",
+                   "value": "$material",
+                  "unitText": "null"
+                },
+                    "calculatedConcentration": {
+                  "description": "Calculated concentration of the Sample",
+                   "value": "$calculatedConcentration",
+                  "unitText": "null"
+                },
+                    "calculatedConcentrationUndilutedSample": {
+                  "description": "Calculated concentration sample before dilution",
+                   "value": "$calculatedConcentrationUndiluted",
+                  "unitText": "null"
+                    },
+
+                   "peeled": {
+                  "description": "If a sample was peeled or not",
+                   "value": "$peeled",
+                  "unitText": "null"
+                }
+
+                    }
+
+
+}
+

@@ -1,0 +1,35 @@
+{
+  "@context": {
+  "results": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "wavelength": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "absorbance":  "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "transmittance":  "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl"
+  },
+            "results": {
+               
+            "wavelength": {
+                  "description": "Wavelength of the reading",
+                   "value": "$wavelength",
+                  "unitText": "cm-1"                                 
+                },
+                "absorbance": {
+                  "description": "Absorbance read by the instrument",
+                   "value": "$absorbance",
+                  "unitText": "a.u."                                 
+                },
+                "transmittance": {
+                  "description": "Transmittance read by the instrument",
+                   "value": "$transmittance",
+                  "unitText": "%",
+                  "@type": "float"
+                }
+                   
+                   
+                
+              }
+            
+}
+                  

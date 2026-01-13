@@ -1,0 +1,351 @@
+{
+  "@context": {
+    "longitude": "http://purl.obolibrary.org/obo/OBI_0001621",
+    "latitude": "http://purl.obolibrary.org/obo/OBI_0001620",
+    "location": "http://purl.obolibrary.org/obo/GEO_000000358",
+    "country": "http://purl.obolibrary.org/obo/NCIT_C25464",
+    "state": "http://purl.obolibrary.org/obo/TXPO_0000270",
+    "county": "http://purl.obolibrary.org/obo/GAZ_00483966",
+    "field": "http://purl.obolibrary.org/obo/ENVO_01000352",
+    "header": "http://purl.obolibrary.org/obo/NCIT_C68829",
+    "name": "http://purl.obolibrary.org/obo/NCIT_C42614",
+    "well": "http://purl.obolibrary.org/obo/ENVO_01000003",
+    "description": "http://semanticscience.org/resource/SIO_000136",
+    "curve": "http://semanticscience.org/resource/SIO_000608",
+    "curves": "http://semanticscience.org/resource/SIO_000608",
+    "quantity": "http://semanticscience.org/resource/SIO_000052",
+    "unit": "http://semanticscience.org/resource/SIO_000074",
+    "date": "http://purl.obolibrary.org/obo/NCIT_C25164",
+    "startIndex": "https://github.com/JSONWellLogFormat/JSONWellLogFormat",
+    "endIndex": "https://github.com/JSONWellLogFormat/JSONWellLogFormat",
+    "step": "https://github.com/JSONWellLogFormat/JSONWellLogFormat",
+    "rockType": "https://docs.ppdm.org/",
+    "totalorganicCarbon": "http://purl.obolibrary.org/obo/NCIT_C134114",
+    "totalPorosity": "http://purl.obolibrary.org/obo/ENVO_09200004",
+    "porosity": "http://purl.obolibrary.org/obo/ENVO_09200004",
+    "waterSaturation": "http://purl.obolibrary.org/obo/ENVO_00000329",
+    "densityofthemineralMatrix": "https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "volumeofSand":"https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "volumeofLime":"https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "volumeofdolomite": "https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "VolumeofClay": "https://cwrusdle.bitbucket.io/Ontology/geospatialwells",
+    "photoelectric": "https://www.britannica.com/science/photoelectric-effect",
+    "density": "https://www.britannica.com/science/density",
+    "neutronPorosity": "https://docs.ppdm.org/",
+    "laterologdeep": "https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "gammaray":"https://docs.ppdm.org/",
+    "Measureddepth":"https://glossary.slb.com/en/terms/m/measured_depth",
+    "valueType": "https://github.com/JSONWellLogFormat/JSONWellLogFormat",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "definedRegion":"https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "place":"https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "propertyValue":"https://cwrusdle.bitbucket.io/Ontology/geospatialwells.owl",
+    "wellLogs":"http://purl.obolibrary.org/obo/ENVO_01000003",
+    "dimensions": "http://purl.obolibrary.org/obo/BFO_0000009",
+     "geocoordinates":"https://schema.org/GeoCoordinates"
+  },
+  
+ 
+  
+  "wellLogs": {
+    "geocoordinates": {
+      "latitude": {
+        "@type": "place",
+        "description": "A measurement datum that is the measure of the latitude coordinate of a site",
+        "value": "$longitude",
+        "unitText": [
+          "deg",
+          "deg/min/sec"
+        ]
+      },
+      "longitude": {
+        "@type": "place",
+        "description": "A measurement datum that is the measure of the longitude coordinate of a site",
+        "value": "$longitude",
+        "unitText": [
+          "deg",
+          "deg/min/sec"
+        ]
+      }
+    },
+    "location": {
+      "country": {
+        "@type": "definedRegion",
+        "description": "A sovereign nation occupying a distinct territory and ruled by an autonomous government.",
+        "value": "$location",
+        "unitText": null
+      },
+      "state": {
+        "@type": "definedRegion",
+        "description": "An aggregate of governmental organizations that is not itself a sovereign state and whose members are only sovereign states that have some feature in common",
+        "value": "",
+        "unitText": null
+      },
+      "county": {
+        "@type": "definedRegion",
+        "description": "An administrative area",
+        "value": "",
+        "unitText": null
+      },
+      "field": {
+        "@type": "definedRegion",
+        "description": "A field  is located on land and can be used for dirrent purposes",
+        "value": "",
+        "unitText": null
+      }
+    },
+    "header": {
+      "name": {
+        "@type": "name",
+        "description": "The words or language units by which a thing is known",
+        "value": "",
+        "unitText": null
+      },
+      "well": {
+        "@type": "well",
+        "description": " A well which has been drilled in order to extract petroleum oil from subterranean reservoirs and bring it to the surface",
+        "value": "",
+        "unitText": null
+      },
+      
+      "date": {
+        "@type": "date",
+        "description": "The particular day, month and year an event has happened or will happen",
+        "value": "",
+        "unitText": ["sec", "min", "hr","day","yr"]
+      },
+      "startIndex": {
+        "@type": "propertyValue",
+        "description": "Value of the first index. Unit according to index curve..",
+        "value": "",
+        "unitText": null
+      },
+      "endIndex": {
+        "@type": "propertyValue",
+        "description": "Value of the last index. Unit according to index curve",
+        "value": "",
+        "unitText": null
+      },
+      "step": {
+        "@type": "propertyValue",
+        "description": "Distance between indices if regularly sampled. Unit according to index curve. If log is time based, milliseconds assumed",
+        "value": "",
+        "unitText": null
+      }
+    },
+    "curves": {
+      "Measureddepth": {
+        "name": "MD",
+        "description": "Measured depth",
+        "quantity": "length",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Measured depth",
+        "unitText": [
+          "ft",
+          "m",
+          "yd",
+          "mi",
+          "mm",
+          "cm",
+          "km"
+        ]
+      },
+      "gammaray": {
+        "name": "GR",
+        "description": "continuous measurement record of naturally occurring gamma rays in the formations adjacent to the wellbore",
+        "quantity": "radioactive content of the formations",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Gamma ray",
+        "unitText": [
+          "GAPI"
+        ]
+      },
+      "laterologdeep": {
+        "name": "LLD",
+        "description": "continuous measurement record of attenuation resistivity",
+        "quantity": "radioactive content of the formations",
+        "unit": "ohmm",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$laterolog deep",
+        "unitText": [
+          "ohmm"
+        ]
+      },
+      "neutronPorosity": {
+        "name": "NPHI",
+        "description": "continuous measurement record of neutrons emitted concentration in a formation",
+        "quantity": "neutrons content of the formations",
+        "unit": "dec",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$laterolog deep",
+        "unitText": [
+          "ohmm"
+        ]
+      },
+      "density": {
+        "name": "RHOB",
+        "description": "continuous measurement record of the bulk density of the formation in a formation",
+        "quantity": "formation density t content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Density",
+        "unitText": [
+          "g/cm3"
+        ]
+      },
+      "photoelectric": {
+        "name": "PEF",
+        "description": "continuous measurement record of the  photoelectric absorption factor in a formation",
+        "quantity": "formation density content",
+        "unit": "barns/electron",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Photoelectric",
+        "unitText": [
+          "barns/electron"
+        ]
+      },
+      "VolumeofClay": {
+        "name": "Vcl",
+        "description": "continuous measurement record of the  volume of clay in a formation",
+        "quantity": "formation clay mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Volume of clay",
+        "unitText": [
+          "kg/m^3",
+          "Dec",
+          "%"
+        ]
+      },
+      "volumeofdolomite": {
+        "name": "VDol",
+        "description": "continuous measurement record of the  volume of volumes of dolomite in a formation",
+        "quantity": "formation volumes of dolomite mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Volume of dolomite",
+        "unitText": [
+          "kg/m^3",
+          "Dec",
+          "%"
+        ]
+      },
+      "volumeofLime": {
+        "name": "VLime",
+        "description": "continuous measurement record of the volumes of  limestone in a formation",
+        "quantity": "formation volumes of limestone mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Volume of lime",
+        "unitText": [
+          "kg/m^3",
+          "Dec",
+          "%"
+        ]
+      },
+      "volumeofSand": {
+        "name": "VSand",
+        "description": "continuous measurement record of the  volumes of  sand in a formation",
+        "quantity": "formation volumes of sand mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Volume of sand",
+        "unitText": [
+          "kg/m^3",
+          "Dec",
+          "%"
+        ]
+      },
+      "densityofthemineralMatrix": {
+        "name": "RhoMa",
+        "description": "continuous measurement record of the matrix density in a formation",
+        "quantity": "formation volumes of sand mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Volume of sand",
+        "unitText": [
+          "gm/cc"
+        ]
+      },
+      "waterSaturation": {
+        "name": "Sw",
+        "description": "continuous measurement record of the water saturation in a formation",
+        "quantity": "formation volumes of sand mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$Sw",
+        "unitText": [
+          "barns/electron"
+        ]
+      },
+      "porosity": {
+        "name": "PHIE",
+        "description": "continuous measurement record of the effective porosity in a formation",
+        "quantity": "formation volumes of sand mineral content",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$PHIE",
+        "unitText": [
+          "phi",
+          "%"
+        ]
+      },
+      "totalPorosity": {
+        "name": "PHIT",
+        "description": "continuous measurement record of the total porosity of clean (clay free) sand  in a formation",
+        "quantity": "formation volumes of sand mineral content",
+        "unit": "dec",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$PHIE",
+        "unitText": [
+          "phi",
+          "%"
+        ]
+      },
+      "totalorganicCarbon": {
+        "name": "TOC",
+        "description": "continuous measurement record of the weight percent of total organic matter content in a formation",
+        "quantity": "formation percentage of organic matter content",
+        "unit": "wt%",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$PHIE",
+        "unitText": [
+          "wt%"
+        ]
+      },
+      "rockType": {
+        "name": "Rock_type",
+        "description": "continuous measurement record of the rock type in a formation",
+        "quantity": "formation rock type",
+        "valueType": "float",
+        "dimensions": "",
+        "@type": "curves",
+        "value": "$PHIE",
+        "unitText": null
+      }
+    }
+  }
+}

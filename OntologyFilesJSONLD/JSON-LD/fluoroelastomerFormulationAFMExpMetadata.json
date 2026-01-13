@@ -1,0 +1,110 @@
+{
+  "@context": {
+    "afmExpMetadata": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "sampleID": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanParameters": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanSize": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanRate": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanAngle": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "scanLines": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afmVoltage": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "springConstant": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "gainParameters": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "integralGain": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "proportionalGain": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "setPoint": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "driveAmplitude": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "resonanceFrequency": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "hotStageTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "piezoelectricSensorLocation": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afmChannel": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "height": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "amplitude": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "phase": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "zSensor": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "description": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "value": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "units": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024"
+  },
+  "experiment": {
+    "value": "$experiment",
+    "sampleID": {
+      "description": "Sample ID of the AFM instrument.",
+      "value": "$sampleID"
+    },
+    "scanParameters": {
+      "scanSize": {
+        "value": "$scanSize",
+        "description": "Size of the AFM scan along one side of the square."
+      },
+      "scanRate": {
+        "value": "$scanRate",
+        "description": "Controls the rate at which the cantilever scans the sample area."
+      },
+      "scanAngle": {
+        "value": "$scanAngle",
+        "description": "Angle at which the scanning occurs."
+      },
+      "scanLines": {
+        "value": "$scanLines",
+        "description": "Number of lines scanned per second in the fast scan direction (X-axis)."
+      }
+    },
+    "afmVoltage": {
+      "description": "Voltage of the AFM experiment.",
+      "value": "$afmVoltage"
+    },
+    "springConstant": {
+      "description": "Spring constant associated with AFM experiment.",
+      "value": "$springConstant"
+    },
+    "gainParameters": {
+      "integralGain": {
+        "value": "$integralGain",
+        "description": "Controls response time of the feedback loop; can dramatically affect the image quality and dependent on both the duration and magnitude of the error signal."
+      },
+      "proportionalGain": {
+        "value": "$proportionalGain",
+        "description": "Scales the error signal by a user specified value."
+      }
+    },
+    "setPoint": {
+      "description": "Deflection or amplitude that the height feedback maintains during imaging.",
+      "value": "$setPoint"
+    },
+    "driveAmplitude": {
+      "description": "Amplitude of the voltage to cause the cantilever to vibrate.",
+      "value": "$driveAmplitude"
+    },
+    "resonanceFrequency": {
+      "description": "Resonance frequency of the cantilever.",
+      "value": "$resonanceFrequency"
+    },
+    "hotstageTemperature": {
+      "description": "AFM hot stage temperature.",
+      "value": "$hotstageTemperature"
+    },
+    "piezoelectricSensorLocation": {
+      "description": "Piezoelectric sensor location of the AFM instrument.",
+      "value": "$piezoelectricSensorLocation"
+    },
+    "afmChannel": {
+      "height": {
+        "value": "$height",
+        "description": "Height image from AFM instrument."
+      },
+      "amplitude": {
+        "value": "$amplitude",
+        "description": "Amplitude image from AFM instrument."
+      },
+      "phase": {
+        "value": "$phase",
+        "description": "Phase image from AFM instrument."
+      },
+      "zSensor": {
+        "value": "$zSensor",
+        "description": "Z-sensor image from AFM instrument."
+      }
+    }
+  }
+}

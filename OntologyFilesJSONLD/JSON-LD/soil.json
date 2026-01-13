@@ -1,0 +1,363 @@
+{
+  "@context": {
+    "SampleID": "https://schema.org/",
+    "@vocab": "http://www.w3.org/2001/XMLSchema#",
+    "site": "http://semanticscience.org/resource/SIO_000019",
+    "value": "https://schema.org/value",
+    "description": "https://schema.org/description",
+    "soilMappingUnitIdentifier":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "ID":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "muGlobal": "https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "muSource1":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "muSource2":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "coverage":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "isSoil":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "sequence":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "share":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "soilUnitNaming":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "texture":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "refDepth":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "AWC":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUSymbol":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUSym74":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUSym85":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUSym90":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUCode74":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUCode85":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "SUCode90":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "soilPhases":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "phase1":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "phase2":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "roots":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "impermeableLayer":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "soilWaterRegimeSWR":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "soilProperties":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "addProp": "https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "topSoil":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "tGravel":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tSand": "https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tSlit":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tClay":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tUsdaTexClass":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tRefBulkDensity":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tTeb":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tOc":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tPhH2O":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tCecClay":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tCecSoil":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tBs":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tCaCO3":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tCaSO4":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tEsp":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"tEce":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "sGravel":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sSand": "https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sSlit":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sClay":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sUsdaTexClass":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sRefBulkDensity":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sTeb":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sOc":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sPhH2O":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sCecClay":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sCecSoil":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sBs":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sCaCO3":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sCaSO4":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sEsp":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+	"sEce":"https://cwrusdle.bitbucket.io/Ontology/soil.owl",
+    "subSoil":"https://cwrusdle.bitbucket.io/Ontology/soil.owl"
+     },
+    "soilMappingUnitIdentifier":{
+      "description":"Identifier to map dataset to other datasets",
+      "ID": {
+        "description" : "Internal unique indexed database identifier (4-byte integer)", 
+        "value": "$ID",
+        "unitText": "Null"
+      },
+      "muGlobal": {
+        "description" : "The Global Mapping Unit identifier (4-byte integer) provides the link between the GIS layer and the attribute database", 
+        "value": "$muGlobal",
+        "unitText": "Null"
+      },
+      "muSource1": {
+        "description" : "This alphanumerical field stores the main mapping unit identifier from the source database, as shown below", 
+        "value": "$muSource1",
+        "unitText": "Null"
+      },
+      "muSource2": {
+        "description" : "This second (4-byte numerical) identifier may be used to accommodate a second unit identifier in the source database; it has been populated with the STU from ESDB only", 
+        "value": "$muSource2",
+        "unitText": "Null"
+      },
+      "coverage": {
+        "description" : "This field stores the source of the record", 
+        "value": "$coverage",
+        "unitText": "Null"
+      },
+      "isSoil": {
+        "description" : "Field indicating if the soil mapping unit is a soil or a non-soil", 
+        "value": "$isSoil",
+        "unitText": ["Non-soil", "yes"]
+      },
+      "SEQ": {
+        "description" : "The sequence in which soil units within the soil mapping unit are presented follow the rule that the dominant soil always has sequence 1. The sequence can range between 1 and 9", 
+        "value": "$SEQ",
+        "unitText": "Null"
+      },
+      "share": {
+        "description" : "Share of the soil unit within the mapping unit in %. Shares of component soil units5 of a mapping unit always sum up to 100%", 
+        "value": "$share",
+        "unitText": "Null"
+      }},
+      "soilUnitNaming":{
+        "description":"Features used in labeling plots of land based of soil characteristics",
+        "texture": {
+          "description" : "Topsoil textural class refers to the simplified textural classes for 0-30cm used in the Soil Map of the World (FAO/Unesco, 1970-1980). Because of the scale of the map (1:5 million) only three simplified textural classes were used", 
+          "value": "$texture",
+          "unitText": ["None","Coarse","Medium","Fine"]
+        },
+        "refDepth": {
+          "description" : "Reference depth of the soil unit", 
+          "value": "$refDepth",
+          "unitText": "Null"
+        },
+        "AWC": {
+          "description" : "Available water storage capacity in mm/m of the soil unit", 
+          "value": "$AWC",
+          "unitText": ["0","15","50","75","100","125","150"]
+        },
+        "SUSymbol": {
+          "description" : "This symbol stands for the spatially dominant major soil group", 
+          "value": "$SUSymbol",
+          "unitText": "Null"
+        },
+        "SUSym74": {
+          "description" : "This is the soil unit symbol according to the FAO-74 soil classification, as used for the DSMW coverage", 
+          "value": "$SUSym74",
+          "unitText": "Null"
+        },
+        "SUSym85": {
+          "description" : "This is the soil unit symbol according to the FAO-85 interim soil classification which is used for the ESDB coverage", 
+          "value": "$SUSym85",
+          "unitText": ["Non-soil", "yes"]
+        },
+        "SUSym90": {
+          "description" : "This is the soil unit symbol according to the FAO-90 soil classification, which was used here for the ESDB, China and SOTWIS coverage", 
+          "value": "$SUSym90",
+          "unitText": "Null"
+        },
+        "SUCode74": {
+          "description" : "The numerical code for the FAO-74 soil classification system", 
+          "value": "$SUCode74",
+          "unitText": "Null"
+        },
+        "SUCode85": {
+          "description" : "The numerical code for the FAO-85 soil classification system", 
+          "value": "$SUCode85",
+          "unitText": "Null"
+        },
+        "SUCode90": {
+          "description" : "The numerical code for the FAO-90 soil classification system", 
+          "value": "$SUCode90",
+          "unitText": "Null"
+        }},
+        "soilPhases":{
+          "description":"Phases are subdivisions of soil units based on characteristics which are significant for the use or management of the land but are not diagnostic for the separation of the soil units themselves",
+          "phase1": {
+            "description" : "Phases are subdivisions of soil units based on characteristics which are significant for the use or management of the land but are not diagnostic for the separation of the soil units themselves", 
+            "value": "$phase1",
+            "unitText": "Null"
+          },
+          "phase2": {
+            "description" : "Phases are subdivisions of soil units based on characteristics which are significant for the use or management of the land but are not diagnostic for the separation of the soil units themselves", 
+            "value": "$phase2",
+            "unitText": "Null"
+          },
+          "roots": {
+            "description" : "Provides the depth class of an obstacle to roots within the STU", 
+            "value": "$roots",
+            "unitText": ["None",">80","60-80","40-60", "20-40","0-80","0-20"]
+          },
+          "impermeableLayer": {
+            "description" : ": Indicates the presence of an impermeable layer within the soil profile of the STU. The code is only available in ESDB", 
+            "value": "$impermeableLayer",
+            "unitText": "Null"
+          },
+          "soilWaterRegimeSWR": {
+            "description" : ": Indicates the dominant annual average soil water regime class of the soil profile of the STU. The code is only available in ESDB", 
+            "value": "$soilWaterRegimeSWR",
+            "unitText": "Null"
+          }},
+          "soilProperties":{
+            "description":"Derived chemical and physical soil properties are provided for topsoil",
+            "addProp": {
+              "description" : "Certain soil properties, inherent to the soil unit definition that are relevant for agricultural use", 
+              "value": "$soilProperties",
+              "unitText": ["None","Petric","Gelic","Vertic"]
+            }},
+        "topSoil":{
+          "description":"features describing the topsoil",
+          "tGravel": {
+            "description" : "Volumne percentage of gravel present in topsoil", 
+            "value": "$tGravel",
+            "unitText": "Null"
+          },
+          "tSand": {
+            "description" : "Percentage of sand in the topsoil", 
+            "value": "$tSand",
+            "unitText": "Null"
+          },
+          "tSlit": {
+            "description" : "Percentage of silt in the topsoil", 
+            "value": "$tSlit",
+            "unitText": "Null"
+          },
+          "tClay": {
+            "description" : "Percentage of clay in the topsoil", 
+            "value": "$tClay",
+            "unitText": "Null"
+          },
+          "tUsdaTexClass": {
+            "description" : "USDA texture class name and code for topsoil", 
+            "value": "$tUsdaTexClass",
+            "unitText": ["clay (heavy)", "slity clay", "clay", "silty clay loam", "slit", "slit loam", "sandy clay", "loam", "sandy clay loam", "sandy loam", "loamy sand", "sand"]
+          },
+          "tRefBulkDensity": {
+            "description" : "Reference Bulk Density of topsoil", 
+            "value": "$tRefBulkDensity",
+            "unitText": "Null"
+          },
+          "tTeb": {
+            "description" : "the total exchangeable bases in the topsoil", 
+            "value": "$tTeb",
+            "unitText": "Null"
+          },
+          "tOc": {
+            "description" : "percentage of organic carbon in topsoil", 
+            "value": "$tOc",
+            "unitText": "Null"
+          },
+          "tPhH2O": {
+            "description" : "e soil reaction of topsoil", 
+            "value": "$tPhH2O",
+            "unitText": "Null"
+          },
+          "tCecClay": {
+            "description" : "the cation exchange capacity of the clay fraction in topsoil", 
+            "value": "$tCecClay",
+            "unitText": "Null"
+          },
+          "tCecSoil": {
+            "description" : "the cation exchange capacity in topsoil", 
+            "value": "$tCecSoil",
+            "unitText": "Null"
+          },
+          "tBs": {
+            "description" : "the base saturation in topsoil", 
+            "value": "$tBs",
+            "unitText": "Null"
+          },
+          "tCaCO3": {
+            "description" : " the calcium carbonate (lime) content in topsoil", 
+            "value": "$tCaCO3",
+            "unitText": "Null"
+          },
+          "tCaSO4": {
+            "description" : "Calcium sulphate (gypsum) content in topsoil", 
+            "value": "$tCaSO4",
+            "unitText": "Null"
+          },
+          "tEsp": {
+            "description" : " the exchangeable sodium percentage in the topsoil", 
+            "value": "$tEsp",
+            "unitText": "Null"
+          },
+          "tEce": {
+            "description" : "the electrical conductivity of topsoil", 
+            "value": "$tEce",
+            "unitText": "Null"
+          }},
+          "subSoil":{
+            "description":"features describing the subsoil",
+            "sGravel": {
+              "description" : "Volumne percentage of gravel present in topsoil", 
+              "value": "$sGravel",
+              "unitText": "Null"
+            },
+            "sSand": {
+              "description" : "Percentage of sand in the subsoil", 
+              "value": "$sSand",
+              "unitText": "Null"
+            },
+            "sSlit": {
+              "description" : "Percentage of silt in the subsoil", 
+              "value": "$sSlit",
+              "unitText": "Null"
+            },
+            "sClay": {
+              "description" : "Percentage of clay in the subsoil", 
+              "value": "$sClay",
+              "unitText": "Null"
+            },
+            "sUsdaTexClass": {
+              "description" : "USDA texture class name and code for subsoil", 
+              "value": "$sUsdaTexClass",
+              "unitText": ["clay (heavy)", "slity clay", "clay", "silty clay loam", "slit", "slit loam", "sandy clay", "loam", "sandy clay loam", "sandy loam", "loamy sand", "sand"]
+            },
+            "sRefBulkDensity": {
+              "description" : "Reference Bulk Density of subsoil", 
+              "value": "$sRefBulkDensity",
+              "unitText": "Null"
+            },
+            "sTeb": {
+              "description" : "the total exchangeable bases in the subsoil", 
+              "value": "$sTeb",
+              "unitText": "Null"
+            },
+            "sOc": {
+              "description" : "percentage of organic carbon in subsoil", 
+              "value": "$sOc",
+              "unitText": "Null"
+            },
+            "sPhH2O": {
+              "description" : "e soil reaction of subsoil", 
+              "value": "$sPhH2O",
+              "unitText": "Null"
+            },
+            "sCecClay": {
+              "description" : "the cation exchange capacity of the clay fraction in subsoil", 
+              "value": "$sCecClay",
+              "unitText": "Null"
+            },
+            "sCecSoil": {
+              "description" : "the cation exchange capacity in subsoil", 
+              "value": "$sCecSoil",
+              "unitText": "Null"
+            },
+            "sBs": {
+              "description" : "the base saturation in subsoil", 
+              "value": "$sBs",
+              "unitText": "Null"
+            },
+            "sCaCO3": {
+              "description" : " the calcium carbonate (lime) content in subsoil", 
+              "value": "$sCaCO3",
+              "unitText": "Null"
+            },
+            "sCaSO4": {
+              "description" : "Calcium sulphate (gypsum) content in subsoil", 
+              "value": "$sCaSO4",
+              "unitText": "Null"
+            },
+            "sEsp": {
+              "description" : " the exchangeable sodium percentage in the subsoil", 
+              "value": "$sEsp",
+              "unitText": "Null"
+            },
+            "sEce": {
+              "description" : "the electrical conductivity of subsoil", 
+              "value": "$sEce",
+              "unitText": "Null"
+            }}
+  }

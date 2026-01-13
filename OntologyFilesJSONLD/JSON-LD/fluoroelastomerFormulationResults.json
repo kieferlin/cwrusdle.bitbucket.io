@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "results": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "sampleID": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "imgFormat": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "imgDimensions": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "afmChannel": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "timeStep": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "description": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "value": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "units": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024"
+  },
+  "results": {
+    "value": "$results",
+    "sampleID": {
+      "description": "Sample ID of the AFM instrument.",
+      "value": "$sampleID"
+    },
+    "imgFormat": {
+      "value": "$imgFormat",
+      "description": "Format of the image."
+    },
+    "imgDimensions": {
+      "value": "$imgDimensions",
+      "description": "Dimensions of the image."
+    },
+    "afmChannel": {
+      "value": "$afmChannel",
+      "description": "AFM channel from which the image is obtained."
+    },
+    "timeStep": {
+      "value": "$timeStep",
+      "description": "Time step corresponding to the image frame."
+    }
+  }
+}

@@ -1,0 +1,617 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XRDDataReductionChess": "https://cwrusdle.bitbucket.io/xrdDataReductionChess#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-XRDDataReductionChess:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "XRD Data Reduction Ontology for the FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XRDDataReductionChess",
+      "rdfs:label": "mds-XRDDataReductionChess"
+    },
+    {
+      "@id": "pmd:executedBy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDDataReductionChess:AzimuthalRegrouping"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "executed by"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDDataReductionChess:Integration"
+      },
+      "skos:definition": {
+        "@language": "en",
+        "@value": "This property represents which process is executed by which process node."
+      }
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:IntegrationType",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationType",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Type of integration, either 1 or 2D."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:Frame",
+      "@type": "owl:Class",
+      "rdfs:label": "Frame",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The frame of diffraction."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:Integration",
+      "@type": "owl:Class",
+      "rdfs:label": "Integration",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Integration of diffraction patterns azimuthally."
+    },
+    {
+      "@id": "pmd:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ValueObject",
+        {
+          "@language": "en",
+          "@value": "Value Object"
+        },
+        {
+          "@language": "de",
+          "@value": "Wertobjekt"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRDDataReductionChess:DoPolarizationCorrection"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:PolarizationFactor"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:Nptradial"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:RadialRange"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:NptAzimuth"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:AzimuthRange"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:ChiDiscontinuity"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:DoSolidAngleCorrection"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:DoRemoveNAN"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:ErrorModel"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:IntegrationMethod"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:OpenCLDevice"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:IntegrationType"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:boolean"
+        },
+        {
+          "@id": "xsd:float"
+        },
+        {
+          "@id": "xsd:integer"
+        },
+        {
+          "@id": "xsd:string"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:AzimuthRange",
+      "@type": "owl:Class",
+      "rdfs:label": "AzimuthRange",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The azimuthal integration range."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:DoPolarizationCorrection",
+      "@type": "owl:Class",
+      "rdfs:label": "DoPolarizationCorrection",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is polarization correction required."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:ChiDiscontinuity",
+      "@type": "owl:Class",
+      "rdfs:label": "ChiDiscontinuity",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:Algorithm",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Algorithm",
+        {
+          "@language": "en",
+          "@value": "Algorithm"
+        },
+        {
+          "@language": "de",
+          "@value": "Algorithmus"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."
+      }
+    },
+    {
+      "@id": "pmd:ComputingNode",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ComputingNode",
+        {
+          "@language": "de",
+          "@value": "Computerknoten"
+        },
+        {
+          "@language": "en",
+          "@value": "Computing Node"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A computing system that provides an execution environment for, e.g., simulation processes or prediction models.\nA Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."
+        },
+        {
+          "@language": "de",
+          "@value": "Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.\nEin Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDDataReductionChess:Integration"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:OpenCLDevice",
+      "@type": "owl:Class",
+      "rdfs:label": "OpenCLDevice",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The device used. Either CPU or GPU."
+    },
+    {
+      "@id": "pmd:inputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRDDataReductionChess:DataReduction"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:AzimuthalRegrouping"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:Integration"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "input of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRDDataReductionChess:ImageStack"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:DiffractionImage"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:PoniFile"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:PostProcessing"
+        }
+      ],
+      "skos:altLabel": "is input of"
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:NptAzimuth",
+      "@type": "owl:Class",
+      "rdfs:label": "NptAzimuth",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:ErrorModel",
+      "@type": "owl:Class",
+      "rdfs:label": "ErrorModel",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The error model used."
+    },
+    {
+      "@id": "pmd:outputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDDataReductionChess:DataReduction"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "output of"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDDataReductionChess:AzimuthalRegrouping"
+      },
+      "skos:altLabel": {
+        "@language": "en",
+        "@value": "is output of"
+      }
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:PoniFile",
+      "@type": "owl:Class",
+      "rdfs:label": "PoniFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:CalibrationDocument"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "PONI file of the detector."
+    },
+    {
+      "@id": "pmd:isPartOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDDataReductionChess:ImageStack"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRDDataReductionChess:Frame"
+        },
+        {
+          "@id": "mds-XRDDataReductionChess:DarkField"
+        }
+      ]
+    },
+    {
+      "@id": "pmd:CalibrationDocument",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "CalibrationDocument",
+        {
+          "@language": "en",
+          "@value": "Calibration Document"
+        },
+        {
+          "@language": "de",
+          "@value": "Kalibrierschein"
+        },
+        {
+          "@language": "de",
+          "@value": "Kalibrierungsdokument"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Entität beschreibt ein Dokument, welches Abweichungen eines Messgerätes oder einer Maßverkörperung gegenüber einem anderen Gerät oder einer anderen Maßverkörperung feststellt und dokumentiert. Typischerweise ist die Person, welche die Kalibrierung durchführte, angegeben."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes a document used to state that a set of graduations to indicate values or positions has been performed. Typically, the calibration operator is included."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:RadialRange",
+      "@type": "owl:Class",
+      "rdfs:label": "RadialRange",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The radial range."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:IntegrationMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The method used for integration."
+    },
+    {
+      "@id": "pmd:Image",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Image",
+        {
+          "@language": "de",
+          "@value": "Bild"
+        },
+        {
+          "@language": "en",
+          "@value": "Image"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A visual representation of something"
+      }
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:AzimuthalRegrouping",
+      "@type": "owl:Class",
+      "rdfs:label": "AzimuthalRegrouping",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The azimuthal regrouping of XRD data."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:PostProcessing",
+      "@type": "owl:Class",
+      "rdfs:label": "PostProcessing",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Post processing appplied to the original collected data."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:ImageStack",
+      "@type": "owl:Class",
+      "rdfs:label": "ImageStack",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The image stack."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:DarkField",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkField",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The dark field image."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:DoSolidAngleCorrection",
+      "@type": "owl:Class",
+      "rdfs:label": "DoSolidAngleCorrection",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is solid angle correction required."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:DataReduction",
+      "@type": "owl:Class",
+      "rdfs:label": "DataReduction",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ComputingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The data reduction of X-Ray diffraction data."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:Nptradial",
+      "@type": "owl:Class",
+      "rdfs:label": "Nptradial",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:IntegrationID",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Identifier for the integration process."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:DiffractionImage",
+      "@type": "owl:Class",
+      "rdfs:label": "DiffractionImage",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The diffraction image being integrated."
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDDataReductionChess:Integration"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDDataReductionChess:IntegrationID"
+      }
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:PolarizationFactor",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:Degree"
+      },
+      "rdfs:label": "PolarizationFactor",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Polarization factor of the diffractometer."
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:DoRemoveNAN",
+      "@type": "owl:Class",
+      "rdfs:label": "DoRemoveNAN",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDDataReductionChess:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is NAN removal required."
+    },
+    {
+      "@id": "pmd:ProvidedIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProvidedIdentifier",
+        {
+          "@language": "de",
+          "@value": "Bereitgestellter Identifikator"
+        },
+        {
+          "@language": "en",
+          "@value": "Provided Identifier"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A colloquial, human-generated descriptor."
+      }
+    },
+    {
+      "@id": "mds-XRDDataReductionChess:IntegrationOptions",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationOptions",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The various optoins used for integration."
+    }
+  ]
+}

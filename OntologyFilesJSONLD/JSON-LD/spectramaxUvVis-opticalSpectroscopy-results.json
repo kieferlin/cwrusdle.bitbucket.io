@@ -1,0 +1,35 @@
+{
+  "@context": {
+  "results": "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl",
+    "wavelength": "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl",
+    "fluorescenceIntensity": "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl",  
+    "absorbance":  "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl", 
+    "value": "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/spectramaxUvVis.owl"
+  },
+              "results": {
+               
+            "wavelength": {
+                  "description": "Wavelength of the reading",
+                   "value": "$wavelength",
+                  "unitText": "null"                                 
+                },
+                                                       
+            "fluorescenceIntensity": {
+                  "description": "Reading of the sample fluorescence intensity",
+                   "value": "$FluorescenceIntensity",
+                  "unitText": "null"                                 
+                },
+                "absorbance": {
+                  "description": "Absorbance read by the instrument",
+                   "value": "$absorbance",
+                  "unitText": "null"                                 
+                }
+                   
+                   
+                
+              }
+            
+}
+                  

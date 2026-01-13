@@ -1,0 +1,410 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XrayToolChess": "https://cwrusdle.bitbucket.io/xrayTool#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "pmd:Optical",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloEV"
+      },
+      "rdfs:label": [
+        "Optical",
+        {
+          "@language": "en",
+          "@value": "Optical"
+        },
+        {
+          "@language": "de",
+          "@value": "Optisch"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Optical is relating to the science of optics. Here specifically to the optical properties of a material."
+        },
+        {
+          "@language": "de",
+          "@value": "Optisch bezieht sich auf die Wissenschaft der Optik. Hier speziell auf die optischen Eigenschaften eines Materials."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XrayToolChess:XrayDetector",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayDetector",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XrayToolChess:Facility",
+      "@type": "owl:Class",
+      "rdfs:label": "Facility",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Laboratory"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Facility where the experiment was performed."
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XrayToolChess:ToolID"
+        },
+        {
+          "@id": "mds-XrayToolChess:Facility"
+        },
+        {
+          "@id": "mds-XrayToolChess:Station"
+        },
+        {
+          "@id": "mds-XrayToolChess:WavelengthRange"
+        },
+        {
+          "@id": "mds-XrayToolChess:EnergyRange"
+        },
+        {
+          "@id": "mds-XrayToolChess:BeamConvergence"
+        },
+        {
+          "@id": "mds-XrayToolChess:MaxBeamSize"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "mds-XrayToolChess:BeamConvergence",
+      "@type": "owl:Class",
+      "rdfs:label": "BeamConvergence",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Optical"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Beam convergence of the incident beam."
+    },
+    {
+      "@id": "mds-XrayToolChess:XrayTool",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayTool",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProcessingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The instrument used to perform the experiment."
+    },
+    {
+      "@id": "mds-XrayToolChess:WavelengthRange",
+      "@type": "owl:Class",
+      "rdfs:label": "WavelengthRange",
+      "rdfs:subClassOf": {
+        "@id": "pmd:WorkingRange"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The wavelength range the given beamline can operate in."
+    },
+    {
+      "@id": "mds-XrayToolChess:Station",
+      "@type": "owl:Class",
+      "rdfs:label": "Station",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Department"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Particular beamline within the facility."
+    },
+    {
+      "@id": "pmd:Department",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Department",
+        {
+          "@language": "de",
+          "@value": "Abteilung"
+        },
+        {
+          "@language": "en",
+          "@value": "Department"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A sub section of an organization."
+      }
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XrayToolChess:XrayTool"
+      },
+      "rdfs:range": {
+        "@id": "mds-XrayToolChess:ToolID"
+      }
+    },
+    {
+      "@id": "mds-XrayToolChess:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "XRD Tool Ontology for the FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XrayToolChess",
+      "rdfs:label": "mds-XrayToolChess"
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XrayToolChess:XrayTool"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XrayToolChess:Facility"
+        },
+        {
+          "@id": "mds-XrayToolChess:Station"
+        },
+        {
+          "@id": "mds-XrayToolChess:WavelengthRange"
+        },
+        {
+          "@id": "mds-XrayToolChess:EnergyRange"
+        },
+        {
+          "@id": "mds-XrayToolChess:BeamConvergence"
+        },
+        {
+          "@id": "mds-XrayToolChess:MaxBeamSize"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "pmd:WorkingRange",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "WorkingRange",
+        {
+          "@language": "de",
+          "@value": "Arbeitsbereich"
+        },
+        {
+          "@language": "en",
+          "@value": "Working Range"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft beschreibt den Bereich zwischen den Grenzen, innerhalb derer ein Prozessknoten (z. B. eine Maschine) für ihren vorgesehenen Zweck verwendet werden kann, ausgedrückt durch die Angabe der in Rede stehenden unteren und oberen Bereichswerte."
+        },
+        {
+          "@language": "en",
+          "@value": "This property describes the region between the limits within which a processing node (e.g., a machine) is capable of being used for its intended purpose, expressed by stating the lower and upper range values of interest."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XrayToolChess:EnergyRange",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:ANGSTROM"
+      },
+      "rdfs:label": "EnergyRange",
+      "rdfs:subClassOf": {
+        "@id": "pmd:WorkingRange"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The energy range the given beamline can operate in."
+    },
+    {
+      "@id": "mds-XrayToolChess:ToolID",
+      "@type": "owl:Class",
+      "rdfs:label": "ToolID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An identifier for the instrument."
+    },
+    {
+      "@id": "pmd:Laboratory",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Laboratory",
+        {
+          "@language": "de",
+          "@value": "Labor"
+        },
+        {
+          "@language": "en",
+          "@value": "Laboratory"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A place equipped for experimental study in a science or for testing and analysis."
+      }
+    },
+    {
+      "@id": "pmd:component",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XrayToolChess:XrayTool"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "component"
+      },
+      "rdfs:range": {
+        "@id": "mds-XrayToolChess:XrayDetector"
+      },
+      "skos:altLabel": {
+        "@language": "en",
+        "@value": "has component"
+      },
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die Objekt-Eigenschaft Komponente, die in Verbindung mit ProzessKnoten und seinen (modularen) Elementen verwendet wird. Sie ermöglicht die Darstellung der einzelnen, unterschiedlichen Teile von ProzessKnoten. Im Wesentlichen ist die  \"Komponenten-Eigenschaft\" eine Möglichkeit, ein komplexes System in überschaubare und eindeutige Teile zu zerlegen, um die Rolle der einzelnen Teile innerhalb des Gesamtsystems zu verstehen und zu verwalten."
+        },
+        {
+          "@language": "en",
+          "@value": "The object property component, which is used in connection with ProcessingNode and its (modular) elements. It enables the representation of the individual, different parts of processing nodes. Essentially, the 'component property' is a way of breaking down a complex system into manageable and distinct parts in order to understand and manage the role of each part within the overall system."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:ProcessingNode",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProcessingNode",
+        {
+          "@language": "en",
+          "@value": "Processing Node"
+        },
+        {
+          "@language": "de",
+          "@value": "Prozessknoten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."
+        },
+        {
+          "@language": "de",
+          "@value": "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XrayToolChess:MaxBeamSize",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:DEG"
+      },
+      "rdfs:label": "MaxBeamSize",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Optical"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum beam size."
+    },
+    {
+      "@id": "pmd:ProvidedIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProvidedIdentifier",
+        {
+          "@language": "de",
+          "@value": "Bereitgestellter Identifikator"
+        },
+        {
+          "@language": "en",
+          "@value": "Provided Identifier"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A colloquial, human-generated descriptor."
+      }
+    }
+  ]
+}

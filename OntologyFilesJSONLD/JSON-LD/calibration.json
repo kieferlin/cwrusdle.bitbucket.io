@@ -1,0 +1,74 @@
+{
+  "@context": {
+   "description": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "sampleID":  "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "calibrationInformation": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "calibrationName": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "calibrationId": "https://cwrusdle.bitbucket.io/Ontology/calibrationa.owl",
+    "measuredIntensity": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "element": "https://cwrusdle.bitbucket.io/Ontology/calibrationowl",
+    "calibrationSlope": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "calibrationR2": "https://cwrusdle.bitbucket.io/Ontologycalibration.owl",
+    "calibrationConstant": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl",
+    "date": "https://cwrusdle.bitbucket.io/Ontology/calibration.owl"
+
+
+  },
+              "calibrationInformation": {
+
+            "sampleID": {
+                  "description": "Sample ID",
+                   "value": "$sampleID",
+                  "unitText": "null"
+                },
+
+            "calibrationName": {
+                  "description": "Name of the calibration curve",
+                   "value": "$calibrationName",
+                  "unitText": "null"
+                },
+                "calibrationId": {
+                  "description": "Calibration identification",
+                   "value": "$calibrationId",
+                  "unitText": "null"
+                },
+                   "measuredIntensity": {
+                  "description": "Measured Intensity",
+                   "value": "$measuredIntensity",
+                  "unitText": "null"
+                },
+                   "element": {
+                     "description": "Elements identified",
+                   "value": "$element",
+                  "unitText": "null"
+                },
+                   "calibrationSlope": {
+                  "description": "calibrationSlope",
+                   "value": "$calibrationSlope",
+                  "unitText": "null"
+                },
+                   "calibrationR2": {
+                  "description": "Calibration R2",
+                   "value": "$calibrationR2",
+                  "unitText": "null"
+                },
+                    "calibrationConstant": {
+                  "description": "Calibration constant for the curve",
+                   "value": "$calibrationConstant",
+                  "unitText": "null"
+                },
+                    "date": {
+                  "description": "Date of the Calibration run",
+                   "value": "$date",
+                  "unitText": "null"
+                    }
+
+
+                    }
+
+
+}
+
+

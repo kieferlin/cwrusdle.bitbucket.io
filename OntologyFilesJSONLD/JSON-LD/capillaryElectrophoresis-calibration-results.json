@@ -1,0 +1,84 @@
+
+{
+  "@context": {
+    "capillaryElectrophoresis": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "calibration": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "mixtureName": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "calibrationCoefficient" : "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "date": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "ion": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "time": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "results": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "conductivity": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "ionType": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "peakHeight": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "peakArea": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "analyte": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "analyteConcentration": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl"
+  },
+
+    "capillaryElectrophoresis": {
+     "calibration": {
+               
+		      	"mixtureName": {
+                  "description": "Commercial name of the buffer mixture",
+                   "value": "$mixtureName",
+                  "unitText": "null"                                 
+                },
+                
+		      	"ions": {
+                  "description": " Ions present in the commercia mixture",
+                   "value": "$ions",
+                  "unitText": "null"                                 
+                }
+                },
+
+                  "results" : {                                                                                  
+              	"conductivity": {
+                  "description": " conductivity in time",
+                   "value": "$conductivity",
+                  "unitText": "null"  
+                    },
+                    "time": {
+                  "description": " Time in which each peak is detected",
+                   "value": "$time",
+                  "unitText": "null"  
+                    },
+                   "peakHeight": {
+                  "description": " Height of the peaks ",
+                   "value": "$capillaryDiameter",
+                  "unitText": "null"  
+                    },
+                  "peakArea": {
+                  "description": " Height of the peaks ",
+                   "value": "$capillaryDiameter",
+                  "unitText": "null"  
+                    },
+                  "conductivity": {
+                  "description": " Diameter of the capillary",
+                   "value": "$peakHeight",
+                  "unitText": "null"  
+                    },                                                                        
+                  "analyte": {
+                  "description": " Analyte identified",
+                   "value": "$ion",
+                  "unitText": "null"  
+                    },
+                    
+                  "analyteConcentration": {
+                  "description": " Concentration of each analyte detected",
+                   "value": "$analyteConcentration",
+                  "unitText": "null"  
+                    }
+                  
+                    
+                  
+}
+    
+
+
+}
+}

@@ -1,0 +1,90 @@
+
+{
+  "@context": {
+    "@vocab": "https://ontobee.org/ontology/FIX?iri=http://purl.obolibrary.org/obo/FIX_0000014",
+    "environmentalExposure": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "degradation": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "thermalDegradation": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "heat": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "temperature": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "hydrolyticDegradation": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "moisture": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "waterAbsorption": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "relativeHumidity": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "absoluteHumidity": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "photodegradation": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "radiation": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "synergyEffect": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "unit": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/environmentalExposure.owl"
+    
+  },
+
+    "environmentalExposure": 
+    {
+      "description": "Exposure to environmental stressors result in different degradation processes",
+      "degradation": 
+      {
+        "description": "Degradation results in performnace loss",
+		      	"thermalDegradation": 
+		      	{
+		      	  "description": "Thermal degradation takes place when the polymer changes its properties due to increased temperature",
+                 "heat" : {
+                "temperature" : {
+                  "description": "Temperature of the environment",
+                  "value": "$temperature",
+                  "unitText": "Celsius",
+                  "@type": "float"
+                }
+                }
+		      	  
+		      	},
+                            
+		      	"hydrolyticDegradation": {
+		      	  "description": "Hydrolytic degradation takes place when the polymer bonds react with water molecules and modify the chains",
+                  "moisture" : {
+                  "waterAbsorption" : {
+                  "description": "Transport of water",
+                  "value": "$waterAbsorption",
+                  "@type": "string",
+                  "relativeHumidity" : {
+                  "description": "The percent ratio of the amount of water vapor in the air at a given temperature relative the amount of the maximum possible water vapor",
+                  "value": "$relativeHumidity",
+                  "unitText": "%",
+                  "@type": "float"
+                },
+                "absoluteHumidity" : {
+                  "description": "The actual amount of water vapor in the air",
+                  "value": "$absoluteHumidity",
+                  "unitText": "g/m3",
+                  "@type": "float"
+                }
+                }
+                }                       
+                },
+                 
+		      	"photodegradation": {
+		      	  "description": "Photodegradation is caused by the absorption of photons",
+		      	  "radiation" : {
+                "uvLight" : {
+                  "description": "UV light radiation",
+                  "value": "$uvLight",
+                  "unitText": "mW/cm2",
+                  "@type": "float"
+                }
+		      	  }
+                },
+                "synergyEffect": {
+                  "description": "Different degradation processes happen simultaneouly",
+                   "value": "$synergyEffect",
+                   "@type": "string"
+                }
+                }
+                }
+                }
+
+                 
+		      	
+	

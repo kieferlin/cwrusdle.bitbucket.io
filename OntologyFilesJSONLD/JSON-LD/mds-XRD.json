@@ -1,0 +1,3107 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XRD": "https://cwrusdle.bitbucket.io/mdsxrd#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-XRD:MaterialName",
+      "@type": "owl:Class",
+      "rdfs:label": "MaterialName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MaterialDesignation"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the material."
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:RecipeID"
+        },
+        {
+          "@id": "mds-XRD:WavelengthUsed"
+        },
+        {
+          "@id": "mds-XRD:EnergyUsed"
+        },
+        {
+          "@id": "mds-XRD:DistanceFromSample"
+        },
+        {
+          "@id": "mds-XRD:BeamSize"
+        },
+        {
+          "@id": "mds-XRD:Btm_rota"
+        },
+        {
+          "@id": "mds-XRD:Cesr_"
+        },
+        {
+          "@id": "mds-XRD:Crys_rtrn"
+        },
+        {
+          "@id": "mds-XRD:Crys_sply"
+        },
+        {
+          "@id": "mds-XRD:Diod"
+        },
+        {
+          "@id": "mds-XRD:Ic0"
+        },
+        {
+          "@id": "mds-XRD:Ic1"
+        },
+        {
+          "@id": "mds-XRD:Ic2"
+        },
+        {
+          "@id": "mds-XRD:Ic3"
+        },
+        {
+          "@id": "mds-XRD:Fst_shtr"
+        },
+        {
+          "@id": "mds-XRD:Load_scrw"
+        },
+        {
+          "@id": "mds-XRD:Mo_stab"
+        },
+        {
+          "@id": "mds-XRD:Sync_cnt"
+        },
+        {
+          "@id": "mds-XRD:Top_pzo"
+        },
+        {
+          "@id": "mds-XRD:Top_rota"
+        },
+        {
+          "@id": "mds-XRD:Load_cll"
+        },
+        {
+          "@id": "mds-XRD:StartEndTimeStamp"
+        },
+        {
+          "@id": "mds-XRD:DAQFrequency"
+        },
+        {
+          "@id": "mds-XRD:ExposureTime"
+        },
+        {
+          "@id": "mds-XRD:BankNo"
+        },
+        {
+          "@id": "mds-XRD:AngularRangeX"
+        },
+        {
+          "@id": "mds-XRD:AngularRangeY"
+        },
+        {
+          "@id": "mds-XRD:Init-theta"
+        },
+        {
+          "@id": "mds-XRD:Init-delta"
+        },
+        {
+          "@id": "mds-XRD:File-format"
+        },
+        {
+          "@id": "mds-XRD:FxyeGSASFileEntry"
+        },
+        {
+          "@id": "mds-XRD:2-theta-pos"
+        },
+        {
+          "@id": "mds-XRD:Intensity"
+        },
+        {
+          "@id": "mds-XRD:IntensityUnc"
+        },
+        {
+          "@id": "mds-XRD:FirstName"
+        },
+        {
+          "@id": "mds-XRD:Bank-id"
+        },
+        {
+          "@id": "mds-XRD:Htype"
+        },
+        {
+          "@id": "mds-XRD:Irads"
+        },
+        {
+          "@id": "mds-XRD:AzmVal"
+        },
+        {
+          "@id": "mds-XRD:Fxn"
+        },
+        {
+          "@id": "mds-XRD:DoPolarizationCorrection"
+        },
+        {
+          "@id": "mds-XRD:PolarizationFactor"
+        },
+        {
+          "@id": "mds-XRD:Nptradial"
+        },
+        {
+          "@id": "mds-XRD:RadialRange"
+        },
+        {
+          "@id": "mds-XRD:NptAzimuth"
+        },
+        {
+          "@id": "mds-XRD:AzimuthRange"
+        },
+        {
+          "@id": "mds-XRD:ChiDiscontinuity"
+        },
+        {
+          "@id": "mds-XRD:DoSolidAngleCorrection"
+        },
+        {
+          "@id": "mds-XRD:DoRemoveNAN"
+        },
+        {
+          "@id": "mds-XRD:ErrorModel"
+        },
+        {
+          "@id": "mds-XRD:IntegrationMethod"
+        },
+        {
+          "@id": "mds-XRD:OpenCLDevice"
+        },
+        {
+          "@id": "mds-XRD:IntegrationType"
+        },
+        {
+          "@id": "mds-XRD:DetectorName"
+        },
+        {
+          "@id": "mds-XRD:PixelSize"
+        },
+        {
+          "@id": "mds-XRD:DetectorLength"
+        },
+        {
+          "@id": "mds-XRD:DetectorWidth"
+        },
+        {
+          "@id": "mds-XRD:PixelWidth"
+        },
+        {
+          "@id": "mds-XRD:PixelHeight"
+        },
+        {
+          "@id": "mds-XRD:MaxFrameRate"
+        },
+        {
+          "@id": "mds-XRD:ReadOutTime"
+        },
+        {
+          "@id": "mds-XRD:BitDepth"
+        },
+        {
+          "@id": "mds-XRD:EnergyRange"
+        },
+        {
+          "@id": "mds-XRD:ResultID"
+        },
+        {
+          "@id": "mds-XRD:ImageSequence"
+        },
+        {
+          "@id": "mds-XRD:StackNumber"
+        },
+        {
+          "@id": "mds-XRD:MethodName"
+        },
+        {
+          "@id": "mds-XRD:VersionNumber"
+        },
+        {
+          "@id": "mds-XRD:NumberOfRings"
+        },
+        {
+          "@id": "mds-XRD:DistanceBetweenTwoRings"
+        },
+        {
+          "@id": "mds-XRD:ToolID"
+        },
+        {
+          "@id": "mds-XRD:Facility"
+        },
+        {
+          "@id": "mds-XRD:Station"
+        },
+        {
+          "@id": "mds-XRD:WavelengthRange"
+        },
+        {
+          "@id": "mds-XRD:BeamConvergence"
+        },
+        {
+          "@id": "mds-XRD:MaxBeamSize"
+        },
+        {
+          "@id": "mds-XRD:ModelID"
+        },
+        {
+          "@id": "mds-XRD:Architecture"
+        },
+        {
+          "@id": "mds-XRD:Epochs"
+        },
+        {
+          "@id": "mds-XRD:TrainingSplit"
+        },
+        {
+          "@id": "mds-XRD:TestingSplit"
+        },
+        {
+          "@id": "mds-XRD:SampleID"
+        },
+        {
+          "@id": "mds-XRD:ProcessingMethod"
+        },
+        {
+          "@id": "mds-XRD:MaterialName"
+        },
+        {
+          "@id": "pmd:Length"
+        },
+        {
+          "@id": "pmd:Width"
+        },
+        {
+          "@id": "pmd:Thickness"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        },
+        {
+          "@id": "xsd:dateTime"
+        },
+        {
+          "@id": "xsd:integer"
+        },
+        {
+          "@id": "xsd:boolean"
+        },
+        {
+          "@id": "xsd:Sequence"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "pmd:MeasuringDevice",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MeasuringDevice",
+        {
+          "@language": "en",
+          "@value": "Measuring Device"
+        },
+        {
+          "@language": "de",
+          "@value": "Messgerät"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": "A processing node capable of determining a specific quality."
+    },
+    {
+      "@id": "pmd:Image",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Image",
+        {
+          "@language": "de",
+          "@value": "Bild"
+        },
+        {
+          "@language": "en",
+          "@value": "Image"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A visual representation of something"
+      }
+    },
+    {
+      "@id": "mds-XRD:MaxBeamSize",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:DEG"
+      },
+      "rdfs:label": "MaxBeamSize",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Optical"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum beam size."
+    },
+    {
+      "@id": "pmd:Length",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Length",
+        {
+          "@language": "en",
+          "@value": "Length"
+        },
+        {
+          "@language": "de",
+          "@value": "Länge"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A measured distance or dimension of an object, usually the longer or longest dimension of the object."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:XraySample",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "XraySample",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Sample"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:DataReduction",
+      "@type": "owl:Class",
+      "rdfs:label": "DataReduction",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ComputingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The data reduction of X-Ray diffraction data."
+    },
+    {
+      "@id": "pmd:inputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:DataReduction"
+        },
+        {
+          "@id": "mds-XRD:AzimuthalRegrouping"
+        },
+        {
+          "@id": "mds-XRD:Integration"
+        },
+        {
+          "@id": "mds-XRD:PostProcessing"
+        },
+        {
+          "@id": "mds-XRD:XraySample"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "input of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:ImageStack"
+        },
+        {
+          "@id": "mds-XRD:DiffractionImage"
+        },
+        {
+          "@id": "mds-XRD:PoniFile"
+        },
+        {
+          "@id": "mds-XRD:PostProcessing"
+        },
+        {
+          "@id": "mds-XRD:Modeling"
+        },
+        {
+          "@id": "mds-XRD:XrayTool"
+        }
+      ],
+      "skos:altLabel": "is input of"
+    },
+    {
+      "@id": "mds-XRD:Load_cll",
+      "@type": "owl:Class",
+      "rdfs:label": "Load_cll",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:ModelingParameters",
+      "@type": "owl:Class",
+      "rdfs:label": "ModelingParameters",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Parameters of the model."
+    },
+    {
+      "@id": "mds-XRD:DiffractionImage",
+      "@type": "owl:Class",
+      "rdfs:label": "DiffractionImage",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The diffraction image being integrated."
+    },
+    {
+      "@id": "mds-XRD:RingPointFile",
+      "@type": "owl:Class",
+      "rdfs:label": "RingPointFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:CalibrationDocument"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Ring point file of the detector."
+    },
+    {
+      "@id": "mds-XRD:Load_scrw",
+      "@type": "owl:Class",
+      "rdfs:label": "Load_scrw",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:EnergyRange",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloEV"
+      },
+      "rdfs:label": "EnergyRange",
+      "rdfs:subClassOf": {
+        "@id": "pmd:WorkingRange"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The energy range the tool can operate in. "
+    },
+    {
+      "@id": "pmd:Process",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Process",
+        {
+          "@language": "en",
+          "@value": "Process"
+        },
+        {
+          "@language": "de",
+          "@value": "Prozess"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A process is an activity including a series of actions or operations conducing to an end. In PMD, a process is conducted via processing nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements."
+      }
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:DetectorCalibration"
+        },
+        {
+          "@id": "mds-XRD:SampleAlignment"
+        },
+        {
+          "@id": "mds-XRD:DiffractionFrame"
+        },
+        {
+          "@id": "mds-XRD:XrayRecipe"
+        },
+        {
+          "@id": "mds-XRD:TextureMeasurement"
+        },
+        {
+          "@id": "mds-XRD:HeatTreatmentProcess"
+        },
+        {
+          "@id": "mds-XRD:DetectorParameters"
+        },
+        {
+          "@id": "mds-XRD:BeamlineConfiguration"
+        },
+        {
+          "@id": "mds-XRD:Integration"
+        },
+        {
+          "@id": "mds-XRD:XrayDetector"
+        },
+        {
+          "@id": "mds-XRD:XrayResult"
+        },
+        {
+          "@id": "mds-XRD:RingSamplingMethod"
+        },
+        {
+          "@id": "mds-XRD:DarkCorrectionMethod1"
+        },
+        {
+          "@id": "mds-XRD:DarkCorrectionMethod2"
+        },
+        {
+          "@id": "mds-XRD:XrayTool"
+        },
+        {
+          "@id": "mds-XRD:Modeling"
+        },
+        {
+          "@id": "mds-XRD:XraySample"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:StartEndTimeStamp"
+        },
+        {
+          "@id": "mds-XRD:SampleToLabAlignment"
+        },
+        {
+          "@id": "pmd:Medium"
+        },
+        {
+          "@id": "mds-XRD:BeamlineConfiguration"
+        },
+        {
+          "@id": "mds-XRD:RingPointFile"
+        },
+        {
+          "@id": "mds-XRD:MaskFile"
+        },
+        {
+          "@id": "mds-XRD:RmsFitQuality"
+        },
+        {
+          "@id": "mds-XRD:Calibration"
+        },
+        {
+          "@id": "mds-XRD:ExposureTime"
+        },
+        {
+          "@id": "mds-XRD:FramesPerFile"
+        },
+        {
+          "@id": "mds-XRD:DAQFrequency"
+        },
+        {
+          "@id": "mds-XRD:WavelengthUsed"
+        },
+        {
+          "@id": "mds-XRD:EnergyUsed"
+        },
+        {
+          "@id": "mds-XRD:DistanceFromSample"
+        },
+        {
+          "@id": "mds-XRD:BeamSize"
+        },
+        {
+          "@id": "mds-XRD:IntegrationOptions"
+        },
+        {
+          "@id": "mds-XRD:PixelSize"
+        },
+        {
+          "@id": "mds-XRD:DetectorLength"
+        },
+        {
+          "@id": "mds-XRD:DetectorWidth"
+        },
+        {
+          "@id": "mds-XRD:MaxFrameRate"
+        },
+        {
+          "@id": "mds-XRD:ReadOutTime"
+        },
+        {
+          "@id": "mds-XRD:BitDepth"
+        },
+        {
+          "@id": "mds-XRD:EnergyRange"
+        },
+        {
+          "@id": "mds-XRD:DetectorResolution"
+        },
+        {
+          "@id": "mds-XRD:LogFile"
+        },
+        {
+          "@id": "mds-XRD:ImageSequence"
+        },
+        {
+          "@id": "mds-XRD:StackNumber"
+        },
+        {
+          "@id": "mds-XRD:VersionNumber"
+        },
+        {
+          "@id": "mds-XRD:NumberOfRings"
+        },
+        {
+          "@id": "mds-XRD:DistanceBetweenTwoRings"
+        },
+        {
+          "@id": "mds-XRD:DarkPatternUsed"
+        },
+        {
+          "@id": "mds-XRD:Facility"
+        },
+        {
+          "@id": "mds-XRD:Station"
+        },
+        {
+          "@id": "mds-XRD:WavelengthRange"
+        },
+        {
+          "@id": "mds-XRD:BeamConvergence"
+        },
+        {
+          "@id": "mds-XRD:MaxBeamSize"
+        },
+        {
+          "@id": "mds-XRD:Architecture"
+        },
+        {
+          "@id": "mds-XRD:Epochs"
+        },
+        {
+          "@id": "mds-XRD:TrainingSplit"
+        },
+        {
+          "@id": "mds-XRD:TestingSplit"
+        },
+        {
+          "@id": "mds-XRD:ProcessingMethod"
+        },
+        {
+          "@id": "mds-XRD:MaterialName"
+        },
+        {
+          "@id": "pmd:Length"
+        },
+        {
+          "@id": "pmd:Width"
+        },
+        {
+          "@id": "pmd:Thickness"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-XRD:Nptradial",
+      "@type": "owl:Class",
+      "rdfs:label": "Nptradial",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:composedOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:XrayRecipe"
+        },
+        {
+          "@id": "mds-XRD:BeamlineConfiguration"
+        },
+        {
+          "@id": "pmd:Furnace"
+        },
+        {
+          "@id": "mds-XRD:DiffractionFrame"
+        },
+        {
+          "@id": "mds-XRD:DetectorResolution"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "composed of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:BeamlineConfiguration"
+        },
+        {
+          "@id": "mds-XRD:Calibration"
+        },
+        {
+          "@id": "mds-XRD:DataCollection"
+        },
+        {
+          "@id": "mds-XRD:ExperimentType"
+        },
+        {
+          "@id": "mds-XRD:XrayRecipeParameters"
+        },
+        {
+          "@id": "pmd:Medium"
+        },
+        {
+          "@id": "mds-XRD:DetectorParameters"
+        },
+        {
+          "@id": "mds-XRD:PixelWidth"
+        },
+        {
+          "@id": "mds-XRD:PixelHeight"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "This property is used to describe the fact that and which objects are composed of other objects, i.e. it is used to describe the specific constituents or ingredients that form a particular entity or object. \nAs a prepositional phrase, it indicates the elements, parts, or components that make up a whole."
+        },
+        {
+          "@language": "en",
+          "@value": "This property is used to describe which voxels and materials an object is composed of."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:Diod",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "Diod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:SampleAlignment",
+      "@type": "owl:Class",
+      "rdfs:label": "SampleAlignment",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Calibration"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Alignment of the sample and stage."
+    },
+    {
+      "@id": "mds-XRD:Architecture",
+      "@type": "owl:Class",
+      "rdfs:label": "Architecture",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ModelingParameters"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Architecture of the model."
+    },
+    {
+      "@id": "pmd:Description",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Description",
+        {
+          "@language": "de",
+          "@value": "Beschreibung"
+        },
+        {
+          "@language": "en",
+          "@value": "Description"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Ein beschreibender Text, der die Natur / Beschaffenheit / Informationen zu einer Entität qualifiziert (z.B. Aktivitäten, Entitäten, Objekten, ...)."
+        },
+        "A descriptive text qualifying the nature of a thing (e.g. agent, activity, entity, object, ...)."
+      ]
+    },
+    {
+      "@id": "mds-XRD:PolarizationFactor",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:Degree"
+      },
+      "rdfs:label": "PolarizationFactor",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Polarization factor of the diffractometer."
+    },
+    {
+      "@id": "mds-XRD:File-format",
+      "@type": "owl:Class",
+      "rdfs:label": "File-format",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:FrameID",
+      "@type": "owl:Class",
+      "rdfs:label": "FrameID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Identifier of the frame."
+    },
+    {
+      "@id": "mds-XRD:PixelwiseCorrelation",
+      "@type": "owl:Class",
+      "rdfs:label": "PixelwiseCorrelation",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Rescaling"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixelwise correlation for rescaling."
+    },
+    {
+      "@id": "mds-XRD:ChiDiscontinuity",
+      "@type": "owl:Class",
+      "rdfs:label": "ChiDiscontinuity",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Fst_shtr",
+      "@type": "owl:Class",
+      "rdfs:label": "Fst_shtr",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:EnergyUsed",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloEV"
+      },
+      "rdfs:label": "EnergyUsed",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Force"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The energy of the incident beam."
+    },
+    {
+      "@id": "mds-XRD:DoPolarizationCorrection",
+      "@type": "owl:Class",
+      "rdfs:label": "DoPolarizationCorrection",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is polarization correction required."
+    },
+    {
+      "@id": "mds-XRD:CroppingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "CroppingMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Registration"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The cropping method."
+    },
+    {
+      "@id": "mds-XRD:Station",
+      "@type": "owl:Class",
+      "rdfs:label": "Station",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Department"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Particular beamline within the facility."
+    },
+    {
+      "@id": "mds-XRD:DetectorName",
+      "@type": "owl:Class",
+      "rdfs:label": "DetectorName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:NodeSeries"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the detector."
+    },
+    {
+      "@id": "mds-XRD:Frame",
+      "@type": "owl:Class",
+      "rdfs:label": "Frame",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The frame of diffraction."
+    },
+    {
+      "@id": "mds-XRD:AzimuthRange",
+      "@type": "owl:Class",
+      "rdfs:label": "AzimuthRange",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The azimuthal integration range."
+    },
+    {
+      "@id": "pmd:ManufacturingProcess",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ManufacturingProcess",
+        {
+          "@language": "de",
+          "@value": "Herstellungsprozess"
+        },
+        {
+          "@language": "en",
+          "@value": "Manufacture Process"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A process that is driven by the primary intent to transform objects."
+      }
+    },
+    {
+      "@id": "mds-XRD:Top_pzo",
+      "@type": "owl:Class",
+      "rdfs:label": "Top_pzo",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:2-theta-pos",
+      "@type": "owl:Class",
+      "rdfs:label": "2-theta-pos",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:DAQFrequency",
+      "@type": "owl:Class",
+      "rdfs:label": "DAQFrequency",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "DAQ frequency of the detector."
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:XrayRecipe"
+        },
+        {
+          "@id": "mds-XRD:DetectorCalibration"
+        },
+        {
+          "@id": "mds-XRD:SampleAlignment"
+        },
+        {
+          "@id": "mds-XRD:BeamlineConfiguration"
+        },
+        {
+          "@id": "mds-XRD:DiffractionFrame"
+        },
+        {
+          "@id": "mds-XRD:Integration"
+        },
+        {
+          "@id": "mds-XRD:XrayDetector"
+        },
+        {
+          "@id": "mds-XRD:XrayResult"
+        },
+        {
+          "@id": "mds-XRD:RingSamplingMethod"
+        },
+        {
+          "@id": "mds-XRD:GravityMethod"
+        },
+        {
+          "@id": "mds-XRD:CroppingMethod"
+        },
+        {
+          "@id": "mds-XRD:RollingMethod"
+        },
+        {
+          "@id": "mds-XRD:PixelwiseCorrelation"
+        },
+        {
+          "@id": "mds-XRD:DarkCorrectionMethod1"
+        },
+        {
+          "@id": "mds-XRD:DarkCorrectionMethod2"
+        },
+        {
+          "@id": "mds-XRD:XrayTool"
+        },
+        {
+          "@id": "mds-XRD:Modeling"
+        },
+        {
+          "@id": "mds-XRD:XraySample"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:RecipeID"
+        },
+        {
+          "@id": "mds-XRD:FrameID"
+        },
+        {
+          "@id": "mds-XRD:IntegrationID"
+        },
+        {
+          "@id": "mds-XRD:DetectorName"
+        },
+        {
+          "@id": "mds-XRD:ResultID"
+        },
+        {
+          "@id": "mds-XRD:MethodName"
+        },
+        {
+          "@id": "mds-XRD:ToolID"
+        },
+        {
+          "@id": "mds-XRD:ModelID"
+        },
+        {
+          "@id": "mds-XRD:SampleID"
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:AzimuthalRegrouping",
+      "@type": "owl:Class",
+      "rdfs:label": "AzimuthalRegrouping",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The azimuthal regrouping of XRD data."
+    },
+    {
+      "@id": "pmd:executedBy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:HeatTreatmentProcess"
+        },
+        {
+          "@id": "mds-XRD:AzimuthalRegrouping"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "executed by"
+      },
+      "rdfs:range": [
+        {
+          "@id": "pmd:Furnace"
+        },
+        {
+          "@id": "mds-XRD:Integration"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "This property represents which process is executed by which process node."
+      }
+    },
+    {
+      "@id": "pmd:Sample",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Sample",
+        {
+          "@language": "de",
+          "@value": "Probe"
+        },
+        {
+          "@language": "en",
+          "@value": "Sample"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Portion of material, usually selected from a larger quantity of material, collected and taken away for testing"
+      }
+    },
+    {
+      "@id": "mds-XRD:Rescaling",
+      "@type": "owl:Class",
+      "rdfs:label": "Rescaling",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Rescaling of images."
+    },
+    {
+      "@id": "mds-XRD:DetectorCalibration",
+      "@type": "owl:Class",
+      "rdfs:label": "DetectorCalibration",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Calibration"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:NumberOfRings",
+      "@type": "owl:Class",
+      "rdfs:label": "NumberOfRings",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of rings in the diffractogram."
+    },
+    {
+      "@id": "mds-XRD:XrayRecipe",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayRecipe",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MeasuringProcess"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Th experimental setttings used to get a set of data."
+    },
+    {
+      "@id": "pmd:Optical",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Optical",
+        {
+          "@language": "en",
+          "@value": "Optical"
+        },
+        {
+          "@language": "de",
+          "@value": "Optisch"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Optical is relating to the science of optics. Here specifically to the optical properties of a material."
+        },
+        {
+          "@language": "de",
+          "@value": "Optisch bezieht sich auf die Wissenschaft der Optik. Hier speziell auf die optischen Eigenschaften eines Materials."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:CalibrationDocument",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "CalibrationDocument",
+        {
+          "@language": "en",
+          "@value": "Calibration Document"
+        },
+        {
+          "@language": "de",
+          "@value": "Kalibrierschein"
+        },
+        {
+          "@language": "de",
+          "@value": "Kalibrierungsdokument"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Entität beschreibt ein Dokument, welches Abweichungen eines Messgerätes oder einer Maßverkörperung gegenüber einem anderen Gerät oder einer anderen Maßverkörperung feststellt und dokumentiert. Typischerweise ist die Person, welche die Kalibrierung durchführte, angegeben."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes a document used to state that a set of graduations to indicate values or positions has been performed. Typically, the calibration operator is included."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:ProcessingNode",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProcessingNode",
+        {
+          "@language": "en",
+          "@value": "Processing Node"
+        },
+        {
+          "@language": "de",
+          "@value": "Prozessknoten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."
+        },
+        {
+          "@language": "de",
+          "@value": "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:TestingSplit",
+      "@type": "owl:Class",
+      "rdfs:label": "TestingSplit",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ModelingParameters"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The testing split."
+    },
+    {
+      "@id": "mds-XRD:FxyeGSASFileEntry",
+      "@type": "owl:Class",
+      "rdfs:label": "FxyeGSASFileEntry",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:composes",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "pmd:Furnace"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "composes"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRD:Design"
+      },
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft wird verwendet, um die Tatsache zu beschreiben, dass und welche Objekte andere Objekte zusammensetzen, d. h. sie wird verwendet, um die spezifischen Bestandteile oder Zutaten zu beschreiben, aus denen ein bestimmtes Gebilde oder Objekt besteht. \nAls Präpositionalphrase bezeichnet sie die Elemente, Teile oder Komponenten, aus denen sich ein anderes Objekt zusammensetzt."
+        },
+        {
+          "@language": "en",
+          "@value": "This property is used to describe the fact that and which objects compose other objects, i.e. it is used to describe the specific constituents or ingredients forming a particular entity or object. \nAs a prepositional phrase, it indicates the elements, parts, or components that make up a whole of another object."
+        },
+        {
+          "@language": "en",
+          "@value": "This property is used to describe which objects a voxel or a material contributes to compose."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:XrayTool",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayTool",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProcessingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The instrument used to perform the experiment."
+    },
+    {
+      "@id": "mds-XRD:DistanceBetweenTwoRings",
+      "@type": "owl:Class",
+      "rdfs:label": "DistanceBetweenTwoRings",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Distance"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Distance between two rings."
+    },
+    {
+      "@id": "mds-XRD:MethodName",
+      "@type": "owl:Class",
+      "rdfs:label": "MethodName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Identifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the method."
+    },
+    {
+      "@id": "mds-XRD:ProcessingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "ProcessingMethod",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ManufacturingProcess"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The manufacturing method by ehich the sample was created."
+    },
+    {
+      "@id": "mds-XRD:TextureMeasurement",
+      "@type": "owl:Class",
+      "rdfs:label": "TextureMeasurement",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ExperimentType"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An experiment to measure texture in a sample."
+    },
+    {
+      "@id": "pmd:Metadata",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Metadata",
+        {
+          "@language": "en",
+          "@value": "Metadata"
+        },
+        {
+          "@language": "de",
+          "@value": "Metadaten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die DataScope Metadaten umfassen Attribute und zusätzliche Daten (Provenienz), die z.B. die Fabrik, das Labor, das Prozesssystem und die Objekte betreffen und die eine Bewertung der Qualität / Zuverlässigkeit der Messungen und eine systematische Suche in einer Datenbank ermöglichen."
+        },
+        {
+          "@language": "en",
+          "@value": "This data scope expresses that a :ValueObject refers to attributes and additional data (provenance) on production, laboratory, process system and objects that enable an evaluation of the quality/reliability of the measurements and a systematic search task in a database."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:Init-theta",
+      "@type": "owl:Class",
+      "rdfs:label": "Init-theta",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:FramesPerFile",
+      "@type": "owl:Class",
+      "rdfs:label": "FramesPerFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:DataAcquisitionRate"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of frames per file."
+    },
+    {
+      "@id": "mds-XRD:SampleToLabAlignment",
+      "@type": "owl:Class",
+      "rdfs:label": "SampleToLabAlignment",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:SampleAlignment"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Alignment of the sample in lab coordinates."
+    },
+    {
+      "@id": "pmd:Laboratory",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Laboratory",
+        {
+          "@language": "de",
+          "@value": "Labor"
+        },
+        {
+          "@language": "en",
+          "@value": "Laboratory"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A place equipped for experimental study in a science or for testing and analysis."
+      }
+    },
+    {
+      "@id": "pmd:Force",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Force",
+        {
+          "@language": "en",
+          "@value": "Force"
+        },
+        {
+          "@language": "de",
+          "@value": "Kraft"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Strength or energy exerted or brought to bear : cause of motion or change : active power."
+      }
+    },
+    {
+      "@id": "mds-XRD:WavelengthUsed",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:ANGSTROM"
+      },
+      "rdfs:label": "WavelengthUsed",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The wavelength used for the experiment."
+    },
+    {
+      "@id": "pmd:WorkingRange",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "WorkingRange",
+        {
+          "@language": "de",
+          "@value": "Arbeitsbereich"
+        },
+        {
+          "@language": "en",
+          "@value": "Working Range"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft beschreibt den Bereich zwischen den Grenzen, innerhalb derer ein Prozessknoten (z. B. eine Maschine) für ihren vorgesehenen Zweck verwendet werden kann, ausgedrückt durch die Angabe der in Rede stehenden unteren und oberen Bereichswerte."
+        },
+        {
+          "@language": "en",
+          "@value": "This property describes the region between the limits within which a processing node (e.g., a machine) is capable of being used for its intended purpose, expressed by stating the lower and upper range values of interest."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:Time",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Time",
+        {
+          "@language": "en",
+          "@value": "Time"
+        },
+        {
+          "@language": "de",
+          "@value": "Zeit"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A nonspatial continuum that is measured in terms of events which succeed one another from past through present to future."
+      }
+    },
+    {
+      "@id": "pmd:SequenceNumber",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "SequenceNumber",
+        {
+          "@language": "en",
+          "@value": "Sequence Number"
+        },
+        {
+          "@language": "de",
+          "@value": "Sequenznummer"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Strict monotonically increasing integer that indicates the position in an ordered list."
+      }
+    },
+    {
+      "@id": "mds-XRD:ModelID",
+      "@type": "owl:Class",
+      "rdfs:label": "ModelID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An identifier for the model."
+    },
+    {
+      "@id": "mds-XRD:MaskFile",
+      "@type": "owl:Class",
+      "rdfs:label": "MaskFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:CalibrationDocument"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Mask file of the detector."
+    },
+    {
+      "@id": "mds-XRD:PixelHeight",
+      "@type": "owl:Class",
+      "rdfs:label": "PixelHeight",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixel height of the detector."
+    },
+    {
+      "@id": "mds-XRD:ImageSequence",
+      "@type": "owl:Class",
+      "rdfs:label": "ImageSequence",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SequenceNumber"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Running sequence of the image taken."
+    },
+    {
+      "@id": "pmd:isPartOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRD:ImageStack"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:Frame"
+        },
+        {
+          "@id": "mds-XRD:DarkField"
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:ExperimentType",
+      "@type": "owl:Class",
+      "rdfs:label": "ExperimentType",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Process"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Type of the experiment performed."
+    },
+    {
+      "@id": "mds-XRD:DarkCorrectionMethod2",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkCorrectionMethod2",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:DarkCorrection"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Method 2 to perform dark correction."
+    },
+    {
+      "@id": "pmd:ComputingNode",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ComputingNode",
+        {
+          "@language": "de",
+          "@value": "Computerknoten"
+        },
+        {
+          "@language": "en",
+          "@value": "Computing Node"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A computing system that provides an execution environment for, e.g., simulation processes or prediction models.\nA Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."
+        },
+        {
+          "@language": "de",
+          "@value": "Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.\nEin Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:Width",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Width",
+        {
+          "@language": "de",
+          "@value": "Breite"
+        },
+        {
+          "@language": "en",
+          "@value": "Width"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Entität bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes a horizontal measurement of an object taken at right angles to the length of the object."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:BeamConvergence",
+      "@type": "owl:Class",
+      "rdfs:label": "BeamConvergence",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Optical"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Beam convergence of the incident beam."
+    },
+    {
+      "@id": "mds-XRD:Mo_stab",
+      "@type": "owl:Class",
+      "rdfs:label": "Mo_stab",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:component",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:Calibration"
+        },
+        {
+          "@id": "mds-XRD:XrayRecipe"
+        },
+        {
+          "@id": "mds-XRD:XrayTool"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "component"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:DetectorCalibration"
+        },
+        {
+          "@id": "mds-XRD:SampleAlignment"
+        },
+        {
+          "@id": "mds-XRD:XrayTool"
+        },
+        {
+          "@id": "mds-XRD:XrayDetector"
+        },
+        {
+          "@id": "pmd:Sample"
+        }
+      ],
+      "skos:altLabel": {
+        "@language": "en",
+        "@value": "has component"
+      },
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die Objekt-Eigenschaft Komponente, die in Verbindung mit ProzessKnoten und seinen (modularen) Elementen verwendet wird. Sie ermöglicht die Darstellung der einzelnen, unterschiedlichen Teile von ProzessKnoten. Im Wesentlichen ist die  \"Komponenten-Eigenschaft\" eine Möglichkeit, ein komplexes System in überschaubare und eindeutige Teile zu zerlegen, um die Rolle der einzelnen Teile innerhalb des Gesamtsystems zu verstehen und zu verwalten."
+        },
+        {
+          "@language": "en",
+          "@value": "The object property component, which is used in connection with ProcessingNode and its (modular) elements. It enables the representation of the individual, different parts of processing nodes. Essentially, the 'component property' is a way of breaking down a complex system into manageable and distinct parts in order to understand and manage the role of each part within the overall system."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:RadialRange",
+      "@type": "owl:Class",
+      "rdfs:label": "RadialRange",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The radial range."
+    },
+    {
+      "@id": "pmd:Distance",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Distance",
+        {
+          "@language": "de",
+          "@value": "Abstand"
+        },
+        {
+          "@language": "en",
+          "@value": "Distance"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Spatial remoteness."
+      }
+    },
+    {
+      "@id": "pmd:PrimaryData",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "PrimaryData",
+        {
+          "@language": "en",
+          "@value": "Primary Data"
+        },
+        {
+          "@language": "de",
+          "@value": "Primärdaten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die Datenkategorie Primärdaten umfasst Daten, die vor / nach einem Prozess erfasst werden, entweder bezogen auf die Geometrie des Objekts (z.B. ao, bo, do, au, bu, du, Lu) oder als Register des gesamten Aufbaus (z.B. Skizzen, Fotos oder Videos)"
+        },
+        {
+          "@language": "en",
+          "@value": "This data scope expresses that a ValueObject refers to data that is directly acquired during a process by sensors (time, force, length, temperature)"
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:Calibration",
+      "@type": "owl:Class",
+      "rdfs:label": "Calibration",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Process"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:BeamSize",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "BeamSize",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Optical"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Size of the incident beam."
+    },
+    {
+      "@id": "pmd:ProvidedIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProvidedIdentifier",
+        {
+          "@language": "de",
+          "@value": "Bereitgestellter Identifikator"
+        },
+        {
+          "@language": "en",
+          "@value": "Provided Identifier"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A colloquial, human-generated descriptor."
+      }
+    },
+    {
+      "@id": "mds-XRD:Facility",
+      "@type": "owl:Class",
+      "rdfs:label": "Facility",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Laboratory"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Facility where the experiment was performed."
+    },
+    {
+      "@id": "pmd:Thickness",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": [
+        "Thickness",
+        {
+          "@language": "de",
+          "@value": "Dicke"
+        },
+        {
+          "@language": "en",
+          "@value": "Thickness"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        "Thickness of the sample.",
+        {
+          "@language": "de",
+          "@value": "Diese Entität beschreibt die gemessene Dimension in einer Richtung eines Prüfstücks."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes the measured dimension in one direction of a test piece."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:HeatTreatmentProcess",
+      "@type": "owl:Class",
+      "rdfs:label": "HeatTreatmentProcess",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ExperimentType"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Heat treatment experiment."
+    },
+    {
+      "@id": "mds-XRD:PixelSize",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MicroM"
+      },
+      "rdfs:label": "PixelSize",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixel size of the detector."
+    },
+    {
+      "@id": "pmd:Algorithm",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Algorithm",
+        {
+          "@language": "en",
+          "@value": "Algorithm"
+        },
+        {
+          "@language": "de",
+          "@value": "Algorithmus"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."
+      }
+    },
+    {
+      "@id": "pmd:DataAcquisitionRate",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "DataAcquisitionRate",
+        {
+          "@language": "en",
+          "@value": "Data Acquisition Rate"
+        },
+        {
+          "@language": "de",
+          "@value": "Datenerfassungsrate"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft bezeichnet die Anzahl der Messungen / Abfragen pro Zeiteinheit bei einer betrachteten Messung einer Messgröße (Abtast-/Abfragerate bei der Datenerfassung)."
+        },
+        {
+          "@language": "en",
+          "@value": "This property denotes the number of measurements / queries per time period for a considered measurement of a measurement parameter (sampling / query rate during data acquisition)."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:DarkPatternUsed",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkPatternUsed",
+      "rdfs:subClassOf": {
+        "@id": "pmd:PrimaryData"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The dark image used to perform dark correction."
+    },
+    {
+      "@id": "mds-XRD:ParametersFAST",
+      "@type": "owl:Class",
+      "rdfs:label": "ParametersFAST",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:XrayRecipeParameters"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Intensity",
+      "@type": "owl:Class",
+      "rdfs:label": "Intensity",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Bank-id",
+      "@type": "owl:Class",
+      "rdfs:label": "Bank-id",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:IntegrationMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The method used for integration."
+    },
+    {
+      "@id": "pmd:MeasuringProcess",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MeasuringProcess",
+        {
+          "@language": "en",
+          "@value": "Measuring Process"
+        },
+        {
+          "@language": "de",
+          "@value": "Messprozess"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A measurement process is an analysis process that acquires data (usually expressed in numbers) by using tools."
+      }
+    },
+    {
+      "@id": "mds-XRD:IntegrationType",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationType",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Type of integration, either 1 or 2D."
+    },
+    {
+      "@id": "mds-XRD:Ic2",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:S"
+      },
+      "rdfs:label": "Ic2",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:IntegrationOptions",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationOptions",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The various optoins used for integration."
+    },
+    {
+      "@id": "mds-XRD:RecipeID",
+      "@type": "owl:Class",
+      "rdfs:label": "RecipeID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An identifier for the recipe."
+    },
+    {
+      "@id": "mds-XRD:Sync_cnt",
+      "@type": "owl:Class",
+      "rdfs:label": "Sync_cnt",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:StackNumber",
+      "@type": "owl:Class",
+      "rdfs:label": "StackNumber",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProjectIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The stack of the data."
+    },
+    {
+      "@id": "mds-XRD:Parameters1ID",
+      "@type": "owl:Class",
+      "rdfs:label": "Parameters1ID",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:XrayRecipeParameters"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Epochs",
+      "@type": "owl:Class",
+      "rdfs:label": "Epochs",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ModelingParameters"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of epochs the model was trained for."
+    },
+    {
+      "@id": "pmd:Furnace",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Furnace",
+        {
+          "@language": "en",
+          "@value": "Furnace"
+        },
+        {
+          "@language": "de",
+          "@value": "Ofen"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "An enclosed structure in which heat is produced (as for heating a house or for reducing ore)."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine geschlossene Struktur, in der Wärme erzeugt wird (z. B. zum Heizen eines Hauses oder zum Einschmelzen von Erz)."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:PostProcessing",
+      "@type": "owl:Class",
+      "rdfs:label": "PostProcessing",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Post processing appplied to the original collected data."
+    },
+    {
+      "@id": "mds-XRD:Modeling",
+      "@type": "owl:Class",
+      "rdfs:label": "Modeling",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ComputingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Modeling applied to the collected or modified data."
+    },
+    {
+      "@id": "mds-XRD:Irads",
+      "@type": "owl:Class",
+      "rdfs:label": "Irads",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:ToolID",
+      "@type": "owl:Class",
+      "rdfs:label": "ToolID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An identifier for the instrument."
+    },
+    {
+      "@id": "mds-XRD:Design",
+      "@type": "owl:Class",
+      "rdfs:label": "Design",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Description"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Design of the furnace."
+    },
+    {
+      "@id": "mds-XRD:RollingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "RollingMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Registration"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The rolling method."
+    },
+    {
+      "@id": "mds-XRD:DoRemoveNAN",
+      "@type": "owl:Class",
+      "rdfs:label": "DoRemoveNAN",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is NAN removal required."
+    },
+    {
+      "@id": "mds-XRD:DetectorLength",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "DetectorLength",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Length of the detector."
+    },
+    {
+      "@id": "mds-XRD:Ic0",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:S"
+      },
+      "rdfs:label": "Ic0",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:AzmVal",
+      "@type": "owl:Class",
+      "rdfs:label": "AzmVal",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Resolution",
+      "@type": "owl:Class",
+      "rdfs:label": "Resolution",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "the smallest interval measurable by a scientific (especially optical) instrument"
+    },
+    {
+      "@id": "mds-XRD:Ic1",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:S"
+      },
+      "rdfs:label": "Ic1",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:OpenCLDevice",
+      "@type": "owl:Class",
+      "rdfs:label": "OpenCLDevice",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The device used. Either CPU or GPU."
+    },
+    {
+      "@id": "mds-XRD:DetectorWidth",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "DetectorWidth",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Width"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Width of the detector."
+    },
+    {
+      "@id": "pmd:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ValueObject",
+        {
+          "@language": "en",
+          "@value": "Value Object"
+        },
+        {
+          "@language": "de",
+          "@value": "Wertobjekt"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    },
+    {
+      "@id": "mds-XRD:TrainingSplit",
+      "@type": "owl:Class",
+      "rdfs:label": "TrainingSplit",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ModelingParameters"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The training split."
+    },
+    {
+      "@id": "mds-XRD:FirstName",
+      "@type": "owl:Class",
+      "rdfs:label": "FirstName",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:DistanceFromSample",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "DistanceFromSample",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Distance"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Distance of the detector from the sample. "
+    },
+    {
+      "@id": "mds-XRD:PoniFile",
+      "@type": "owl:Class",
+      "rdfs:label": "PoniFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:CalibrationDocument"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "PONI file of the detector."
+    },
+    {
+      "@id": "mds-XRD:Centering",
+      "@type": "owl:Class",
+      "rdfs:label": "Centering",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Centering algorithm to center the images."
+    },
+    {
+      "@id": "mds-XRD:Registration",
+      "@type": "owl:Class",
+      "rdfs:label": "Registration",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Registration of an image."
+    },
+    {
+      "@id": "pmd:MaterialDesignation",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MaterialDesignation",
+        {
+          "@language": "en",
+          "@value": "Material Designation"
+        },
+        {
+          "@language": "de",
+          "@value": "Materialbezeichnung"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": "It is a name or identifier of a material type. It designates a material. \nE.g. \"steel\", \"aluminium\", \"wood\", \"plastic\", \"rubber\"."
+    },
+    {
+      "@id": "mds-XRD:ExposureTime",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:SEC"
+      },
+      "rdfs:label": "ExposureTime",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Time"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Exposure time for the detector."
+    },
+    {
+      "@id": "mds-XRD:XrayDetector",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayDetector",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MeasuringDevice"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The detector used to capture the transmitted X-rays."
+    },
+    {
+      "@id": "mds-XRD:DataCollection",
+      "@type": "owl:Class",
+      "rdfs:label": "DataCollection",
+      "rdfs:subClassOf": {
+        "@id": "pmd:PrimaryData"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Data collection stage of the experiment."
+    },
+    {
+      "@id": "mds-XRD:Fxn",
+      "@type": "owl:Class",
+      "rdfs:label": "Fxn",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:RingSamplingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "RingSamplingMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The ring sampling method."
+    },
+    {
+      "@id": "pmd:NodeSeries",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "NodeSeries",
+        {
+          "@language": "en",
+          "@value": "Node Series"
+        },
+        {
+          "@language": "de",
+          "@value": "Serie"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@language": "de",
+          "@value": "Knotentyp"
+        },
+        {
+          "@language": "en",
+          "@value": "Node Type"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Processing Node typename, e.g. \"ProTherm500\""
+      }
+    },
+    {
+      "@id": "pmd:input",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRD:PostProcessing"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "input"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRD:XrayResult"
+      },
+      "skos:altLabel": "has input",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "This property is used to link the processes to their input objects."
+      }
+    },
+    {
+      "@id": "pmd:ProjectIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProjectIdentifier",
+        {
+          "@language": "en",
+          "@value": "Project Identifier"
+        },
+        {
+          "@language": "de",
+          "@value": "Projektidentifikator"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A colloquial, human-generated, descriptive text qualifying the nature of a project."
+        },
+        {
+          "@language": "de",
+          "@value": "Ein umgangssprachlicher, von Menschen erstellter, beschreibender Text, der die Art eines Projekts qualifiziert."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:XrayRecipeParameters",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayRecipeParameters",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Various parmeters of the testing equipment."
+    },
+    {
+      "@id": "mds-XRD:AngularRangeY",
+      "@type": "owl:Class",
+      "rdfs:label": "AngularRangeY",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:Medium",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Medium",
+        {
+          "@language": "de",
+          "@value": "Medium"
+        },
+        {
+          "@language": "en",
+          "@value": "Medium"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Substance that surrounds an object inside the system boundaries of a processing node."
+      }
+    },
+    {
+      "@id": "mds-XRD:ResultID",
+      "@type": "owl:Class",
+      "rdfs:label": "ResultID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An identifier for the results."
+    },
+    {
+      "@id": "mds-XRD:GravityMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "GravityMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Centering"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The gravity centering method."
+    },
+    {
+      "@id": "mds-XRD:DarkCorrectionMethod1",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkCorrectionMethod1",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:DarkCorrection"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Method 1 to perform dark correction."
+    },
+    {
+      "@id": "mds-XRD:DarkCorrection",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkCorrection",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Dark correction of raw images."
+    },
+    {
+      "@id": "mds-XRD:PixelWidth",
+      "@type": "owl:Class",
+      "rdfs:label": "PixelWidth",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Width"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixel width of the detector."
+    },
+    {
+      "@id": "mds-XRD:AngularRangeX",
+      "@type": "owl:Class",
+      "rdfs:label": "AngularRangeX",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:DarkField",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkField",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The dark field image."
+    },
+    {
+      "@id": "mds-XRD:WavelengthRange",
+      "@type": "owl:Class",
+      "rdfs:label": "WavelengthRange",
+      "rdfs:subClassOf": {
+        "@id": "pmd:WorkingRange"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The wavelength range the given beamline can operate in."
+    },
+    {
+      "@id": "mds-XRD:IntensityUnc",
+      "@type": "owl:Class",
+      "rdfs:label": "IntensityUnc",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:DoSolidAngleCorrection",
+      "@type": "owl:Class",
+      "rdfs:label": "DoSolidAngleCorrection",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is solid angle correction required."
+    },
+    {
+      "@id": "pmd:Department",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Department",
+        {
+          "@language": "de",
+          "@value": "Abteilung"
+        },
+        {
+          "@language": "en",
+          "@value": "Department"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A sub section of an organization."
+      }
+    },
+    {
+      "@id": "mds-XRD:Crys_rtrn",
+      "@type": "owl:Class",
+      "rdfs:label": "Crys_rtrn",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:SampleID",
+      "@type": "owl:Class",
+      "rdfs:label": "SampleID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SpecimenName"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "A human-labeled sample identifier."
+    },
+    {
+      "@id": "mds-XRD:Ic3",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:S"
+      },
+      "rdfs:label": "Ic3",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Top_rota",
+      "@type": "owl:Class",
+      "rdfs:label": "Top_rota",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:VersionNumber",
+      "@type": "owl:Class",
+      "rdfs:label": "VersionNumber",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SequenceNumber"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Version number of the method."
+    },
+    {
+      "@id": "mds-XRD:NptAzimuth",
+      "@type": "owl:Class",
+      "rdfs:label": "NptAzimuth",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:RmsFitQuality",
+      "@type": "owl:Class",
+      "rdfs:label": "RmsFitQuality",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "RMS fit quality of the detector."
+    },
+    {
+      "@id": "mds-XRD:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "Ontology for the XRD FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XRD",
+      "rdfs:label": "mds-XRD"
+    },
+    {
+      "@id": "mds-XRD:ReadOutTime",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliSEC"
+      },
+      "rdfs:label": "ReadOutTime",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Time"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Time to read out the data."
+    },
+    {
+      "@id": "mds-XRD:ErrorModel",
+      "@type": "owl:Class",
+      "rdfs:label": "ErrorModel",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:IntegrationOptions"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The error model used."
+    },
+    {
+      "@id": "mds-XRD:BitDepth",
+      "@type": "owl:Class",
+      "rdfs:label": "BitDepth",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Depth"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Bit depth of the resulting image."
+    },
+    {
+      "@id": "mds-XRD:LogFile",
+      "@type": "owl:Class",
+      "rdfs:label": "LogFile",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Metadata"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:BeamlineConfiguration",
+      "@type": "owl:Class",
+      "rdfs:label": "BeamlineConfiguration",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Configuration of the beamline after the calibration. "
+    },
+    {
+      "@id": "mds-XRD:IntegrationID",
+      "@type": "owl:Class",
+      "rdfs:label": "IntegrationID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Identifier for the integration process."
+    },
+    {
+      "@id": "mds-XRD:Htype",
+      "@type": "owl:Class",
+      "rdfs:label": "Htype",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Integration",
+      "@type": "owl:Class",
+      "rdfs:label": "Integration",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Integration of diffraction patterns azimuthally."
+    },
+    {
+      "@id": "pmd:outputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRD:DetectorCalibration"
+        },
+        {
+          "@id": "mds-XRD:DataReduction"
+        },
+        {
+          "@id": "mds-XRD:XrayResult"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "output of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRD:PoniFile"
+        },
+        {
+          "@id": "mds-XRD:AzimuthalRegrouping"
+        },
+        {
+          "@id": "mds-XRD:XrayRecipe"
+        }
+      ],
+      "skos:altLabel": {
+        "@language": "en",
+        "@value": "is output of"
+      }
+    },
+    {
+      "@id": "mds-XRD:ImageStack",
+      "@type": "owl:Class",
+      "rdfs:label": "ImageStack",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Image"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The image stack."
+    },
+    {
+      "@id": "mds-XRD:DiffractionFrame",
+      "@type": "owl:Class",
+      "rdfs:label": "DiffractionFrame",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:DataCollection"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The frame of diffraction."
+    },
+    {
+      "@id": "mds-XRD:Cesr_",
+      "@type": "owl:Class",
+      "rdfs:label": "Cesr_",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:SpecimenName",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "SpecimenName",
+        {
+          "@language": "de",
+          "@value": "Prüfstück Name"
+        },
+        {
+          "@language": "en",
+          "@value": "Specimen Name"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft beschreibt die Bezeichnung eines Prüfstücks, die in der Regel von Menschen als von Menschen lesbarer Identifikator vergeben wird."
+        },
+        {
+          "@language": "de",
+          "@value": "This property describes the designation of a specimen, usually given as human-readable identifier by humans."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRD:Depth",
+      "@type": "owl:Class",
+      "rdfs:label": "Depth",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "the distance from the top or surface to the bottom of something"
+    },
+    {
+      "@id": "mds-XRD:DetectorResolution",
+      "@type": "owl:Class",
+      "rdfs:label": "DetectorResolution",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Resolution"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The resolution of the detector."
+    },
+    {
+      "@id": "mds-XRD:StartEndTimeStamp",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:SEC"
+      },
+      "rdfs:label": "StartEndTimeStamp",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Time"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Start and end time stamp. "
+    },
+    {
+      "@id": "mds-XRD:DetectorParameters",
+      "@type": "owl:Class",
+      "rdfs:label": "DetectorParameters",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:DiffractionFrame"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Detector parameters for the frame."
+    },
+    {
+      "@id": "mds-XRD:XrayResult",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayResult",
+      "rdfs:subClassOf": {
+        "@id": "pmd:PrimaryData"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Btm_rota",
+      "@type": "owl:Class",
+      "rdfs:label": "Btm_rota",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Crys_sply",
+      "@type": "owl:Class",
+      "rdfs:label": "Crys_sply",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:ParametersFAST"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:BankNo",
+      "@type": "owl:Class",
+      "rdfs:label": "BankNo",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XRD:Init-delta",
+      "@type": "owl:Class",
+      "rdfs:label": "Init-delta",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRD:Parameters1ID"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:Identifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Identifier",
+        {
+          "@language": "en",
+          "@value": "Identifier"
+        },
+        {
+          "@language": "de",
+          "@value": "Identifikator"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A named value intended to distinguish between entities."
+      }
+    },
+    {
+      "@id": "mds-XRD:MaxFrameRate",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:HZ"
+      },
+      "rdfs:label": "MaxFrameRate",
+      "rdfs:subClassOf": {
+        "@id": "pmd:DataAcquisitionRate"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum frame rate the detector can capture."
+    }
+  ]
+}

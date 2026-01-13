@@ -1,0 +1,498 @@
+{
+
+"@context": {
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "value": "https://schema.org/value",
+        "unitText": "https://schema.org/unitText",
+        "description": "https://schema.org/description",
+        "sampleID": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "opticalSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "vibrationalSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "ftirSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleInformation": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleMaterial": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "samplePhysicalState": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleThickness": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleWidth": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleID": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "experimentalData": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "wavelength": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "spc": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "absorbance": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "transmittance": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "experimentalMetadata": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "dataType": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "stepNumber": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "ATR": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "transmission": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "numberScans": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "electronicSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "uvVisSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "wavelengthUv": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "intensityUv": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "absorbanceUv": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "transmittanceUv": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "experimentalMetadataUv": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "dataTypeUv": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "scatteringSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "fluorescenceSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "inductivelyCoupledPlasmaOpticalEmissionSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "Calibration": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "calibrationMixture": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "dilution": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "numberRuns": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "concentrationRange": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "wavelenghts": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "ICPMethod": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "detectorType": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "scanMode": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "readings": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "replicates": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "cellGas": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "concentration": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleDilution": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "numberRunsSample": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "sampleReplicate": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "results": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "element": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl",
+        "elementConcentration": "https://cwrusdle.bitbucket.io/Ontology/opticalSpectroscopy.owl"
+
+  },
+
+"opticalSpectroscopy": {
+"vibrationalSpectroscopy": {
+"ftirSpectroscopy": {
+      "sampleInformation": {
+              "sampleMaterial": {
+                  "value": "$sampleMaterial",
+                  "@type": "string",
+                  "description": "Information of the sample such as physical state, thickness, width, and ID number."
+              },
+              "samplePhysicalState": {
+                  "value": "$samplePhysicalState",
+                  "@type": "string",
+                  "description": "The physical state of the sample."
+              },
+              "sampleThickness": {
+                  "value": "$sampleThickness",
+                  "@type": "string",
+                  "description": "The thickness of the sample."
+              },
+              "sampleWidth": {
+                  "value": "$sampleWidth",
+                  "@type": "string",
+                  "description": "The width of the sample."
+              },
+              "sampleID": {
+                  "value": "$sampleID",
+                  "@type": "string",
+                  "description": "Sample identification number."
+              }
+      },
+      "experimentalData": {
+              "wavelength": {
+                  "value": "$wavelength",
+                  "unitText": "cm-1",
+                  "@type": "float"
+              },
+              "intensity": {
+                  "absorbance": {
+                  "value": "$absorbance",
+                  "unitText": "a.u.",
+                  "@type": "float",
+                  "description": "The absorbance value from FTIR measurement."
+              },
+                  "transmittance": {
+                  "value": "$transmittance",
+                  "unitText": "%",
+                  "@type": "float",
+                  "description": "The transmittance value from FTIR measurement."
+              }
+              }
+              },
+      "experimentalMetadata": {
+              "dataType": {
+              "csv": {
+                "value": "$csv",
+                "@type": "string"
+              }
+              },
+              "stepNumber": {
+                "value": "$stepNumber",
+                "@type": "float",
+                "unitText": "null"
+              },
+              "scanMode": {
+                "value": "$scanMode",
+                "@type": "string",
+                "ATR": {
+                "value": "$ATR",
+                "@type": "string"
+              },
+              "transmission": {
+                "value": "$transmission",
+                "@type": "string"
+              }
+              },
+              "numberScans": {
+                "value": "$numberScans",
+                "@type": "float",
+                "unitText": "null",
+                "description": "The number of scans during a measurement"
+              }
+      }
+  }
+},
+
+"electronicSpectroscopy": {
+"uvVisSpectroscopy": {
+      "sampleInformation": {
+              "sampleMaterial": {
+                  "value": "$sampleMaterial",
+                  "@type": "string",
+                  "description": "Information of the sample such as physical state, thickness, width, and ID number."
+              },
+              "samplePhysicalState": {
+                  "value": "$samplePhysicalState",
+                  "@type": "string",
+                  "description": "The physical state of the sample."
+              },
+              "sampleThickness": {
+                  "value": "$sampleThickness",
+                  "@type": "string",
+                  "description": "The thickness of the sample."
+              },
+              "sampleWidth": {
+                  "value": "$sampleWidth",
+                  "@type": "string",
+                  "description": "The width of the sample."
+              },
+              "sampleIDUv": {
+                  "value": "$sampleIDUv",
+                  "@type": "string",
+                  "description": "Sample identification number."
+              }
+      },
+      "experimentalData": {
+              "wavelengthUv": {
+                  "value": "$wavelengthUv",
+                  "unitText": "cm-1",
+                  "@type": "float"
+              },
+              "intensityUv": {
+                  "absorbanceUv": {
+                  "value": "$absorbanceUv",
+                  "unitText": "a.u.",
+                  "@type": "float",
+                  "description": "The absorbance value from UV-vis measurement."
+              },
+              "transmittanceUv": {
+                  "value": "$transmittanceUv",
+                  "unitText": "%",
+                  "@type": "float",
+                  "description": "The transmittance value from UV-vis measurement."
+              }
+              }
+              },
+      "experimentalMetadataUv": {
+        "dataTypeUv": {
+              "csv": {
+                "value": "$csv",
+                "@type": "string"
+              }         
+              },
+        "stepNumber": {
+       "value": "$stepNumber",
+       "@type": "float",
+        "unitText": "null"
+        },
+        "numberScans": {
+                "value": "$numberScans",
+                "@type": "float",
+                "unitText": "null",
+                "description": "The number of scans during a measurement"
+              }
+      }
+  }
+
+},
+
+"scatteringSpectroscopy": {
+"ramanSpectroscopy": {
+      "sampleInformation": {
+              "sampleMaterial": {
+                  "value": "$sampleMaterial",
+                  "@type": "string",
+                  "description": "Information of the sample such as physical state, thickness, width, and ID number."
+              },
+              "samplePhysicalState": {
+                  "value": "$samplePhysicalState",
+                  "@type": "string",
+                  "description": "The physical state of the sample."
+              },
+              "sampleThickness": {
+                  "value": "$sampleThickness",
+                  "@type": "string",
+                  "description": "The thickness of the sample."
+              },
+              "sampleWidth": {
+                  "value": "$sampleWidth",
+                  "@type": "string",
+                  "description": "The width of the sample."
+              },
+              "sampleID": {
+                  "value": "$sampleID",
+                  "@type": "string",
+                  "description": "The ID number of the sample."
+              }
+      },
+      "experimentalData": {
+              "wavelength": {
+                  "value": "$wavelength",
+                  "unitText": "cm-1",
+                  "@type": "float"
+              },
+              "intensity": {
+                  "absorbance": {
+                  "value": "$absorbance",
+                  "unitText": "a.u.",
+                  "@type": "float",
+                  "description": "The absorbance value from FTIR measurement."
+              },
+              "transmittance": {
+                  "value": "$transmittance",
+                  "unitText": "%",
+                  "@type": "float",
+                  "description": "The transmittance value from FTIR measurement."
+              }
+              }
+              },
+      "experimentalMetadata": {
+        "value": "$experimentalMetadata",
+        "@type": "string",
+              "dataType": {
+              "csv": {
+                "value": "$csv",
+                "@type": "string"
+              }
+              },
+              "stepNumber": {
+                "value": "$stepNumber",
+                "@type": "float",
+                "unitText": "null"
+              },
+              "scanMode": {
+                "value": "$scanMode",
+                "@type": "string",
+                "ATR": {
+                "value": "$ATR",
+                "@type": "string"
+              },
+              "transmission": {
+                "value": "$transmission",
+                "@type": "string"
+              }
+              },
+              "numberScans": {
+                "value": "$numberScans",
+                "@type": "float",
+                "unitText": "null",
+                "description": "The number of scans during a measurement"
+              }
+      }
+  }
+},
+
+"fluorescenceSpectroscopy": {
+      "sampleInformation": {
+              "sampleMaterial": {
+                  "value": "$sampleMaterial",
+                  "@type": "string",
+                  "description": "Information of the sample such as physical state, thickness, width, and ID number."
+              },
+              "samplePhysicalState": {
+                  "value": "$samplePhysicalState",
+                  "@type": "string",
+                  "description": "The physical state of the sample."
+              },
+              "sampleThickness": {
+                  "value": "$sampleThickness",
+                  "@type": "string",
+                  "description": "The thickness of the sample."
+              },
+              "sampleWidth": {
+                  "value": "$sampleWidth",
+                  "@type": "string",
+                  "description": "The width of the sample."
+              },
+              "sampleID": {
+                  "value": "$sampleID",
+                  "@type": "string",
+                  "description": "The ID number of the sample."
+              }
+      },
+      "experimentalData": {
+              "wavelength": {
+                  "value": "$wavelength",
+                  "unitText": "nm",
+                  "@type": "float"
+              },
+              "intensity": {
+                  "excitation": {
+                  "value": "$excitation",
+                  "unitText": "a.u.",
+                  "@type": "float",
+                  "description": "The excitation value from fluorescence measurement."
+              },
+                  "emission": {
+                  "value": "$emission",
+                  "unitText": "a.u.",
+                  "@type": "float",
+                  "description": "The emission value from fluorescence measurement."
+              }
+              }
+              },
+      "experimentalMetadata": {
+        "value": "$experimentalMetadata",
+        "@type": "string",
+              "dataType": {
+              "csv": {
+                "value": "$csv",
+                "@type": "string"
+              }
+              },
+              "stepNumber": {
+                "value": "$stepNumber",
+                "@type": "float",
+                "unitText": "null"
+              },
+              "scanMode": {
+                "value": "$scanMode",
+                "@type": "string"
+              },
+              "numberScans": {
+                "value": "$numberScans",
+                "@type": "float",
+                "unitText": "null",
+                "description": "The number of scans during a measurement"
+              }
+      }
+},
+
+"inductivelyCoupledPlasmaOpticalEmissionSpectroscopy": {
+      "Calibration": {
+              "calibrationMixture": {
+              "description" : "Commercial name of the calibration mixture",
+                  "value": "$calibrationMixture",
+                  "unitText": "null"
+              },
+              "dilution": {
+                "description": "Dilution factor used in the calibration run",
+                  "value": "$dilution",
+                  "unitText": "null"
+              },
+              "numberRuns": {
+              "description": "Number of runs for each calibration mixture",
+                "value": "$numberRuns",
+                  "unitText": "null"
+              },
+              "wavelenghts": {
+              "description": "Wavelenghs used in calibration",
+                "value": "$wavelenghts",
+                  "unitText": "null"
+              },
+              "concentrationRange": {
+              "description": "Concentration Range per analyte",
+                  "value": "$concentrationRange",
+                  "unitText": "null"
+              }
+      },
+      "experimentalMetadata": {
+                  "ICPMethod": {
+                  "description": "ICP method emploied : ICP, TKN or OIS",
+                    "value": "$ICPMethod",
+                  "unitText": "null"
+              },
+              "detectorType": {
+              "description": "ICP method emploied : ICP, TKN or OIS",
+                "value": "$detectorType",
+                  "unitText": "null"
+              },
+              
+              "scanMode": {
+               "description": "Scan Mode",
+                "value": "$scanMode",
+                  "unitText": "null"
+              },
+                "dwellTime": {
+              "description": "Dwell time",
+                "value": "$dwellTime",
+                  "unitText": "null"
+              },
+              
+              "readings": {
+               "description": "Number of sweep/readins",
+                "value": "$readings",
+                  "unitText": "null"
+              },
+               "replicates": {
+              "description": "Number of Replicates",
+                "value": "$replicates",
+                  "unitText": "null"
+              },
+              
+              "cellGas": {
+               "description": "Cell gas",
+                "value": "$cellGas",
+                  "unitText": "null"
+              }
+              },
+      "sampleInformation": {
+      "sampleId": {
+        "description": "Sample identification number",
+        "value": "$sampleId",
+          "unitText": "null"
+      },
+      
+        "concentration": {
+        "description": "concentration of the sample",
+        "value": "$sampleConcentration",
+          "unitText": "null"
+      },
+          "numberRunsSample": {
+        "description": "Number of sample runs",
+        "value": "$numberRuns",
+          "unitText": "null"
+      },
+          "sampleDilution": {
+        "description": "Dilution Factor used in the samples",
+        "value": "$sampleDilution",
+          "unitText": "null"
+      },
+          "sampleReplicate": {
+        "description": "Number of the replicate",
+        "value": "$sampleReplicate",
+          "unitText": "null"
+      }
+      },
+      "results": {
+      "element": {
+        "description": "Element detected",
+        "value": "$element",
+          "unitText": "null"
+      },
+      
+        "elementConcentration": {
+        "description": "concentration of the element",
+        "value": "$concentration",
+          "unitText": "null"
+      }
+      
+      
+      
+}
+}
+
+}
+
+}

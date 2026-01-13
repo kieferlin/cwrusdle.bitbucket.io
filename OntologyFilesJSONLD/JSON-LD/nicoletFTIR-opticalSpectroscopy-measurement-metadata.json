@@ -1,0 +1,50 @@
+{
+  "@context": {
+  "measurementMetadata": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "wavelengthRange": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "readModes": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",  
+     "resolution":  "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+     "numScans":  "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+     "correction":  "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",    
+    "value": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/nicoletFTIR.owl"
+  },
+
+   "measurementMetadata": {
+               
+            "wavelengthRange": {
+                  "description": "Range of the wavelength the reading will take place",
+                   "value": "$wavelengthRange",
+                  "unitText": "null"                                 
+                },
+                                                       
+            "readModes": {
+                  "description": "Reading modes such as ATR or Transmission",
+                   "value": "$readModes",
+                  "unitText": "null"                                 
+                },
+                   "resolution": {
+                  "description": "Resolution",
+                   "value": "$resolution",
+                  "unitText": "null"                                 
+                },
+                "numScans": {
+                  "description": "Number of scans for each run",
+                   "value": "$numScans",
+                  "unitText": "null"                                 
+                },
+                "correction": {
+                  "description": "Correction method used when taking measurements",
+                   "value": "$correction",
+                  "unitText": "null"                                 
+                }
+                
+              }
+                    
+                  
+}
+    
+
+
+

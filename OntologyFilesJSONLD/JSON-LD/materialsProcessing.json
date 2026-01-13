@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "SampleID": "https://schema.org/",
+    "@vocab": "http://www.w3.org/2001/XMLSchema#",
+    "sinteringTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "sinteringPressure": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "sinteringAtmosphere": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "thermalCuringTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "thermalCuringPressure": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "thermalCuringDuration": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "etchingTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "etchingDwellTime": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "etchingRampRates": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "forgingTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "forgingPressure": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "annealingTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "annealingTime": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "annealingAtmosphere": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "quenchingTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "quenchingTime": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "quenchingCoolingRate": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "weldingTravelSpeed": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "weldingCurrent": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "weldingArc": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "electroplatingCurrent": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "electroplatingIonConcentration": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "extrusionTemperature": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "extrusionRate": "https://cwrusdle.bitbucket.io/Ontology/materials-processing.owl",
+    "value": "https://schema.org/value",
+    "description": "https://schema.org/description",
+    "unitText": "https://schema.org/unitText"
+  },
+  "SampleID": {
+        "@type": "PropertyValue",
+        "description": "Sample ID",
+        "value": "$SampleID",
+        "unitText": "Null"
+    },
+  "sinteringTemperature": {
+      "@type": "PropertyValue",
+      "description": "Temperature parameter for Sintering process",
+      "value": "$sinteringTemperature",
+      "unitText": "Null"
+  },
+  "sinteringPressure": {
+    "@type": "PropertyValue",
+    "description": "Pressure parameter for Sintering process",
+    "value": "$sinteringPressure",
+    "unitText": "Null"
+  },
+  "sinteringAtmosphere": {
+    "@type": "PropertyValue",
+    "description": "Atmosphere parameter for Sintering process",
+    "value": "$sinteringAtmosphere",
+    "unitText": "Null"
+  },
+  "thermalCuringTemperature": {
+    "@type": "PropertyValue",
+    "description": "Temperature parameter for Thermal Curing process",
+    "value": "$thermalCuringTemperature",
+    "unitText": "Null"
+  },
+  "thermalCuringPressure": {
+    "@type": "PropertyValue",
+    "description": "Pressure parameter for Thermal Curing process",
+    "value": "$thermalCuringPressure",
+    "unitText": "Null"
+  },
+  "thermalCuringDuration": {
+    "@type": "PropertyValue",
+    "description": "Duration parameter for Thermal Curing process",
+    "value": "$thermalCuringDuration",
+    "unitText": "Null"
+  },
+  "etchingTemperature": {
+    "@type": "PropertyValue",
+    "description": "Temperature parameter for Etching process",
+    "value": "$etchingTemperature",
+    "unitText": "Null"
+  },
+  "etchingDwellTime": {
+    "@type": "PropertyValue",
+    "description": "Dwell time parameter for Etching process",
+    "value": "$etchingDwellTime",
+    "unitText": "Null"
+  },
+  "etchingRampRates": {
+    "@type": "PropertyValue",
+    "description": "Ramp rates parameter for Etching process",
+    "value": "$etchingRampRates",
+    "unitText": "Null"
+  },
+  "forgingTemperature": {
+    "@type": "PropertyValue",
+    "description": "Temperature parameter for Forging process",
+    "value": "$forgingTemperature",
+    "unitText": "Null"
+  },
+  "forgingPressure": {
+    "@type": "PropertyValue",
+    "description": "Pressure parameter for Forging process",
+    "value": "$forgingPressure",
+    "unitText": "Null"
+  },
+  "annealingTemperature": {
+    "@type": "PropertyValue",
+    "description": "Temperature parameter for Annealing process",
+    "value": "$annealingTemperature",
+    "unitText": "Null"
+  },
+  "annealingTime": {
+    "@type": "PropertyValue",
+    "description": "Time parameter for Annealing process",
+    "value": "$annealingTime",
+    "unitText": "Null"
+  },
+  "annealingAtmosphere": {
+    "@type": "PropertyValue",
+    "description": "Atmosphere parameter for Annealing process",
+    "value": "$annealingAtmosphere",
+    "unitText": "Null"
+  },
+  "quenchingTemperature": {
+    "@type": "PropertyValue",
+    "description": "Temperature parameter for Quenching process",
+    "value": "$quenchingTemperature",
+    "unitText": "Null"
+  },
+  "quenchingTime": {
+    "@type": "PropertyValue",
+    "description": "Time parameter for Quenching process",
+    "value": "$quenchingTime",
+    "unitText": "Null"
+  },
+  "quenchingCoolingRate": {
+    "@type": "PropertyValue",
+    "description": "Cooling Rate parameter for Quenching process",
+    "value": "$quenchingCoolingRate",
+    "unitText": "Null"
+  },
+  "weldingTravelSpeed": {
+    "@type": "PropertyValue",
+    "description": "Travel Speed parameter for Welding process",
+    "value": "$weldingTravelSpeed",
+    "unitText": "Null"
+  },
+  "weldingCurrent": {
+    "@type": "PropertyValue",
+    "description": "Current parameter for Welding process",
+    "value": "$weldingCurrent",
+    "unitText": "Null"
+  },
+  "weldingArc": {
+    "@type": "PropertyValue",
+    "description": "Arc parameter for Welding process",
+    "value": "$weldingArc",
+    "unitText": "Null"
+  },
+  "electroplatingCurrent": {
+    "@type": "PropertyValue",
+    "description": "Current parameter for Electro Plating process",
+    "value": "$electroplatingCurrent",
+    "unitText": "Null"
+  },
+  "electroplatingIonConcentration": {
+    "@type": "PropertyValue",
+    "description": "Ion concentration parameter for Electro Plating process",
+    "value": "$electroplatingIonConcentration",
+    "unitText": "Null"
+  },
+  "extrusionTemperature": {
+    "@type": "PropertyValue",
+    "description": "Temperature parameter for Extrusion process",
+    "value": "$extrusionTemperature",
+    "unitText": "Null"
+  },
+  "extrusionRate": {
+    "@type": "PropertyValue",
+    "description": "Rate parameter for Extrusion process",
+    "value": "$extrusionRate",
+    "unitText": "Null"
+  }
+
+}

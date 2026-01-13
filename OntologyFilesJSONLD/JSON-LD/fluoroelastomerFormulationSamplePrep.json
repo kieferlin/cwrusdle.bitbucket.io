@@ -1,0 +1,140 @@
+{
+  "@context": {
+    "samplePrep": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "fluoroelastomerProperties": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "material": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "batch": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "polydispersityIndex": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "gyrationRadius": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "hydrodynamicRadius": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "peakMolecularWeight": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "numberAverageMolecularWeight": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "weightAverageMolecularWeight": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "intrinsicVelocity": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "fluoroelastomerFilmPreparation": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "substrate": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "cleaningProcess": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "substrateType": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "substrateDimensions": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "solventProperties": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "solventType": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "solventConcentration": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "adhesionPromoter": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "filmDimensions": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoatingParameters": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoatingTime": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoatingSpeed": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "dryingTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "dryingTime": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "spincoaterInstrument": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "preFiltration": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "description": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "value": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "units": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024"
+  },
+  "samplePrep": {
+    "value": "$samplePrep",
+    "sampleID": {
+      "description": "Sample ID of the sample prepared.",
+      "value": "$sampleID"
+    },
+    "fluoroelastomerProperties": {
+      "material": {
+        "value": "$material",
+        "description": "Fluoroelastomer material."
+      },
+      "batch": {
+        "value": "$material",
+        "description": "Fluoroelastomer batch."
+      },
+      "polydispersityIndex": {
+        "value": "$polydispersityIndex",
+        "description": "Polydispersity index of the fluoroelastomer."
+      },
+      "gyrationRadius": {
+        "value": "$gyrationRadius",
+        "description": "Radius of gyration of the fluoroelastomer."
+      },
+      "hydrodynamicRadius": {
+        "value": "$hydrodynamicRadius",
+        "description": "Hydrodynamic radius of the fluoroelastomer."
+      },
+      "peakMolecularWeight": {
+        "value": "$peakMolecularWeight",
+        "description": "Peak molecular weight of the fluoroelastomer."
+      },
+      "numberAverageMolecularWeight": {
+        "value": "$numberAverageMolecularWeight",
+        "description": "Number average molecular weight of the fluoroelastomer."
+      },
+      "weightAverageMolecularWeight": {
+        "value": "$weightAverageMolecularWeight",
+        "description": "Weight molecular weight of the fluoroelastomer."
+      },
+      "intrinsicVelocity": {
+        "value": "$intrinsicVelocity",
+        "description": "Intrinsic velocity of the fluoroelastomer."
+      }
+    },
+    "fluoroelastomerFilmPreparation": {
+      "substrate": {
+        "cleaningProcess": {
+          "value": "$cleaningProcess",
+          "description": "Cleaning process of the substrate."
+        },
+        "substrateType": {
+          "value": "$substrateType",
+          "description": "Type of substrate being used for AFM study."
+        },
+        "substrateDimensions": {
+          "value": "$substrateDimensions",
+          "description": "Dimensions of the substrate."
+        }
+      },
+      "solventProperties": {
+        "solventType": {
+          "value": "$solventType",
+          "description": "Type of solvent for thin-film preparation."
+        },
+        "solventConcentration": {
+          "value": "$solventConcentration",
+          "description": "Solvent concentration."
+        }
+      },
+      "adhesionPromoter": {
+        "value": "$adhesionPromoter",
+        "description": "Adhesion promoter."
+      },
+      "filmDimensions": {
+        "value": "$filmDimensions",
+        "description": "Dimension of the fluoroelastomer film."
+      },
+      "spincoatingParameters": {
+        "spincoatingTime": {
+          "value": "$spincoatingTime",
+          "description": "Time taken for spin-coating."
+        },
+        "spincoatingSpeed": {
+          "value": "$spincoatingSpeed",
+          "description": "Speed of spin-coating."
+        }
+      },
+      "dryingTemperature": {
+        "value": "$dryingTemperature",
+        "description": "Drying temperature in the evaporation process of film preparation."
+      },
+      "dryingTime": {
+        "value": "$dryingTime",
+        "description": "Drying time in the evaporation process of film preparation."
+      },
+      "spincoaterInstrument": {
+        "value": "$spincoaterInstrument",
+        "description": "Spin-coating instrument."
+      },
+      "preFiltration": {
+        "value": "$preFiltration",
+        "description": "Is there pre-filtration prior to film preparation?"
+      }
+    }
+  }
+}

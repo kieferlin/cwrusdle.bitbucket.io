@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "instrument": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "sampleID": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "software": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "model": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "manufacturer": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "hotstageDimensions": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "microscopeOptics": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "sampleSize": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "resolution": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "tipMaterial": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "laserType": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "laserWavelength": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "piezoelectricSensorMaterial": "https://cwrusdle.bitbucket.io/Ontology/polymerFormulation.owl",
+    "value": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024",
+    "units": "https://ontobee.org/ontology/CHMO?iri=http://purl.obolibrary.org/obo/CHMO_0001024"
+  },
+  "instrument": {
+    "value": "$instrument",
+    "sampleID": {
+      "description": "Sample ID of the AFM instrument.",
+      "value": "$sampleID"
+    },
+    "software": {
+      "description": "Software used in the AFM instrument.",
+      "value": "$software"
+    },
+    "model": {
+      "description": "Model of the AFM instrument.",
+      "value": "$model"
+    },
+    "manufacturer": {
+      "description": "Manufacturer of the AFM instrument.",
+      "value": "$manufacturer"
+    },
+    "hotstageDimensions": {
+      "description": "Dimensions of the hot stage in the AFM instrument.",
+      "value": "$hotstageDimensions"
+    },
+    "microscopeOptics": {
+      "description": "Microscope optics and camera specifications in the AFM instrument.",
+      "value": "$microscopeOptics"
+    },
+    "sampleSize": {
+      "description": "Dimensions of the sample size permissible to be loaded for using AFM instrument.",
+      "value": "$resonanceFrequency"
+    },
+    "resolution": {
+      "description": "Resolution of the AFM instrument.",
+      "value": "$resolution"
+    },
+    "tipMaterial": {
+      "description": "Material of the AFM tip.",
+      "value": "$tipMaterial"
+    },
+    "laserType": {
+      "description": "Type of laser used in the AFM instrument.",
+      "value": "$laserType"
+    },
+    "laserWavelength": {
+      "description": "Wavelength of the laser used in the AFM instrument.",
+      "value": "$laserWavelength"
+    },
+    "piezoelectricSensorMaterial": {
+      "description": "Material of the piezoelectric sensor used in the AFM instrument.",
+      "value": "$piezoelectricSensorMaterial"
+    }
+  }
+}

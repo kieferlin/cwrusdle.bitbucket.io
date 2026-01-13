@@ -1,0 +1,46 @@
+
+
+{
+  "@context": {
+  "measurementMetadata": "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",
+    "wavelengthRange": "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",
+    "readModes": "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",  
+     "resolution":  "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",
+     "baseline":  "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",    
+    "value": "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/caryUvVis.owl"
+  },
+
+   "measurementMetadata": {
+               
+            "wavelengthRange": {
+                  "description": "Range of the wavelength the reading will take place",
+                   "value": "$wavelengthRange",
+                  "unitText": "null"                                 
+                },
+                                                       
+            "readModes": {
+                  "description": "Read modes : Reflection or Transmission",
+                   "value": "$readModes",
+                  "unitText": "null"                                 
+                },
+                   "resolution": {
+                  "description": "Resolution",
+                   "value": "$resolution",
+                  "unitText": "null"                                 
+                },
+                "baseline": {
+                  "description": "Specify if it is a baseline measurement",
+                   "value": "$baseline",
+                  "unitText": "null"                                 
+                }
+                
+              }
+                    
+                  
+}
+    
+
+
+

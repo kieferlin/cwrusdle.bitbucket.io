@@ -1,0 +1,126 @@
+
+
+{
+  "@context": {
+    "capillaryElectrophoresis": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "sampleInformation": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "unit": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "sampleID": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "mobility": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "experimetalMetadata": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "bufferComposition": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "bufferPh": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "zetaPotential": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "appliedVoltage": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "columnTemperature": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "detectorType": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "capillaryLength": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "capillaryMaterial": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "capillaryCoating": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "capillaryDiameter": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "polarity": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "ionicStrength": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "injectionPressure": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl",
+    "ionicStrengthCorrection": "https://cwrusdle.bitbucket.io/Ontology/capillary-electrophoresis.owl"
+  },
+
+    "capillaryElectrophoresis": {
+
+                "experimetalMetadata" : {                  
+            "bufferComposition": {
+                  "description": "Buffer composition, buffer mantains a constant ph and provides ions that carry a current",
+                   "value": "$bufferComposition",
+                  "unitText": "null"                                 
+                },              
+      
+            "bufferPh": {
+                  "description": " Buffer pH",
+                   "value": "$bufferpH",
+                  "unitText": "null"                                 
+                },
+                              
+            "zetaPotential": {
+                  "description": "  zeta Potential",
+                   "value": "$zetaPotential",
+                  "unitText": "null"                                 
+                },
+              
+                 
+            "appliedVoltage": {
+                  "description": "Volage applied: it drives the movement of the Analyte",
+                   "value": "$appliedVoltage",
+                  "unitText": "null"                                 
+                },
+                                            
+            "columnTemperature": {
+                  "description": "Column temperature",
+                   "value": "$columnTemperature",
+                  "unitText": "null"                                 
+                },
+                 
+            "detectorType": {
+                  "description": "Type of Detector",
+                  "value": "$detectorType",
+                  "unitText": "null"                                 
+                },
+                                             
+            "capillaryLength": {
+                  "description": " Capillary Length",
+                  "value": "$capillaryLength",
+                  "unitText": "null"                                 
+                },
+                
+            "capillaryMaterial": {
+                  "description": "Capillary Material",
+                  "value": "$capillaryMaterial",
+                  "unitText": "null"                                 
+                },
+                
+            "capillaryCoating": {
+                  "description": "Material used in capillary coating (when present)",
+                   "value": "$capillaryCoating",
+                  "unitText": "null"                                 
+                },
+                  
+            "capillaryDiameter": {
+                  "description": " Diameter of the capillary",
+                   "value": "$capillaryDiameter",
+                  "unitText": "null"                                 
+                },
+                
+            "polarity": {
+                  "description": "Material used in capillary coating (when present)",
+                   "value": "$capillaryCoating",
+                  "unitText": "null"                                 
+                },
+                  
+            "ionicStrength": {
+                  "description": " Diameter of the capillary",
+                   "value": "$capillaryDiameter",
+                  "unitText": "null"                                 
+                },
+                "injectionPressure": {
+                  "description": "Material used in capillary coating (when present)",
+                   "value": "$capillaryCoating",
+                  "unitText": "null"                                 
+                },
+                  
+            "ionicStrengthCorrection": {
+                  "description": " Diameter of the capillary",
+                   "value": "$capillaryDiameter",
+                  "unitText": "null"                                 
+                }              
+                }
+              
+                  }
+                    
+                  
+}
+    
+
+
+

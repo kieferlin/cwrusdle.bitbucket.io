@@ -1,0 +1,59 @@
+PVsystem  
+  PVSystem 
+    BillOfMaterials 
+    Devices 
+      Location 
+        Altitude 
+        Elevation 
+        Latitude 
+        LocationID
+        LocationType 
+        Longitude
+      Orientation 
+        Azimuth 
+        Tilt 
+      Product 
+        ProdDatasheet 
+        ProdMfr 
+        ProdName 
+        ProdType 
+      SerialNum 
+    SystemID 
+    SystemType 
+    CapacityAC 
+    CapacityDC 
+    Production 
+      IrradGlobalHorizMeas 
+        EndTime 
+        StartTime
+      IrradPlaneOfArrayMeas 
+        EndTime 
+        StartTime
+      PowerACMeas 
+        PowerACArray 
+          EndTime 
+          StartTime 
+      TempAmbMeas 
+        TempAmbArray 
+          EndTime 
+          StartTime
+          
+    WeatherDataRecord 
+      Albedo 
+      HumidityRelative 
+      IrradDiffuseHorizontal 
+      IrradDirectNormal 
+      IrradGlobalHorizontal 
+      IrradPlaneOfArray 
+      PrecipitalWater 
+      ReferenceCellMeasurement 
+        CurrentShortCircuit 
+        TempRefCell 
+        VoltageOpenCircuit 
+      Snowfall 
+      TempAmb 
+      WindSpeed
+      
+    
+  
+

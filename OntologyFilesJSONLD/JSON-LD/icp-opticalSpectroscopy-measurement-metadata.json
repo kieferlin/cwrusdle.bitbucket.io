@@ -1,0 +1,60 @@
+
+{
+  "@context": {
+    "inductivelyCoupledPlasmaOpticalSpectroscopy": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "unit": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "sampleId": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "temperature": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "rfPower": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "washTime": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "flowRate": "https://cwrusdle.bitbucket.io/Ontology/icp.owl"
+  },
+
+    "inductivelyCoupledPlasmaOpticalSpectroscopy": {
+
+            "sampleId": {
+                  "description": "Sample id",
+                   "value": "$sampleId",
+                  "unitText": "null"
+                },
+
+            "temperature": {
+                  "description": "Temperature of the Experiment",
+                   "value": "$temperature",
+                  "unitText": "null"
+                },
+
+            "rfPower": {
+                  "description": "RF Power",
+                   "value": "$rfpower",
+                  "unitText": "null"
+                },
+
+
+            "washTime": {
+                  "description": "Wash time",
+                   "value": "$washTime",
+                  "unitText": "null"
+                },
+
+            "flowRate": {
+                  "description": "Flow rate applied",
+                   "value": "$flowRate",
+                  "unitText": "null"
+                }
+
+
+
+
+                  }
+
+
+}
+
+
+
+

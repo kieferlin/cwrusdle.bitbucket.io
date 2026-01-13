@@ -1,0 +1,324 @@
+{
+    "@context": {
+        "@vocab": "http://www.w3.org/2001/XMLSchema#",
+        "MeasurementTechnique": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "value": "https://schema.org/value",
+        "unitText": "https://schema.org/unitText",
+        "description": "https://schema.org/description",
+        "SampleID": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "PrintMethod": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "Manufacturer": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "brand": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "Material": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "ChemicalComposition": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "LotNumber": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "BuildGeometry": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "SlicingParameter": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "FlowRate": "http://purl.obolibrary.org/obo/NCIT_C82554",
+        "LayerThickness": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "DepositionSpeed": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "InfillPercentage": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "RasterAngle": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "RasterPattern": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "ContourWidth": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "AirGap": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "NozzleDiameter": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "WidthTop": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "WidthBot": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "BuildOrientation": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "temperature": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "EnvironmentTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "ExtrusionTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "PlatformTemperature": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "InSitu": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "ExSitu": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "profilometer": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "IRCamera": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "HighSpeedCamera": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "image": "http://schema.org/image",
+        "VideoObject": "https://schema.org/VideoObject",
+        "duration": "https://schema.org/duration",
+        "SurfaceRoughness": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "FrameRate": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "CompositeRatio": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "BasePolymer": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "FillerMaterial": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "MechanicalProperties": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "TensileStrength": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "TensileModulus": "https://cwrusdle.bitbucket.io/Ontology/polymerAdditiveManufacturing.owl",
+        "Density": "http://purl.obolibrary.org/obo/NCIT_C45781",
+        "MolecularWeight": "http://purl.obolibrary.org/obo/NCIT_C28272",
+        "Viscosity": "http://purl.obolibrary.org/obo/NCIT_C75912"
+    },
+    "SampleID": {
+        "value": "$SampleID",
+        "@type": "string",
+        "Manufacturer": {
+            "value": "$Manufacturer",
+            "@type": "string",
+            "description": "Manufacturer of the sample."
+        },
+        "LotNumber": {
+            "value": "$LotNumber",
+            "@type": "string",
+            "description": "Identifier for the manufactured batch number of the material of the sample."
+        },
+        "BuildGeometry": {
+            "value": "$BuildGeometry",
+            "@type": "string",
+            "description": "Shape of printed sample."
+        },
+        "PrintMethod": {
+            "value": "$PrintMethod",
+            "@type": "string",
+            "description": "Printing Method used to print the sample."
+        },
+        "SlicingParameter": {
+            "description": "Parameters controlling the building of slices from CAD model.",
+            "FlowRate": {
+                "value": "$flowRate",
+                "@type": "float",
+                "unitText": "mm3/s",
+                "description": "The speed of movement of a fluid."
+            },
+            "LayerThickness": {
+                "value": "$LayerThickness",
+                "@type": "string",
+                "unitText": "mm",
+                "description": "Thickness of each slice layer."
+            },
+            "DepositionSpeed": {
+                "value": "$DepositionSpeed",
+                "@type": "float",
+                "unitText": "mm/s",
+                "description": "Speed at which the print material is deposited."
+            },
+            "InfillPercentage": {
+                "value": "$InfillPercentage",
+                "@type": "float",
+                "unitText": "%",
+                "description": "Percentage representing how much space inside a print material is filled."
+            },
+            "RasterAngle": {
+                "value": "$RasterAngle",
+                "@type": "float",
+                "unitText": "deg",
+                "description": "The angle measured from the X-axis (horizontal axis) of a layer to a raster."
+            },
+            "RasterPattern": {
+                "value": "$RasterPattern",
+                "@type": "string",
+                "description": "Building Pattern."
+            },
+            "ContourWidth": {
+                "value": "$ContourWidth",
+                "@type": "float",
+                "unitText": "mm",
+                "description": "The width of the material bead used for contours."
+            },
+            "AirGap": {
+                "value": "$AirGap",
+                "@type": "float",
+                "unitText": "mm",
+                "description": "The distances or spaces between two adjacent rasters or between a raster and a contour or between two adjacent contours."
+            },
+            "NozzleDiameter": {
+                "value": "$NozzleDiameter",
+                "@type": "float",
+                "unitText": [
+                    "mm",
+                    "in"
+                ],
+                "description": "Diameter of printer nozzle."
+            },
+            "WidthTop": {
+                "value": "$WidthTop",
+                "@type": "float",
+                "unitText": "mm",
+                "description": "null"
+            },
+            "WidthBot": {
+                "value": "$WidthBot",
+                "@type": "float",
+                "unitText": "mm",
+                "description": "null"
+            }
+        },
+        "BuildOrientation": {
+            "value": "$BuildOrientation",
+            "@type": "string",
+            "description": "Direction of build."
+        },
+        "temperature": {
+            "ExtrusionTemperature": {
+                "value": "$ExtrusionTemperature",
+                "@type": "float",
+                "unitText": "Celsius",
+                "description": "Temperature the material is extruded at."
+            },
+            "PlatformTemperature": {
+                "value": "$PlatformTemperature",
+                "@type": "float",
+                "unitText": "Celsius",
+                "description": "Temperature of build platform."
+            },
+            "EnvironmentTemperature": {
+                "value": "$EnvironmentTemperature",
+                "@type": "float",
+                "unitText": "Celsius",
+                "description": "null"
+            }
+        },
+        "MeasurementTechnique": {
+            "InSitu": {
+                "profilometer": {
+                    "SurfaceRoughness": {
+                        "value": "$SurfaceRoughness",
+                        "@type": "float",
+                        "unitText": "micrometer"
+                    },
+                    "image": {
+                        "value": "$image",
+                        "@type": "string",
+                        "description": "Image obtained from profilometer. Can also be a filepath where image is stored."
+                    },
+                    "brand": {
+                        "value": "$brand",
+                        "@type": "string",
+                        "description": "Instrument brand name."
+                    }
+                },
+                "IRCamera": {
+                    "image": {
+                        "value": "$image",
+                        "@type": "string",
+                        "description": "Image obtained from IR camera. Can also be a filepath where image is stored."
+                    },
+                    "VideoObject": {
+                        "value": "$VideoObject",
+                        "@type": "string",
+                        "description": "Video obtained from IR camera. Can also be a filepath where video is stored."
+                    },
+                    "duration": {
+                        "value": "$duration",
+                        "@type": "float",
+                        "unitText": [
+                            "s",
+                            "min",
+                            "hrs"
+                        ],
+                        "description": "Time duration of Video Object"
+                    },
+                    "temperature": {
+                        "value": "$temperature",
+                        "@type": "float",
+                        "unitText": "Celsius",
+                        "description": "Temperature obtained from IR Camera."
+                    },
+                    "FrameRate": {
+                        "value": "$FrameRate",
+                        "@type": "float",
+                        "unitText": "frame/sec",
+                        "description": "Frame Rate of the Video or Image Sequence."
+                    },
+                    "brand": {
+                        "value": "$brand",
+                        "@type": "string",
+                        "description": "Brand name of IR Camera."
+                    }
+                },
+                "HighSpeedCamera": {
+                    "image": {
+                        "value": "$image",
+                        "@type": "string",
+                        "description": "Image obtained from HS camera. Can also be a filepath where image is stored."
+                    },
+                    "VideoObject": {
+                        "value": "$VideoObject",
+                        "@type": "string",
+                        "description": "Video obtained from HS camera. Can also be a filepath where video is stored."
+                    },
+                    "duration": {
+                        "value": "$duration",
+                        "@type": "float",
+                        "unitText": [
+                            "s",
+                            "min",
+                            "hrs"
+                        ],
+                        "description": "Time duration of Video Object"
+                    },
+                    "FrameRate": {
+                        "value": "$FrameRate",
+                        "@type": "float",
+                        "unitText": "frame/sec",
+                        "description": "Frame Rate of the Video or Image Sequence."
+                    },
+                    "brand": {
+                        "value": "$brand",
+                        "@type": "string",
+                        "description": "Brand name of HS Camera."
+                    }
+                }
+            },
+            "ExSitu": {
+                "value": "$ExSitu"
+            }
+        },
+        "Material": {
+            "value": "$Material",
+            "@type": "string",
+            "description": "Name or Type of material used to print sample.",
+            "ChemicalComposition": {
+                "BasePolymer": {
+                    "value": "$BasePolymer",
+                    "@type": "string",
+                    "description": "Base Polymer in the material used to print sample."
+                },
+                "FillerMaterial": {
+                    "value": "$FillerMaterial",
+                    "@type": "string",
+                    "description": "Filler Material in the material used to print sample."
+                },
+                "CompositeRatio": {
+                    "value": "$CompositeRatio",
+                    "@type": "float",
+                    "description": "Ratio of Base Polymer to Filler Material."
+                },
+                "MolecularWeight": {
+                    "value": "$MolecularWeight",
+                    "@type": "float",
+                    "unitText": "g/mol",
+                    "description": "The sum of the relative atomic masses of the constituent atoms of a molecule."
+                }
+            },
+            "MechanicalProperties": {
+                "TensileStrength": {
+                    "value": "$TensileStrength",
+                    "@type": "float",
+                    "unitText": [
+                        "MPa",
+                        "psi"
+                    ]
+                },
+                "TensileModulus": {
+                    "value": "$TensileModulus",
+                    "@type": "float",
+                    "unitText": "MPa"
+                }
+            },
+            "Density": {
+                "value": "$Density",
+                "@type": "float",
+                "unitText": "g/cm^3",
+                "description": "Density of print material."
+            },
+            "Viscosity": {
+                "value": "$Viscosity",
+                "@type": "float",
+                "unitText": "Pas",
+                "description": "Intrinsic viscosity of print material."
+            }
+        }
+    }
+}

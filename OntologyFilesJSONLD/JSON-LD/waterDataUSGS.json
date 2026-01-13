@@ -1,0 +1,87 @@
+
+{
+  "@context": {
+    "waterUSGS": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "gageHeight": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "waterTemp": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "conductance": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "pH": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "oxigen": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "turbidity": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "nitrate": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl", 
+    "discharge": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl", 
+    "description": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "time" : "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "date": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "timezone": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",    
+  },
+
+    "waterUSGS": {               
+                 
+                "data": {
+                  "time" : {
+                  "description": "time",
+                   "value": "$time",
+                  "unitText": "null"
+              
+                },
+                    "date" : {
+                  "description": "Date of the measurement",
+                   "value": "$date",
+                  "unitText": "null"
+              
+                },
+                   "timezone" : {
+                  "description": "Timezone of the location",
+                   "value": "$timezone",
+                  "unitText": "null"
+                },
+                "waterTemp" : {
+                  "description": "Water temperature at that location",
+                   "value": "$waterTemp",
+                  "unitText": "null"
+              
+                },
+                  "conductance": {                           
+                  "description": "Specific conductance",
+                   "value": "$conductance",
+                  "unitText": "null"  
+                },
+                  "pH": {
+                  "description": "water pH",
+                   "value": "$ph",
+                  "unitText": "null"  
+                },
+                   "oxigen": {
+                  "description": " Concentration of Dissolved oxigen",
+                   "value": "$oxigen",
+                  "unitText": "null" 
+                },
+                   "turbidity": {
+                  "description": "water turbidity",
+                   "value": "$turbidity",
+                  "unitText": "null"       
+                },
+                   "nitrate": {
+                  "description": " Concentration of nitrate",
+                   "value": "$nitrate",
+                  "unitText": "null" 
+                },
+                    "discharge": {
+                  "description": " Water discharge",
+                   "value": "$discharge",
+                  "unitText": "null" 
+                },
+                   "gageHeight" : {
+                  "description": "Gage height",
+                   "value": "$gageHeight",
+                  "unitText": "null"            
+                }
+
+                }
+              }
+      
+
+}

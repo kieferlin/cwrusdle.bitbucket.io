@@ -1,0 +1,135 @@
+{
+	"@context": {
+		"@vocab": "http://www.w3.org/2001/XMLSchema#",
+		"schema": "https://schema.org/",
+
+		"currentVoltage": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"measurementSettings": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"calibrationSettings": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"sweepType": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"polarity": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"irradiance": "https://cwrusdle.bitbucket.io/Ontology/oeo-full.owl",
+		"flashDuration": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"timeStamp": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"equipmentType": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"ProdSpecifications": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+		"spacialUniformity": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"temporalStability": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"spectralClass": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"analysis": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"performanceParameters": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"maximumPowerPoint": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"shuntResistance": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"seriesResistance": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"fillFactor": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl",
+		"curves": "https://cwrusdle.bitbucket.io/Ontology/currentVoltage.owl"
+	},
+	"currentVoltage": {
+		"schema:description": "A measurement method based on the current-voltage plot of photovoltaic systems.",
+		"measurementSettings": {
+			"schema:description": "The settings for the equipment used to measure the current voltage.",
+			"calibrationSettings": {
+				"schema:description": "Unique settings of measurement equipment.",
+				"schema:value": "$calibrationSettings",
+				"schema:unitText": null
+			},
+			"sweepType": {
+				"schema:description": "The sweep method used for current voltage measurement.",
+				"schema:value": "$sweepType",
+				"schema:unitText": null
+			},
+			"polarity": {
+				"schema:description": "Positive or negative polarity for the voltage.",
+				"schema:value": "$polarity",
+				"schema:unitText": null
+			},
+			"irradiance": {
+				"schema:description": "Measurement setting describing the intensity of the light energy.",
+				"schema:value": "$irradiance",
+				"schema:unitText": "Suns"
+			},
+			"flashDuration": {
+				"schema:description": "The amount of time for a flash during currentVoltage measurement.",
+				"schema:value": "$flashDuration",
+				"schema:unitText": "ms"
+			},
+			"timeStamp": {
+				"@type": "dateTime",
+				"schema:description": "The time at which the specific current voltage measurement took place.",
+				"schema:value": "$timeStamp",
+				"schema:unitText": null
+			}
+		},
+		"equipmentType": {
+			"schema:description": "The equipment used for the current voltage measurement.",
+			"schema:manufacturer": {
+				"schema:description": "The manufacturer of the product",
+				"schema:value": "$manufacturer",
+				"schema:unitText": null
+			},
+			"schema:model": {
+				"schema:description": "The model of the product",
+				"schema:value": "$model",
+				"schema:unitText": null
+			},
+			"ProdSpecifications": {
+				"spacialUniformity": {
+					"schema:description": "The measurement of how the irradiance varies over a defined area.",
+					"schema:value": "$spacialUniformity",
+					"schema:unitText": null
+				},
+				"temporalStability": {
+					"schema:description": "The output of a solar system at a certain spot, comparing the max irradiance and minimum irradiance.",
+					"schema:value": "$temporalStability",
+					"schema:unitText": null
+				},
+				"spectralClass": {
+					"schema:description": "Definition of how well the distribution of irradiance among different wavelengths approximates natural sunlight.",
+					"schema:value": "$spectralClass",
+					"schema:unitText": null
+				}
+			}
+		},
+		"schema:measurementTechnique": {
+			"schema:description": "The technique used to measure the CurrentVoltage data. The value can be dark, illuminated, or pseudo.",
+			"schema:value": "$measurementTechnique",
+			"schema:unitText": null
+		},
+		"analysis": {
+			"schema:description": "The curve fitting and associated parameters created from the curve fitting.",
+			"analysisMethod": {
+				"schema:description": "The curve fitting and analysis method used to create the current voltage curve",
+				"schema:value": "$analysisMethod",
+				"schema:unitText": null
+			},
+			"performanceParameters": {
+				"schema:description": "The extracted parameters from the current voltage measurement.",
+				"maximumPowerPoint": {
+					"schema:description": "The point on the power curve that has the highest power output, or the product of the voltage and current.",
+					"schema:value": "$maximumPowerPoint",
+					"schema:unitText": "W"
+				},
+				"shuntResistance": {
+					"schema:description": "The slope of the dark current versus applied voltage.",
+					"schema:value": "$shuntResistance",
+					"schema:unitText": "ohm*cm^2"
+				},
+				"seriesResistance": {
+					"schema:description": "Equivalent resistance throughout the solar cell.",
+					"schema:value": "$seriesResistance",
+					"schema:unitText": "ohm"
+				},
+				"fillFactor": {
+					"schema:description": "The ratio of the maximum power to the product of the short circuit current and open circuit voltage.",
+					"schema:value": "$fillFactor",
+					"schema:unitText": null
+				}
+			}
+		},
+		"curves": {
+			"schema:description": "The base current voltage data that is to be used in the currentVoltage measurement method.",
+			"schema:value": "$curves",
+			"schema:unitText": null
+		}
+	}
+}

@@ -1,0 +1,699 @@
+{
+  "@context": {
+    "unitText": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "value": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "description": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "alternativeIdentifier": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Albedo": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Altitude": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "AveragePowerFromGrid": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "Azimuth": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "BatTemp": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "BatteryBankCurrentIn": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "BatteryBankCurrentOut": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "BatteryBankVoltage": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "CapacityAC": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "CapacityDC": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "ChargeControllerCurrent": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "ChargeControllerTemp": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "ChargeControllerVoltage": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "ClimateZone": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "CumulativeEnergyToGrid": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "CurrentShortCircuit": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "CurrentToCriticalLoad": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "dasVoltage": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "dasTemp": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "DateTime": "https://schema.org/DateTime",
+    "Elevation": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "EnergyFromCriticalLoad": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "EnergyProduction": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "EnergyToCriticalLoad": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "GridCurrent": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "GridVoltage": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "GridPowerFactor": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "HumidityRelative": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "ImportedCumulativeEnergyFromGrid": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "IndividualID": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "InverterID": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "InverterCurrent": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "InverterTemp": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "InverterVoltage": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "IrradDirectNormal": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "IrradDiffuseHorizontal": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "IrradGlobalHoriz": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "IrradPlaneOfArray": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Latitude": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Location": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "LocationType": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Longitude": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "ModTemp": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "ModuleID": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "NetCumulativeEnergyFromGrid": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "Orientation": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "PowerACMeas": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "PowerDC": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "PowerFactorAtCriticalLoad": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "PowerFromGrid": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "PowerToCriticalLoad": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "PowerToGrid": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "PrecipitalWater": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "PredictedPower": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "Production": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "PVSystem": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "RackingStructure": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "ReferenceCellMeasurement": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Snowfall": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "SystemInfo": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "SystemType": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "TempAmb": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "TempRefCell": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "Tilt": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "VoltageOpenCircuit": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "VoltageToCriticalLoad": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl",
+    "WindSpeed": "https://github.com/Open-Orange-Button/Orange-Button-Taxonomy",
+    "WindDirection": "https://cwrusdle.bitbucket.io/Ontology/photovoltaicModule.owl"
+  },
+  "PVSystem": {
+    "IndividualID": {
+      "@type": "string",
+      "unitText": null,
+      "value": "$IndividualID",
+      "description": "Alphanumeric identifier for the metadata document"
+    },
+    "SystemInfo": {
+      "@type": "meta-data",
+      "description": "General information about the system",
+      "SystemType": {
+        "@type": "string",
+        "unitText": null,
+        "value": "$SystemType",
+        "description": "System Type"
+      },
+      "RackingStructure": {
+        "@type": "string",
+        "unitText": null,
+        "value": "$RackingStructure",
+        "description": "PV mounting Structure"
+      },
+      "CapacityAC": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW",
+          "GW"
+        ],
+        "value": "$CapacityAC",
+        "description": "AC capacity"
+      },
+      "CapacityDC": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW",
+          "GW"
+        ],
+        "value": "$CapacityDC",
+        "description": "DC capacity"
+      },
+      "ModuleID": {
+        "@type": "meta-data",
+        "description": "Module Identifier",
+        "value": "$ModuleID"
+      },
+      "InverterID": {
+        "@type": "meta-data",
+        "description": "Inverter Identifier",
+        "value": "$InverterID",
+        "alternativeIdentifier": ["invt"]
+      },
+      "NumberofModules": {
+          "@type": "string",
+          "unitText": null,
+          "value": "$NumberofModules",
+          "description": "Number of PV panels in the inverter string"
+        },
+        "NumberofInverters": {
+          "@type": "string",
+          "unitText": null,
+          "value": "$NumberofInverters",
+          "description": "Total number of inverters at the site"
+        },
+      "Location": {
+        "@type": "meta-data",
+        "description": "information about site location",
+        "ClimateZone": {
+          "@type": "string",
+          "unitText": null,
+          "value": "$ClimateZone",
+          "description": "Koppen Geiger Climate Zone"
+        },
+        "Altitude": {
+          "@type": "number",
+          "unitText": [
+            "ft",
+            "km"
+          ],
+          "value": "$Altitude",
+          "description": "Distance above ground"
+        },
+        "Elevation": {
+          "@type": "number",
+          "unitText": [
+            "ft",
+            "km"
+          ],
+          "value": "$Elevation",
+          "description": "Distance above ground"
+        },
+        "Latitude": {
+          "@type": "number",
+          "unitText": "Degree",
+          "value": "$Latitude",
+          "description": "Latitude"
+        },
+        "Longitude": {
+          "@type": "number",
+          "unitText": "Degree",
+          "value": "$Longitude",
+          "description": "Longitude"
+        },
+        "LocationType": {
+          "@type": "string",
+          "unitText": null,
+          "value": "$LocationType",
+          "description": "Description of location"
+        }
+      },
+      "Orientation": {
+        "@type": "meta-data",
+        "description": "orientation of the module",
+        "Azimuth": {
+          "@type": "number",
+          "unitText": "Degree",
+          "value": "$Azimuth",
+          "description": "Module Azimuth"
+        },
+        "Tilt": {
+          "@type": "number",
+          "unitText": "Degree",
+          "value": "$Tilt",
+          "description": "Module Tilt"
+        }
+      }
+    },
+    "Production": {
+      "@type": "quantity",
+      "description": "Values measured in a time series dataset with information about the system",
+      "DateTime": {
+        "@type": "string",
+        "unitText": null,
+        "description": "Timestamp",
+        "alternativeIdentifier": [
+          "tmst",
+          "datetime"
+        ]
+      },
+      "StartTime": {
+        "@type": "string",
+        "unitText": null,
+        "value": "$StartTime",
+        "description": "Start of Timeseries Data"
+      },
+      "EndTime": {
+        "@type": "string",
+        "unitText": null,
+        "value": "$EndTime",
+        "description": "End of Timeseries Data"
+      },
+      "PowerACMeas": {
+        "PowerACArray": {
+          "@type": "number",
+          "unitText": [
+            "W",
+            "kW",
+            "MW",
+            "GW"
+          ],
+          "description": "AC Power Data",
+          "alternativeIdentifier": [
+            "iacp",
+            "invwt",
+            "PV_AC_Power_Out_KW",
+            "syspac_avg"
+          ]
+        }
+      },
+      "PowerDC": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW",
+          "GW"
+        ],
+        "description": "DC Power Data",
+        "alternativeIdentifier": [
+          "idcp"
+        ]
+      },
+      "BatteryBankCurrentOut": {
+        "@type": "number",
+        "unitText": "A",
+        "description": "Current out of the battery bank",
+        "alternativeIdentifier": [
+          "ibbo",
+          "bat2am"
+        ]
+      },
+      "BatteryBankCurrentIn": {
+        "@type": "number",
+        "unitText": "A",
+        "description": "Current into the battery bank",
+        "alternativeIdentifier": [
+          "ibbi"
+        ]
+      },
+      "BatteryBankVoltage": {
+        "@type": "number",
+        "unitText": "V",
+        "description": "Voltage at the battery bank",
+        "alternativeIdentifier": [
+          "bbvo"
+        ]
+      },
+      "InverterCurrent": {
+        "@type": "number",
+        "unitText": "A",
+        "description": "Current measured by the inverter",
+        "alternativeIdentifier": [
+          "dccr",
+          "pvamp"
+        ]
+      },
+      "InverterVoltage": {
+        "@type": "number",
+        "unitText": "V",
+        "description": "Voltage measured by the inverter",
+        "alternativeIdentifier": [
+          "dcvt",
+          "pvvlt",
+          "acvt"
+        ]
+      },
+      "EnergyProduction": {
+        "@type": "number",
+        "unitText": "kWh",
+        "description": "Energy delivered",
+        "alternativeIdentifier": [
+          "ende",
+          "PV_Energy_Production_kWh"
+        ]
+      },
+      "NetCumulativeEnergyFromGrid": {
+        "@type": "number",
+        "unitText": "kWh",
+        "description": "Cumulative energy received from the grid",
+        "alternativeIdentifier": [
+          "engr",
+          "fmugnt"
+        ]
+      },
+      "ImportedCumulativeEnergyFromGrid": {
+        "@type": "number",
+        "unitText": "kWh",
+        "description": "Imported cumulative energy received from the grid",
+        "alternativeIdentifier": [
+          "enin",
+          "imptot"
+        ]
+      },
+      "CumulativeEnergyToGrid": {
+        "@type": "number",
+        "unitText": "kWh",
+        "description": "Cumulative energy sent to the grid",
+        "alternativeIdentifier": [
+          "enex",
+          "exptot"
+        ]
+      },
+      "AveragePowerFromGrid": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW"
+        ],
+        "description": "Net Average Power from Grid",
+        "alternativeIdentifier": [
+          "pwgr",
+          "fmugpw"
+        ]
+      },
+      "PowerFromGrid": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW"
+        ],
+        "description": "Power from Grid",
+        "alternativeIdentifier": [
+          "pwre",
+          "invld"
+        ]
+      },
+      "PowerToGrid": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW"
+        ],
+        "description": "Power to Grid",
+        "alternativeIdentifier": [
+          "pwde"
+        ]
+      },
+      "GridPowerFactor": {
+        "@type": "number",
+        "unitText": null,
+        "description": "Power factor at grid",
+        "alternativeIdentifier": [
+          "grpf",
+          "fmugpf"
+        ]
+      },
+      "GridVoltage": {
+        "@type": "number",
+        "unitText": "V",
+        "description": "Voltage from utility grid",
+        "alternativeIdentifier": [
+          "grvo",
+          "fmugv"
+        ]
+      },
+      "GridCurrent": {
+        "@type": "number",
+        "unitText": "A",
+        "description": "Current from utility grid",
+        "alternativeIdentifier": [
+          "grcr",
+          "fmuga"
+        ]
+      },
+      "EnergyToCriticalLoad": {
+        "@type": "number",
+        "unitText": "kWh",
+        "description": "Net energy to critical load",
+        "alternativeIdentifier": [
+          "encl",
+          "toclnt",
+          "cmto"
+        ]
+      },
+      "EnergyFromCriticalLoad": {
+        "@type": "number",
+        "unitText": "kWh",
+        "description": "Net energy from critical load",
+        "alternativeIdentifier": [
+          "cmfr",
+          "fmctot"
+        ]
+      },
+      "VoltageToCriticalLoad": {
+        "@type": "number",
+        "unitText": "V",
+        "description": "Voltage to critical load",
+        "alternativeIdentifier": [
+          "clvt",
+          "toclv"
+        ]
+      },
+      "CurrentToCriticalLoad": {
+        "@type": "number",
+        "unitText": "A",
+        "description": "Current to critical load",
+        "alternativeIdentifier": [
+          "clcr",
+          "tocla"
+        ]
+      },
+      "PowerToCriticalLoad": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW"
+        ],
+        "description": "Net power to critical load",
+        "alternativeIdentifier": [
+          "pwcl",
+          "toclpw"
+        ]
+      },
+      "PowerFactorAtCriticalLoad": {
+        "@type": "number",
+        "unitText": null,
+        "description": "Power factor at the critical load",
+        "alternativeIdentifier": [
+          "pfcl",
+          "toclpf"
+        ]
+      },
+      "ChargeControllerCurrent": {
+        "@type": "number",
+        "unitText": "A",
+        "description": "Current through the charge controller",
+        "alternativeIdentifier": [
+          "cccr",
+          "ccamp"
+        ]
+      },
+      "ChargeControllerVoltage": {
+        "@type": "number",
+        "unitText": "V",
+        "description": "Voltage at the charge controller",
+        "alternativeIdentifier": [
+          "ccvt",
+          "ccvlt"
+        ]
+      },
+      "PredictedPower": {
+        "@type": "number",
+        "unitText": [
+          "W",
+          "kW",
+          "MW"
+        ],
+        "description": "Power predicted from some model",
+        "alternativeIdentifier": [
+          "pvpr",
+          "pvpred"
+        ]
+      },
+      "dasVoltage": {
+        "@type": "number",
+        "unitText": "V",
+        "description": "Voltage from the Data Acquisition System",
+        "alternativeIdentifier": [
+          "dsvt"
+        ]
+      }
+    },
+    "WeatherDataRecord": {
+      "@type": "meta-data",
+      "description": "Information stored in a time series about the weather",
+      "StartTime": {
+        "@type": "string",
+        "unitText": null,
+        "value": "$StartTime",
+        "description": "Start of Timeseries Data"
+      },
+      "EndTime": {
+        "@type": "string",
+        "unitText": null,
+        "value": "$EndTime",
+        "description": "End of Timeseries Data"
+      },
+      "Albedo": {
+        "@type": "number",
+        "unitText": null,
+        "description": "Ground Albedo (Bulk)"
+      },
+      "HumidityRelative": {
+        "@type": "number",
+        "unitText": "%",
+        "description": "Relative Humidity"
+      },
+      "IrradGlobalHoriz": {
+        "@type": "number",
+        "unitText": "W/M^2",
+        "description": "Irradiance Information",
+        "alternativeIdentifier": [
+          "ghir",
+          "horirr"
+        ]
+      },
+      "IrradPlaneOfArray": {
+        "@type": "number",
+        "unitText": "W/M^2",
+        "description": "Irradiance Information",
+        "alternativeIdentifier": [
+          "poay",
+          "poairr"
+        ]
+      },
+      "IrradDiffuseHorizontal": {
+        "@type": "number",
+        "unitText": "W/M^2",
+        "description": "Diffuse Horizontal Irradiance"
+      },
+      "IrradDirectNormal": {
+        "@type": "number",
+        "unitText": "W/M^2",
+        "description": "Diffuse Normal Irradiance"
+      },
+      "PrecipitalWater": {
+        "@type": "number",
+        "unitText": "kg/M^2",
+        "description": "Precipital Water"
+      },
+      "ReferenceCellMeasurement": {
+        "@type": "meta-data",
+        "description": "Information from reference cell",
+        "CurrentShortCircuit": {
+          "@type": "number",
+          "unitText": "A",
+          "description": "Short Circuit Current"
+        },
+        "TempRefCell": {
+          "@type": " number",
+          "unitText": [
+            "C",
+            "F",
+            "K"
+          ],
+          "description": "Reference Cell Measurement Temperature",
+          "alternativeIdentifier": [
+            "rclt",
+            "reftemp"
+          ]
+        },
+        "VoltageOpenCircuit": {
+          "@type": "number",
+          "unitText": "V",
+          "description": "Voltage Open Circuit"
+        }
+      },
+      "Snowfall": {
+        "@type": "number",
+        "unitText": [
+          "in",
+          "ft",
+          "cm",
+          "m"
+        ],
+        "description": "Amount of Snowfall"
+      },
+      "TempAmb": {
+        "@type": "number",
+        "unitText": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Ambient Temperature",
+        "alternativeIdentifier": [
+          "temp",
+          "ambtm",
+          "tamb",
+          "PV_uInv_Temp_mos",
+          "systemp_avg"
+        ]
+      },
+      "ModTemp": {
+        "@type": "number",
+        "unitText": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Module Temperature",
+        "alternativeIdentifier": [
+          "modt",
+          "pvtmp",
+          "PV_uInv_Temp_dsp"
+        ]
+      },
+      "BatTemp": {
+        "@type": "number",
+        "unitText": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Battery bank temperature",
+        "alternativeIdentifier": [
+          "bttm",
+          "battmp"
+        ]
+      },
+      "dasTemp": {
+        "@type": "number",
+        "unitText": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Temperature from the Data Acquisition System",
+        "alternativeIdentifier": [
+          "dstp"
+        ]
+      },
+      "InverterTemp": {
+        "@type": "number",
+        "unitText": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Temperature from the Inverter",
+        "alternativeIdentifier": [
+          "intm"
+        ]
+      },
+      "ChargeControllerTemp": {
+        "@type": "number",
+        "unitText": [
+          "C",
+          "F",
+          "K"
+        ],
+        "description": "Temperature from the Charge Controller",
+        "alternativeIdentifier": [
+          "cgtm"
+        ]
+      },
+      "WindSpeed": {
+        "@type": "number",
+        "unitText": "m/s",
+        "description": "Windspeed",
+        "alternativeIdentifier": [
+          "wspa",
+          "wndspd"
+        ]
+      },
+      "WindDirection": {
+        "@type": "number",
+        "unitText": "m/s",
+        "description": "Wind direction",
+        "alternativeIdentifier": [
+          "wdra",
+          "wnddir"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "@context": {
+   "description": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "results": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "sampleID":  "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "time": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "dilutionFactor": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "concentration": "https://cwrusdle.bitbucket.io/Ontology/icp.owl",
+    "countsConcentration": "https://cwrusdle.bitbucket.io/Ontology/icp.owl"
+
+
+  },
+              "results": {
+
+            "sampleID": {
+                  "description": "Sample ID",
+                   "value": "$sampleID",
+                  "unitText": "null"
+                },
+
+            "time": {
+                  "description": "time of the measurement",
+                   "value": "$time",
+                  "unitText": "null"
+                },
+                "dilutionFactor": {
+                  "description": "dilutionFactor",
+                   "value": "$dilutionFactor",
+                  "unitText": "null"
+                },
+                   "concentration": {
+                  "description": "concentration",
+                   "value": "$Concentration",
+                  "unitText": "null"
+                },
+                   "countsConcentration": {
+                   "description": "Counts per concentration",
+                   "value": "$countsConcentration",
+                  "unitText": "null"
+                }
+
+
+
+                    }
+
+
+}
+
+
+
+

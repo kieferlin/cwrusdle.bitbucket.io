@@ -1,0 +1,116 @@
+
+{
+  "@context": {
+    "soilWoSis": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "layers": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "metadata": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "latitude": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "longitude": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "layers": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "physicalProperties": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "chemicalProperties": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "soilClassification": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "bulkDensity": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "clayTotal": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "coarserFragments": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "sandTotal": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "slitTotal": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "cationExchange": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "organicCarbon": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "nitrogen": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "totalCarbon": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+    "pH": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl",
+     "value": "https://cwrusdle.bitbucket.io/Ontology/soilWosis.owl"
+
+  },
+
+    "soilWoSis": {
+      "metadata" :{
+		      	"latitude": {
+                  "description": "Latitude of the location",
+                   "value": "$latitude",
+                  "unitText": ["degree"]                              
+                },
+                            
+		      	"longitude": {
+                  "description": "Longitude of the location",
+                   "value": "$longitude",
+                  "unitText": ["degree"]                              
+                }
+                },
+            "layers": {
+		      	"physicalProperties": {
+                "bulkDensity" : {
+                  "description": "Bulk Density",
+                   "value": "$bulkDensity",
+                  "unitText": "null"
+                },
+                  "clayTotal": {
+                  "description": "% of Clay",
+                   "value": "$clayTotal",
+                  "unitText": "null"   
+
+                },
+                  "coarserFragments": {
+                  "description": "Charge of the Analyte",
+                   "value": "$coarserFragments",
+                  "unitText": "null"  
+                },
+                  "sandTotal" : {
+                  "description": "% of Sand",
+                   "value": "$sandTotal",
+                  "unitText": "null"
+                },
+                  "slitTotal": {
+                  "description": "Charge of the Analyte",
+                   "value": "$slitTotal",
+                  "unitText": "null"  
+                }
+                },
+                "soilClassification" : {
+                  "description": "Soil Classification",
+                   "value": "$soilClassification",
+                  "unitText": "null"
+                  },
+                  "chemicalProperties" : {
+                   "cationExchange" : {
+                  "description": "Cation Exchange",
+                   "value": "$cationExchange",
+                  "unitText": "null"
+                  },
+                   "organicCarbon" : {
+                  "description": "Organic Carbon",
+                   "value": "$organicCarbon",
+                  "unitText": "null"
+                  },
+                  "nitrogen" : {
+                  "description": "Nitrogen",
+                   "value": "$nitrogen",
+                  "unitText": "null"
+                  },
+                   "totalCarbon" : {
+                  "description": "Total Carbon",
+                   "value": "$totalCarbon",
+                  "unitText": "null"
+                  },
+                  "pH" : {
+                  "description": "pH",
+                   "value": "$pH",
+                  "unitText": "null"
+                  }
+                  }
+                  }  
+                  }
+                  }
+                  
+                  
+                  
+                
+                
+
+
+                
+
+

@@ -1,0 +1,269 @@
+
+{
+  "@context": {
+    "sampleID": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "studyType": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "gas": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "soilNitrogen": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "rainfall": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "experimentType": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "date": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "location": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "elevation": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "siteType": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "lat": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "lon": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "vegetation": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "mat": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "map": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "soilType": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "soilC": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "soilDb": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "soilN": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "soilPh": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "tIncubation": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "tSoilPre": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "tSoilPost": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "smPre": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "smPost": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "smChange": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "fluxPreRaw": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "fluxPosRaw": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "fluxPre": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "fluxPost": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "fluxUnits": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "conversion": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+     "fluxPreNorm": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+     "fluxPostNorm": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "fluxNormUnits": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+     "fluxChange": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "cumulativeFluxDuringPeak": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl", 
+    "peakLag": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+ 	"duration": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "annualBudgetContrib": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl",
+    "ref": "https://cwrusdle.bitbucket.io/Ontology/gasFlux.owl"
+  },
+
+    "sampleMetadata": {               
+		      	"studyType": {
+                  "description": "Type of study",
+                   "value": "$studytype",
+                  "unitText": ["rewetting", "thawing"]                              
+                },
+                "sampleID": {
+                  "description": "",
+                   "value": "$sampleID",
+                  "unitText": "null" 
+                  }, 
+                 "experimentType": {
+                  "description": "",
+                   "value": "$experimentType",
+                  "unitText": "null"                             
+                },
+                "date": {
+                  "description": "",
+                   "value": "$date",
+                  "unitText": "null"                               
+                },
+                  "location": {
+                  "description": "",
+                   "value": "$location",
+                  "unitText": "null"   
+                  }, 
+                 "elevation": {
+                  "description": "",
+                   "value": "$elevation",
+                  "unitText": "null"                               
+                },
+                  "siteType": {
+                  "description": "",
+                   "value": "$siteType",
+                  "unitText": "null"   
+                  }, 
+                   "lat": {
+                  "description": "",
+                   "value": "$lat",
+                  "unitText": "null"                              
+                },
+                  "lon": {
+                  "description": "",
+                   "value": "$lon",
+                  "unitText": "null"   
+                  },                                           
+		      	"gas": { 
+                  "description": "Type of gas measured",
+                   "value": "$gas",
+                  "unitText": ["CH4", "CO2", "N2O", "NH3","NO" ]                              
+                }
+                },
+                "data" :  {
+                  "sampleID": {
+                  "description": "",
+                   "value": "$sampleID",
+                  "unitText": "null" 
+                  }, 
+                "soilNitrogen": {
+                  "description": "",
+                   "value": "$soilNitrogen",
+                  "unitText": "null"                               
+                },
+                  "rainfall": {
+                  "description": "",
+                   "value": "$rainfall",
+                  "unitText": "null"    
+                },                 
+                   "vegetation": {
+                  "description": "",
+                   "value": "$vegetation",
+                  "unitText": "null"   
+                  }, 
+                   "mat": {
+                  "description": "",
+                   "value": "$mat",
+                  "unitText": "null"                               
+                },
+                  "map": {
+                  "description": "",
+                   "value": "$map",
+                  "unitText": "null"  
+                  }, 
+                   "soilType": {
+                  "description": "",
+                   "value": "$soilType",
+                  "unitText": "null"                               
+                },
+                  "soilC": {
+                  "description": "",
+                   "value": "$soilC",
+                  "unitText": "null"   
+                  }, 
+                   "soilDb": {
+                  "description": "",
+                   "value": "$soilDb",
+                  "unitText": "null"   
+                  }, 
+                   "soilN": {
+                  "description":"",
+                   "value": "$soilN",
+                  "unitText": "null"                               
+                },
+                  "soilPh": {
+                  "description": "",
+                   "value": "$soilPh",
+                  "unitText": "null"  
+                  },
+   
+                   "tIncubation": {
+                  "description": "",
+                   "value": "$tIncubation",
+                  "unitText": "null"                               
+                },
+                  "tSoilPre": {
+                  "description": "",
+                   "value": "$tSoilPre",
+                  "unitText": "null"  
+                  },
+                  "tSoilPost": {
+                  "description": "",
+                   "value": "$tSoilPost",
+                  "unitText": "null"                              
+                },
+                "smPre": {
+                  "description": "",
+                   "value": "$smPre",
+                  "unitText": "null"                                 
+                },
+                   "smPost": {
+                  "description": "",
+                   "value": "$smChange",
+                  "unitText": "null"                              
+                },
+                  "smChange": {
+                  "description": "",
+                   "value": "$smChange",
+                  "unitText": "null"                              
+                },
+                "fluxPreRaw": {
+                  "description": "",
+                   "value": "$fluxPreRaw",
+                  "unitText": "null"                               
+                },
+                  "fluxPosRaw": {
+                  "description": "",
+                   "value": "$fluxPosRaw",
+                  "unitText": "null"   
+                  }, 
+                 "fluxPre": {
+                  "description": "",
+                   "value": "$fluxPre",
+                  "unitText": "null"                               
+                },
+                  "fluxPost": {
+                  "description": "",
+                   "value": "$fluxPost",
+                  "unitText": "null"  
+                  }, 
+                   "fluxUnits": {
+                  "description": "",
+                   "value": "$fluxUnits",
+                  "unitText": "null"                              
+                },
+                  "conversion": {
+                  "description": "",
+                   "value": "$conversion",
+                  "unitText": "null"   
+                  }, 
+                   "fluxPreNorm": {
+                  "description": "",
+                   "value": "$fluxPreNorm",
+                  "unitText": "null"   
+                  }, 
+                   "fluxPostNorm": {
+                  "description": "",
+                   "value": "$fluxPostNorm",
+                  "unitText": "null"                              
+                },
+                  "fluxNormUnits": {
+                  "description": "",
+                   "value": "$fluxNormUnits",
+                  "unitText": "null"  
+                  }, 
+                                     
+                   "fluxChange": {
+                  "description": "",
+                   "value": "$fluxChange",
+                  "unitText": "null"                              
+                },
+                  "cumulativeFluxDuringPeak": {
+                  "description": "",
+                   "value": "$cumulativeFluxDuringPeak",
+                  "unitText": "null"   
+                  }, 
+                   "peakLag": {
+                  "description": "",
+                   "value": "$peakLag",
+                  "unitText": "null"  
+                  }, 
+                   "duration": {
+                  "description": "",
+                   "value": "$duration",
+                  "unitText": "null"                             
+                },
+                  "annualBudgetContrib": {
+                  "description": "",
+                   "value": "$annualBudgetContrib",
+                  "unitText": "null"  
+                  },
+                  "ref": {
+                  "description": "",
+                   "value": "$ref",
+                  "unitText": "null"  
+                  }
+                  }
+                 
+                 }
+		      	
+
+
+
+

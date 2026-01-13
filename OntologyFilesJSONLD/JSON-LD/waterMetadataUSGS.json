@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "waterUSGS": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "metadata": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "location": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "usgsSiteNumber": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "latitude": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "longitude": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "state": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",        
+    "description": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/waterUSGS.owl",
+     "county": "https://cwrusdle.bitbucket.io/Ontology/waterMUSGS.owl"
+  },
+
+    "waterUSGS": {               
+                 
+            "metadata": {
+                "usgsSiteNumber" : {
+                  "description": "USGS code for that location",
+                   "value": "$usgsSiteNumber",
+                  "unitText": "null"              
+                },
+
+                "location" : {          
+                    "latitude": {                           
+                  "description": "latitudo of that site",
+                   "value": "$latitude",
+                  "unitText": "null"  
+                },
+                  "longitude": {
+                  "description": "longitude of the site",
+                   "value": "$longitude",
+                  "unitText": "null"  
+
+                },
+                   "county": {
+                  "description": "county of the measurement",
+                   "value": "$county",
+                  "unitText": "null"  
+
+                },
+                   "state": {
+                  "description": "State of the location(usgs site number)",
+                   "value": "$state",
+                  "unitText": "null" 
+                }
+                }
+                }
+
+              }
+      
+    
+}

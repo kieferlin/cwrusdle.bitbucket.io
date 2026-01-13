@@ -1,0 +1,696 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-pvInverter": "https://cwrusdle.bitbucket.io/pvInverter#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-pvInverter:InverterOutput",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "InverterOutput",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Output AC power of the inverter"
+    },
+    {
+      "@id": "mds-pvInverter:InverterEfficiencyIEC",
+      "@type": "owl:Class",
+      "rdfs:label": "InverterEfficiencyIEC",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterEfficiency"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "IEC inverter efficency"
+    },
+    {
+      "@id": "mds-pvInverter:VoltageDCInverterStart",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "VoltageDCInverterStart",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Turn-on input DC voltage required for inverter to output AC power"
+    },
+    {
+      "@id": "mds-pvInverter:TotalHarmonicDistortionCurrent",
+      "@type": "owl:Class",
+      "rdfs:label": "TotalHarmonicDistortionCurrent",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Harmonic distortion of current"
+    },
+    {
+      "@id": "mds-pvInverter:PhotovoltaicInverterID",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicInverterID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProvidedIdentifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Identifier for a PV inverter"
+    },
+    {
+      "@id": "pmd:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ValueObject",
+        {
+          "@language": "en",
+          "@value": "Value Object"
+        },
+        {
+          "@language": "de",
+          "@value": "Wertobjekt"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    },
+    {
+      "@id": "mds-pvInverter:InterconnectionLineCount",
+      "@type": "owl:Class",
+      "rdfs:label": "InterconnectionLineCount",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of interconnection lines"
+    },
+    {
+      "@id": "mds-pvInverter:PowerACNom",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "PowerACNom",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Nominal AC power"
+    },
+    {
+      "@id": "mds-pvInverter:HasMeter",
+      "@type": "owl:Class",
+      "rdfs:label": "HasMeter",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Does the inverter measure output AC power and input DC power?"
+    },
+    {
+      "@id": "mds-pvInverter:ACOutputs",
+      "@type": "owl:Class",
+      "rdfs:label": "ACOutputs",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "AC output of inverter"
+    },
+    {
+      "@id": "mds-pvInverter:IsHybrid",
+      "@type": "owl:Class",
+      "rdfs:label": "IsHybrid",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "System connected only to grid, or also to batteries?"
+    },
+    {
+      "@id": "mds-pvInverter:CurrentACMax",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:A"
+      },
+      "rdfs:label": "CurrentACMax",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Current at maximum AC power"
+    },
+    {
+      "@id": "pmd:ProvidedIdentifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProvidedIdentifier",
+        {
+          "@language": "de",
+          "@value": "Bereitgestellter Identifikator"
+        },
+        {
+          "@language": "en",
+          "@value": "Provided Identifier"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A colloquial, human-generated descriptor."
+      }
+    },
+    {
+      "@id": "mds-pvInverter:InverterSwitchoverTime",
+      "@type": "owl:Class",
+      "rdfs:label": "InverterSwitchoverTime",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Switch over time between grid import and inverter export to grid"
+    },
+    {
+      "@id": "mds-pvInverter:EfficiencyCECWtdVoltageMax",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "EfficiencyCECWtdVoltageMax",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterEfficiency"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "CEC measured voltage maximum"
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-pvInverter:PhotovoltaicInverterID"
+        },
+        {
+          "@id": "mds-pvInverter:ModuleCountSeries"
+        },
+        {
+          "@id": "mds-pvInverter:ModuleCountParallel"
+        },
+        {
+          "@id": "mds-pvInverter:InverterEfficiency"
+        },
+        {
+          "@id": "mds-pvInverter:InverterOutput"
+        },
+        {
+          "@id": "mds-pvInverter:IsHybrid"
+        },
+        {
+          "@id": "mds-pvInverter:IsPVInputCapable"
+        },
+        {
+          "@id": "mds-pvInverter:HasMeter"
+        },
+        {
+          "@id": "mds-pvInverter:EfficiencyCECWtdVoltageMax"
+        },
+        {
+          "@id": "mds-pvInverter:EfficiencyCECWtdVoltageMin"
+        },
+        {
+          "@id": "mds-pvInverter:EfficiencyCECWtdVoltageNom"
+        },
+        {
+          "@id": "mds-pvInverter:InverterEfficiencyCEC"
+        },
+        {
+          "@id": "mds-pvInverter:InverterEfficiencyIEC"
+        },
+        {
+          "@id": "mds-pvInverter:InverterEfficiencyMax"
+        },
+        {
+          "@id": "mds-pvInverter:CurrentACMax"
+        },
+        {
+          "@id": "mds-pvInverter:PowerACMax"
+        },
+        {
+          "@id": "mds-pvInverter:PowerACNom"
+        },
+        {
+          "@id": "mds-pvInverter:VoltageACMax"
+        },
+        {
+          "@id": "mds-pvInverter:VoltageACMin"
+        },
+        {
+          "@id": "mds-pvInverter:FrequenciesAC"
+        },
+        {
+          "@id": "mds-pvInverter:PowerDCOut"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:integer"
+        },
+        {
+          "@id": "xsd:float"
+        },
+        {
+          "@id": "xsd:boolean"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "mds-pvInverter:CECListingDate",
+      "@type": "owl:Class",
+      "rdfs:label": "CECListingDate",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Date module measurements listed by CEC"
+    },
+    {
+      "@id": "mds-pvInverter:NightTare",
+      "@type": "owl:Class",
+      "rdfs:label": "NightTare",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Power consumption of the device during nighttime"
+    },
+    {
+      "@id": "mds-pvInverter:RevenueGrade",
+      "@type": "owl:Class",
+      "rdfs:label": "RevenueGrade",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is the inverter revenue grade? (accuracy of 0.5% or better)"
+    },
+    {
+      "@id": "mds-pvInverter:PowerFactorMin",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "PowerFactorMin",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Minimum power factor"
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-pvInverter:PhotovoltaicInverter"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-pvInverter:CECNotes",
+      "@type": "owl:Class",
+      "rdfs:label": "CECNotes",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Notes from CEC testing of the inverter"
+    },
+    {
+      "@id": "mds-pvInverter:IsPVInputCapable",
+      "@type": "owl:Class",
+      "rdfs:label": "IsPVInputCapable",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Is inverter capable of directly accepting PV input?"
+    },
+    {
+      "@id": "mds-pvInverter:EfficiencyCECWtdVoltageNom",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "EfficiencyCECWtdVoltageNom",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterEfficiency"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "CEC measured nominal operating voltage"
+    },
+    {
+      "@id": "mds-pvInverter:OrangeButtonTerm",
+      "@type": "owl:Class",
+      "rdfs:label": "OrangeButtonTerm",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Term from the OrangeButton Taxonomy"
+    },
+    {
+      "@id": "mds-pvInverter:PowerACMax",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "PowerACMax",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum AC power"
+    },
+    {
+      "@id": "mds-pvInverter:FrequenciesAC",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:Hertz"
+      },
+      "rdfs:label": "FrequenciesAC",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "AC frequency, typically 60Hz (Americas) or 50Hz (elsewhere)"
+    },
+    {
+      "@id": "mds-pvInverter:InterconnectionPhaseType",
+      "@type": "owl:Class",
+      "rdfs:label": "InterconnectionPhaseType",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Interconnection phase type"
+    },
+    {
+      "@id": "mds-pvInverter:TotalHarmonicDistortionPower",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "TotalHarmonicDistortionPower",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Total harmonic distortion of power"
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-pvInverter:PhotovoltaicInverter"
+      },
+      "rdfs:range": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterID"
+      }
+    },
+    {
+      "@id": "mds-pvInverter:VoltageACMin",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "VoltageACMin",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Minimum AC voltage"
+    },
+    {
+      "@id": "mds-pvInverter:PowerFactorMax",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "PowerFactorMax",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum power factor"
+    },
+    {
+      "@id": "mds-pvInverter:InverterEfficiency",
+      "@type": "owl:Class",
+      "rdfs:label": "InverterEfficiency",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Inverter efficency from DC to AC power"
+    },
+    {
+      "@id": "mds-pvInverter:VoltageACMax",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "VoltageACMax",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum AC voltage "
+    },
+    {
+      "@id": "pmd:ProcessingNode",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ProcessingNode",
+        {
+          "@language": "en",
+          "@value": "Processing Node"
+        },
+        {
+          "@language": "de",
+          "@value": "Prozessknoten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."
+        },
+        {
+          "@language": "de",
+          "@value": "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."
+        }
+      ]
+    },
+    {
+      "@id": "mds-pvInverter:GridInterfaceType",
+      "@type": "owl:Class",
+      "rdfs:label": "GridInterfaceType",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Grid interface phase (monophase, biphase, triphase)"
+    },
+    {
+      "@id": "mds-pvInverter:InverterEfficiencyMax",
+      "@type": "owl:Class",
+      "rdfs:label": "InverterEfficiencyMax",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterEfficiency"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Theoretical maximum inverter efficency (nameplate)"
+    },
+    {
+      "@id": "mds-pvInverter:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "Ontology describing a PV inverter",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-pvInverter",
+      "rdfs:label": "mds-pvInverter"
+    },
+    {
+      "@id": "mds-pvInverter:PhotovoltaicInverter",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicInverter",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ProcessingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An inverter for a PV system"
+    },
+    {
+      "@id": "mds-pvInverter:ModuleCountParallel",
+      "@type": "owl:Class",
+      "rdfs:label": "ModuleCountParallel",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of strings of modules connected in parallel"
+    },
+    {
+      "@id": "mds-pvInverter:PowerDCOut",
+      "@type": "owl:Class",
+      "rdfs:label": "PowerDCOut",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "DC power output of PV array"
+    },
+    {
+      "@id": "mds-pvInverter:ModuleCountSeries",
+      "@type": "owl:Class",
+      "rdfs:label": "ModuleCountSeries",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:PhotovoltaicInverterProperty"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of modules per string connected in series"
+    },
+    {
+      "@id": "mds-pvInverter:InverterEfficiencyCEC",
+      "@type": "owl:Class",
+      "rdfs:label": "InverterEfficiencyCEC",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterEfficiency"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "CEC measured inverter efficency"
+    },
+    {
+      "@id": "mds-pvInverter:VoltageACNom",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "VoltageACNom",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterOutput"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Nominal AC voltage"
+    },
+    {
+      "@id": "mds-pvInverter:PhotovoltaicInverterProperty",
+      "@type": "owl:Class",
+      "rdfs:label": "PhotovoltaicInverterProperty",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Property of a PV inverter"
+    },
+    {
+      "@id": "pmd:hasSource",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-pvInverter:InverterEfficiency"
+        },
+        {
+          "@id": "mds-pvInverter:InverterOutput"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "mds-pvInverter:OrangeButtonTerm"
+      }
+    },
+    {
+      "@id": "mds-pvInverter:EfficiencyCECWtdVoltageMin",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:V"
+      },
+      "rdfs:label": "EfficiencyCECWtdVoltageMin",
+      "rdfs:subClassOf": {
+        "@id": "mds-pvInverter:InverterEfficiency"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "CEC measured voltage minimum"
+    }
+  ]
+}

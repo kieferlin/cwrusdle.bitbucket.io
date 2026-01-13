@@ -1,0 +1,67 @@
+
+{
+  "@context": {
+    "asterGdem": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "latitude": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "longitude": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "elevationLand": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "elevationRiver": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "elevationLake": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "elevationOcean": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "typeBody": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "land": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "water": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "ocean": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "river": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "lake": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "unit": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/asterGdem.owl"
+    
+  },
+
+    "asterGdem": {               
+		      	"latitude": {
+                  "description": "Latitude of the location",
+                   "value": "$latitude",
+                  "unitText": ["degree"]                              
+                },
+                            
+		      	"longitude": {
+                  "description": "Longitude of the location",
+                   "value": "$longitude",
+                  "unitText": ["degree"]                              
+                },
+                 
+		      	"typeBody": {
+                "land" : {
+                  "description": "Elevation Land",
+                   "value": "$elevationLand",
+                  "unitText": ["m", "meters"],
+                  "elevationLand": ""
+                },
+                "water" : {
+                    "ocean": {
+                  "description": "Elevation Ocean",
+                   "value": "$elevationOcean",
+                  "unitText": ["m", "meters"] ,   
+                  "elevationOcean": ""
+                },
+                  "river": {
+                  "description": "Elevation River",
+                   "value": "$riverElevation",
+                  "unitText": ["m", "meters"],  
+                  "elevationRiver": ""
+                },
+                
+                "lake": {
+                  "description": "Elevation Lake",
+                   "value": "$lakeElevation",
+                  "unitText": ["m", "meters"] ,
+                  "elevationLake": ""
+                }
+                }
+                }
+                }
+                }

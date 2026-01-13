@@ -1,0 +1,310 @@
+{
+    "@context": {
+
+      "@vocab": "http://www.w3.org/2001/XMLSchema#",
+    "value": "https://schema.org/value",
+    "description": "https://schema.org/description",
+    "unit" : "https://schema.org/unitText",
+    "pattern": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "experimentSetting": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "imageAttr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "imageMeta": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "logs": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "beamlineAttr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "detectorAttr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "sampleAttr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "otherAttr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "said": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "indx": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "img_stck": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "tif_path": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "bttm_pzo_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "btm_rota": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "cesr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "crys_rtrn": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "crys_sply": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "data_xrd": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "diod": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "fst_shtr": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "hepp": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "hep_stat": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "ic0_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "ic1_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "ic2_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "ic3_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "load_cll": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "load_scrw": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "mo_stab_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "summary_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "sync_cnt": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "time": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "top_pzo_": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "top_rota": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "leng": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "wdth": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "thckness": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "print_sh": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "beamnrgy": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "wavelngt": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "ti_mater": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl",
+    "log_files": "https://cwrusdle.bitbucket.io/Ontology/XRD.owl"
+    },
+
+
+    "pattern":
+    {
+      "imageAttr": {
+        "said": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$said",
+                  "unit": "Null"
+                },
+        "indx": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$indx",
+                  "unit": "Null"
+                },
+        "img_stck":{
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$img_stck",
+                  "unit": "Null"
+                },
+        "tif_path": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$tif_path",
+                  "unit": "Null"
+                }
+      },
+
+      "imageMeta": {
+        "leng": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$leng",
+                  "unit": "Null"
+                },
+        "wdth": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$wdth",
+                  "unit": "Null"
+                },
+        "thckness": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$thckness",
+                  "unit": "Null"
+                }
+        },
+
+      "logs": {
+        "log_files": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$log_files",
+                  "unit": "Null"
+        }
+      }
+    },
+
+
+    "experimentSetting":
+
+    {
+      "beamlineAttr":
+
+        {
+        "beamnrgy": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$beamnrgy",
+                  "unit": "Null"
+                },
+
+        "wavelngt": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$wavelngt",
+                  "unit": "Null"
+                }
+        },
+
+
+      "detectorAttr": {},
+
+      "sampleAttr": {
+        "ti_mater": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$ti_mater",
+                  "unit": "Null"
+                },
+        "leng": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$leng",
+                  "unit": "Null"
+                },
+        "wdth": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$wdth",
+                  "unit": "Null"
+                },
+        "thckness": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$thckness",
+                  "unit": "Null"
+                }
+      },
+
+      "otherAttr": {
+        "bttm_pzo_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$bttm_pzo_",
+                  "unit": "Null"
+                },
+        "btm_rota": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$btm_rota",
+                  "unit": "Null"
+                },
+        "cesr": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$cesr",
+                  "unit": "Null"
+                },
+        "crys_rtrn": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$crys_rtrn",
+                  "unit": "Null"
+                },
+        "crys_sply": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$crys_sply",
+                  "unit": "Null"
+                },
+        "data_xrd": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$data_xrd",
+                  "unit": "Null"
+                },
+        "diod": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$diod",
+                  "unit": "Null"
+                },
+        "fst_shtr": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$fst_shtr",
+                  "unit": "Null"
+                },
+        "hepp": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$hepp",
+                  "unit": "Null"
+                },
+        "hep_stat": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$hep_stat",
+                  "unit": "Null"
+                },
+        "ic0_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$ic0_",
+                  "unit": "Null"
+                },
+        "ic1_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$ic1_",
+                  "unit": "Null"
+                },
+        "ic2_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$ic2_",
+                  "unit": "Null"
+                },
+        "ic3_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$ic3_",
+                  "unit": "Null"
+                },
+        "load_cll": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$load_cll",
+                  "unit": "Null"
+                },
+        "load_scrw": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$load_scrw",
+                  "unit": "Null"
+                },
+        "mo_stab_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$mo_stab_",
+                  "unit": "Null"
+                },
+        "summary_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$summary_",
+                  "unit": "Null"
+                },
+        "sync_cnt": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$sync_cnt",
+                  "unit": "Null"
+                },
+        "time": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$time",
+                  "unit": "Null"
+                },
+        "top_pzo_": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$top_pzo_",
+                  "unit": "Null"
+                },
+        "top_rota": {
+                  "@type": "PropertyValue",
+                  "description": "Null",
+                  "value": "$top_rota",
+                  "unit": "Null"
+                }
+
+      }
+    }
+
+
+}
+
+
+
+
+
+

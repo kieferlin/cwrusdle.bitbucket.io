@@ -1,0 +1,322 @@
+{ "@context": { 
+
+    "@vocab": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "value": "https://schema.org/value",
+    "description": "https://schema.org/description",
+    "unit" : "https://schema.org/unitText",
+
+    "SampleID": "https://schema.org/",
+    "Material": "https://schema.org/material",
+
+    "rrms": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "pen": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "date": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "exposureCondition": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "hoursExposed": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "scanArea": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "xPosition": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "yPosition": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "zPosition": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "lightLevel": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "frequency": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "xScanStep": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "yScanStep": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "xDistance": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "yDistance": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "formRemoved": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "scanSpeed": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "magnification": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "zHeight": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "surface": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "ySize": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "xSize": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "minMod": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "cameraMode": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "scanLength": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "fdaRes": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "stitch": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "percentOverlap": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "stitchNCols": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "stitchNRows": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl",
+    "formRemoved__1": "https://cwrusdle.bitbucket.io/Ontology/optical-spc.owl"
+  },
+  
+    "SampleID": {
+        "@type": "PropertyValue",
+        "description": "Sample ID",
+        "value": "$SampleID",
+        "unitText": "Null"
+    },
+
+    "Material": {
+        "@type": "PropertyValue",
+        "description": "A material that something is made from",
+        "value": "$Material",
+        "unitText": "Null"
+    },
+
+  "whiteLightInterferometer":
+  {
+    "interferomMeasurementParameters": {
+      "magnification": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$magnification",
+                "unit": "Null"
+              },
+      "minMod": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$minMod",
+                "unit": "Null"
+              },
+      "cameraMode":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "Null",
+                "unit": "Null"
+              },
+      "scanLength": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$cameraMode",
+                "unit": "Null"
+              },
+      "fdaRes":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$fdaRes",
+                "unit": "Null"
+              },
+      "stitch":
+
+            {
+            "percentOverlap": {
+                        "@type": "PropertyValue",
+                        "description": "Null",
+                        "value": "$stitch",
+                        "unit": "Null"
+                        },
+
+              "stitchNCols": {
+                        "@type": "PropertyValue",
+                        "description": "Null",
+                        "value": "$stitchNCols",
+                        "unit": "Null"
+                      },
+
+              "stitchNRows": {
+                        "@type": "PropertyValue",
+                        "description": "Null",
+                        "value": "$stitchNRows",
+                        "unit": "Null"
+                      }
+                },
+      "formRemoved":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$formRemoved",
+                "unit": "Null"
+              }        
+   },
+    
+    "interferomMetadata": {
+      "sample": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$sample",
+                "unit": "Null"
+              },
+      "rrms": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$rrms",
+                "unit": "Null"
+              },
+      "magnification": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$magnification",
+                "unit": "Null"
+              },
+      "zHeight": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$zHeight",
+                "unit": "Null"
+              },
+      "date": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$date",
+                "unit": "Null"
+              },
+      "surface": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$surface",
+                "unit": "Null"
+              },
+      "exposureCondition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$exposureCondition",
+                "unit": "Null"
+              },
+      "hoursExposed": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$hoursExposed",
+                "unit": "Null"
+              },
+      "scanArea": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$scanArea",
+                "unit": "Null"
+              },
+      "xPosition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$xPosition",
+                "unit": "Null"
+              },
+      "yPosition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$yPosition",
+                "unit": "Null"
+              },
+      "zPosition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$zPosition",
+                "unit": "Null"
+              }
+    }
+  },
+  
+  "chromaticLightProfilometry":
+  {
+    "chromaticMeasurementParameters": {
+      "pen": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$pen",
+                "unit": "Null"
+              },
+      "lightLevel": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$lightLevel",
+                "unit": "Null"
+              },
+      "frequency":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$frequency",
+                "unit": "Null"
+              },
+      "xScanStep": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "xScanStep",
+                "unit": "Null"
+              },
+      "yScanStep":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "yScanStep",
+                "unit": "Null"
+              },
+      "xDistance":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "xDistance",
+                "unit": "Null"
+              },
+      "yDistance":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "yDistance",
+                "unit": "Null"
+              },
+      "formRemoved":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$formRemoved",
+                "unit": "Null"
+              },
+      "scanSpeed":{
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$scanSpeed",
+                "unit": "Null"
+              }            
+  },
+
+    "chromaticMetadata": {
+      "sample": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$sample",
+                "unit": "Null"
+              },
+      "rrms": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$rrms",
+                "unit": "Null"
+              },
+      "pen": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$pen",
+                "unit": "Null"
+              },
+      "date": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$date",
+                "unit": "Null"
+              },
+      "exposureCondition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$exposureCondition",
+                "unit": "Null"
+              },
+      "hoursExposed": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$hoursExposed",
+                "unit": "Null"
+              },
+      "scanArea": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$scanArea",
+                "unit": "Null"
+              },
+      "xPosition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$xPosition",
+                "unit": "Null"
+              },
+      "yPosition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$yPosition",
+                "unit": "Null"
+              },
+      "zPosition": {
+                "@type": "PropertyValue",
+                "description": "Null",
+                "value": "$zPosition",
+                "unit": "Null"
+              }
+      }
+      }
+
+}

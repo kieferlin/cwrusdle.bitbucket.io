@@ -1,0 +1,69 @@
+{
+  "@context": {
+  "instrumentMetadata": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+    "manufacturer": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+    "model": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",  
+    "serialNumber":  "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl", 
+    "software":  "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+     "lightSource": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",  
+    "detector":  "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl", 
+     "sensitivity":  "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl", 
+    "readingTime": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+    "plateShaking": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+    "unitText": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+    "value": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl",
+    "description": "https://cwrusdle.bitbucket.io/Ontology/instrumentMetadata.owl"
+  },
+              "instrumentMetadata": {
+               
+            "manufacturer": {
+                  "description": "Manufacturer of the instrument",
+                   "value": "$manufacturer",
+                  "unitText": "null"                                 
+                },
+                                                       
+                "model": {
+                  "description": "Model of the instrument",
+                   "value": "$model",
+                  "unitText": "null"                                 
+                },
+                "serialNumber": {
+                  "description": "Serial numer of the instrument",
+                   "value": "$serial",
+                  "unitText": "null"                                 
+                },
+                   "software": {
+                  "description": "Sofwtare used in the instrument",
+                   "value": "$software",
+                  "unitText": "null"                                 
+                },
+                   "lightSource": {
+                  "description": "Light source used in the equipment",
+                   "value": "$lightSource",
+                  "unitText": "null"                                 
+                },
+                  "detector": {
+                  "description": "Sofwtare used in the instrument",
+                   "value": "$detector",
+                  "unitText": "null"                                 
+                },
+                   "sensitivity": {
+                  "description": "Equipment sensitivity",
+                   "value": "$sensitivity",
+                  "unitText": "null"                                 
+                },
+                  "readingTime": {
+                  "description": "Time the instrument takes for the readings",
+                   "value": "$readingTime",
+                  "unitText": "null"                                 
+                },
+                    "plateShaking": {
+                  "description": "Type of plate shaking, ex: linear",
+                   "value": "$plateShaking",
+                  "unitText": "null"                                 
+                }
+                
+              }
+            
+}
+                  

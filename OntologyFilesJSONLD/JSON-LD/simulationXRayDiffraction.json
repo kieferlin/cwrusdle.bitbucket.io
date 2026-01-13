@@ -1,0 +1,219 @@
+{
+  "@context":{
+
+  "@vocab": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "value": "https://schema.org/value",
+  "description": "https://schema.org/description",
+  "unit" : "https://schema.org/unitText",
+
+  "Experimental_Attributes": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Beamline_Attributes": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Alpha-Ti": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Austenite": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "BaseName": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Beta-Ti": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Image_Attributes": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Lambda": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Length_Unit": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "MaskDim": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "NGrains": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "NPatterns": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "PhaseFracAlpha": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "PhaseFracAust": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "PhaseFracBeta": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "PhaseFracTotal": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Phases": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "PixelDim": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Relative_wavelength_spread": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Run_Description": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Sample_attributes": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "Simulated_pattern": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "SizeDistrAust": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "SizeDistrTiAlpha": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "SizeDistrTiBeta": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "TextureAust": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "TextureTiAlpha": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "TextureTiBeta": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  "UUID": "https://cwrusdle.bitbucket.io/Ontology/simulationXRay.owl",
+  },
+
+  "Experimental_Attributes":
+  {
+
+    "Sample_attributes :{
+      "Phases":{
+
+        "PhaseFracTotal":{
+          "@type": "PropertyValue",
+          "description": "Total phase fraction of all present phases",
+          "value": "$PhaseFracTotal",
+          "unit": "Null"
+        },
+
+        "Austenite":{
+
+          "TextureAust":{
+            "@type": "PropertyValue",
+            "description": "Texture of Austenite phase",
+            "value": "$TextureAust",
+            "unit": "Null"
+          },
+
+          "SizeDistrAust":{
+            "@type": "PropertyValue",
+            "description": "Size distribution of Austenite grains",
+            "value": "$SizeDistrAust",
+            "unit": "Null"
+          },
+
+          "PhaseFracAust":{
+            "@type": "PropertyValue",
+            "description": "Phase fraction of Austenite phase",
+            "value": "$PhaseFracAust",
+            "unit": "Null"
+          }
+
+        },
+
+        "Alpha-Ti":{
+
+          "TextureTiAlpha":{
+            "@type": "PropertyValue",
+            "description": "Texture of the Alpha-Ti phase",
+            "value": "$TextureTiAlpha",
+            "unit": "Null"
+          },
+
+          "SizeDistrTiAlpha":{
+            "@type": "PropertyValue",
+            "description": "Size distribution of Alpha-Ti grains",
+            "value": "$SizeDistrTiAlpha",
+            "unit": "Null"
+          },
+
+          "PhaseFracAlpha":{
+            "@type": "PropertyValue",
+            "description": "Phase fraction of Alpha-Ti phase",
+            "value": "$PhaseFracAlpha",
+            "unit": "Null"
+          }
+
+        },
+
+        "Beta-Ti":{
+
+          "TextureTiBeta":{
+            "@type": "PropertyValue",
+            "description": "Texture of the Beta-Ti phase",
+            "value": "$TextureTiBeta",
+            "unit": "Null"
+          },
+
+          "SizeDistrTiBeta":{
+            "@type": "PropertyValue",
+            "description": "Size distribution of Beta-Ti grains",
+            "value": "$SizeDistrTiBeta",
+            "unit": "Null"
+          },
+
+          "PhaseFracAlpha":{
+            "@type": "PropertyValue",
+            "description": "Phase fraction of Beta-Ti phase",
+            "value": "$PhaseFracBeta",
+            "unit": "Null"
+          }
+
+        }
+
+      }
+    },
+
+    "Beamline_Attributes":{
+
+      "Relative_wavelength_spread":{
+          "@type": "PropertyValue",
+          "description": "The energy spread of the incident beam",
+          "value": "$Relative_wavelength_spread",
+          "unit": "Null"
+        },
+
+      "Length_Unit":{
+          "@type": "PropertyValue",
+          "description": "Unit of length used for the simulations",
+          "value": "$Length_Unit",
+          "unit": "Null"
+        },
+
+      "Lambda":{
+          "@type": "PropertyValue",
+          "description": "Wavelength of the incident beam",
+          "value": "$Lambda",
+          "unit": "Null"
+        }
+
+    },
+  }
+
+  "Simulated_pattern":
+  {
+
+     "Run_Description":{
+          "@type": "PropertyValue",
+          "description": "The phases present in the simulated patterns",
+          "value": "$Run_Description",
+          "unit": "Null"
+        },
+
+      "NGrains":{
+          "@type": "PropertyValue",
+          "description": "Number of grains in the microstructure",
+          "value": "$NGrains",
+          "unit": "Null"
+        },
+
+      "NPatterns":{
+          "@type": "PropertyValue",
+          "description": "Number of patterns simulated using these conditions",
+          "value": "$NPatterns",
+          "unit": "Null"
+        },
+
+    "Image_Attributes":
+    {
+
+     "BaseName":{
+          "@type": "PropertyValue",
+          "description": "The naming convention used for the set of patterns",
+          "value": "$BaseName",
+          "unit": "Null"
+        },
+
+      "PixelDim":{
+          "@type": "PropertyValue",
+          "description": "The pixel size of the simulated patterns",
+          "value": "$PixelDim",
+          "unit": "Null"
+        },
+
+      "MaskDim":{
+          "@type": "PropertyValue",
+          "description": "The mask size applied",
+          "value": "$MaskDim",
+          "unit": "Null"
+        },
+
+      "UUID":{
+          "@type": "PropertyValue",
+          "description": "The unique identifier for each generated pattern",
+          "value": "$UUID",
+          "unit": "Null"
+        }
+
+    }
+
+
+  }
+
+ }
+
+}

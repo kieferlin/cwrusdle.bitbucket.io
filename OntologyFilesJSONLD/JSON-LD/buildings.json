@@ -1,0 +1,131 @@
+{
+  "@context": { 
+    "SampleID": "https://schema.org/",
+    "Building": "https://bedes.lbl.gov/bedes-online/building",
+    "PremisesName": "https://bedes-manager.lbl.gov/composite-term/edit/0ea62740-72f1-4991-a065-0693012a26b1",
+    "OperatorType" : "https://bedes-manager.lbl.gov/composite-term/edit/47293ce1-3df5-4fb2-88fd-d1a31cfd29f2",
+    "Longitude": "https://bedes-manager.lbl.gov/composite-term/edit/b263d4b0-0f00-48fd-a750-3e8d610bdb98",
+    "Latitude": "https://bedes-manager.lbl.gov/composite-term/edit/913d4b10-bf26-4c0d-b662-699c339c3ad6",
+    "Address": "https://buildingsync.net/dictionary/2.4.0/#54729",
+    "City": "https://bedes-manager.lbl.gov/composite-term/edit/c208fe09-422d-4031-abf6-073aa7bda8c5",
+    "County": "https://bedes-manager.lbl.gov/composite-term/edit/be811d87-d5db-4e1c-84ec-ccbbccdb852c",
+    "State": "https://bedes-manager.lbl.gov/composite-term/edit/9a8423a7-0729-4eca-b6b4-4ec39a1f4a5b",
+    "PostalCode": "https://bedes-manager.lbl.gov/composite-term/edit/6eea1dab-5d50-45f7-ae8d-5f7a183a536a",
+    "ClimateZoneType": "https://bedes.lbl.gov/bedes-online/climate-zone-type",
+    "ASHRAE": "https://bedes.lbl.gov/bedes-online/ashrae",
+    "KoppenClimate": "https://bedes.lbl.gov/bedes-online/other-53",
+    "FloorArea": "https://bedes.lbl.gov/bedes-online/area",
+    "FloorAreaType": "https://bedes-manager.lbl.gov/composite-term/edit/411284ab-e0af-4aa5-aed7-85d5ccf0e588",
+    "FloorAreaPercentage": "http://purl.obolibrary.org/obo/CHMO_0002190",
+    "FloorAreaValue": "https://bedes-manager.lbl.gov/composite-term/edit/6d86c9e2-797c-4f79-a5c0-6a01f5d6950a",
+    "OverallWindowToWallRatio": "https://bedes.lbl.gov/bedes-online/window-wall-ratio",
+    "ConditionedFloorsAboveGrade": "https://bedes-manager.lbl.gov/composite-term/edit/805021fd-82d5-49e7-add7-fdd6ceac6ece"
+  },
+  
+  "SampleID": {
+        "@type": "PropertyValue",
+        "description": "Sample ID",
+        "value": "$SampleID",
+        "unitText": "Null"
+    },
+
+  "Building": 
+  {
+    "PremisesName": {
+                "@type": "PropertyValue",
+                "description": "Name of the building",
+                "value": "$PremisesName",
+                "unit": "Null"
+              },
+    "OperatorType": {
+                "@type": "PropertyValue",
+                "description": "Building usage type",
+                "value": "$OperatorType",
+                "unit": "Null"
+              },
+    "Longitude": {
+                "@type": "PropertyValue",
+                "description": "Longitude of building location",
+                "value": "$Longitude",
+                "unit": "Null"
+              },
+    "Latitude": {
+                "@type": "PropertyValue",
+                "description": "Latitude of building location",
+                "value": "$Latitude",
+                "unit": "Null"
+              },
+    
+    "Address": {
+      
+      "City": {
+                "@type": "PropertyValue",
+                "description": "City of the building located",
+                "value": "$City",
+                "unit": "Null"
+              },
+      "County":{
+                "@type": "PropertyValue",
+                "description": "County of the building located",
+                "value": "$County",
+                "unit": "Null"
+              },
+      "State": {
+                "@type": "PropertyValue",
+                "description": "State of the building located",
+                "value": "$State",
+                "unit": "Null"
+              },
+      "PostalCode": {
+                "@type": "PropertyValue",
+                "description": "Postal code of the building location",
+                "value": "$PostalCode",
+                "unit": "Null"
+              }
+    }, 
+    
+    "ClimateZoneType": {
+      
+      "ASHRAE": {
+                "@type": "PropertyValue",
+                "description": "Ashrae climate zone of the building location",
+                "value": "$ASHRAE",
+                "unit": "Null"
+              },
+      "KoppenClimate":{
+                "@type": "PropertyValue",
+                "description": "Koppen Climate zone of the building location",
+                "value": "$KoppenClimate",
+                "unit": "Null"
+              }
+    },
+    
+    "FloorArea": {
+      "FloorAreaPercentage":{
+                "@type": "PropertyValue",
+                "description": "Floor percentage of total area",
+                "value": "$FloorAreaPercentage",
+                "unit": "Null"
+              },
+      "FloorAreaValue": {
+                "@type": "PropertyValue",
+                "description": "Floor Area",
+                "value": "$FloorAreaValue",
+                "unit": "Square Footage"
+              }
+    }, 
+    "OverallWindowToWallRatio": {
+                "@type": "PropertyValue",
+                "description": "Ratio of total window area to total wall area, where the total wall area is calculated using the floor to floor height, rather than the floor to ceiling height.",
+                "value": "$OverallWindowToWallRatio",
+                "unit": "Null"
+              },
+    "ConditionedFloorsAboveGrade": {
+                "@type": "PropertyValue",
+                "description": "Number of floors above ground in conditioned area",
+                "value": "$ConditionedFloorsAboveGrade",
+                "unit": "Null"
+              }
+  }
+
+}

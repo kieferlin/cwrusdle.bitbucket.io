@@ -1,0 +1,544 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XrayDetector": "https://cwrusdle.bitbucket.io/xrayDetector#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-XrayDetector:Resolution",
+      "@type": "owl:Class",
+      "rdfs:label": "Resolution",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "the smallest interval measurable by a scientific (especially optical) instrument"
+    },
+    {
+      "@id": "mds-XrayDetector:Depth",
+      "@type": "owl:Class",
+      "rdfs:label": "Depth",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "the distance from the top or surface to the bottom of something"
+    },
+    {
+      "@id": "pmd:Time",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Time",
+        {
+          "@language": "en",
+          "@value": "Time"
+        },
+        {
+          "@language": "de",
+          "@value": "Zeit"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A nonspatial continuum that is measured in terms of events which succeed one another from past through present to future."
+      }
+    },
+    {
+      "@id": "mds-XrayDetector:PixelHeight",
+      "@type": "owl:Class",
+      "rdfs:label": "PixelHeight",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixel height of the detector."
+    },
+    {
+      "@id": "mds-XrayDetector:DetectorName",
+      "@type": "owl:Class",
+      "rdfs:label": "DetectorName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:NodeSeries"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the detector."
+    },
+    {
+      "@id": "mds-XrayDetector:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "Ontology for the XRay Detector FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XrayDetector",
+      "rdfs:label": "mds-XrayDetector"
+    },
+    {
+      "@id": "mds-XrayDetector:DetectorWidth",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "DetectorWidth",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Width"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Width of the detector."
+    },
+    {
+      "@id": "mds-XrayDetector:PixelSize",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MicroM"
+      },
+      "rdfs:label": "PixelSize",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixel size of the detector."
+    },
+    {
+      "@id": "mds-XrayDetector:PixelWidth",
+      "@type": "owl:Class",
+      "rdfs:label": "PixelWidth",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Width"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixel width of the detector."
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XrayDetector:DetectorName"
+        },
+        {
+          "@id": "mds-XrayDetector:PixelSize"
+        },
+        {
+          "@id": "mds-XrayDetector:DetectorLength"
+        },
+        {
+          "@id": "mds-XrayDetector:DetectorWidth"
+        },
+        {
+          "@id": "mds-XrayDetector:PixelWidth"
+        },
+        {
+          "@id": "mds-XrayDetector:PixelHeight"
+        },
+        {
+          "@id": "mds-XrayDetector:MaxFrameRate"
+        },
+        {
+          "@id": "mds-XrayDetector:ReadOutTime"
+        },
+        {
+          "@id": "mds-XrayDetector:BitDepth"
+        },
+        {
+          "@id": "mds-XrayDetector:EnergyRange"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "mds-XrayDetector:DetectorLength",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "DetectorLength",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Length"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Length of the detector."
+    },
+    {
+      "@id": "pmd:Width",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Width",
+        {
+          "@language": "de",
+          "@value": "Breite"
+        },
+        {
+          "@language": "en",
+          "@value": "Width"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Entität bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."
+        },
+        {
+          "@language": "en",
+          "@value": "This entity describes a horizontal measurement of an object taken at right angles to the length of the object."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:MeasuringDevice",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "MeasuringDevice",
+        {
+          "@language": "en",
+          "@value": "Measuring Device"
+        },
+        {
+          "@language": "de",
+          "@value": "Messgerät"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": "A processing node capable of determining a specific quality."
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XrayDetector:XrayDetector"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XrayDetector:PixelSize"
+        },
+        {
+          "@id": "mds-XrayDetector:DetectorLength"
+        },
+        {
+          "@id": "mds-XrayDetector:DetectorWidth"
+        },
+        {
+          "@id": "mds-XrayDetector:MaxFrameRate"
+        },
+        {
+          "@id": "mds-XrayDetector:ReadOutTime"
+        },
+        {
+          "@id": "mds-XrayDetector:BitDepth"
+        },
+        {
+          "@id": "mds-XrayDetector:EnergyRange"
+        },
+        {
+          "@id": "mds-XrayDetector:DetectorResolution"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-XrayDetector:MaxFrameRate",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:HZ"
+      },
+      "rdfs:label": "MaxFrameRate",
+      "rdfs:subClassOf": {
+        "@id": "pmd:DataAcquisitionRate"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Maximum frame rate the detector can capture."
+    },
+    {
+      "@id": "mds-XrayDetector:ReadOutTime",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliSEC"
+      },
+      "rdfs:label": "ReadOutTime",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Time"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Time to read out the data."
+    },
+    {
+      "@id": "mds-XrayDetector:DetectorResolution",
+      "@type": "owl:Class",
+      "rdfs:label": "DetectorResolution",
+      "rdfs:subClassOf": {
+        "@id": "mds-XrayDetector:Resolution"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The resolution of the detector."
+    },
+    {
+      "@id": "mds-XrayDetector:XrayDetector",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayDetector",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MeasuringDevice"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The detector used to capture the transmitted X-rays."
+    },
+    {
+      "@id": "pmd:composedOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XrayDetector:DetectorResolution"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "composed of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XrayDetector:PixelWidth"
+        },
+        {
+          "@id": "mds-XrayDetector:PixelHeight"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "This property is used to describe the fact that and which objects are composed of other objects, i.e. it is used to describe the specific constituents or ingredients that form a particular entity or object. \nAs a prepositional phrase, it indicates the elements, parts, or components that make up a whole."
+        },
+        {
+          "@language": "en",
+          "@value": "This property is used to describe which voxels and materials an object is composed of."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:NodeSeries",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "NodeSeries",
+        {
+          "@language": "en",
+          "@value": "Node Series"
+        },
+        {
+          "@language": "de",
+          "@value": "Serie"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@language": "de",
+          "@value": "Knotentyp"
+        },
+        {
+          "@language": "en",
+          "@value": "Node Type"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Processing Node typename, e.g. \"ProTherm500\""
+      }
+    },
+    {
+      "@id": "pmd:DataAcquisitionRate",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "DataAcquisitionRate",
+        {
+          "@language": "en",
+          "@value": "Data Acquisition Rate"
+        },
+        {
+          "@language": "de",
+          "@value": "Datenerfassungsrate"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft bezeichnet die Anzahl der Messungen / Abfragen pro Zeiteinheit bei einer betrachteten Messung einer Messgröße (Abtast-/Abfragerate bei der Datenerfassung)."
+        },
+        {
+          "@language": "en",
+          "@value": "This property denotes the number of measurements / queries per time period for a considered measurement of a measurement parameter (sampling / query rate during data acquisition)."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:WorkingRange",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "WorkingRange",
+        {
+          "@language": "de",
+          "@value": "Arbeitsbereich"
+        },
+        {
+          "@language": "en",
+          "@value": "Working Range"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Diese Eigenschaft beschreibt den Bereich zwischen den Grenzen, innerhalb derer ein Prozessknoten (z. B. eine Maschine) für ihren vorgesehenen Zweck verwendet werden kann, ausgedrückt durch die Angabe der in Rede stehenden unteren und oberen Bereichswerte."
+        },
+        {
+          "@language": "en",
+          "@value": "This property describes the region between the limits within which a processing node (e.g., a machine) is capable of being used for its intended purpose, expressed by stating the lower and upper range values of interest."
+        }
+      ]
+    },
+    {
+      "@id": "mds-XrayDetector:BitDepth",
+      "@type": "owl:Class",
+      "rdfs:label": "BitDepth",
+      "rdfs:subClassOf": {
+        "@id": "mds-XrayDetector:Depth"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Bit depth of the resulting image."
+    },
+    {
+      "@id": "pmd:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ValueObject",
+        {
+          "@language": "en",
+          "@value": "Value Object"
+        },
+        {
+          "@language": "de",
+          "@value": "Wertobjekt"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    },
+    {
+      "@id": "pmd:Length",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Length",
+        {
+          "@language": "en",
+          "@value": "Length"
+        },
+        {
+          "@language": "de",
+          "@value": "Länge"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A measured distance or dimension of an object, usually the longer or longest dimension of the object."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine gemessene Entfernung oder Abmessung eines Objekts, normalerweise die längere oder längste Abmessung des Objekts."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XrayDetector:XrayDetector"
+      },
+      "rdfs:range": {
+        "@id": "mds-XrayDetector:DetectorName"
+      }
+    },
+    {
+      "@id": "mds-XrayDetector:EnergyRange",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:KiloEV"
+      },
+      "rdfs:label": "EnergyRange",
+      "rdfs:subClassOf": {
+        "@id": "pmd:WorkingRange"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The energy range the detector can operate in. "
+    }
+  ]
+}

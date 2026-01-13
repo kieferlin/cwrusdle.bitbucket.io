@@ -1,0 +1,539 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XRDPostProcessing": "https://cwrusdle.bitbucket.io/xrdPostProcessing#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-XRDPostProcessing:DarkPatternUsed",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkPatternUsed",
+      "rdfs:subClassOf": {
+        "@id": "pmd:PrimaryData"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The dark image used to perform dark correction."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:Centering",
+      "@type": "owl:Class",
+      "rdfs:label": "Centering",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Centering algorithm to center the images."
+    },
+    {
+      "@id": "pmd:SequenceNumber",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "SequenceNumber",
+        {
+          "@language": "en",
+          "@value": "Sequence Number"
+        },
+        {
+          "@language": "de",
+          "@value": "Sequenznummer"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Strict monotonically increasing integer that indicates the position in an ordered list."
+      }
+    },
+    {
+      "@id": "mds-XRDPostProcessing:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohommad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "Ontology for the XRD Post-Processing FAST Beamline at CHESS.",
+      "dcterms:hasVersion": "0.2.0.5",
+      "dcterms:title": "mds-XRDPostProcessing",
+      "rdfs:label": "mds-XRDPostProcessing"
+    },
+    {
+      "@id": "mds-XRDPostProcessing:Registration",
+      "@type": "owl:Class",
+      "rdfs:label": "Registration",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Registration of an image."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:GravityMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "GravityMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:Centering"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The gravity centering method."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:DarkCorrection",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkCorrection",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Dark correction of raw images."
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRDPostProcessing:MethodName"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:VersionNumber"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:NumberOfRings"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DistanceBetweenTwoRings"
+        }
+      ],
+      "rdfs:label": [
+        {
+          "@language": "de",
+          "@value": "hat Wert"
+        },
+        {
+          "@language": "en",
+          "@value": "value"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    },
+    {
+      "@id": "mds-XRDPostProcessing:XrayResult",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayResult",
+      "rdfs:subClassOf": {
+        "@id": "pmd:PrimaryData"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:inputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "input of"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDPostProcessing:Modeling"
+      },
+      "skos:altLabel": "is input of"
+    },
+    {
+      "@id": "mds-XRDPostProcessing:DistanceBetweenTwoRings",
+      "@type": "owl:Class",
+      "rdfs:label": "DistanceBetweenTwoRings",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Distance"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Distance between two rings."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:DarkCorrectionMethod2",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkCorrectionMethod2",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:DarkCorrection"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Method 2 to perform dark correction."
+    },
+    {
+      "@id": "pmd:Identifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Identifier",
+        {
+          "@language": "en",
+          "@value": "Identifier"
+        },
+        {
+          "@language": "de",
+          "@value": "Identifikator"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A named value intended to distinguish between entities."
+      }
+    },
+    {
+      "@id": "mds-XRDPostProcessing:RingSamplingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "RingSamplingMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The ring sampling method."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:RollingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "RollingMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:Registration"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The rolling method."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:MethodName",
+      "@type": "owl:Class",
+      "rdfs:label": "MethodName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Identifier"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the method."
+    },
+    {
+      "@id": "pmd:Algorithm",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Algorithm",
+        {
+          "@language": "en",
+          "@value": "Algorithm"
+        },
+        {
+          "@language": "de",
+          "@value": "Algorithmus"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation."
+      }
+    },
+    {
+      "@id": "mds-XRDPostProcessing:NumberOfRings",
+      "@type": "owl:Class",
+      "rdfs:label": "NumberOfRings",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Number of rings in the diffractogram."
+    },
+    {
+      "@id": "pmd:ComputingNode",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ComputingNode",
+        {
+          "@language": "de",
+          "@value": "Computerknoten"
+        },
+        {
+          "@language": "en",
+          "@value": "Computing Node"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A computing system that provides an execution environment for, e.g., simulation processes or prediction models.\nA Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."
+        },
+        {
+          "@language": "de",
+          "@value": "Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.\nEin Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."
+        }
+      ]
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRDPostProcessing:RingSamplingMethod"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:GravityMethod"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:CroppingMethod"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:RollingMethod"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:PixelwiseCorrelation"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DarkCorrectionMethod1"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DarkCorrectionMethod2"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "mds-XRDPostProcessing:MethodName"
+      }
+    },
+    {
+      "@id": "mds-XRDPostProcessing:Modeling",
+      "@type": "owl:Class",
+      "rdfs:label": "Modeling",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ComputingNode"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "ValueObject",
+        {
+          "@language": "en",
+          "@value": "Value Object"
+        },
+        {
+          "@language": "de",
+          "@value": "Wertobjekt"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    },
+    {
+      "@id": "mds-XRDPostProcessing:PixelwiseCorrelation",
+      "@type": "owl:Class",
+      "rdfs:label": "PixelwiseCorrelation",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:Rescaling"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pixelwise correlation for rescaling."
+    },
+    {
+      "@id": "pmd:Distance",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "Distance",
+        {
+          "@language": "de",
+          "@value": "Abstand"
+        },
+        {
+          "@language": "en",
+          "@value": "Distance"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "Spatial remoteness."
+      }
+    },
+    {
+      "@id": "pmd:input",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "input"
+      },
+      "rdfs:range": {
+        "@id": "mds-XRDPostProcessing:XrayResult"
+      },
+      "skos:altLabel": "has input",
+      "skos:definition": {
+        "@language": "en",
+        "@value": "This property is used to link the processes to their input objects."
+      }
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XRDPostProcessing:RingSamplingMethod"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DarkCorrectionMethod1"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DarkCorrectionMethod2"
+        }
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "characteristic of"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XRDPostProcessing:VersionNumber"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:NumberOfRings"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DistanceBetweenTwoRings"
+        },
+        {
+          "@id": "mds-XRDPostProcessing:DarkPatternUsed"
+        }
+      ],
+      "skos:altLabel": "is characteristic of"
+    },
+    {
+      "@id": "mds-XRDPostProcessing:VersionNumber",
+      "@type": "owl:Class",
+      "rdfs:label": "VersionNumber",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SequenceNumber"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Version number of the method."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:Rescaling",
+      "@type": "owl:Class",
+      "rdfs:label": "Rescaling",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:PostProcessing"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Rescaling of images."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:CroppingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "CroppingMethod",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:Registration"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The cropping method."
+    },
+    {
+      "@id": "pmd:PrimaryData",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        "PrimaryData",
+        {
+          "@language": "en",
+          "@value": "Primary Data"
+        },
+        {
+          "@language": "de",
+          "@value": "Primärdaten"
+        }
+      ],
+      "skos:altLabel": "",
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Die Datenkategorie Primärdaten umfasst Daten, die vor / nach einem Prozess erfasst werden, entweder bezogen auf die Geometrie des Objekts (z.B. ao, bo, do, au, bu, du, Lu) oder als Register des gesamten Aufbaus (z.B. Skizzen, Fotos oder Videos)"
+        },
+        {
+          "@language": "en",
+          "@value": "This data scope expresses that a ValueObject refers to data that is directly acquired during a process by sensors (time, force, length, temperature)"
+        }
+      ]
+    },
+    {
+      "@id": "mds-XRDPostProcessing:PostProcessing",
+      "@type": "owl:Class",
+      "rdfs:label": "PostProcessing",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Algorithm"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Post processing appplied to the original collected data."
+    },
+    {
+      "@id": "mds-XRDPostProcessing:DarkCorrectionMethod1",
+      "@type": "owl:Class",
+      "rdfs:label": "DarkCorrectionMethod1",
+      "rdfs:subClassOf": {
+        "@id": "mds-XRDPostProcessing:DarkCorrection"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Method 1 to perform dark correction."
+    }
+  ]
+}
